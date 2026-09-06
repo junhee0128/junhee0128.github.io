@@ -1,0 +1,105 @@
+:root {
+  --bg: #0d0f14;
+  --panel: #161a22;
+  --panel-edge: #262c38;
+  --ink: #e8ecf3;
+  --ink-dim: #99a1b0;
+  --ink-faint: #656d7c;
+  --ok: #58c98a;
+  --warn: #e8b45c;
+  --bad: #e5606a;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font: 15px/1.6 ui-sans-serif, system-ui, "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  padding: 0 20px 64px;
+}
+
+.masthead { max-width: 1080px; margin: 0 auto; padding: 56px 0 32px; }
+.masthead h1 {
+  margin: 0;
+  font-size: clamp(30px, 6vw, 46px);
+  letter-spacing: 0.14em;
+  font-weight: 700;
+}
+.lede { margin: 10px 0 0; color: var(--ink-dim); }
+.built { margin: 4px 0 0; color: var(--ink-faint); font-size: 12.5px; }
+
+.shelf {
+  max-width: 1080px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--panel-edge);
+  border-radius: 14px;
+  padding: 22px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 3px solid var(--accent, var(--panel-edge));
+}
+
+.card-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.card-head h2 { margin: 0; font-size: 21px; letter-spacing: 0.02em; }
+.codename { color: var(--ink-faint); font-size: 12px; letter-spacing: 0.16em; }
+.tagline { margin: -6px 0 0; color: var(--ink-dim); font-size: 14px; }
+.engine { color: var(--ink-faint); font-size: 12px; }
+
+.pill {
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 999px; border: 1px solid currentColor;
+  margin-left: auto;
+}
+.pill.playable { color: var(--ok); }
+.pill.wip { color: var(--warn); }
+.pill.paused, .pill.idea { color: var(--ink-faint); }
+
+.bar { height: 7px; border-radius: 4px; background: #0a0c11; display: flex; overflow: hidden; }
+.bar span { display: block; height: 100%; }
+.bar .done { background: var(--ok); }
+.bar .partial { background: var(--warn); }
+.bar-label { display: flex; justify-content: space-between; font-size: 12.5px; color: var(--ink-dim); margin-bottom: 6px; }
+.bar-label b { color: var(--ink); font-weight: 600; }
+
+.stones { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: 13.5px; }
+.stones li { display: grid; grid-template-columns: 16px 1fr; gap: 8px; align-items: start; color: var(--ink-dim); }
+.stones .mark { color: var(--ink-faint); }
+.stones li.done .mark { color: var(--ok); }
+.stones li.done { color: var(--ink); }
+.stones li.active .mark { color: var(--warn); }
+.stones li.active { color: var(--ink); }
+.stones .note { color: var(--ink-faint); font-size: 12.5px; }
+
+.facts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--ink-dim); }
+.facts .ok { color: var(--ok); }
+.facts .bad { color: var(--bad); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: auto; padding-top: 4px; }
+.play {
+  background: var(--accent, #4a5568); color: #0d0f14; font-weight: 700;
+  border: 0; border-radius: 8px; padding: 9px 18px; font-size: 14px;
+  text-decoration: none; letter-spacing: 0.04em; cursor: pointer;
+}
+.play.off { background: #232936; color: var(--ink-faint); cursor: not-allowed; }
+select {
+  background: #0f1218; color: var(--ink); border: 1px solid var(--panel-edge);
+  border-radius: 8px; padding: 8px 10px; font: inherit; font-size: 13px;
+}
+.docs { display: flex; flex-wrap: wrap; gap: 10px; font-size: 12.5px; }
+.docs a { color: var(--ink-faint); }
+.docs a:hover { color: var(--ink-dim); }
+
+.fail { background: #24151a; border: 1px solid #4a2730; border-radius: 8px; padding: 10px 12px; }
+.fail p { margin: 0 0 6px; color: var(--bad); font-size: 13px; font-weight: 600; }
+.fail pre { margin: 0; max-height: 150px; overflow: auto; font-size: 11.5px; color: var(--ink-dim); white-space: pre-wrap; }
+
+.foot { max-width: 1080px; margin: 48px auto 0; color: var(--ink-faint); font-size: 12.5px; }
+.foot code { background: #0f1218; border: 1px solid var(--panel-edge); border-radius: 5px; padding: 2px 6px; }

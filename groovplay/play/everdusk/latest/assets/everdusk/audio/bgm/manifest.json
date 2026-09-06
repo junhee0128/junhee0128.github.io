@@ -1,0 +1,104 @@
+{
+  "tracks": {
+    "d1_lantern_market": {
+      "title": "Lantern Market",
+      "bpm": 128,
+      "loopSec": 98.112,
+      "source": "design/everdusk/incoming/bgm/d1_lantern_market/mureka_1.wav",
+      "files": {
+        "ogg": "audio/bgm/d1_lantern_market.ogg",
+        "m4a": "audio/bgm/d1_lantern_market.m4a"
+      }
+    },
+    "title": {
+      "title": "Everdusk Theme",
+      "bpm": 88,
+      "loopSec": 105.023,
+      "source": "design/everdusk/incoming/bgm/title/mureka_1.wav",
+      "files": {
+        "ogg": "audio/bgm/title.ogg",
+        "m4a": "audio/bgm/title.m4a"
+      }
+    },
+    "hub": {
+      "title": "City Map",
+      "bpm": 76,
+      "loopSec": 53.755,
+      "source": "design/everdusk/incoming/bgm/hub/mureka_0.wav",
+      "files": {
+        "ogg": "audio/bgm/hub.ogg",
+        "m4a": "audio/bgm/hub.m4a"
+      }
+    },
+    "d2_clocktower_ward": {
+      "title": "Clocktower Ward",
+      "bpm": 132,
+      "loopSec": 101.334,
+      "source": "design/everdusk/incoming/bgm/d2_clocktower_ward/mureka_0.wav",
+      "files": {
+        "ogg": "audio/bgm/d2_clocktower_ward.ogg",
+        "m4a": "audio/bgm/d2_clocktower_ward.m4a"
+      }
+    },
+    "d3_moonrail_depot": {
+      "title": "Moonrail Depot",
+      "bpm": 136,
+      "loopSec": 42.106,
+      "source": "design/everdusk/incoming/bgm/d3_moonrail_depot/mureka_0.wav",
+      "files": {
+        "ogg": "audio/bgm/d3_moonrail_depot.ogg",
+        "m4a": "audio/bgm/d3_moonrail_depot.m4a"
+      }
+    },
+    "d4_glassgarden": {
+      "title": "Glassgarden",
+      "bpm": 130,
+      "loopSec": 51.924,
+      "source": "design/everdusk/incoming/bgm/d4_glassgarden/mureka_1.wav",
+      "files": {
+        "ogg": "audio/bgm/d4_glassgarden.ogg",
+        "m4a": "audio/bgm/d4_glassgarden.m4a"
+      }
+    },
+    "d5_rain_cathedral": {
+      "title": "Rain Cathedral",
+      "bpm": 126,
+      "loopSec": 46.538,
+      "source": "design/everdusk/incoming/bgm/d5_rain_cathedral/mureka_1.wav",
+      "files": {
+        "ogg": "audio/bgm/d5_rain_cathedral.ogg",
+        "m4a": "audio/bgm/d5_rain_cathedral.m4a"
+      }
+    },
+    "d6_silent_foundry": {
+      "title": "Silent Foundry",
+      "bpm": 140,
+      "loopSec": 85.515,
+      "source": "design/everdusk/incoming/bgm/d6_silent_foundry/mureka_1.wav",
+      "files": {
+        "ogg": "audio/bgm/d6_silent_foundry.ogg",
+        "m4a": "audio/bgm/d6_silent_foundry.m4a"
+      }
+    },
+    "boss": {
+      "title": "The Hush Answers",
+      "bpm": 150,
+      "loopSec": 46.785,
+      "source": "design/everdusk/incoming/bgm/boss/mureka_1.wav",
+      "files": {
+        "ogg": "audio/bgm/boss.ogg",
+        "m4a": "audio/bgm/boss.m4a"
+      }
+    },
+    "boss_final": {
+      "title": "Luminarch",
+      "bpm": 152,
+      "loopSec": 147.545,
+      "source": "design/everdusk/incoming/bgm/boss_final/mureka_1.wav",
+      "files": {
+        "ogg": "audio/bgm/boss_final.ogg",
+        "m4a": "audio/bgm/boss_final.m4a"
+      }
+    }
+  }
+}

@@ -1,0 +1,4009 @@
+{
+  "version": 1,
+  "entries": {
+    "bcn_post_blaze": {
+      "src": "beacons/bcn_post_blaze_{nn}@4x.webp",
+      "frameW": 88,
+      "frameH": 192,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bcn_post_catch": {
+      "src": "beacons/bcn_post_catch_{nn}@4x.webp",
+      "frameW": 82,
+      "frameH": 192,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bcn_post_dark": {
+      "src": "beacons/bcn_post_dark_{nn}@4x.webp",
+      "frameW": 81,
+      "frameH": 191,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bcn_post_lit": {
+      "src": "beacons/bcn_post_lit_{nn}@4x.webp",
+      "frameW": 82,
+      "frameH": 192,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bcn_post_unlit": {
+      "src": "beacons/bcn_post_unlit_{nn}@4x.webp",
+      "frameW": 82,
+      "frameH": 192,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_belless_broken": {
+      "src": "bosses/bos_belless_broken_{nn}@4x.webp",
+      "frameW": 209,
+      "frameH": 235,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_belless_down": {
+      "src": "bosses/bos_belless_down_{nn}@4x.webp",
+      "frameW": 237,
+      "frameH": 210,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_belless_idle": {
+      "src": "bosses/bos_belless_idle_{nn}@4x.webp",
+      "frameW": 212,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_belless_rise": {
+      "src": "bosses/bos_belless_rise_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 182,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_belless_strike": {
+      "src": "bosses/bos_belless_strike_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 238,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_choir-ascendant_broken": {
+      "src": "bosses/bos_choir-ascendant_broken_{nn}@4x.webp",
+      "frameW": 119,
+      "frameH": 228,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_choir-ascendant_down": {
+      "src": "bosses/bos_choir-ascendant_down_{nn}@4x.webp",
+      "frameW": 115,
+      "frameH": 66,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_choir-ascendant_idle": {
+      "src": "bosses/bos_choir-ascendant_idle_{nn}@4x.webp",
+      "frameW": 119,
+      "frameH": 235,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_choir-ascendant_rise": {
+      "src": "bosses/bos_choir-ascendant_rise_{nn}@4x.webp",
+      "frameW": 106,
+      "frameH": 186,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_choir-ascendant_strike": {
+      "src": "bosses/bos_choir-ascendant_strike_{nn}@4x.webp",
+      "frameW": 119,
+      "frameH": 240,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_glass-widow_broken": {
+      "src": "bosses/bos_glass-widow_broken_{nn}@4x.webp",
+      "frameW": 204,
+      "frameH": 165,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_glass-widow_down": {
+      "src": "bosses/bos_glass-widow_down_{nn}@4x.webp",
+      "frameW": 226,
+      "frameH": 131,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_glass-widow_idle": {
+      "src": "bosses/bos_glass-widow_idle_{nn}@4x.webp",
+      "frameW": 215,
+      "frameH": 176,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_glass-widow_rise": {
+      "src": "bosses/bos_glass-widow_rise_{nn}@4x.webp",
+      "frameW": 209,
+      "frameH": 138,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_glass-widow_strike": {
+      "src": "bosses/bos_glass-widow_strike_{nn}@4x.webp",
+      "frameW": 209,
+      "frameH": 240,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_luminarch_broken": {
+      "src": "bosses/bos_luminarch_broken_{nn}@4x.webp",
+      "frameW": 134,
+      "frameH": 175,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_luminarch_down": {
+      "src": "bosses/bos_luminarch_down_{nn}@4x.webp",
+      "frameW": 126,
+      "frameH": 134,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_luminarch_idle": {
+      "src": "bosses/bos_luminarch_idle_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 196,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_luminarch_rise": {
+      "src": "bosses/bos_luminarch_rise_{nn}@4x.webp",
+      "frameW": 125,
+      "frameH": 162,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_luminarch_strike": {
+      "src": "bosses/bos_luminarch_strike_{nn}@4x.webp",
+      "frameW": 134,
+      "frameH": 240,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_pale-clock_broken": {
+      "src": "bosses/bos_pale-clock_broken_{nn}@4x.webp",
+      "frameW": 164,
+      "frameH": 229,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_pale-clock_down": {
+      "src": "bosses/bos_pale-clock_down_{nn}@4x.webp",
+      "frameW": 157,
+      "frameH": 137,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_pale-clock_idle": {
+      "src": "bosses/bos_pale-clock_idle_{nn}@4x.webp",
+      "frameW": 164,
+      "frameH": 240,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_pale-clock_rise": {
+      "src": "bosses/bos_pale-clock_rise_{nn}@4x.webp",
+      "frameW": 144,
+      "frameH": 147,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_pale-clock_strike": {
+      "src": "bosses/bos_pale-clock_strike_{nn}@4x.webp",
+      "frameW": 165,
+      "frameH": 223,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_stationmaster_broken": {
+      "src": "bosses/bos_stationmaster_broken_{nn}@4x.webp",
+      "frameW": 141,
+      "frameH": 218,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_stationmaster_down": {
+      "src": "bosses/bos_stationmaster_down_{nn}@4x.webp",
+      "frameW": 134,
+      "frameH": 170,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_stationmaster_idle": {
+      "src": "bosses/bos_stationmaster_idle_{nn}@4x.webp",
+      "frameW": 141,
+      "frameH": 240,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_stationmaster_rise": {
+      "src": "bosses/bos_stationmaster_rise_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 225,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "bos_stationmaster_strike": {
+      "src": "bosses/bos_stationmaster_strike_{nn}@4x.webp",
+      "frameW": 141,
+      "frameH": 218,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_dash": {
+      "src": "characters/ferren/chr_ferren_dash_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_defeat": {
+      "src": "characters/ferren/chr_ferren_defeat_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_double-jump": {
+      "src": "characters/ferren/chr_ferren_double-jump_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_hit": {
+      "src": "characters/ferren/chr_ferren_hit_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_idle": {
+      "src": "characters/ferren/chr_ferren_idle_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_jump-apex": {
+      "src": "characters/ferren/chr_ferren_jump-apex_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_jump-fall": {
+      "src": "characters/ferren/chr_ferren_jump-fall_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_jump-rise": {
+      "src": "characters/ferren/chr_ferren_jump-rise_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_landing": {
+      "src": "characters/ferren/chr_ferren_landing_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_run": {
+      "src": "characters/ferren/chr_ferren_run_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_slide": {
+      "src": "characters/ferren/chr_ferren_slide_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_ferren_victory": {
+      "src": "characters/ferren/chr_ferren_victory_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_lyra_dash": {
+      "src": "characters/lyra/chr_lyra_dash_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 3,
+      "fps": 12,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "chr_lyra_defeat": {
+      "src": "characters/lyra/chr_lyra_defeat_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 4,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_lyra_double-jump": {
+      "src": "characters/lyra/chr_lyra_double-jump_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 4,
+      "fps": 12,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_lyra_hit": {
+      "src": "characters/lyra/chr_lyra_hit_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 2,
+      "fps": 10,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_lyra_idle": {
+      "src": "characters/lyra/chr_lyra_idle_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 4,
+      "fps": 6,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "chr_lyra_jump-apex": {
+      "src": "characters/lyra/chr_lyra_jump-apex_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "chr_lyra_jump-fall": {
+      "src": "characters/lyra/chr_lyra_jump-fall_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 2,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "chr_lyra_jump-rise": {
+      "src": "characters/lyra/chr_lyra_jump-rise_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 2,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "chr_lyra_landing": {
+      "src": "characters/lyra/chr_lyra_landing_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 2,
+      "fps": 12,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_lyra_run": {
+      "src": "characters/lyra/chr_lyra_run_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 8,
+      "fps": 12,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "chr_lyra_slide": {
+      "src": "characters/lyra/chr_lyra_slide_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 2,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "chr_lyra_victory": {
+      "src": "characters/lyra/chr_lyra_victory_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 4,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_dash": {
+      "src": "characters/sable/chr_sable_dash_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_defeat": {
+      "src": "characters/sable/chr_sable_defeat_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_double-jump": {
+      "src": "characters/sable/chr_sable_double-jump_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_hit": {
+      "src": "characters/sable/chr_sable_hit_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_idle": {
+      "src": "characters/sable/chr_sable_idle_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_jump-apex": {
+      "src": "characters/sable/chr_sable_jump-apex_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_jump-fall": {
+      "src": "characters/sable/chr_sable_jump-fall_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_jump-rise": {
+      "src": "characters/sable/chr_sable_jump-rise_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_landing": {
+      "src": "characters/sable/chr_sable_landing_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_run": {
+      "src": "characters/sable/chr_sable_run_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_slide": {
+      "src": "characters/sable/chr_sable_slide_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "chr_sable_victory": {
+      "src": "characters/sable/chr_sable_victory_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "enm_choir_break": {
+      "src": "enemies/enm_choir_break_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 3,
+      "fps": 14,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "enm_choir_idle": {
+      "src": "enemies/enm_choir_idle_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 4,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "enm_hollowfolk_break": {
+      "src": "enemies/enm_hollowfolk_break_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 3,
+      "fps": 14,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "enm_hollowfolk_idle": {
+      "src": "enemies/enm_hollowfolk_idle_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 4,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "enm_murmurs_break": {
+      "src": "enemies/enm_murmurs_break_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 3,
+      "fps": 14,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "enm_murmurs_idle": {
+      "src": "enemies/enm_murmurs_idle_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 4,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "enm_stills_break": {
+      "src": "enemies/enm_stills_break_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 3,
+      "fps": 14,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "enm_stills_idle": {
+      "src": "enemies/enm_stills_idle_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 4,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "enm_wardens_break": {
+      "src": "enemies/enm_wardens_break_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 3,
+      "fps": 14,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "enm_wardens_idle": {
+      "src": "enemies/enm_wardens_idle_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 4,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
+    "env_clocktower-ward_bld_archive": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_bld_archive_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_bld_bellhouse": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_bld_bellhouse_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_bld_clocktower": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_bld_clocktower_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_bld_gearworks": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_bld_gearworks_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_bld_pendulum-gate": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_bld_pendulum-gate_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_bld_watchmaker": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_bld_watchmaker_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_chasm_pit": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_chasm_pit.webp",
+      "frameW": 768,
+      "frameH": 512,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_clocktower-ward_far_skyline": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_far_skyline.webp",
+      "frameW": 1536,
+      "frameH": 754,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_clocktower-ward_ground_road": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_ground_road.webp",
+      "frameW": 1024,
+      "frameH": 683,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_clocktower-ward_mid_street": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_mid_street.webp",
+      "frameW": 1536,
+      "frameH": 874,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_bell": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_bell_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_bench": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_bench_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_chain": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_chain_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_cogs": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_cogs_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_crate": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_crate_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_gear": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_gear_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_lamp-clock": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_lamp-clock_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_pendulum": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_pendulum_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_street-clock": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_street-clock_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_prop_valve": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_prop_valve_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_clocktower-ward_sky_night": {
+      "src": "environment/clocktower-ward/env_clocktower-ward_sky_night.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_glassgarden_bld_conservatory": {
+      "src": "environment/glassgarden/env_glassgarden_bld_conservatory_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_bld_crystal-tree": {
+      "src": "environment/glassgarden/env_glassgarden_bld_crystal-tree_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_bld_dome": {
+      "src": "environment/glassgarden/env_glassgarden_bld_dome_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_bld_gardeners-lodge": {
+      "src": "environment/glassgarden/env_glassgarden_bld_gardeners-lodge_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_bld_glasshouse": {
+      "src": "environment/glassgarden/env_glassgarden_bld_glasshouse_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_bld_pavilion": {
+      "src": "environment/glassgarden/env_glassgarden_bld_pavilion_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_chasm_pit": {
+      "src": "environment/glassgarden/env_glassgarden_chasm_pit.webp",
+      "frameW": 768,
+      "frameH": 512,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_glassgarden_far_skyline": {
+      "src": "environment/glassgarden/env_glassgarden_far_skyline.webp",
+      "frameW": 1536,
+      "frameH": 606,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_glassgarden_ground_road": {
+      "src": "environment/glassgarden/env_glassgarden_ground_road.webp",
+      "frameW": 1024,
+      "frameH": 683,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_glassgarden_mid_street": {
+      "src": "environment/glassgarden/env_glassgarden_mid_street.webp",
+      "frameW": 1536,
+      "frameH": 731,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_glassgarden_prop_barrow": {
+      "src": "environment/glassgarden/env_glassgarden_prop_barrow_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_prop_bell-flower": {
+      "src": "environment/glassgarden/env_glassgarden_prop_bell-flower_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_prop_bench": {
+      "src": "environment/glassgarden/env_glassgarden_prop_bench_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_prop_birdbath": {
+      "src": "environment/glassgarden/env_glassgarden_prop_birdbath_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_prop_boulder": {
+      "src": "environment/glassgarden/env_glassgarden_prop_boulder_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_prop_fountain": {
+      "src": "environment/glassgarden/env_glassgarden_prop_fountain_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_prop_lamp": {
+      "src": "environment/glassgarden/env_glassgarden_prop_lamp_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_prop_pots": {
+      "src": "environment/glassgarden/env_glassgarden_prop_pots_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_prop_shrub": {
+      "src": "environment/glassgarden/env_glassgarden_prop_shrub_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_prop_trellis": {
+      "src": "environment/glassgarden/env_glassgarden_prop_trellis_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_glassgarden_sky_night": {
+      "src": "environment/glassgarden/env_glassgarden_sky_night.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_lantern-market_bld_apothecary": {
+      "src": "environment/lantern-market/env_lantern-market_bld_apothecary_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_canal_a": {
+      "src": "environment/lantern-market/env_lantern-market_bld_canal_a_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_canal_b": {
+      "src": "environment/lantern-market/env_lantern-market_bld_canal_b_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_fruit": {
+      "src": "environment/lantern-market/env_lantern-market_bld_fruit_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_gate": {
+      "src": "environment/lantern-market/env_lantern-market_bld_gate_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_noodle": {
+      "src": "environment/lantern-market/env_lantern-market_bld_noodle_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_pagoda": {
+      "src": "environment/lantern-market/env_lantern-market_bld_pagoda_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_roof_a": {
+      "src": "environment/lantern-market/env_lantern-market_bld_roof_a_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_roof_b": {
+      "src": "environment/lantern-market/env_lantern-market_bld_roof_b_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_square_a": {
+      "src": "environment/lantern-market/env_lantern-market_bld_square_a_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_square_b": {
+      "src": "environment/lantern-market/env_lantern-market_bld_square_b_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_teahouse": {
+      "src": "environment/lantern-market/env_lantern-market_bld_teahouse_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_under_a": {
+      "src": "environment/lantern-market/env_lantern-market_bld_under_a_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_bld_under_b": {
+      "src": "environment/lantern-market/env_lantern-market_bld_under_b_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_chasm_canal": {
+      "src": "environment/lantern-market/env_lantern-market_chasm_canal.webp",
+      "frameW": 768,
+      "frameH": 768,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_lantern-market_far_rooftops": {
+      "src": "environment/lantern-market/env_lantern-market_far_rooftops.webp",
+      "frameW": 1536,
+      "frameH": 612,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_lantern-market_ground_road": {
+      "src": "environment/lantern-market/env_lantern-market_ground_road.webp",
+      "frameW": 1024,
+      "frameH": 546,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_lantern-market_mid_shops": {
+      "src": "environment/lantern-market/env_lantern-market_mid_shops.webp",
+      "frameW": 1536,
+      "frameH": 642,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_lantern-market_prop_banner": {
+      "src": "environment/lantern-market/env_lantern-market_prop_banner_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_prop_barrel": {
+      "src": "environment/lantern-market/env_lantern-market_prop_barrel_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_prop_bundle": {
+      "src": "environment/lantern-market/env_lantern-market_prop_bundle_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_prop_cart": {
+      "src": "environment/lantern-market/env_lantern-market_prop_cart_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_prop_crates": {
+      "src": "environment/lantern-market/env_lantern-market_prop_crates_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_prop_lantern-pole": {
+      "src": "environment/lantern-market/env_lantern-market_prop_lantern-pole_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_prop_shrine": {
+      "src": "environment/lantern-market/env_lantern-market_prop_shrine_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_prop_signpost": {
+      "src": "environment/lantern-market/env_lantern-market_prop_signpost_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_prop_stall": {
+      "src": "environment/lantern-market/env_lantern-market_prop_stall_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_prop_tree": {
+      "src": "environment/lantern-market/env_lantern-market_prop_tree_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_lantern-market_sky_night": {
+      "src": "environment/lantern-market/env_lantern-market_sky_night.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_moonrail-depot_bld_engine-shed": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_bld_engine-shed_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_bld_platform-canopy": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_bld_platform-canopy_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_bld_signal-box": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_bld_signal-box_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_bld_ticket-hall": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_bld_ticket-hall_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_bld_warehouse": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_bld_warehouse_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_bld_water-tower": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_bld_water-tower_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_chasm_pit": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_chasm_pit.webp",
+      "frameW": 768,
+      "frameH": 512,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_moonrail-depot_far_skyline": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_far_skyline.webp",
+      "frameW": 1536,
+      "frameH": 685,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_moonrail-depot_ground_road": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_ground_road.webp",
+      "frameW": 1024,
+      "frameH": 683,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_moonrail-depot_mid_street": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_mid_street.webp",
+      "frameW": 1536,
+      "frameH": 661,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_barrel": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_barrel_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_bench": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_bench_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_board": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_board_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_buffer": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_buffer_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_coal": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_coal_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_crates": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_crates_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_luggage": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_luggage_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_rail-lantern": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_rail-lantern_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_signal": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_signal_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_prop_water-crane": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_prop_water-crane_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_moonrail-depot_sky_night": {
+      "src": "environment/moonrail-depot/env_moonrail-depot_sky_night.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_rain-cathedral_bld_bell-tower": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_bld_bell-tower_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_bld_chapel": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_bld_chapel_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_bld_cloister": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_bld_cloister_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_bld_gatehouse": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_bld_gatehouse_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_bld_nave": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_bld_nave_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_bld_rectory": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_bld_rectory_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_chasm_pit": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_chasm_pit.webp",
+      "frameW": 768,
+      "frameH": 512,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_rain-cathedral_far_skyline": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_far_skyline.webp",
+      "frameW": 1536,
+      "frameH": 675,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_rain-cathedral_ground_road": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_ground_road.webp",
+      "frameW": 1024,
+      "frameH": 683,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_rain-cathedral_mid_street": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_mid_street.webp",
+      "frameW": 1536,
+      "frameH": 878,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_angel": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_angel_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_bench": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_bench_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_candles": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_candles_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_gargoyle": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_gargoyle_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_gate": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_gate_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_lantern": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_lantern_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_prayer-post": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_prayer-post_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_rain-barrel": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_rain-barrel_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_slabs": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_slabs_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_prop_urn": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_prop_urn_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_rain-cathedral_sky_night": {
+      "src": "environment/rain-cathedral/env_rain-cathedral_sky_night.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_silent-foundry_bld_blast-furnace": {
+      "src": "environment/silent-foundry/env_silent-foundry_bld_blast-furnace_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_bld_chimney-stack": {
+      "src": "environment/silent-foundry/env_silent-foundry_bld_chimney-stack_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_bld_forge-hall": {
+      "src": "environment/silent-foundry/env_silent-foundry_bld_forge-hall_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_bld_foundry-office": {
+      "src": "environment/silent-foundry/env_silent-foundry_bld_foundry-office_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_bld_gantry": {
+      "src": "environment/silent-foundry/env_silent-foundry_bld_gantry_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_bld_pipeworks": {
+      "src": "environment/silent-foundry/env_silent-foundry_bld_pipeworks_{nn}@4x.webp",
+      "frameW": 256,
+      "frameH": 256,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_chasm_pit": {
+      "src": "environment/silent-foundry/env_silent-foundry_chasm_pit.webp",
+      "frameW": 768,
+      "frameH": 512,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_silent-foundry_far_skyline": {
+      "src": "environment/silent-foundry/env_silent-foundry_far_skyline.webp",
+      "frameW": 1536,
+      "frameH": 629,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_silent-foundry_ground_road": {
+      "src": "environment/silent-foundry/env_silent-foundry_ground_road.webp",
+      "frameW": 1024,
+      "frameH": 683,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_silent-foundry_mid_street": {
+      "src": "environment/silent-foundry/env_silent-foundry_mid_street.webp",
+      "frameW": 1536,
+      "frameH": 686,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        1
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "env_silent-foundry_prop_anvil": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_anvil_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_prop_barrel": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_barrel_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_prop_bellows": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_bellows_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_prop_coal-cart": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_coal-cart_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_prop_cogs": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_cogs_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_prop_crucible": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_crucible_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_prop_hoist": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_hoist_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_prop_lamp": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_lamp_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_prop_pipes": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_pipes_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_prop_valve": {
+      "src": "environment/silent-foundry/env_silent-foundry_prop_valve_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "env_silent-foundry_sky_night": {
+      "src": "environment/silent-foundry/env_silent-foundry_sky_night.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "haz_drop_burst": {
+      "src": "hazards/haz_drop_burst_{nn}@4x.webp",
+      "frameW": 66,
+      "frameH": 112,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_drop_crack": {
+      "src": "hazards/haz_drop_crack_{nn}@4x.webp",
+      "frameW": 44,
+      "frameH": 112,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_drop_whole": {
+      "src": "hazards/haz_drop_whole_{nn}@4x.webp",
+      "frameW": 43,
+      "frameH": 108,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_mute_low": {
+      "src": "hazards/haz_mute_low_{nn}@4x.webp",
+      "frameW": 67,
+      "frameH": 59,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_mute_mid": {
+      "src": "hazards/haz_mute_mid_{nn}@4x.webp",
+      "frameW": 98,
+      "frameH": 89,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_mute_tall": {
+      "src": "hazards/haz_mute_tall_{nn}@4x.webp",
+      "frameW": 128,
+      "frameH": 122,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_thorn_low": {
+      "src": "hazards/haz_thorn_low_{nn}@4x.webp",
+      "frameW": 49,
+      "frameH": 83,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_thorn_mid": {
+      "src": "hazards/haz_thorn_mid_{nn}@4x.webp",
+      "frameW": 84,
+      "frameH": 104,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_thorn_tall": {
+      "src": "hazards/haz_thorn_tall_{nn}@4x.webp",
+      "frameW": 127,
+      "frameH": 121,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_wall_low": {
+      "src": "hazards/haz_wall_low_{nn}@4x.webp",
+      "frameW": 68,
+      "frameH": 74,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_wall_tall": {
+      "src": "hazards/haz_wall_tall_{nn}@4x.webp",
+      "frameW": 73,
+      "frameH": 128,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_wire_long": {
+      "src": "hazards/haz_wire_long_{nn}@4x.webp",
+      "frameW": 105,
+      "frameH": 27,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_wire_mid": {
+      "src": "hazards/haz_wire_mid_{nn}@4x.webp",
+      "frameW": 77,
+      "frameH": 25,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_wire_short": {
+      "src": "hazards/haz_wire_short_{nn}@4x.webp",
+      "frameW": 55,
+      "frameH": 26,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_icon_crystal": {
+      "src": "items/item_icon_crystal_{nn}@4x.webp",
+      "frameW": 30,
+      "frameH": 50,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_icon_kindled-flame": {
+      "src": "items/item_icon_kindled-flame_{nn}@4x.webp",
+      "frameW": 29,
+      "frameH": 46,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_icon_moth-jar": {
+      "src": "items/item_icon_moth-jar_{nn}@4x.webp",
+      "frameW": 31,
+      "frameH": 50,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_icon_relight": {
+      "src": "items/item_icon_relight_{nn}@4x.webp",
+      "frameW": 35,
+      "frameH": 56,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_icon_spark": {
+      "src": "items/item_icon_spark_{nn}@4x.webp",
+      "frameW": 36,
+      "frameH": 46,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_power_flame": {
+      "src": "items/item_power_flame_{nn}@4x.webp",
+      "frameW": 34,
+      "frameH": 61,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_power_mothjar": {
+      "src": "items/item_power_mothjar_{nn}@4x.webp",
+      "frameW": 41,
+      "frameH": 62,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_power_relight": {
+      "src": "items/item_power_relight_{nn}@4x.webp",
+      "frameW": 41,
+      "frameH": 64,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_brass-compass": {
+      "src": "items/item_relic_brass-compass_{nn}@4x.webp",
+      "frameW": 43,
+      "frameH": 49,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_choir-mute": {
+      "src": "items/item_relic_choir-mute_{nn}@4x.webp",
+      "frameW": 42,
+      "frameH": 45,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_clock-key": {
+      "src": "items/item_relic_clock-key_{nn}@4x.webp",
+      "frameW": 42,
+      "frameH": 55,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_ember-locket": {
+      "src": "items/item_relic_ember-locket_{nn}@4x.webp",
+      "frameW": 38,
+      "frameH": 51,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_foundry-slag": {
+      "src": "items/item_relic_foundry-slag_{nn}@4x.webp",
+      "frameW": 44,
+      "frameH": 51,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_glass-charm": {
+      "src": "items/item_relic_glass-charm_{nn}@4x.webp",
+      "frameW": 29,
+      "frameH": 56,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_hush-bell": {
+      "src": "items/item_relic_hush-bell_{nn}@4x.webp",
+      "frameW": 32,
+      "frameH": 55,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_lamplighters-wick": {
+      "src": "items/item_relic_lamplighters-wick_{nn}@4x.webp",
+      "frameW": 35,
+      "frameH": 50,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_moth-silk": {
+      "src": "items/item_relic_moth-silk_{nn}@4x.webp",
+      "frameW": 36,
+      "frameH": 54,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_rail-token": {
+      "src": "items/item_relic_rail-token_{nn}@4x.webp",
+      "frameW": 37,
+      "frameH": 41,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_wardens-buckle": {
+      "src": "items/item_relic_wardens-buckle_{nn}@4x.webp",
+      "frameW": 40,
+      "frameH": 54,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_relic_widows-thread": {
+      "src": "items/item_relic_widows-thread_{nn}@4x.webp",
+      "frameW": 31,
+      "frameH": 57,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_spark_big": {
+      "src": "items/item_spark_big_{nn}@4x.webp",
+      "frameW": 44,
+      "frameH": 48,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_spark_combo": {
+      "src": "items/item_spark_combo_{nn}@4x.webp",
+      "frameW": 41,
+      "frameH": 39,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "item_spark_small": {
+      "src": "items/item_spark_small_{nn}@4x.webp",
+      "frameW": 25,
+      "frameH": 26,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_bellbit_ability": {
+      "src": "pets/pet_bellbit_ability_{nn}@4x.webp",
+      "frameW": 64,
+      "frameH": 58,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_bellbit_celebrate": {
+      "src": "pets/pet_bellbit_celebrate_{nn}@4x.webp",
+      "frameW": 63,
+      "frameH": 56,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_bellbit_follow": {
+      "src": "pets/pet_bellbit_follow_{nn}@4x.webp",
+      "frameW": 62,
+      "frameH": 53,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_bellbit_hurt": {
+      "src": "pets/pet_bellbit_hurt_{nn}@4x.webp",
+      "frameW": 50,
+      "frameH": 49,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_bellbit_idle": {
+      "src": "pets/pet_bellbit_idle_{nn}@4x.webp",
+      "frameW": 64,
+      "frameH": 54,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_ember-pup_ability": {
+      "src": "pets/pet_ember-pup_ability_{nn}@4x.webp",
+      "frameW": 64,
+      "frameH": 58,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_ember-pup_celebrate": {
+      "src": "pets/pet_ember-pup_celebrate_{nn}@4x.webp",
+      "frameW": 58,
+      "frameH": 55,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_ember-pup_follow": {
+      "src": "pets/pet_ember-pup_follow_{nn}@4x.webp",
+      "frameW": 60,
+      "frameH": 52,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_ember-pup_hurt": {
+      "src": "pets/pet_ember-pup_hurt_{nn}@4x.webp",
+      "frameW": 52,
+      "frameH": 52,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_ember-pup_idle": {
+      "src": "pets/pet_ember-pup_idle_{nn}@4x.webp",
+      "frameW": 64,
+      "frameH": 63,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_glimmerfin_ability": {
+      "src": "pets/pet_glimmerfin_ability_{nn}@4x.webp",
+      "frameW": 59,
+      "frameH": 41,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_glimmerfin_celebrate": {
+      "src": "pets/pet_glimmerfin_celebrate_{nn}@4x.webp",
+      "frameW": 56,
+      "frameH": 59,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_glimmerfin_follow": {
+      "src": "pets/pet_glimmerfin_follow_{nn}@4x.webp",
+      "frameW": 50,
+      "frameH": 40,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_glimmerfin_hurt": {
+      "src": "pets/pet_glimmerfin_hurt_{nn}@4x.webp",
+      "frameW": 36,
+      "frameH": 41,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_glimmerfin_idle": {
+      "src": "pets/pet_glimmerfin_idle_{nn}@4x.webp",
+      "frameW": 64,
+      "frameH": 59,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_morrow_ability": {
+      "src": "pets/pet_morrow_ability_{nn}@4x.webp",
+      "frameW": 60,
+      "frameH": 28,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_morrow_celebrate": {
+      "src": "pets/pet_morrow_celebrate_{nn}@4x.webp",
+      "frameW": 64,
+      "frameH": 56,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_morrow_follow": {
+      "src": "pets/pet_morrow_follow_{nn}@4x.webp",
+      "frameW": 58,
+      "frameH": 53,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_morrow_hurt": {
+      "src": "pets/pet_morrow_hurt_{nn}@4x.webp",
+      "frameW": 51,
+      "frameH": 50,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_morrow_idle": {
+      "src": "pets/pet_morrow_idle_{nn}@4x.webp",
+      "frameW": 64,
+      "frameH": 58,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_mothkin_ability": {
+      "src": "pets/pet_mothkin_ability_{nn}@4x.webp",
+      "frameW": 55,
+      "frameH": 64,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_mothkin_celebrate": {
+      "src": "pets/pet_mothkin_celebrate_{nn}@4x.webp",
+      "frameW": 55,
+      "frameH": 50,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_mothkin_follow": {
+      "src": "pets/pet_mothkin_follow_{nn}@4x.webp",
+      "frameW": 46,
+      "frameH": 39,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_mothkin_hurt": {
+      "src": "pets/pet_mothkin_hurt_{nn}@4x.webp",
+      "frameW": 33,
+      "frameH": 39,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "pet_mothkin_idle": {
+      "src": "pets/pet_mothkin_idle_{nn}@4x.webp",
+      "frameW": 49,
+      "frameH": 51,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_card_district_clocktower_ward": {
+      "src": "ui/cards/ui_card_district_clocktower-ward.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_district_glassgarden": {
+      "src": "ui/cards/ui_card_district_glassgarden.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_district_lantern_market": {
+      "src": "ui/cards/ui_card_district_lantern-market.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_district_moonrail_depot": {
+      "src": "ui/cards/ui_card_district_moonrail-depot.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_district_rain_cathedral": {
+      "src": "ui/cards/ui_card_district_rain-cathedral.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_district_silent_foundry": {
+      "src": "ui/cards/ui_card_district_silent-foundry.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_epilogue_1": {
+      "src": "ui/cards/ui_card_epilogue_1.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_epilogue_2": {
+      "src": "ui/cards/ui_card_epilogue_2.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_prologue_1": {
+      "src": "ui/cards/ui_card_prologue_1.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_prologue_2": {
+      "src": "ui/cards/ui_card_prologue_2.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_card_prologue_3": {
+      "src": "ui/cards/ui_card_prologue_3.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_corner": {
+      "src": "ui/ui_corner_{nn}@4x.webp",
+      "frameW": 54,
+      "frameH": 56,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_fable_clocktower_ward": {
+      "src": "ui/cards/ui_fable_clocktower-ward.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_fable_glassgarden": {
+      "src": "ui/cards/ui_fable_glassgarden.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_fable_lantern_market": {
+      "src": "ui/cards/ui_fable_lantern-market.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_fable_moonrail_depot": {
+      "src": "ui/cards/ui_fable_moonrail-depot.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_fable_rain_cathedral": {
+      "src": "ui/cards/ui_fable_rain-cathedral.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_fable_silent_foundry": {
+      "src": "ui/cards/ui_fable_silent-foundry.webp",
+      "frameW": 1536,
+      "frameH": 1024,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_flame_lit": {
+      "src": "ui/ui_flame_lit_{nn}@4x.webp",
+      "frameW": 37,
+      "frameH": 56,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_flame_spent": {
+      "src": "ui/ui_flame_spent_{nn}@4x.webp",
+      "frameW": 36,
+      "frameH": 56,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_lock": {
+      "src": "ui/ui_lock_{nn}@4x.webp",
+      "frameW": 44,
+      "frameH": 60,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_node_boss_locked": {
+      "src": "ui/ui_node_boss_locked_{nn}@4x.webp",
+      "frameW": 76,
+      "frameH": 87,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_node_boss_open": {
+      "src": "ui/ui_node_boss_open_{nn}@4x.webp",
+      "frameW": 76,
+      "frameH": 88,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_node_clear": {
+      "src": "ui/ui_node_clear_{nn}@4x.webp",
+      "frameW": 67,
+      "frameH": 85,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_node_locked": {
+      "src": "ui/ui_node_locked_{nn}@4x.webp",
+      "frameW": 75,
+      "frameH": 85,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_node_open": {
+      "src": "ui/ui_node_open_{nn}@4x.webp",
+      "frameW": 73,
+      "frameH": 85,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_star_empty": {
+      "src": "ui/ui_star_empty_{nn}@4x.webp",
+      "frameW": 54,
+      "frameH": 53,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "ui_star_full": {
+      "src": "ui/ui_star_full_{nn}@4x.webp",
+      "frameW": 54,
+      "frameH": 54,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "vfx_dust": {
+      "src": "vfx/vfx_dust_{nn}@4x.webp",
+      "frameW": 96,
+      "frameH": 96,
+      "frames": 5,
+      "fps": 16,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "vfx_hush": {
+      "src": "vfx/vfx_hush_{nn}@4x.webp",
+      "frameW": 96,
+      "frameH": 96,
+      "frames": 5,
+      "fps": 16,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "vfx_light": {
+      "src": "vfx/vfx_light_{nn}@4x.webp",
+      "frameW": 96,
+      "frameH": 96,
+      "frames": 5,
+      "fps": 16,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "scale": 4,
+      "loop": false
+    }
+  }
+}
