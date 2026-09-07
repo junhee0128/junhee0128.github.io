@@ -2,10 +2,7 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
     <meta name="color-scheme" content="dark" />
     <meta name="theme-color" content="#081522" />
     <link rel="icon" href="./pick/coin.webp" type="image/webp" />
@@ -22,6 +19,16 @@
     <link rel="modulepreload" crossorigin href="./assets/CanvasPool-DNCgqWYU.js">
     <link rel="modulepreload" crossorigin href="./assets/BufferResource-DMVw2qgu.js">
     <link rel="stylesheet" crossorigin href="./assets/index-BMrKV8Js.css">
+    <!-- groovplay:pwa -->
+    <link rel="manifest" href="./app.webmanifest" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="왕실 요리사 러너" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <script defer src="../../../mobile.js"></script>
+    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("../../../sw.js").catch(function(){})});</script>
+    <!-- /groovplay:pwa -->
   </head>
   <body>
     <div id="app"></div>

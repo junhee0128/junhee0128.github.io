@@ -361,19 +361,15 @@
         "partial": 0,
         "todo": 2
       },
-      "commit": {
-        "hash": "62761b9",
-        "date": "2026-09-07T18:16:14+09:00",
-        "subject": "이야기 컷도 화면 전체를 쓰고, 감사가 다섯 해상도에서 문제 없음을 확인한다"
-      },
+      "commit": null,
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2104
+          "ms": 2113
         },
         "test": {
           "ok": true,
-          "ms": 3456,
+          "ms": 3409,
           "tests": {
             "passed": 190,
             "failed": 0,
@@ -383,8 +379,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2478,
-        "at": "2026-09-07T09:16:33.250Z"
+        "ms": 2547,
+        "at": "2026-09-07T13:10:36.121Z"
       },
       "checkpoints": []
     }
