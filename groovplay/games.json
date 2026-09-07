@@ -1,11 +1,11 @@
 {
-  "builtAt": "2026-09-06T14:01:57.223Z",
+  "builtAt": "2026-09-07T09:16:33.251Z",
   "games": [
     {
       "id": "everdusk",
       "title": "EVERDUSK",
       "codename": "LUMEN RUSH",
-      "tagline": "빛을 든 세 명이 여섯 구역의 비콘을 다시 켜는 페인팅 러너. 성장·펫·유물·Fable이 에피소드를 잇는다.",
+      "tagline": "빛을 든 세 명이 여섯 구역의 비콘을 다시 켜는 페인팅 러너. 홈·탭·일일 임무·업적, 파워업 7, Hush 추격, 대사로 이어지는 에피소드.",
       "status": "playable",
       "accent": "#f0a63c",
       "engine": "Vite · TypeScript · Canvas 2D · WebAudio",
@@ -43,12 +43,24 @@
           "state": "done"
         },
         {
+          "name": "v4 셸 — 랜딩·홈·탭 5·대사·모바일 우선",
+          "state": "done"
+        },
+        {
+          "name": "v4 런 감각 — 카메라·자동 공격·파워업 7·Hush 추격",
+          "state": "done"
+        },
+        {
+          "name": "일일 임무 3 · 업적 15 · 구역별 지연 로딩",
+          "state": "done"
+        },
+        {
           "name": "실기 폰 플레이 확인 · 밸런스 패스",
           "state": "active",
           "note": "헤드리스로는 판정 불가"
         },
         {
-          "name": "PWA 오프라인 · 구역별 지연 로딩",
+          "name": "PWA 오프라인",
           "state": "todo"
         }
       ],
@@ -62,6 +74,10 @@
           "path": "design/PROGRESS.md"
         },
         {
+          "label": "제품 기획안 v4",
+          "path": "docs/everdusk/EVERDUSK_PRODUCT_PLAN_v4.md"
+        },
+        {
           "label": "제품 기획안 v3",
           "path": "docs/everdusk/EVERDUSK_PRODUCT_PLAN_v3.md"
         },
@@ -72,29 +88,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "000a6d9",
-        "date": "2026-09-06T00:33:31+09:00",
-        "subject": "골든 기준선: 허브의 초상과 Fable 버튼; 골든 스크립트가 스토리 비트를 건너뛴다"
+        "hash": "36211ff",
+        "date": "2026-09-07T17:55:30+09:00",
+        "subject": "v4 R2–R5: 런 감각·파워업 7·Hush 추격, 일일 임무·업적·보스 대사, 구역별 지연 로딩"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2541
+          "ms": 2515
         },
         "test": {
           "ok": true,
-          "ms": 5365,
+          "ms": 5206,
           "tests": {
-            "passed": 376,
+            "passed": 385,
             "failed": 0,
-            "total": 376
+            "total": 385
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3009,
-        "at": "2026-09-06T14:01:33.111Z"
+        "ms": 2862,
+        "at": "2026-09-07T08:55:41.007Z"
       },
       "checkpoints": []
     },
@@ -105,7 +121,7 @@
       "tagline": "동네 아이가 어처구니없이 사소한 사명을 세계 멸망급 각오로 수행하는 러너.",
       "status": "wip",
       "accent": "#2f7fff",
-      "engine": "Vite · TypeScript · Canvas 2D · 렌더한 2.5D 스프라이트 · Jua",
+      "engine": "Vite · TypeScript · Canvas 2D · 2.5D WebP 스프라이트 · Jua",
       "milestones": [
         {
           "name": "게이트 A — 손맛 (점프 · 2단 · 스핀 · 간식 라인)",
@@ -147,6 +163,11 @@
           "state": "done"
         },
         {
+          "name": "v3 전면 개편 — 두 버튼 조작 · 구간 연출 · 플레이어블 4 · 로비 · 오프닝 · WebP 지연 로딩 · 4층 시차",
+          "state": "done",
+          "note": "design/OVERHAUL_PLAN.md L1–L7"
+        },
+        {
           "name": "출시 판정 — 사람 플레이",
           "state": "active"
         }
@@ -155,6 +176,10 @@
         {
           "label": "README",
           "path": "README.md"
+        },
+        {
+          "label": "전면 개편 계획 v3",
+          "path": "design/OVERHAUL_PLAN.md"
         },
         {
           "label": "시즌 1 바이블",
@@ -181,18 +206,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "ffe3749",
-        "date": "2026-09-06T00:02:49+09:00",
-        "subject": "시즌 1 아트 66장 전부 착륙: 배경 12 · 세트 9 · 보스 12 · 적 가족 10 · 펫 7 · 초상 12 · 키 비주얼 · 표지 3"
+        "hash": "d12785b",
+        "date": "2026-09-07T17:41:24+09:00",
+        "subject": "튜토리얼 제목이 카드 안에 들어가게"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1692
+          "ms": 1983
         },
         "test": {
           "ok": true,
-          "ms": 10576,
+          "ms": 11335,
           "tests": {
             "passed": 76,
             "failed": 0,
@@ -202,8 +227,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2442,
-        "at": "2026-09-06T14:01:48.415Z"
+        "ms": 4706,
+        "at": "2026-09-07T08:41:45.915Z"
       },
       "checkpoints": []
     },
@@ -211,10 +236,10 @@
       "id": "royal-chef",
       "title": "왕실 요리사 러너",
       "codename": "ROYAL CHEF RUNNER",
-      "tagline": "낚싯줄에 걸린 물고기를 점프로 유도해 재료를 쓸어 담는 러너. 시즌 1 여덟 편(편마다 새 물고기·해역·규칙), 어시장 상점, 물속에서 행동하는 펫 다섯.",
+      "tagline": "낚싯줄에 걸린 물고기를 점프로 유도해 재료를 쓸어 담는 러너. 시즌 1 여덟 편, 시즌 프롤로그와 편별 오프닝, 어시장 상점, 행동하는 펫 다섯. 모바일 세로까지 최적화.",
       "status": "playable",
       "accent": "#e0a030",
-      "engine": "Vite · TypeScript · PixiJS · WebAudio 합성 · 정본에서 생성한 렌더 그림",
+      "engine": "Vite · TypeScript · PixiJS · WebAudio 합성 · 정본에서 생성한 WebP 그림 · 모바일 우선 UI",
       "milestones": [
         {
           "name": "관문 1 — 앱 부팅 · 렌더러 · 고정 스텝 클록 경계",
@@ -261,9 +286,29 @@
           "note": "2026-09-06 전부 생성·투명 검사 통과. Codex·사용자 시각 검수 대기"
         },
         {
+          "name": "모바일 우선 UI — 세로 차단 제거 · 48px 탭 · 12px 글자 바닥 · 옆으로 미는 선반 · 세로 플레이 띠",
+          "state": "done",
+          "note": "2026-09-07. tools/audit.mjs가 다섯 해상도 열세 화면에서 결함 0건을 지킨다"
+        },
+        {
+          "name": "진입과 이야기 — 시즌 프롤로그 5컷 · 편별 표제 카드와 지난 이야기 · 다음 화 예고 · 타자기 연출",
+          "state": "done",
+          "note": "2026-09-07. 시험 9건"
+        },
+        {
+          "name": "손맛 — 앞경 시차 · 카메라 추적과 속도 줌 · 뱅킹과 몸부림 · 항적 · 충격파 · 위험 테두리 · 구간 알림",
+          "state": "done",
+          "note": "2026-09-07. 실기 검수 대기"
+        },
+        {
+          "name": "무게 — 그림 121장 WebP 전환(44.9MB → 5.4MB), 빌드 51MB → 11MB",
+          "state": "done",
+          "note": "2026-09-07. tools/optimize.mjs"
+        },
+        {
           "name": "실기 폰 플레이 확인과 사용자 손맛 승인",
           "state": "active",
-          "note": "bingle-wsl:4173 배포. 헤드리스 Chromium으로는 손맛을 판정할 수 없다"
+          "note": "bingle-wsl:4173 포털 배포. 헤드리스로는 움직임을 판정할 수 없다"
         },
         {
           "name": "시즌 2 · 파티형 경쟁",
@@ -293,6 +338,10 @@
           "path": "design/FUN_TRACEABILITY.md"
         },
         {
+          "label": "품질 개선 3차 보고",
+          "path": "design/reports/QUALITY_PASS_v3.md"
+        },
+        {
           "label": "시즌 1 구현 보고",
           "path": "design/reports/SEASON_1_REPORT.md"
         },
@@ -313,29 +362,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "f27c305",
-        "date": "2026-09-06T00:08:31+09:00",
-        "subject": "시즌 1 보고와 game.json이 그림 121장과 검증 결과를 말한다"
+        "hash": "62761b9",
+        "date": "2026-09-07T18:16:14+09:00",
+        "subject": "이야기 컷도 화면 전체를 쓰고, 감사가 다섯 해상도에서 문제 없음을 확인한다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2114
+          "ms": 2104
         },
         "test": {
           "ok": true,
-          "ms": 3365,
+          "ms": 3456,
           "tests": {
-            "passed": 179,
+            "passed": 190,
             "failed": 0,
-            "total": 179
+            "total": 190
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 2771,
-        "at": "2026-09-06T14:01:57.223Z"
+        "ms": 2478,
+        "at": "2026-09-07T09:16:33.250Z"
       },
       "checkpoints": []
     }
