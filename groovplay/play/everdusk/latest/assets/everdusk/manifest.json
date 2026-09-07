@@ -458,8 +458,8 @@
     },
     "chr_ferren_dash": {
       "src": "characters/ferren/chr_ferren_dash_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 12,
       "pivot": [
@@ -471,8 +471,8 @@
     },
     "chr_ferren_defeat": {
       "src": "characters/ferren/chr_ferren_defeat_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 6,
       "pivot": [
@@ -484,8 +484,8 @@
     },
     "chr_ferren_double-jump": {
       "src": "characters/ferren/chr_ferren_double-jump_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 12,
       "pivot": [
@@ -497,8 +497,8 @@
     },
     "chr_ferren_hit": {
       "src": "characters/ferren/chr_ferren_hit_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 10,
       "pivot": [
@@ -510,8 +510,8 @@
     },
     "chr_ferren_idle": {
       "src": "characters/ferren/chr_ferren_idle_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 4,
       "fps": 6,
       "pivot": [
@@ -523,8 +523,8 @@
     },
     "chr_ferren_jump-apex": {
       "src": "characters/ferren/chr_ferren_jump-apex_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -536,8 +536,8 @@
     },
     "chr_ferren_jump-fall": {
       "src": "characters/ferren/chr_ferren_jump-fall_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 8,
       "pivot": [
@@ -549,8 +549,8 @@
     },
     "chr_ferren_jump-rise": {
       "src": "characters/ferren/chr_ferren_jump-rise_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 8,
       "pivot": [
@@ -562,8 +562,8 @@
     },
     "chr_ferren_landing": {
       "src": "characters/ferren/chr_ferren_landing_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -575,9 +575,9 @@
     },
     "chr_ferren_run": {
       "src": "characters/ferren/chr_ferren_run_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
-      "frames": 8,
+      "frameW": 160,
+      "frameH": 160,
+      "frames": 12,
       "fps": 14,
       "pivot": [
         0.5,
@@ -588,8 +588,8 @@
     },
     "chr_ferren_slide": {
       "src": "characters/ferren/chr_ferren_slide_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 8,
       "pivot": [
@@ -601,8 +601,8 @@
     },
     "chr_ferren_victory": {
       "src": "characters/ferren/chr_ferren_victory_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 6,
       "pivot": [
@@ -614,8 +614,8 @@
     },
     "chr_lyra_dash": {
       "src": "characters/lyra/chr_lyra_dash_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 12,
       "pivot": [
@@ -627,8 +627,8 @@
     },
     "chr_lyra_defeat": {
       "src": "characters/lyra/chr_lyra_defeat_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 6,
       "pivot": [
@@ -640,8 +640,8 @@
     },
     "chr_lyra_double-jump": {
       "src": "characters/lyra/chr_lyra_double-jump_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 12,
       "pivot": [
@@ -653,8 +653,8 @@
     },
     "chr_lyra_hit": {
       "src": "characters/lyra/chr_lyra_hit_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 10,
       "pivot": [
@@ -666,8 +666,8 @@
     },
     "chr_lyra_idle": {
       "src": "characters/lyra/chr_lyra_idle_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 4,
       "fps": 6,
       "pivot": [
@@ -679,8 +679,8 @@
     },
     "chr_lyra_jump-apex": {
       "src": "characters/lyra/chr_lyra_jump-apex_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -692,8 +692,8 @@
     },
     "chr_lyra_jump-fall": {
       "src": "characters/lyra/chr_lyra_jump-fall_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 8,
       "pivot": [
@@ -705,8 +705,8 @@
     },
     "chr_lyra_jump-rise": {
       "src": "characters/lyra/chr_lyra_jump-rise_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 8,
       "pivot": [
@@ -718,8 +718,8 @@
     },
     "chr_lyra_landing": {
       "src": "characters/lyra/chr_lyra_landing_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -731,9 +731,9 @@
     },
     "chr_lyra_run": {
       "src": "characters/lyra/chr_lyra_run_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
-      "frames": 8,
+      "frameW": 160,
+      "frameH": 160,
+      "frames": 12,
       "fps": 14,
       "pivot": [
         0.5,
@@ -744,8 +744,8 @@
     },
     "chr_lyra_slide": {
       "src": "characters/lyra/chr_lyra_slide_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 8,
       "pivot": [
@@ -757,8 +757,8 @@
     },
     "chr_lyra_victory": {
       "src": "characters/lyra/chr_lyra_victory_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 6,
       "pivot": [
@@ -770,8 +770,8 @@
     },
     "chr_sable_dash": {
       "src": "characters/sable/chr_sable_dash_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 12,
       "pivot": [
@@ -783,8 +783,8 @@
     },
     "chr_sable_defeat": {
       "src": "characters/sable/chr_sable_defeat_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 6,
       "pivot": [
@@ -796,8 +796,8 @@
     },
     "chr_sable_double-jump": {
       "src": "characters/sable/chr_sable_double-jump_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 12,
       "pivot": [
@@ -809,8 +809,8 @@
     },
     "chr_sable_hit": {
       "src": "characters/sable/chr_sable_hit_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 10,
       "pivot": [
@@ -822,8 +822,8 @@
     },
     "chr_sable_idle": {
       "src": "characters/sable/chr_sable_idle_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 4,
       "fps": 6,
       "pivot": [
@@ -835,8 +835,8 @@
     },
     "chr_sable_jump-apex": {
       "src": "characters/sable/chr_sable_jump-apex_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -848,8 +848,8 @@
     },
     "chr_sable_jump-fall": {
       "src": "characters/sable/chr_sable_jump-fall_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 8,
       "pivot": [
@@ -861,8 +861,8 @@
     },
     "chr_sable_jump-rise": {
       "src": "characters/sable/chr_sable_jump-rise_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 8,
       "pivot": [
@@ -874,8 +874,8 @@
     },
     "chr_sable_landing": {
       "src": "characters/sable/chr_sable_landing_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -887,9 +887,9 @@
     },
     "chr_sable_run": {
       "src": "characters/sable/chr_sable_run_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
-      "frames": 8,
+      "frameW": 160,
+      "frameH": 160,
+      "frames": 12,
       "fps": 14,
       "pivot": [
         0.5,
@@ -900,8 +900,8 @@
     },
     "chr_sable_slide": {
       "src": "characters/sable/chr_sable_slide_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 8,
       "pivot": [
@@ -913,8 +913,8 @@
     },
     "chr_sable_victory": {
       "src": "characters/sable/chr_sable_victory_{nn}@4x.webp",
-      "frameW": 96,
-      "frameH": 96,
+      "frameW": 160,
+      "frameH": 160,
       "frames": 2,
       "fps": 6,
       "pivot": [
@@ -924,10 +924,36 @@
       "scale": 4,
       "loop": false
     },
+    "enm_cage_break": {
+      "src": "enemies/enm_cage_break_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 3,
+      "fps": 14,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "enm_cage_idle": {
+      "src": "enemies/enm_cage_idle_{nn}@4x.webp",
+      "frameW": 80,
+      "frameH": 80,
+      "frames": 4,
+      "fps": 8,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": true
+    },
     "enm_choir_break": {
       "src": "enemies/enm_choir_break_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 96,
+      "frameH": 96,
       "frames": 3,
       "fps": 14,
       "pivot": [
@@ -939,8 +965,8 @@
     },
     "enm_choir_idle": {
       "src": "enemies/enm_choir_idle_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 96,
+      "frameH": 96,
       "frames": 4,
       "fps": 8,
       "pivot": [
@@ -952,8 +978,8 @@
     },
     "enm_hollowfolk_break": {
       "src": "enemies/enm_hollowfolk_break_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 104,
+      "frameH": 104,
       "frames": 3,
       "fps": 14,
       "pivot": [
@@ -965,8 +991,8 @@
     },
     "enm_hollowfolk_idle": {
       "src": "enemies/enm_hollowfolk_idle_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 104,
+      "frameH": 104,
       "frames": 4,
       "fps": 8,
       "pivot": [
@@ -978,8 +1004,8 @@
     },
     "enm_murmurs_break": {
       "src": "enemies/enm_murmurs_break_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 84,
+      "frameH": 84,
       "frames": 3,
       "fps": 14,
       "pivot": [
@@ -991,8 +1017,8 @@
     },
     "enm_murmurs_idle": {
       "src": "enemies/enm_murmurs_idle_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 84,
+      "frameH": 84,
       "frames": 4,
       "fps": 8,
       "pivot": [
@@ -1004,8 +1030,8 @@
     },
     "enm_stills_break": {
       "src": "enemies/enm_stills_break_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 92,
+      "frameH": 92,
       "frames": 3,
       "fps": 14,
       "pivot": [
@@ -1017,8 +1043,8 @@
     },
     "enm_stills_idle": {
       "src": "enemies/enm_stills_idle_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 92,
+      "frameH": 92,
       "frames": 4,
       "fps": 8,
       "pivot": [
@@ -1030,8 +1056,8 @@
     },
     "enm_wardens_break": {
       "src": "enemies/enm_wardens_break_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 116,
+      "frameH": 116,
       "frames": 3,
       "fps": 14,
       "pivot": [
@@ -1043,8 +1069,8 @@
     },
     "enm_wardens_idle": {
       "src": "enemies/enm_wardens_idle_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 128,
+      "frameW": 116,
+      "frameH": 116,
       "frames": 4,
       "fps": 8,
       "pivot": [
@@ -2798,8 +2824,8 @@
     },
     "haz_clocktower-ward_beam": {
       "src": "hazards/clocktower-ward/haz_clocktower-ward_beam_{nn}@4x.webp",
-      "frameW": 84,
-      "frameH": 108,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2811,8 +2837,8 @@
     },
     "haz_clocktower-ward_block-low": {
       "src": "hazards/clocktower-ward/haz_clocktower-ward_block-low_{nn}@4x.webp",
-      "frameW": 74,
-      "frameH": 53,
+      "frameW": 100,
+      "frameH": 100,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2824,8 +2850,8 @@
     },
     "haz_clocktower-ward_block-tall": {
       "src": "hazards/clocktower-ward/haz_clocktower-ward_block-tall_{nn}@4x.webp",
-      "frameW": 77,
-      "frameH": 197,
+      "frameW": 124,
+      "frameH": 124,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2837,7 +2863,7 @@
     },
     "haz_clocktower-ward_spike": {
       "src": "hazards/clocktower-ward/haz_clocktower-ward_spike_{nn}@4x.webp",
-      "frameW": 84,
+      "frameW": 94,
       "frameH": 94,
       "frames": 1,
       "fps": 0,
@@ -2850,8 +2876,8 @@
     },
     "haz_clocktower-ward_wall": {
       "src": "hazards/clocktower-ward/haz_clocktower-ward_wall_{nn}@4x.webp",
-      "frameW": 75,
-      "frameH": 240,
+      "frameW": 290,
+      "frameH": 290,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2861,49 +2887,75 @@
       "scale": 4,
       "loop": false
     },
-    "haz_drop_burst": {
-      "src": "hazards/haz_drop_burst_{nn}@4x.webp",
-      "frameW": 66,
-      "frameH": 112,
+    "haz_generic_beam": {
+      "src": "hazards/haz_generic_beam_{nn}@4x.webp",
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
         0.5,
-        0.5
+        1
       ],
       "scale": 4,
       "loop": false
     },
-    "haz_drop_crack": {
-      "src": "hazards/haz_drop_crack_{nn}@4x.webp",
-      "frameW": 44,
-      "frameH": 112,
+    "haz_generic_block-low": {
+      "src": "hazards/haz_generic_block-low_{nn}@4x.webp",
+      "frameW": 100,
+      "frameH": 100,
       "frames": 1,
       "fps": 0,
       "pivot": [
         0.5,
-        0.5
+        1
       ],
       "scale": 4,
       "loop": false
     },
-    "haz_drop_whole": {
-      "src": "hazards/haz_drop_whole_{nn}@4x.webp",
-      "frameW": 43,
-      "frameH": 108,
+    "haz_generic_block-tall": {
+      "src": "hazards/haz_generic_block-tall_{nn}@4x.webp",
+      "frameW": 124,
+      "frameH": 124,
       "frames": 1,
       "fps": 0,
       "pivot": [
         0.5,
-        0.5
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_generic_spike": {
+      "src": "hazards/haz_generic_spike_{nn}@4x.webp",
+      "frameW": 94,
+      "frameH": 94,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
+      ],
+      "scale": 4,
+      "loop": false
+    },
+    "haz_generic_wall": {
+      "src": "hazards/haz_generic_wall_{nn}@4x.webp",
+      "frameW": 290,
+      "frameH": 290,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0.5,
+        1
       ],
       "scale": 4,
       "loop": false
     },
     "haz_glassgarden_beam": {
       "src": "hazards/glassgarden/haz_glassgarden_beam_{nn}@4x.webp",
-      "frameW": 113,
-      "frameH": 88,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2915,8 +2967,8 @@
     },
     "haz_glassgarden_block-low": {
       "src": "hazards/glassgarden/haz_glassgarden_block-low_{nn}@4x.webp",
-      "frameW": 87,
-      "frameH": 77,
+      "frameW": 100,
+      "frameH": 100,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2928,8 +2980,8 @@
     },
     "haz_glassgarden_block-tall": {
       "src": "hazards/glassgarden/haz_glassgarden_block-tall_{nn}@4x.webp",
-      "frameW": 98,
-      "frameH": 186,
+      "frameW": 124,
+      "frameH": 124,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2941,8 +2993,8 @@
     },
     "haz_glassgarden_spike": {
       "src": "hazards/glassgarden/haz_glassgarden_spike_{nn}@4x.webp",
-      "frameW": 113,
-      "frameH": 50,
+      "frameW": 94,
+      "frameH": 94,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2954,8 +3006,8 @@
     },
     "haz_glassgarden_wall": {
       "src": "hazards/glassgarden/haz_glassgarden_wall_{nn}@4x.webp",
-      "frameW": 99,
-      "frameH": 240,
+      "frameW": 290,
+      "frameH": 290,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2967,8 +3019,8 @@
     },
     "haz_lantern-market_beam": {
       "src": "hazards/lantern-market/haz_lantern-market_beam_{nn}@4x.webp",
-      "frameW": 141,
-      "frameH": 113,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2980,8 +3032,8 @@
     },
     "haz_lantern-market_block-low": {
       "src": "hazards/lantern-market/haz_lantern-market_block-low_{nn}@4x.webp",
-      "frameW": 97,
-      "frameH": 112,
+      "frameW": 100,
+      "frameH": 100,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2993,8 +3045,8 @@
     },
     "haz_lantern-market_block-tall": {
       "src": "hazards/lantern-market/haz_lantern-market_block-tall_{nn}@4x.webp",
-      "frameW": 132,
-      "frameH": 205,
+      "frameW": 124,
+      "frameH": 124,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3006,8 +3058,8 @@
     },
     "haz_lantern-market_spike": {
       "src": "hazards/lantern-market/haz_lantern-market_spike_{nn}@4x.webp",
-      "frameW": 141,
-      "frameH": 104,
+      "frameW": 94,
+      "frameH": 94,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3019,8 +3071,8 @@
     },
     "haz_lantern-market_wall": {
       "src": "hazards/lantern-market/haz_lantern-market_wall_{nn}@4x.webp",
-      "frameW": 120,
-      "frameH": 240,
+      "frameW": 290,
+      "frameH": 290,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3032,8 +3084,8 @@
     },
     "haz_moonrail-depot_beam": {
       "src": "hazards/moonrail-depot/haz_moonrail-depot_beam_{nn}@4x.webp",
-      "frameW": 111,
-      "frameH": 124,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3045,8 +3097,8 @@
     },
     "haz_moonrail-depot_block-low": {
       "src": "hazards/moonrail-depot/haz_moonrail-depot_block-low_{nn}@4x.webp",
-      "frameW": 108,
-      "frameH": 83,
+      "frameW": 100,
+      "frameH": 100,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3058,8 +3110,8 @@
     },
     "haz_moonrail-depot_block-tall": {
       "src": "hazards/moonrail-depot/haz_moonrail-depot_block-tall_{nn}@4x.webp",
-      "frameW": 110,
-      "frameH": 190,
+      "frameW": 124,
+      "frameH": 124,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3071,8 +3123,8 @@
     },
     "haz_moonrail-depot_spike": {
       "src": "hazards/moonrail-depot/haz_moonrail-depot_spike_{nn}@4x.webp",
-      "frameW": 116,
-      "frameH": 120,
+      "frameW": 94,
+      "frameH": 94,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3084,47 +3136,8 @@
     },
     "haz_moonrail-depot_wall": {
       "src": "hazards/moonrail-depot/haz_moonrail-depot_wall_{nn}@4x.webp",
-      "frameW": 89,
-      "frameH": 240,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        1
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_mute_low": {
-      "src": "hazards/haz_mute_low_{nn}@4x.webp",
-      "frameW": 67,
-      "frameH": 59,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        1
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_mute_mid": {
-      "src": "hazards/haz_mute_mid_{nn}@4x.webp",
-      "frameW": 98,
-      "frameH": 89,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        1
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_mute_tall": {
-      "src": "hazards/haz_mute_tall_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 122,
+      "frameW": 290,
+      "frameH": 290,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3136,8 +3149,8 @@
     },
     "haz_rain-cathedral_beam": {
       "src": "hazards/rain-cathedral/haz_rain-cathedral_beam_{nn}@4x.webp",
-      "frameW": 110,
-      "frameH": 105,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3149,8 +3162,8 @@
     },
     "haz_rain-cathedral_block-low": {
       "src": "hazards/rain-cathedral/haz_rain-cathedral_block-low_{nn}@4x.webp",
-      "frameW": 97,
-      "frameH": 117,
+      "frameW": 100,
+      "frameH": 100,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3162,8 +3175,8 @@
     },
     "haz_rain-cathedral_block-tall": {
       "src": "hazards/rain-cathedral/haz_rain-cathedral_block-tall_{nn}@4x.webp",
-      "frameW": 100,
-      "frameH": 187,
+      "frameW": 124,
+      "frameH": 124,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3175,8 +3188,8 @@
     },
     "haz_rain-cathedral_spike": {
       "src": "hazards/rain-cathedral/haz_rain-cathedral_spike_{nn}@4x.webp",
-      "frameW": 110,
-      "frameH": 103,
+      "frameW": 94,
+      "frameH": 94,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3188,8 +3201,8 @@
     },
     "haz_rain-cathedral_wall": {
       "src": "hazards/rain-cathedral/haz_rain-cathedral_wall_{nn}@4x.webp",
-      "frameW": 97,
-      "frameH": 240,
+      "frameW": 290,
+      "frameH": 290,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3201,8 +3214,8 @@
     },
     "haz_silent-foundry_beam": {
       "src": "hazards/silent-foundry/haz_silent-foundry_beam_{nn}@4x.webp",
-      "frameW": 133,
-      "frameH": 130,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3214,8 +3227,8 @@
     },
     "haz_silent-foundry_block-low": {
       "src": "hazards/silent-foundry/haz_silent-foundry_block-low_{nn}@4x.webp",
-      "frameW": 107,
-      "frameH": 129,
+      "frameW": 100,
+      "frameH": 100,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3227,8 +3240,8 @@
     },
     "haz_silent-foundry_block-tall": {
       "src": "hazards/silent-foundry/haz_silent-foundry_block-tall_{nn}@4x.webp",
-      "frameW": 123,
-      "frameH": 186,
+      "frameW": 124,
+      "frameH": 124,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3240,8 +3253,8 @@
     },
     "haz_silent-foundry_spike": {
       "src": "hazards/silent-foundry/haz_silent-foundry_spike_{nn}@4x.webp",
-      "frameW": 133,
-      "frameH": 130,
+      "frameW": 94,
+      "frameH": 94,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3253,117 +3266,13 @@
     },
     "haz_silent-foundry_wall": {
       "src": "hazards/silent-foundry/haz_silent-foundry_wall_{nn}@4x.webp",
-      "frameW": 120,
-      "frameH": 240,
+      "frameW": 290,
+      "frameH": 290,
       "frames": 1,
       "fps": 0,
       "pivot": [
         0.5,
         1
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_thorn_low": {
-      "src": "hazards/haz_thorn_low_{nn}@4x.webp",
-      "frameW": 49,
-      "frameH": 83,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        1
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_thorn_mid": {
-      "src": "hazards/haz_thorn_mid_{nn}@4x.webp",
-      "frameW": 84,
-      "frameH": 104,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        1
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_thorn_tall": {
-      "src": "hazards/haz_thorn_tall_{nn}@4x.webp",
-      "frameW": 127,
-      "frameH": 121,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        1
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_wall_low": {
-      "src": "hazards/haz_wall_low_{nn}@4x.webp",
-      "frameW": 68,
-      "frameH": 74,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        1
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_wall_tall": {
-      "src": "hazards/haz_wall_tall_{nn}@4x.webp",
-      "frameW": 73,
-      "frameH": 128,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        1
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_wire_long": {
-      "src": "hazards/haz_wire_long_{nn}@4x.webp",
-      "frameW": 105,
-      "frameH": 27,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        0.5
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_wire_mid": {
-      "src": "hazards/haz_wire_mid_{nn}@4x.webp",
-      "frameW": 77,
-      "frameH": 25,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        0.5
-      ],
-      "scale": 4,
-      "loop": false
-    },
-    "haz_wire_short": {
-      "src": "hazards/haz_wire_short_{nn}@4x.webp",
-      "frameW": 55,
-      "frameH": 26,
-      "frames": 1,
-      "fps": 0,
-      "pivot": [
-        0.5,
-        0.5
       ],
       "scale": 4,
       "loop": false
@@ -3435,8 +3344,8 @@
     },
     "item_pick_afterglow": {
       "src": "items/item_pick_afterglow_{nn}@4x.webp",
-      "frameW": 36,
-      "frameH": 54,
+      "frameW": 68,
+      "frameH": 68,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3448,8 +3357,8 @@
     },
     "item_pick_burst": {
       "src": "items/item_pick_burst_{nn}@4x.webp",
-      "frameW": 31,
-      "frameH": 56,
+      "frameW": 68,
+      "frameH": 68,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3461,8 +3370,8 @@
     },
     "item_pick_light": {
       "src": "items/item_pick_light_{nn}@4x.webp",
-      "frameW": 32,
-      "frameH": 53,
+      "frameW": 68,
+      "frameH": 68,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3474,8 +3383,8 @@
     },
     "item_pick_magnet": {
       "src": "items/item_pick_magnet_{nn}@4x.webp",
-      "frameW": 36,
-      "frameH": 52,
+      "frameW": 68,
+      "frameH": 68,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3487,8 +3396,8 @@
     },
     "item_pick_shield": {
       "src": "items/item_pick_shield_{nn}@4x.webp",
-      "frameW": 30,
-      "frameH": 50,
+      "frameW": 68,
+      "frameH": 68,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3500,8 +3409,8 @@
     },
     "item_pick_sprint": {
       "src": "items/item_pick_sprint_{nn}@4x.webp",
-      "frameW": 34,
-      "frameH": 56,
+      "frameW": 68,
+      "frameH": 68,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3513,8 +3422,8 @@
     },
     "item_pick_windlight": {
       "src": "items/item_pick_windlight_{nn}@4x.webp",
-      "frameW": 33,
-      "frameH": 52,
+      "frameW": 68,
+      "frameH": 68,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3722,7 +3631,7 @@
     "item_spark_big": {
       "src": "items/item_spark_big_{nn}@4x.webp",
       "frameW": 44,
-      "frameH": 48,
+      "frameH": 44,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3734,8 +3643,8 @@
     },
     "item_spark_combo": {
       "src": "items/item_spark_combo_{nn}@4x.webp",
-      "frameW": 41,
-      "frameH": 39,
+      "frameW": 44,
+      "frameH": 44,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3747,8 +3656,8 @@
     },
     "item_spark_small": {
       "src": "items/item_spark_small_{nn}@4x.webp",
-      "frameW": 25,
-      "frameH": 26,
+      "frameW": 44,
+      "frameH": 44,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3760,8 +3669,8 @@
     },
     "pet_bellbit_ability": {
       "src": "pets/pet_bellbit_ability_{nn}@4x.webp",
-      "frameW": 64,
-      "frameH": 58,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3773,8 +3682,8 @@
     },
     "pet_bellbit_celebrate": {
       "src": "pets/pet_bellbit_celebrate_{nn}@4x.webp",
-      "frameW": 63,
-      "frameH": 56,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3786,8 +3695,8 @@
     },
     "pet_bellbit_follow": {
       "src": "pets/pet_bellbit_follow_{nn}@4x.webp",
-      "frameW": 62,
-      "frameH": 53,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3799,8 +3708,8 @@
     },
     "pet_bellbit_hurt": {
       "src": "pets/pet_bellbit_hurt_{nn}@4x.webp",
-      "frameW": 50,
-      "frameH": 49,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3812,8 +3721,8 @@
     },
     "pet_bellbit_idle": {
       "src": "pets/pet_bellbit_idle_{nn}@4x.webp",
-      "frameW": 64,
-      "frameH": 54,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3825,8 +3734,8 @@
     },
     "pet_ember-pup_ability": {
       "src": "pets/pet_ember-pup_ability_{nn}@4x.webp",
-      "frameW": 64,
-      "frameH": 58,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3838,8 +3747,8 @@
     },
     "pet_ember-pup_celebrate": {
       "src": "pets/pet_ember-pup_celebrate_{nn}@4x.webp",
-      "frameW": 58,
-      "frameH": 55,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3851,7 +3760,7 @@
     },
     "pet_ember-pup_follow": {
       "src": "pets/pet_ember-pup_follow_{nn}@4x.webp",
-      "frameW": 60,
+      "frameW": 52,
       "frameH": 52,
       "frames": 1,
       "fps": 0,
@@ -3877,8 +3786,8 @@
     },
     "pet_ember-pup_idle": {
       "src": "pets/pet_ember-pup_idle_{nn}@4x.webp",
-      "frameW": 64,
-      "frameH": 63,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3890,8 +3799,8 @@
     },
     "pet_glimmerfin_ability": {
       "src": "pets/pet_glimmerfin_ability_{nn}@4x.webp",
-      "frameW": 59,
-      "frameH": 41,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3903,8 +3812,8 @@
     },
     "pet_glimmerfin_celebrate": {
       "src": "pets/pet_glimmerfin_celebrate_{nn}@4x.webp",
-      "frameW": 56,
-      "frameH": 59,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3916,8 +3825,8 @@
     },
     "pet_glimmerfin_follow": {
       "src": "pets/pet_glimmerfin_follow_{nn}@4x.webp",
-      "frameW": 50,
-      "frameH": 40,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3929,8 +3838,8 @@
     },
     "pet_glimmerfin_hurt": {
       "src": "pets/pet_glimmerfin_hurt_{nn}@4x.webp",
-      "frameW": 36,
-      "frameH": 41,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3942,8 +3851,8 @@
     },
     "pet_glimmerfin_idle": {
       "src": "pets/pet_glimmerfin_idle_{nn}@4x.webp",
-      "frameW": 64,
-      "frameH": 59,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3955,8 +3864,8 @@
     },
     "pet_morrow_ability": {
       "src": "pets/pet_morrow_ability_{nn}@4x.webp",
-      "frameW": 60,
-      "frameH": 28,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3968,8 +3877,8 @@
     },
     "pet_morrow_celebrate": {
       "src": "pets/pet_morrow_celebrate_{nn}@4x.webp",
-      "frameW": 64,
-      "frameH": 56,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3981,8 +3890,8 @@
     },
     "pet_morrow_follow": {
       "src": "pets/pet_morrow_follow_{nn}@4x.webp",
-      "frameW": 58,
-      "frameH": 53,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3994,8 +3903,8 @@
     },
     "pet_morrow_hurt": {
       "src": "pets/pet_morrow_hurt_{nn}@4x.webp",
-      "frameW": 51,
-      "frameH": 50,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -4007,8 +3916,8 @@
     },
     "pet_morrow_idle": {
       "src": "pets/pet_morrow_idle_{nn}@4x.webp",
-      "frameW": 64,
-      "frameH": 58,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -4020,8 +3929,8 @@
     },
     "pet_mothkin_ability": {
       "src": "pets/pet_mothkin_ability_{nn}@4x.webp",
-      "frameW": 55,
-      "frameH": 64,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -4033,8 +3942,8 @@
     },
     "pet_mothkin_celebrate": {
       "src": "pets/pet_mothkin_celebrate_{nn}@4x.webp",
-      "frameW": 55,
-      "frameH": 50,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -4046,8 +3955,8 @@
     },
     "pet_mothkin_follow": {
       "src": "pets/pet_mothkin_follow_{nn}@4x.webp",
-      "frameW": 46,
-      "frameH": 39,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -4059,8 +3968,8 @@
     },
     "pet_mothkin_hurt": {
       "src": "pets/pet_mothkin_hurt_{nn}@4x.webp",
-      "frameW": 33,
-      "frameH": 39,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -4072,8 +3981,8 @@
     },
     "pet_mothkin_idle": {
       "src": "pets/pet_mothkin_idle_{nn}@4x.webp",
-      "frameW": 49,
-      "frameH": 51,
+      "frameW": 52,
+      "frameH": 52,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -4601,6 +4510,45 @@
         1
       ],
       "scale": 4,
+      "loop": false
+    },
+    "ui_showcase_ferren": {
+      "src": "ui/cards/ui_showcase_ferren.webp",
+      "frameW": 1024,
+      "frameH": 1391,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_showcase_lyra": {
+      "src": "ui/cards/ui_showcase_lyra.webp",
+      "frameW": 1024,
+      "frameH": 1437,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
+      "loop": false
+    },
+    "ui_showcase_sable": {
+      "src": "ui/cards/ui_showcase_sable.webp",
+      "frameW": 1024,
+      "frameH": 1408,
+      "frames": 1,
+      "fps": 0,
+      "pivot": [
+        0,
+        0
+      ],
+      "scale": 1,
       "loop": false
     },
     "ui_star_empty": {

@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-07T09:16:33.251Z",
+  "builtAt": "2026-09-07T14:52:48.463Z",
   "games": [
     {
       "id": "everdusk",
@@ -55,6 +55,10 @@
           "state": "done"
         },
         {
+          "name": "v5 크기 체계 · 게임플레이 재작화 · 관리자 패널",
+          "state": "done"
+        },
+        {
           "name": "실기 폰 플레이 확인 · 밸런스 패스",
           "state": "active",
           "note": "헤드리스로는 판정 불가"
@@ -74,6 +78,10 @@
           "path": "design/PROGRESS.md"
         },
         {
+          "label": "크기 체계",
+          "path": "docs/everdusk/SIZE_CHART.md"
+        },
+        {
           "label": "제품 기획안 v4",
           "path": "docs/everdusk/EVERDUSK_PRODUCT_PLAN_v4.md"
         },
@@ -88,29 +96,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "36211ff",
-        "date": "2026-09-07T17:55:30+09:00",
-        "subject": "v4 R2–R5: 런 감각·파워업 7·Hush 추격, 일일 임무·업적·보스 대사, 구역별 지연 로딩"
+        "hash": "9dfba22",
+        "date": "2026-09-07T23:52:11+09:00",
+        "subject": "v5 P1: 크기 체계와 게임플레이 전면 재작화, 별빛 재배치"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2515
+          "ms": 2521
         },
         "test": {
           "ok": true,
-          "ms": 5206,
+          "ms": 5212,
           "tests": {
-            "passed": 385,
+            "passed": 390,
             "failed": 0,
-            "total": 385
+            "total": 390
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 2862,
-        "at": "2026-09-07T08:55:41.007Z"
+        "ms": 3012,
+        "at": "2026-09-07T14:52:37.241Z"
       },
       "checkpoints": []
     },
