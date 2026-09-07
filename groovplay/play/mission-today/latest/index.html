@@ -7,9 +7,21 @@
     <title>오늘의 사명</title>
     <style>
       html, body { margin: 0; height: 100%; background: #cfe8ff; overflow: hidden; overscroll-behavior: none; }
-      canvas { display: block; width: 100vw; height: 100vh; touch-action: none; -webkit-user-select: none; user-select: none; }
+      /*
+        손에 든 브라우저에서 100vh는 "주소창이 접혔을 때"의 높이다. 주소창이 나와 있으면 캔버스가
+        보이는 영역보다 커져서 아래쪽 조작 단추와 HUD가 주소창 뒤로 숨는다. dvh는 지금 보이는 높이고,
+        --vvh는 포털 런타임(mobile.js)이 visualViewport로 재어 주는 같은 값이다. 셋을 겹쳐 적어
+        오래된 브라우저부터 차례로 받게 한다. 스크립트가 뜨면 main.ts가 픽셀로 다시 잡는다.
+      */
+      canvas { display: block; width: 100vw; height: 100vh; height: 100dvh; height: var(--vvh, 100dvh); touch-action: none; -webkit-user-select: none; user-select: none; }
+      /*
+        포털 런타임이 띄우는 전체 화면 손잡이(.gp-fs)의 기본 자리는 화면 오른쪽 아래인데, 이 게임은
+        거기가 뛰기 단추다. 겹치면 뛰려다 손잡이를 누른다. 두 단추 위로 올린다.
+        선택자를 body로 한 겹 더 좁혀서 런타임이 나중에 붙이는 규칙보다 우선하게 한다.
+      */
+      body .gp-fs, body .gp-fs--small { bottom: calc(22% + env(safe-area-inset-bottom, 0px)); }
     </style>
-    <script type="module" crossorigin src="./assets/index-ts2D5u5r.js"></script>
+    <script type="module" crossorigin src="./assets/index-BS__NbmY.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-B2q2Kslv.css">
     <!-- groovplay:pwa -->
     <link rel="manifest" href="./app.webmanifest" />
