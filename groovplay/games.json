@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-08T15:33:19.112Z",
+  "builtAt": "2026-09-08T15:44:35.926Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4640
+          "ms": 6224
         },
         "test": {
           "ok": true,
-          "ms": 6307,
+          "ms": 9666,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4017,
-        "at": "2026-09-08T15:32:27.115Z"
+        "ms": 7074,
+        "at": "2026-09-08T15:43:57.713Z"
       },
       "checkpoints": []
     },
@@ -221,11 +221,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2194
+          "ms": 2906
         },
         "test": {
           "ok": true,
-          "ms": 14601,
+          "ms": 17065,
           "tests": {
             "passed": 85,
             "failed": 0,
@@ -235,8 +235,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 23957,
-        "at": "2026-09-08T15:33:07.924Z"
+        "ms": 3736,
+        "at": "2026-09-08T15:44:22.464Z"
       },
       "checkpoints": []
     },
@@ -324,6 +324,11 @@
           "note": "2026-09-08. 세로 스크롤 최대 5.57×→1.21×, 잘린 그림 0, 주 행동 화면 밖 0. design/reports/MOBILE_v6.md"
         },
         {
+          "name": "가로 최적화와 세계의 앞뒤 v7 — 떠 있는 머리 · 스크롤 없는 가로 · 하나의 바닥 · 해역별 위험물",
+          "state": "done",
+          "note": "2026-09-09. 가로 스크롤 최대 2.69×→1.21×, 땅 셋을 하나로, 나무는 침몰선에만. design/reports/LANDSCAPE_AND_WORLD_v7.md"
+        },
+        {
           "name": "실기 폰 플레이 확인과 사용자 손맛 승인",
           "state": "active",
           "note": "bingle-wsl:4173 포털 배포. 헤드리스로는 움직임을 판정할 수 없다"
@@ -386,6 +391,14 @@
         {
           "label": "모바일 개선 v6 수행 보고",
           "path": "design/reports/MOBILE_v6.md"
+        },
+        {
+          "label": "가로 화면과 세계의 앞뒤 계획 v7",
+          "path": "design/LANDSCAPE_AND_WORLD_v7.md"
+        },
+        {
+          "label": "가로 화면과 세계의 앞뒤 보고 v7",
+          "path": "design/reports/LANDSCAPE_AND_WORLD_v7.md"
         }
       ],
       "progress": {
@@ -396,29 +409,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "920ee8c",
-        "date": "2026-09-08T20:54:49+09:00",
-        "subject": "화면 하나가 한 화면에 담긴다 — 모바일 전수개선"
+        "hash": "7c8372e",
+        "date": "2026-09-09T00:43:19+09:00",
+        "subject": "가로로 들어도 한 화면에 담기고, 바다에는 바닥이 하나뿐이다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2821
+          "ms": 3236
         },
         "test": {
           "ok": true,
-          "ms": 5120,
+          "ms": 6087,
           "tests": {
-            "passed": 222,
+            "passed": 225,
             "failed": 0,
-            "total": 222
+            "total": 225
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3218,
-        "at": "2026-09-08T15:33:19.107Z"
+        "ms": 3498,
+        "at": "2026-09-08T15:44:35.924Z"
       },
       "checkpoints": []
     }
