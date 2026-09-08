@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-08T10:54:52.938Z",
+  "builtAt": "2026-09-08T11:21:23.589Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 6246
+          "ms": 2934
         },
         "test": {
           "ok": true,
-          "ms": 10794,
+          "ms": 6581,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 6905,
-        "at": "2026-09-08T10:53:56.283Z"
+        "ms": 4007,
+        "at": "2026-09-08T11:20:26.044Z"
       },
       "checkpoints": []
     },
@@ -214,29 +214,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "b112c5e",
-        "date": "2026-09-08T08:47:21+09:00",
-        "subject": "주소창이 나와 있어도 화면이 잘리지 않는다"
+        "hash": "abd5d12",
+        "date": "2026-09-08T20:19:29+09:00",
+        "subject": "모바일 프론트엔드 전면 재작업 — 44px 규격, 세로 배치, 스크롤 목록"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4267
+          "ms": 2239
         },
         "test": {
           "ok": true,
-          "ms": 23582,
+          "ms": 15926,
           "tests": {
-            "passed": 76,
+            "passed": 83,
             "failed": 0,
-            "total": 76
+            "total": 83
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 7705,
-        "at": "2026-09-08T10:54:31.985Z"
+        "ms": 27243,
+        "at": "2026-09-08T11:21:11.511Z"
       },
       "checkpoints": []
     },
@@ -390,11 +390,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 6504
+          "ms": 2962
         },
         "test": {
           "ok": true,
-          "ms": 10390,
+          "ms": 5711,
           "tests": {
             "passed": 213,
             "failed": 0,
@@ -404,8 +404,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4019,
-        "at": "2026-09-08T10:54:52.938Z"
+        "ms": 3382,
+        "at": "2026-09-08T11:21:23.589Z"
       },
       "checkpoints": []
     }
