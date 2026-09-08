@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-08T15:44:35.926Z",
+  "builtAt": "2026-09-08T16:37:47.519Z",
   "games": [
     {
       "id": "everdusk",
@@ -96,18 +96,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "9d06b58",
-        "date": "2026-09-08T19:52:59+09:00",
-        "subject": "모바일: 메뉴는 스크롤하지 않는다"
+        "hash": "203ab33",
+        "date": "2026-09-09T01:34:51+09:00",
+        "subject": "가로 화면의 게임으로: 그림 크기, 다이얼로그 폐지, HUD, 진행 표시"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 6224
+          "ms": 2457
         },
         "test": {
           "ok": true,
-          "ms": 9666,
+          "ms": 5526,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 7074,
-        "at": "2026-09-08T15:43:57.713Z"
+        "ms": 2915,
+        "at": "2026-09-08T16:37:19.148Z"
       },
       "checkpoints": []
     },
@@ -221,11 +221,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2906
+          "ms": 2045
         },
         "test": {
           "ok": true,
-          "ms": 17065,
+          "ms": 12371,
           "tests": {
             "passed": 85,
             "failed": 0,
@@ -235,8 +235,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3736,
-        "at": "2026-09-08T15:44:22.464Z"
+        "ms": 3129,
+        "at": "2026-09-08T16:37:36.758Z"
       },
       "checkpoints": []
     },
@@ -416,11 +416,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3236
+          "ms": 2696
         },
         "test": {
           "ok": true,
-          "ms": 6087,
+          "ms": 5153,
           "tests": {
             "passed": 225,
             "failed": 0,
@@ -430,8 +430,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3498,
-        "at": "2026-09-08T15:44:35.924Z"
+        "ms": 2894,
+        "at": "2026-09-08T16:37:47.519Z"
       },
       "checkpoints": []
     }
