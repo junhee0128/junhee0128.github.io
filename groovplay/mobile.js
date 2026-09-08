@@ -143,9 +143,6 @@
   const canFullscreen =
     typeof fsEl.requestFullscreen === "function" || typeof fsEl.webkitRequestFullscreen === "function";
 
-  const dismissedAt = Number(localStorage.getItem(DISMISS_KEY) ?? 0);
-  if (Date.now() - dismissedAt < DISMISS_DAYS * 86400000) return;
-
   let installPrompt = null;
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
@@ -167,6 +164,27 @@
       /* 사용자가 거부했거나 지원하지 않는다 */
     }
   };
+
+  // ── 1a. 첫 조작에 전체 화면 ──────────────────────────────────
+  // 주소창이 떠 있으면 게임의 아래쪽 조작 단추가 가려진다. 브라우저는 사용자
+  // 제스처 안에서만 전체 화면을 허락하므로, 게임을 처음 만지는 그 순간을 쓴다.
+  // 한 번만 시도하고, 거절당해도 조용히 넘어간다 — 화면은 이미 보이는 높이에
+  // 맞춰져 있으므로 전체 화면은 더 나은 쪽이지 필수는 아니다.
+  const automated = nav.webdriver === true || window.__LUMEN_QA__ === true;
+  if (window.__GP_KIND__ === "game" && touch && canFullscreen && !isIOS && !automated) {
+    const grab = () => {
+      doc.removeEventListener("pointerdown", grab);
+      doc.removeEventListener("keydown", grab);
+      if (doc.fullscreenElement) return;
+      void enterFullscreen();
+    };
+    doc.addEventListener("pointerdown", grab, { passive: true });
+    doc.addEventListener("keydown", grab);
+  }
+
+  // 여기부터는 안내 배너다. 최근에 닫았다면 띄우지 않는다.
+  const dismissedAt = Number(localStorage.getItem(DISMISS_KEY) ?? 0);
+  if (Date.now() - dismissedAt < DISMISS_DAYS * 86400000) return;
 
   const openSheet = () => {
     const sheet = doc.createElement("div");

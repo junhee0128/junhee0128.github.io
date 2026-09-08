@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-08T00:44:02.136Z",
+  "builtAt": "2026-09-08T08:44:46.208Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2746
+          "ms": 2513
         },
         "test": {
           "ok": true,
-          "ms": 5556,
+          "ms": 5654,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3602,
-        "at": "2026-09-08T00:43:21.951Z"
+        "ms": 2952,
+        "at": "2026-09-08T08:44:18.713Z"
       },
       "checkpoints": []
     },
@@ -221,11 +221,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2020
+          "ms": 1851
         },
         "test": {
           "ok": true,
-          "ms": 13483,
+          "ms": 12720,
           "tests": {
             "passed": 76,
             "failed": 0,
@@ -235,8 +235,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 13041,
-        "at": "2026-09-08T00:43:51.067Z"
+        "ms": 2777,
+        "at": "2026-09-08T08:44:36.099Z"
       },
       "checkpoints": []
     },
@@ -390,11 +390,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2568
+          "ms": 2489
         },
         "test": {
           "ok": true,
-          "ms": 4899,
+          "ms": 4757,
           "tests": {
             "passed": 213,
             "failed": 0,
@@ -404,8 +404,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3039,
-        "at": "2026-09-08T00:44:02.134Z"
+        "ms": 2848,
+        "at": "2026-09-08T08:44:46.208Z"
       },
       "checkpoints": []
     }
