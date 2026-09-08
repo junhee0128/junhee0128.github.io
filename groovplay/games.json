@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-08T11:21:23.589Z",
+  "builtAt": "2026-09-08T11:55:52.524Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2934
+          "ms": 2716
         },
         "test": {
           "ok": true,
-          "ms": 6581,
+          "ms": 5733,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4007,
-        "at": "2026-09-08T11:20:26.044Z"
+        "ms": 3716,
+        "at": "2026-09-08T11:55:20.966Z"
       },
       "checkpoints": []
     },
@@ -221,11 +221,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2239
+          "ms": 2128
         },
         "test": {
           "ok": true,
-          "ms": 15926,
+          "ms": 13968,
           "tests": {
             "passed": 83,
             "failed": 0,
@@ -235,8 +235,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 27243,
-        "at": "2026-09-08T11:21:11.511Z"
+        "ms": 3176,
+        "at": "2026-09-08T11:55:40.861Z"
       },
       "checkpoints": []
     },
@@ -319,6 +319,11 @@
           "note": "2026-09-08. design/reports/IMPROVEMENT_v5.md. 새 시험 13항목, 감사 결함 0건"
         },
         {
+          "name": "모바일 전수개선 v6 — 머리글 압축 · 아래 고정 행동 막대 · 탭 분할 · 그림 잘림 제거",
+          "state": "done",
+          "note": "2026-09-08. 세로 스크롤 최대 5.57×→1.21×, 잘린 그림 0, 주 행동 화면 밖 0. design/reports/MOBILE_v6.md"
+        },
+        {
           "name": "실기 폰 플레이 확인과 사용자 손맛 승인",
           "state": "active",
           "note": "bingle-wsl:4173 포털 배포. 헤드리스로는 움직임을 판정할 수 없다"
@@ -373,6 +378,14 @@
         {
           "label": "개선 5차 수행 보고",
           "path": "design/reports/IMPROVEMENT_v5.md"
+        },
+        {
+          "label": "모바일 전수조사와 개선 계획 v6",
+          "path": "design/MOBILE_AUDIT_v6.md"
+        },
+        {
+          "label": "모바일 개선 v6 수행 보고",
+          "path": "design/reports/MOBILE_v6.md"
         }
       ],
       "progress": {
@@ -383,29 +396,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "6d97049",
-        "date": "2026-09-08T09:42:52+09:00",
-        "subject": "여덟 편이 서로 다른 판이 되고, 세계가 화면 비율에 맞는다"
+        "hash": "920ee8c",
+        "date": "2026-09-08T20:54:49+09:00",
+        "subject": "화면 하나가 한 화면에 담긴다 — 모바일 전수개선"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2962
+          "ms": 2685
         },
         "test": {
           "ok": true,
-          "ms": 5711,
+          "ms": 5141,
           "tests": {
-            "passed": 213,
+            "passed": 222,
             "failed": 0,
-            "total": 213
+            "total": 222
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3382,
-        "at": "2026-09-08T11:21:23.589Z"
+        "ms": 3277,
+        "at": "2026-09-08T11:55:52.523Z"
       },
       "checkpoints": []
     }
