@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-08T00:03:42.617Z",
+  "builtAt": "2026-09-08T00:44:02.136Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3960
+          "ms": 2746
         },
         "test": {
           "ok": true,
-          "ms": 9066,
+          "ms": 5556,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 5005,
-        "at": "2026-09-08T00:03:01.432Z"
+        "ms": 3602,
+        "at": "2026-09-08T00:43:21.951Z"
       },
       "checkpoints": []
     },
@@ -221,11 +221,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3269
+          "ms": 2020
         },
         "test": {
           "ok": true,
-          "ms": 18145,
+          "ms": 13483,
           "tests": {
             "passed": 76,
             "failed": 0,
@@ -235,8 +235,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4779,
-        "at": "2026-09-08T00:03:27.720Z"
+        "ms": 13041,
+        "at": "2026-09-08T00:43:51.067Z"
       },
       "checkpoints": []
     },
@@ -244,7 +244,7 @@
       "id": "royal-chef",
       "title": "왕실 요리사 러너",
       "codename": "ROYAL CHEF RUNNER",
-      "tagline": "낚싯줄에 걸린 물고기를 점프로 유도해 재료를 쓸어 담는 러너. 시즌 1 여덟 편, 시즌 프롤로그와 편별 오프닝, 어시장 상점, 행동하는 펫 다섯. 모바일 세로까지 최적화.",
+      "tagline": "낚싯줄에 걸린 물고기를 점프로 유도해 재료를 쓸어 담는 러너. 시즌 1 여덟 편이 서로 다른 코스·우두머리·마무리를 갖고, 시즌 프롤로그와 편별 오프닝, 어시장 상점, 행동하는 펫 다섯. 화면 비율에 맞춰 세계가 늘어난다 — 모바일 세로까지.",
       "status": "playable",
       "accent": "#e0a030",
       "engine": "Vite · TypeScript · PixiJS · WebAudio 합성 · 정본에서 생성한 WebP 그림 · 모바일 우선 UI",
@@ -314,6 +314,11 @@
           "note": "2026-09-07. tools/optimize.mjs"
         },
         {
+          "name": "개선 5차 — 편별 코스 다양화 · 화면 비율 적응 · 뜰채 포획 연출 · 특급 감기 예고 · 이야기 깜빡임 제거 · 초장 복선",
+          "state": "done",
+          "note": "2026-09-08. design/reports/IMPROVEMENT_v5.md. 새 시험 13항목, 감사 결함 0건"
+        },
+        {
           "name": "실기 폰 플레이 확인과 사용자 손맛 승인",
           "state": "active",
           "note": "bingle-wsl:4173 포털 배포. 헤드리스로는 움직임을 판정할 수 없다"
@@ -360,6 +365,14 @@
         {
           "label": "시각 시스템",
           "path": "design/approved/VISUAL_SYSTEM.md"
+        },
+        {
+          "label": "개선 5차 계획",
+          "path": "design/IMPROVEMENT_v5.md"
+        },
+        {
+          "label": "개선 5차 수행 보고",
+          "path": "design/reports/IMPROVEMENT_v5.md"
         }
       ],
       "progress": {
@@ -370,29 +383,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "948c3a8",
-        "date": "2026-09-08T07:53:31+09:00",
-        "subject": "스티커처럼 보이던 그림 넷이 같은 빛 아래로 들어온다"
+        "hash": "6d97049",
+        "date": "2026-09-08T09:42:52+09:00",
+        "subject": "여덟 편이 서로 다른 판이 되고, 세계가 화면 비율에 맞는다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4218
+          "ms": 2568
         },
         "test": {
           "ok": true,
-          "ms": 5829,
+          "ms": 4899,
           "tests": {
-            "passed": 199,
+            "passed": 213,
             "failed": 0,
-            "total": 199
+            "total": 213
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 4819,
-        "at": "2026-09-08T00:03:42.616Z"
+        "ms": 3039,
+        "at": "2026-09-08T00:44:02.134Z"
       },
       "checkpoints": []
     }
