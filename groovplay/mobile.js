@@ -144,6 +144,12 @@
     typeof fsEl.requestFullscreen === "function" || typeof fsEl.webkitRequestFullscreen === "function";
 
   let installPrompt = null;
+  // 전체 화면을 청했는데 브라우저가 거절한 적이 있는가.
+  let fullscreenRefused = false;
+  let lastError = "";
+  // 안내 단추. 아래의 조기 return 보다 앞에서 선언해야 한다 — 배너를 닫아 둔
+  // 사용자도 전체 화면 쪽 코드는 그대로 돌기 때문이다.
+  let button = null;
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     installPrompt = e;
@@ -152,17 +158,27 @@
 
   const enterFullscreen = async () => {
     try {
-      if (typeof fsEl.requestFullscreen === "function") await fsEl.requestFullscreen({ navigationUI: "hide" });
-      else if (typeof fsEl.webkitRequestFullscreen === "function") fsEl.webkitRequestFullscreen();
-      // 전체 화면에서만 방향 잠금이 허용된다. 안 되는 곳에서는 조용히 넘어간다.
-      try {
-        await screen.orientation?.lock?.("any");
-      } catch {
-        /* 지원하지 않는 브라우저 */
+      if (typeof fsEl.requestFullscreen === "function") {
+        // navigationUI 를 모르는 브라우저는 인자째로 거부한다. 그때는 맨손으로 한 번 더.
+        try {
+          await fsEl.requestFullscreen({ navigationUI: "hide" });
+        } catch {
+          await fsEl.requestFullscreen();
+        }
+      } else if (typeof fsEl.webkitRequestFullscreen === "function") {
+        fsEl.webkitRequestFullscreen();
       }
-    } catch {
-      /* 사용자가 거부했거나 지원하지 않는다 */
+    } catch (err) {
+      lastError = String((err && err.message) || err);
+      return false;
     }
+    // 방향 잠금은 전체 화면에 들어간 다음의 별개 시도다. 실패해도 전체 화면은 그대로다.
+    try {
+      await screen.orientation?.lock?.("any");
+    } catch {
+      /* 지원하지 않는 브라우저 */
+    }
+    return true;
   };
 
   // ── 1a. 첫 조작에 전체 화면 ──────────────────────────────────
@@ -172,14 +188,34 @@
   // 맞춰져 있으므로 전체 화면은 더 나은 쪽이지 필수는 아니다.
   const automated = nav.webdriver === true || window.__LUMEN_QA__ === true;
   if (window.__GP_KIND__ === "game" && touch && canFullscreen && !isIOS && !automated) {
-    const grab = () => {
-      doc.removeEventListener("pointerdown", grab);
-      doc.removeEventListener("keydown", grab);
-      if (doc.fullscreenElement) return;
-      void enterFullscreen();
+    // 여러 갈래로 듣는다. 활성화(user activation)를 인정하는 이벤트가 브라우저마다
+    // 다르고, 캡처 단계로 잡아야 게임이 먼저 삼켜도 놓치지 않는다.
+    const TYPES = ["pointerdown", "touchend", "click", "keydown"];
+    let tries = 0;
+    const detach = () => {
+      for (const type of TYPES) doc.removeEventListener(type, grab, true);
     };
-    doc.addEventListener("pointerdown", grab, { passive: true });
-    doc.addEventListener("keydown", grab);
+    function grab() {
+      // 한 번 거절당했다고 포기하지 않는다 — 다음 조작에서 다시 청한다.
+      // 성공했거나 여러 번 거절당하면 조용히 물러난다.
+      if (doc.fullscreenElement) return detach();
+      if (tries >= 8) return detach();
+      tries += 1;
+      void enterFullscreen().then((ok) => {
+        if (ok || doc.fullscreenElement) return;
+        // 이 기기에서는 전체 화면 API 가 듣지 않는다. 남은 답은 설치뿐이다.
+        fullscreenRefused = true;
+        if (button) {
+          const label = button.querySelector(".gp-fs-label");
+          if (label) label.textContent = "앱으로 설치";
+          button.classList.remove("gp-fs--small");
+        }
+      });
+    }
+    for (const type of TYPES) doc.addEventListener(type, grab, { capture: true, passive: true });
+    doc.addEventListener("fullscreenchange", () => {
+      if (doc.fullscreenElement) detach();
+    });
   }
 
   // 여기부터는 안내 배너다. 최근에 닫았다면 띄우지 않는다.
@@ -200,7 +236,6 @@
     doc.body.appendChild(sheet);
   };
 
-  let button = null;
   const mount = () => {
     if (button || !doc.body) return;
     // 손가락으로 하는 기기에서만 띄운다. 데스크탑에서는 주소창이 문제가 아니다.
@@ -222,9 +257,10 @@
         installPrompt = null;
         return;
       }
-      if (canFullscreen && !isIOS) {
-        await enterFullscreen();
-        return;
+      if (canFullscreen && !isIOS && !fullscreenRefused) {
+        const ok = await enterFullscreen();
+        if (ok) return;
+        fullscreenRefused = true;
       }
       openSheet();
     });
@@ -242,6 +278,37 @@
     if (doc.fullscreenElement && button) button.style.display = "none";
     else if (button) button.style.display = "";
   });
+
+  /*
+   * 전체 화면이 왜 안 되는지는 기기마다 다르고, 손에 든 기기에서만 재현된다.
+   * `?fsdebug` 를 붙여 열면 판단에 쓴 값과 마지막 실패 이유를 그대로 보여 준다.
+   * 이것이 없으면 원격에서는 추측밖에 할 수 없다.
+   */
+  if (/(^|[?&])fsdebug($|[=&])/.test(location.search)) {
+    const panel = doc.createElement("pre");
+    panel.style.cssText =
+      "position:fixed;left:8px;top:8px;z-index:2147483002;margin:0;padding:10px 12px;max-width:calc(100vw - 16px);" +
+      "border-radius:10px;background:rgba(6,10,18,0.92);color:#d8ffd8;font:600 12px/1.5 ui-monospace,monospace;white-space:pre-wrap";
+    const draw = () => {
+      panel.textContent = [
+        `kind        ${String(window.__GP_KIND__)}`,
+        `touchPoints ${nav.maxTouchPoints}`,
+        `canFS       ${canFullscreen}`,
+        `iOS         ${isIOS}`,
+        `standalone  ${standalone}`,
+        `webdriver   ${nav.webdriver === true}`,
+        `fullscreen  ${!!doc.fullscreenElement}`,
+        `refused     ${fullscreenRefused}`,
+        `lastError   ${lastError || "-"}`,
+        `viewport    ${window.innerWidth}x${window.innerHeight} / vvh ${root.style.getPropertyValue("--vvh") || "-"}`,
+      ].join("\n");
+    };
+    draw();
+    setInterval(draw, 500);
+    const put = () => doc.body && doc.body.appendChild(panel);
+    if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", put);
+    else put();
+  }
 
   if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", mount);
   else mount();
