@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-08T11:55:52.524Z",
+  "builtAt": "2026-09-08T13:48:33.671Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2716
+          "ms": 2766
         },
         "test": {
           "ok": true,
-          "ms": 5733,
+          "ms": 6415,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3716,
-        "at": "2026-09-08T11:55:20.966Z"
+        "ms": 3769,
+        "at": "2026-09-08T13:47:38.007Z"
       },
       "checkpoints": []
     },
@@ -214,29 +214,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "abd5d12",
-        "date": "2026-09-08T20:19:29+09:00",
-        "subject": "모바일 프론트엔드 전면 재작업 — 44px 규격, 세로 배치, 스크롤 목록"
+        "hash": "aca2640",
+        "date": "2026-09-08T22:46:52+09:00",
+        "subject": "눌러도 안 되던 버튼들과 겹치던 글자들"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2128
+          "ms": 2100
         },
         "test": {
           "ok": true,
-          "ms": 13968,
+          "ms": 14306,
           "tests": {
-            "passed": 83,
+            "passed": 85,
             "failed": 0,
-            "total": 83
+            "total": 85
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3176,
-        "at": "2026-09-08T11:55:40.861Z"
+        "ms": 27258,
+        "at": "2026-09-08T13:48:21.738Z"
       },
       "checkpoints": []
     },
@@ -403,11 +403,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2685
+          "ms": 2867
         },
         "test": {
           "ok": true,
-          "ms": 5141,
+          "ms": 5731,
           "tests": {
             "passed": 222,
             "failed": 0,
@@ -417,8 +417,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3277,
-        "at": "2026-09-08T11:55:52.523Z"
+        "ms": 3316,
+        "at": "2026-09-08T13:48:33.671Z"
       },
       "checkpoints": []
     }
