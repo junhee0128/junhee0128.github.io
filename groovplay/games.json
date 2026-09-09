@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-09T12:48:20.993Z",
+  "builtAt": "2026-09-09T14:26:10.196Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2528
+          "ms": 2942
         },
         "test": {
           "ok": true,
-          "ms": 5413,
+          "ms": 6229,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3165,
-        "at": "2026-09-09T12:47:50.494Z"
+        "ms": 3761,
+        "at": "2026-09-09T14:25:36.355Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -215,29 +215,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "4427249",
-        "date": "2026-09-09T21:47:25+09:00",
-        "subject": "A안 승격 — 상용 수준 개편 기획과, 계측으로 잡아낸 결함 수정"
+        "hash": "207bff1",
+        "date": "2026-09-09T23:25:09+09:00",
+        "subject": "A-4~A-7: 아이콘·상태·토스트·애니메이션 프레임"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2109
+          "ms": 2282
         },
         "test": {
           "ok": true,
-          "ms": 13412,
+          "ms": 14912,
           "tests": {
-            "passed": 85,
+            "passed": 99,
             "failed": 0,
-            "total": 85
+            "total": 99
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3456,
-        "at": "2026-09-09T12:48:09.519Z"
+        "ms": 3782,
+        "at": "2026-09-09T14:25:57.392Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -431,11 +431,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2742
+          "ms": 3255
         },
         "test": {
           "ok": true,
-          "ms": 5539,
+          "ms": 6107,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -445,8 +445,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3174,
-        "at": "2026-09-09T12:48:20.992Z"
+        "ms": 3416,
+        "at": "2026-09-09T14:26:10.191Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"
