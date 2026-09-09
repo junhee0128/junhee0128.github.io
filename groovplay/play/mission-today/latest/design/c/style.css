@@ -58,7 +58,8 @@ h1, .sfx, .act, .cost, .kind { font-family: "Black Han Sans", system-ui, sans-se
 /* ── 오른쪽 컷 열 ────────────────────────────────────────────────────────── */
 .col { position: absolute; right: 10px; width: 324px; top: 10px; bottom: 10px; z-index: 5;
   display: flex; flex-direction: column; gap: 8px }
-.pan.balloon { padding: 10px 13px 12px; flex: none; height: 136px; border-radius: 18px }
+.pan.balloon { padding: 10px 13px 12px; flex: none; height: 136px; border-radius: 18px; overflow: hidden }
+.shop .pan.balloon { flex: 1; height: auto; min-height: 0; display: flex; flex-direction: column }
 .pan.balloon::after { content: ""; position: absolute; left: 34px; bottom: -18px; width: 26px; height: 20px;
   background: #fff; border-right: 4px solid var(--ink); border-bottom: 4px solid var(--ink);
   transform: skewX(-24deg) }
@@ -156,4 +157,4 @@ h1, .sfx, .act, .cost, .kind { font-family: "Black Han Sans", system-ui, sans-se
 .cost { display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 12px; font-size: 15px;
   color: #fff; background: var(--blue); border: 3px solid var(--ink); margin-top: 3px }
 .cost.got { background: #E4E8F0; color: var(--mute) }
-.col .balloon .big { display: block; margin: 2px auto 6px; height: 96px; object-fit: contain }
+.col .balloon .big { display: block; margin: 2px auto 6px; height: 88px; object-fit: contain; flex: none }

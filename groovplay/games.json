@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-09T12:28:56.945Z",
+  "builtAt": "2026-09-09T12:48:20.993Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2638
+          "ms": 2528
         },
         "test": {
           "ok": true,
-          "ms": 5417,
+          "ms": 5413,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3489,
-        "at": "2026-09-09T12:28:24.389Z"
+        "ms": 3165,
+        "at": "2026-09-09T12:47:50.494Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -215,18 +215,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "f0fcc21",
-        "date": "2026-09-09T12:46:05+09:00",
-        "subject": "시안 셋 — 부품을 그리는 것부터 다시"
+        "hash": "4427249",
+        "date": "2026-09-09T21:47:25+09:00",
+        "subject": "A안 승격 — 상용 수준 개편 기획과, 계측으로 잡아낸 결함 수정"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2088
+          "ms": 2109
         },
         "test": {
           "ok": true,
-          "ms": 13717,
+          "ms": 13412,
           "tests": {
             "passed": 85,
             "failed": 0,
@@ -236,8 +236,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3774,
-        "at": "2026-09-09T12:28:44.713Z"
+        "ms": 3456,
+        "at": "2026-09-09T12:48:09.519Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -431,11 +431,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2779
+          "ms": 2742
         },
         "test": {
           "ok": true,
-          "ms": 5576,
+          "ms": 5539,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -445,8 +445,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3318,
-        "at": "2026-09-09T12:28:56.944Z"
+        "ms": 3174,
+        "at": "2026-09-09T12:48:20.992Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"

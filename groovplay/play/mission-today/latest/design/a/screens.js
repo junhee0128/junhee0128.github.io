@@ -20,6 +20,7 @@ const rail = (on) => `<nav class="rail">
 
 const stage = () => `<section class="stage">
   <div class="rug"></div>
+  <div class="birdshade"></div>
   ${im("idle/doyoung", "hero")}${im("friend/mong1", "dog")}${im("pet/sparrow", "bird")}
   <div class="tagplate"><b>도영</b><span>몽이 · 짹이 · 소방관</span></div>
 </section>`;
@@ -35,9 +36,9 @@ const missionCard = `<article class="card mission">
 </article>`;
 
 const quest = `<article class="card quest">
-  <h4>오늘의 추가 지령</h4>
-  <div class="qr"><span>Perfect 5회 연속</span><div class="bar"><i style="--p:0%"></i></div><b>0/5</b></div>
-  <div class="qr"><span>폭주 2회</span><div class="bar"><i style="--p:0%"></i></div><b>0/2</b></div>
+  <h4>오늘의 지령</h4>
+  <div class="qr"><span>Perfect</span><div class="bar"><i style="--p:0%"></i></div><b>0/5</b></div>
+  <div class="qr"><span>폭주</span><div class="bar"><i style="--p:0%"></i></div><b>0/2</b></div>
 </article>`;
 
 const lobbyLand = () => `<div class="scr land lobby">

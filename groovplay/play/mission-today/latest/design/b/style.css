@@ -75,10 +75,10 @@ h1, h4, .btn, .tb em, .kind { font-family: "Gaegu", system-ui, sans-serif; font-
   background: linear-gradient(180deg, #2E7BFF, var(--blue)); border-color: #fff;
   box-shadow: 0 6px 13px rgba(11,79,201,.4) }
 .two { display: flex; gap: 9px } .two .btn { flex: 1; font-size: 16px }
-.quest { flex: 1; min-height: 0; transform: rotate(.6deg); display: flex; flex-direction: column; gap: 5px }
+.quest { flex: none; height: 86px; overflow: hidden; transform: rotate(.6deg); display: flex; flex-direction: column; gap: 4px }
 .land .quest h4 { display: none }
 .quest h4 { font-size: 16px; color: var(--mute) }
-.qr { display: grid; grid-template-columns: 1fr 58px 36px; align-items: center; gap: 8px; font-size: 14px }
+.qr { display: grid; grid-template-columns: 1fr 52px 34px; align-items: center; gap: 8px; font-size: 13px }
 .qr b { text-align: right; font-size: 13px; font-weight: 800; color: var(--blue) }
 .bar { position: relative; display: block; height: 9px; border-radius: 99px; background: #E7DCC4; overflow: hidden }
 .bar.wide { width: 100%; margin-top: 9px }
@@ -155,17 +155,20 @@ h1, h4, .btn, .tb em, .kind { font-family: "Gaegu", system-ui, sans-serif; font-
 .prod { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 1px;
   text-align: center; cursor: pointer; min-height: 0; overflow: hidden }
 .prod:nth-child(2) { transform: rotate(.9deg) } .prod:nth-child(3) { transform: rotate(-.8deg) }
-.prod .pa { height: 54px; display: grid; place-items: center; flex: none }
-.prod .art { max-height: 52px; max-width: 86%; object-fit: contain }
-.prod .cost { margin-top: auto }
+.prod { padding: 5px 7px 7px }
+.prod .pa { height: 40px; display: grid; place-items: center; flex: none }
+.prod .art { max-height: 38px; max-width: 82%; object-fit: contain }
+.prod b { font-size: 17px !important; line-height: 1.1 }
+.prod span { font-size: 12px !important; line-height: 1.15 }
+.prod .cost { margin-top: 2px; height: 24px; font-size: 12.5px; padding: 0 10px }
 .prod b { font-family: "Gaegu", sans-serif; font-size: 18px } .prod span { font-size: 12px; color: var(--mute) }
 .cost { display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 12px; border-radius: 6px;
   font-size: 14px; font-weight: 800; color: #fff; background: var(--blue); margin-top: 3px }
 .cost.got { background: #E7DCC4; color: var(--mute) }
-.side .big { flex: 1; min-height: 0; overflow: hidden; text-align: center; transform: rotate(-.6deg) }
-.hero2 { display: block; margin: 4px auto 6px; height: 104px; object-fit: contain }
-.side .big h1 { font-size: 24px } .side .big h1 em { font-style: normal; font-size: 15px; color: var(--mute) }
-.side .big p { font-size: 13.5px; line-height: 1.5; color: #55503f; margin-top: 6px }
-.side .big .eye { display: block; margin-top: 6px }
+.side .big { flex: 1; min-height: 0; overflow: hidden; text-align: center; transform: rotate(-.6deg); display: flex; flex-direction: column }
+.hero2 { display: block; margin: 0 auto 4px; height: 52px; object-fit: contain; flex: none }
+.side .big h1 { font-size: 21px } .side .big h1 em { font-style: normal; font-size: 15px; color: var(--mute) }
+.side .big p { font-size: 12.5px; line-height: 1.4; color: #55503f; margin-top: 4px }
+.side .big .eye { display: block; margin-top: 4px }
 .side .btn { width: 100% }
 .side .btn.go { margin-top: auto }

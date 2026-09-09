@@ -14,6 +14,7 @@
 .scr { font-family: "Jua", system-ui, sans-serif; color: var(--ink);
   background: linear-gradient(180deg, #DCEBFF, #F3F8FF); }
 .scr .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
+.lobby .bg { filter: blur(5px) brightness(.9) saturate(.92); transform: scale(1.04) }
 .veil { position: absolute; inset: 0; background:
   linear-gradient(180deg, rgba(255,246,230,.55), rgba(255,246,230,.14) 34%, rgba(255,246,230,.5)) }
 .ic { width: 34px; height: 34px; object-fit: contain; display: block }
@@ -66,27 +67,45 @@
   background: #FF4D5E; border: 2px solid #fff }
 
 /* ── 무대 ────────────────────────────────────────────────────────────────── */
-.stage { position: absolute; left: 116px; width: 372px; top: 74px; bottom: 12px; z-index: 3 }
-.rug { position: absolute; left: 8%; right: 8%; bottom: 46px; height: 34px; border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(23,106,251,.26), rgba(23,106,251,0)) }
-.stage .hero { position: absolute; left: 22%; bottom: 50px; height: 218px }
-.stage .dog { position: absolute; left: 56%; bottom: 50px; height: 86px }
-.stage .bird { position: absolute; left: 0; bottom: 190px; height: 52px }
-.tagplate { position: absolute; left: 50%; transform: translateX(-50%); bottom: 4px; height: 44px; padding: 0 18px;
-  display: flex; align-items: baseline; gap: 9px; border-radius: 99px; white-space: nowrap }
+/* 무대 — 배우는 하나의 지면선 위에 선다. 크기는 ART_BIBLE의 표를 그대로 따른다:
+   몽이 0.65H / 도영 1.15H = 57%, 짹이 0.388H / 1.15H = 34%. 나는 배우는 지면에 부유 그림자를 남긴다. */
+.stage { --hero-h: 218px; --ground: 50px;
+  position: absolute; left: 116px; width: 372px; top: 74px; bottom: 12px; z-index: 3 }
+.rug { position: absolute; left: 4%; right: 4%; bottom: calc(var(--ground) - 34px); height: 108px;
+  border-radius: 50%; background: radial-gradient(closest-side, rgba(255,255,255,.55), rgba(255,255,255,0) 72%) }
+.stage .hero { position: absolute; left: 24%; bottom: var(--ground); height: var(--hero-h); z-index: 2 }
+.stage .dog { position: absolute; left: 46%; bottom: calc(var(--ground) - 6px);
+  height: calc(var(--hero-h) * .57); z-index: 3 }
+.stage .bird { position: absolute; left: 12%; bottom: calc(var(--ground) + var(--hero-h) * .52);
+  height: calc(var(--hero-h) * .34); z-index: 4 }
+/* 접지 그림자 — 배우마다 하나씩. 무대 광원은 좌상단 하나다 */
+.stage::before, .stage::after { content: ""; position: absolute; bottom: calc(var(--ground) - 6px);
+  border-radius: 50%; z-index: 1;
+  background: radial-gradient(closest-side, rgba(18,32,60,.46), rgba(18,32,60,.22) 52%, rgba(18,32,60,0) 82%) }
+.stage::before { left: 24%; width: calc(var(--hero-h) * .50); height: calc(var(--hero-h) * .095);
+  transform: translateX(calc(var(--hero-h) * .12)) }
+.stage::after { left: 46%; width: calc(var(--hero-h) * .44); height: calc(var(--hero-h) * .075);
+  transform: translateX(calc(var(--hero-h) * .18)) }
+/* 나는 배우의 부유 그림자 — 작고 흐리게, 지면 위에 */
+.birdshade { position: absolute; left: 12%; bottom: calc(var(--ground) - 4px);
+  width: calc(var(--hero-h) * .22); height: calc(var(--hero-h) * .035); border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(18,32,60,.30), rgba(18,32,60,.12) 55%, rgba(18,32,60,0) 82%);
+  transform: translateX(calc(var(--hero-h) * .06)); z-index: 1 }
+.tagplate { position: absolute; left: 50%; transform: translateX(-50%); bottom: 4px; height: 46px; padding: 0 20px;
+  display: flex; align-items: center; gap: 9px; border-radius: 99px; white-space: nowrap; z-index: 4 }
 .tagplate b { font-size: 17px } .tagplate span { font-size: 13px; color: var(--mute) }
 
 /* ── 오른쪽 판 ───────────────────────────────────────────────────────────── */
 .panel { position: absolute; right: 12px; top: 74px; bottom: 12px; width: 336px; z-index: 5;
-  display: flex; flex-direction: column; gap: 10px; padding: 12px; border-radius: 26px }
+  display: flex; flex-direction: column; gap: 8px; padding: 12px; border-radius: 26px; overflow: hidden }
 .card.mission { position: relative; display: flex; gap: 11px; padding: 11px; flex: none }
-.card.mission .cov { width: 84px; height: 84px; object-fit: cover; border-radius: 16px; flex: none;
+.card.mission .cov { width: 74px; height: 74px; object-fit: cover; border-radius: 16px; flex: none;
   box-shadow: 0 3px 0 #E3D5BB }
 .mt { min-width: 0 }
 .eyebrow { font-size: 12px; color: var(--mute) }
-.card.mission h1 { font-size: 20px; margin-top: 1px }
+.card.mission h1 { font-size: 19px; margin-top: 1px }
 .card.mission h1 em { font-style: normal; color: var(--blue) }
-.card.mission p { font-size: 13px; line-height: 1.45; color: #4B5A78; margin-top: 3px }
+.card.mission p { font-size: 12.5px; line-height: 1.4; color: #4B5A78; margin-top: 2px }
 .stars { position: absolute; right: 11px; bottom: 9px; display: flex; gap: 3px }
 .st { width: 19px; height: 19px; object-fit: contain; filter: grayscale(1) opacity(.35) }
 .st.on { filter: none }
@@ -98,20 +117,24 @@
   background: linear-gradient(180deg, var(--blue-l), var(--blue));
   box-shadow: 0 6px 0 var(--blue-x), 0 14px 22px rgba(4,58,168,.34), inset 0 2px 0 rgba(255,255,255,.45) }
 .two { display: flex; gap: 9px } .two .btn { flex: 1; font-size: 15px }
-.card.quest { flex: 1; min-height: 0; display: flex; flex-direction: column; gap: 7px; padding: 11px 12px }
-.card.quest h4 { font-size: 14px; color: var(--mute) }
-.qr { display: grid; grid-template-columns: 1fr 56px 34px; align-items: center; gap: 8px; font-size: 14px }
-.qr b { text-align: right; font-size: 13px; color: var(--blue) }
+/* 지령은 카드가 아니라 한 줄이다 — 오른쪽 판에 다 들어가지 않으면 넘치는 대신 줄인다 */
+.card.quest { flex: none; display: flex; align-items: center; gap: 10px; height: 40px; padding: 0 12px;
+  border-radius: 14px; overflow: hidden }
+.card.quest h4 { font-size: 13px; color: var(--mute); white-space: nowrap }
+.qr { display: flex; align-items: center; gap: 6px; font-size: 13px; white-space: nowrap }
+.qr span { color: #4B5A78 }
+.qr b { font-size: 13px; color: var(--blue) }
+.qr .bar { width: 40px }
 .bar { position: relative; height: 8px; border-radius: 99px; background: #E7DECB; overflow: hidden }
 .bar i { position: absolute; inset: 0 auto 0 0; width: var(--p); border-radius: 99px;
   background: linear-gradient(180deg, var(--gold), var(--gold-d)) }
 
 /* ── 세로 ────────────────────────────────────────────────────────────────── */
-.port .stage { left: 12px; right: 12px; width: auto; top: 78px; bottom: auto; height: 328px }
-.port .stage .hero { left: 28%; bottom: 52px; height: 304px }
-.port .stage .dog { left: 60%; bottom: 52px; height: 116px }
-.port .stage .bird { left: 2%; bottom: 250px; height: 62px }
-.port .panel { left: 12px; right: 12px; width: auto; top: 414px; bottom: 104px }
+.port .stage { --hero-h: 300px; --ground: 40px;
+  left: 12px; right: 12px; width: auto; top: 74px; bottom: auto; height: 344px }
+.port .stage .hero { left: 20% } .port .stage .dog { left: 40% } .port .stage .bird { left: 8% }
+.port .stage::before { left: 20% } .port .stage::after { left: 40% } .port .birdshade { left: 8% }
+.port .panel { left: 12px; right: 12px; width: auto; top: 428px; bottom: 104px; gap: 10px }
 .port .card.mission .cov { width: 96px; height: 96px }
 .dock { position: absolute; left: 8px; right: 8px; bottom: 8px; height: 88px; z-index: 6; display: flex;
   align-items: center; justify-content: space-around; border-radius: 26px;
@@ -134,7 +157,7 @@
 .run .j4 { left: 68%; bottom: 160px } .run .j5 { left: 74%; bottom: 134px }
 .hud { position: absolute; inset: 0 }
 .scoreplate { position: absolute; left: 12px; top: 12px; height: 52px; padding: 0 16px; display: flex;
-  align-items: baseline; gap: 9px; border-radius: 18px }
+  align-items: center; gap: 9px; border-radius: 18px }
 .scoreplate b { font-family: "Gothic A1", sans-serif; font-weight: 800; font-size: 27px; color: var(--blue) }
 .scoreplate em { font-style: normal; font-size: 15px; color: var(--gold-d) }
 .course { position: absolute; left: 296px; width: 250px; top: 22px; height: 16px; border-radius: 99px;
@@ -166,9 +189,10 @@
 .petring circle { fill: none; stroke: rgba(18,32,60,.14); stroke-width: 5 }
 .petring circle.p { stroke: var(--gold); stroke-dasharray: 145; stroke-dashoffset: 40; stroke-linecap: round }
 .petring .pi { position: absolute; left: 50%; top: 50%; width: 34px; transform: translate(-50%,-50%) }
-.hud .ribbon { position: absolute; left: 172px; bottom: 12px; height: 48px; display: flex; align-items: center }
-.hud .ribbon img { position: absolute; left: -14px; right: -14px; top: -6px; bottom: -6px;
-  width: calc(100% + 28px); height: calc(100% + 12px); object-fit: fill }
+.hud .ribbon { position: absolute; left: 172px; bottom: 14px; height: 44px; display: flex; align-items: center;
+  border-radius: 16px; background: linear-gradient(180deg, #FFFFFF, var(--cream));
+  box-shadow: 0 4px 0 #E3D5BB, 0 10px 16px rgba(18,32,60,.2), inset 0 2px 0 #fff }
+.hud .ribbon img { display: none }
 .hud .ribbon span { position: relative; display: flex; align-items: center; gap: 9px; padding: 0 16px;
   font-size: 14px; color: var(--ink) }
 .hud .ribbon b { font-size: 15px }
@@ -192,11 +216,11 @@
   font-size: 14px; color: #fff; background: linear-gradient(180deg, var(--blue-l), var(--blue));
   box-shadow: 0 3px 0 var(--blue-d); margin-top: 3px }
 .price.got { background: #E7DECB; color: var(--mute); box-shadow: 0 3px 0 #D3C7AE }
-.panel.detail { gap: 9px }
+.panel.detail { gap: 8px }
 .dhead { display: flex; align-items: center; gap: 12px }
-.dhead .big { width: 104px; height: 104px; object-fit: contain }
-.dhead h1 { font-size: 24px }
-.dd { font-size: 14px; line-height: 1.5; color: #4B5A78 }
-.lv { margin-top: 2px } .lv span { display: block; font-size: 12px; color: var(--mute); margin-top: 5px }
+.dhead .big { width: 88px; height: 88px; object-fit: contain }
+.dhead h1 { font-size: 22px }
+.dd { flex: none; font-size: 13.5px; line-height: 1.45; color: #4B5A78 }
+.lv { margin-top: auto } .lv span { display: block; font-size: 12px; color: var(--mute); margin-top: 5px }
 .panel.detail .btn { width: 100% }
-.panel.detail .btn.go { margin-top: auto }
+.panel.detail .btn.go { margin-top: 0 }
