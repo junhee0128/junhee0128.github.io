@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko" data-img="../../img">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>시안 5 · 캔디 팝 — 오늘의 사명</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gothic+A1:wght@700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/doc.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="doc">
+  <a class="crumb" href="../">← 다섯 시안</a>
+  <div class="head">
+    <h1>시안 5 — 캔디 팝<em>Candy Pop</em></h1>
+    <p class="phil">모든 것이 손으로 만질 수 있는 물건이다. 두툼하게 솟고, 누르면 내려앉는다. 글자를 못 읽어도 무엇을 누르는지 알 수 있어야 한다.</p>
+  </div>
+  <div class="spec"><dl><dt>서체</dt><dd><b>Jua</b> 표제·버튼 · <b>Gothic A1 800</b> 숫자. 점수는 흰 글자 + 5px 잉크 외곽선 + 아래 그림자</dd><dt>타이포 스케일</dt><dd>32 → 24 → 22 → 17 → 13. <b>버튼 글자가 본문보다 크다</b> — 읽는 화면이 아니라 누르는 화면이다</dd><dt>격자·간격</dt><dd>중앙 집중. 왼쪽 리본 레일 82 · 가운데 무대 372 · 오른쪽 판 316. 여백 12~16</dd><dt>면과 곡률</dt><dd>반경 22~28의 두툼한 판. 리본 머리표가 판의 제목을 대신한다</dd><dt>깊이</dt><dd><b>6px 하단 모서리 + 안쪽 위 하이라이트 + 확산 그림자</b> 3단. 누르면 모서리가 2px로 줄고 판이 내려앉는다</dd><dt>내비게이션</dt><dd>가로는 왼쪽 원형 리본 레일, 세로는 <b>하단 독</b>(반경 26, 높이 84). 최소 탭 56px</dd><dt>색</dt><dd>하늘 <span class='swatch'><i style='background:#CFEBFF'></i></span> 바탕 + <span class='swatch'><i style='background:#FF4E7E'></i>분홍</span><span class='swatch'><i style='background:#FFC93C'></i>노랑</span><span class='swatch'><i style='background:#35D6A8'></i>민트</span><span class='swatch'><i style='background:#2FA8F0'></i>파랑</span></dd><dt>밀도</dt><dd>가장 낮다. 큰 물건 몇 개. 로비의 탭 대상은 크지만 수가 적다</dd><dt>조작 표시</dt><dd>진행 바 위를 도영의 얼굴이 달린다. 게이지에는 광택이 있고, 펫 링은 받침 위에 얹힌다</dd></dl></div>
+  <p class="diff">다른 넷과 갈라지는 지점: <b>모든 부품에 두께가 있다.</b> 평평한 면이 하나도 없고 최소 탭이 56px이라, 다섯 중 유일하게 「아이 손가락」을 먼저 계산한 시스템이다.</p>
+  <main id="g"></main>
+  <nav class="pager"><a href="../4/">← 아케이드</a><a href="../">다섯 시안</a><a href="../1/">극장 →</a></nav>
+</div>
+<script type="module">
+  import { mount } from "../shared/frame.js";
+  import { SCREENS } from "./screens.js";
+  mount(document.getElementById("g"), SCREENS);
+</script>
+</body>
+</html>

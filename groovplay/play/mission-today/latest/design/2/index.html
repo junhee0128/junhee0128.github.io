@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko" data-img="../../img">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>시안 2 · 벤토 — 오늘의 사명</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/doc.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="doc">
+  <a class="crumb" href="../">← 다섯 시안</a>
+  <div class="head">
+    <h1>시안 2 — 벤토<em>Bento</em></h1>
+    <p class="phil">상태가 전부 한 화면에 타일로 보인다. 스크롤도 탭도 없다. 타일을 누르는 것이 곧 이동이다 — 내비게이션이라는 별도의 층을 없앤다.</p>
+  </div>
+  <div class="spec"><dl><dt>서체</dt><dd><b>IBM Plex Sans KR</b> 한 종류. 300/400/600/700 네 굵기로만 위계를 만든다. 숫자는 <code>tabular-nums</code></dd><dt>타이포 스케일</dt><dd>26 → 21 → 16 → 13 → 11 <code>(비율 1.25)</code> — 촘촘한 계단, 정보량이 많은 화면에 맞는다</dd><dt>격자·간격</dt><dd><b>8px 기준 격자.</b> 가로 6열×3행, 세로 4열. 타일은 1×1 · 2×1 · 2×3 · 3×2로만 자란다. 여백은 항상 8의 배수</dd><dt>면과 곡률</dt><dd>흰 타일 + 반경 18. <b>테두리도 그림자도 없다</b> — 회백 바탕(#EDEFF3)과의 명도 차이만으로 뜬다</dd><dt>깊이</dt><dd>없음. 평면. 층은 색으로만 구분한다</dd><dt>내비게이션</dt><dd>탭 없음 · 레일 없음. 타일 자체가 목적지다. 배지는 타일 오른쪽 위 점</dd><dt>색</dt><dd><span class='swatch'><i style='background:#EDEFF3'></i>바탕</span><span class='swatch'><i style='background:#2563EB'></i>사명</span><span class='swatch'><i style='background:#059669'></i>편의점</span><span class='swatch'><i style='background:#D946EF'></i>뽑기</span><span class='swatch'><i style='background:#F59E0B'></i>목표</span> — 목적지마다 색이 고정된다</dd><dt>밀도</dt><dd>가장 높다. 로비 한 화면에 타일 7개, 지표 6개</dd><dt>조작 표시</dt><dd>런의 HUD도 같은 문법 — 반투명 캡슐 타일. 조작은 원이 아니라 <b>반경 16 사각 패드</b></dd></dl></div>
+  <p class="diff">다른 넷과 갈라지는 지점: <b>내비게이션 층이 없다.</b> 하단 탭도 레일도 두지 않고 타일이 그 일을 하므로, 화면의 100%가 내용이다. 대신 아트는 타일 안에 갇힌다.</p>
+  <main id="g"></main>
+  <nav class="pager"><a href="../1/">← 극장</a><a href="../">다섯 시안</a><a href="../3/">크래프트 →</a></nav>
+</div>
+<script type="module">
+  import { mount } from "../shared/frame.js";
+  import { SCREENS } from "./screens.js";
+  mount(document.getElementById("g"), SCREENS);
+</script>
+</body>
+</html>

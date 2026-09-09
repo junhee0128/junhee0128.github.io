@@ -1,0 +1,128 @@
+/* ── 시안 1 「극장」 ────────────────────────────────────────────────────────
+   기준: 화면은 포스터다. UI는 자막처럼 최소로 얹힌다.
+   · 서체   Black Han Sans(표제) / Noto Sans KR 300·500(본문)
+   · 스케일 46 → 15 → 12 → 10.5  (비율 1.5 — 표제와 본문의 대비를 극단으로)
+   · 격자   없음. 가장자리 여백 28px과 광학 정렬만 쓴다
+   · 면     카드 없음, 테두리 없음. 정보는 그라디언트 스크림 위에 직접 놓인다
+   · 내비   하단 탭 없음. 왼쪽 위 메뉴 하나 → 전면 오버레이
+   · 색     아트에서 뽑은 강조색 하나(#FFC24B) + 흰색 투명도 계단
+   · 밀도   가장 낮음. 한 화면에 결정 하나                                   */
+.scr { font-family: "Noto Sans KR", system-ui, sans-serif; color: #fff; background: #0A0C10; }
+.scr .art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.scr .veil { position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(8,10,14,.62) 0%, rgba(8,10,14,0) 26%),
+              linear-gradient(0deg, rgba(8,10,14,.92) 0%, rgba(8,10,14,.55) 34%, rgba(8,10,14,0) 62%),
+              linear-gradient(90deg, rgba(8,10,14,.72) 0%, rgba(8,10,14,0) 52%); }
+
+/* 인물은 화면에 꽉 차고 가장자리에서 잘린다 — 포스터의 문법 */
+.lobby .cast { position: absolute; }
+.lobby .hero { right: 3%; bottom: -2%; height: 96%; }
+.lobby .dog { right: 25%; bottom: -1%; height: 34%; }
+.lobby .bird { right: 42%; bottom: 52%; height: 15%; }
+.port.lobby .hero { right: 2%; bottom: 41%; height: 44%; }
+.port.lobby .dog { right: 46%; bottom: 41%; height: 15%; }
+.port.lobby .bird { right: 64%; bottom: 62%; height: 7%; }
+
+.menu { position: absolute; left: 22px; top: 20px; width: 44px; height: 44px; border: 0; background: none;
+  display: grid; align-content: center; gap: 5px; cursor: pointer; padding: 0 9px; }
+.menu span { display: block; height: 2px; background: #fff; border-radius: 2px; }
+.menu span:nth-child(2) { width: 68%; }
+.mark { position: absolute; left: 74px; top: 32px; font-size: 12px; font-weight: 500;
+  letter-spacing: .26em; opacity: .72; }
+.purse { position: absolute; right: 26px; top: 32px; display: flex; align-items: center; gap: 12px;
+  font-size: 13px; font-weight: 500; letter-spacing: .04em; }
+.purse s { width: 1px; height: 11px; background: rgba(255,255,255,.34); }
+.purse span::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 99px;
+  margin-right: 7px; vertical-align: 1px; background: #4FB8FF; }
+.purse span:last-child::before { background: #FFC24B; }
+
+.block { position: absolute; left: 28px; bottom: 30px; width: 46%; }
+.ep { font-size: 10.5px; font-weight: 500; letter-spacing: .3em; color: #FFC24B; margin-bottom: 10px; }
+.title { font-family: "Black Han Sans", system-ui, sans-serif; font-size: 46px; font-weight: 400;
+  line-height: .98; letter-spacing: -.01em; }
+.sub { margin-top: 12px; font-size: 15px; font-weight: 300; line-height: 1.62; opacity: .78; }
+.acts { margin-top: 20px; display: flex; align-items: center; gap: 14px; }
+.go { height: 52px; padding: 0 34px; border: 0; border-radius: 99px; cursor: pointer;
+  background: #fff; color: #0A0C10; font: 500 16px "Noto Sans KR", sans-serif; letter-spacing: .02em; }
+.link { font-size: 13.5px; font-weight: 400; opacity: .74; text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,.34); padding-bottom: 2px; cursor: pointer; }
+.dot { font-style: normal; opacity: .34; }
+.meta { position: absolute; left: 74px; top: 58px; display: flex; align-items: center; gap: 10px;
+  font-size: 11.5px; font-weight: 400; letter-spacing: .1em; opacity: .6; }
+.meta i { font-style: normal; opacity: .45; margin: 0 2px; }
+.meta s { width: 3px; height: 3px; border-radius: 99px; background: currentColor; opacity: .5; }
+
+.port .block { left: 24px; right: 24px; width: auto; bottom: 56px; }
+.port .title { font-size: 40px; }
+.port .acts { flex-wrap: wrap; }
+.port .go { width: 100%; margin-bottom: 4px; }
+.port .meta { left: 24px; top: auto; bottom: 26px; }
+
+/* ── 플레이 ─────────────────────────────────────────────────────────────── */
+.run .field { position: absolute; inset: 0; }
+.run .asphalt { position: absolute; left: 0; right: 0; bottom: 0; height: 74px;
+  background: linear-gradient(180deg, #8b9099, #5f656d); }
+.run .asphalt::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: rgba(255,255,255,.28); }
+.run .cast { position: absolute; }
+.run .hero { left: 21%; bottom: 68px; height: 41%; }
+.run .dog { left: 11%; bottom: 68px; height: 18%; }
+.run .bird { left: 33%; bottom: 210px; height: 12%; }
+.run .ob { position: absolute; left: 79%; bottom: 68px; height: 20%; }
+.run .jelly { position: absolute; height: 13%; }
+.run .j0 { left: 44%; bottom: 124px } .run .j1 { left: 50%; bottom: 150px }
+.run .j2 { left: 56%; bottom: 166px } .run .j3 { left: 62%; bottom: 166px }
+.run .j4 { left: 68%; bottom: 150px } .run .j5 { left: 74%; bottom: 124px }
+.run .hud { position: absolute; inset: 0; }
+.run .hud::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 120px;
+  background: linear-gradient(180deg, rgba(8,10,14,.78), rgba(8,10,14,.30) 55%, transparent); }
+/* 진행은 화면 맨 위 모서리를 가로지르는 3px 선이다 — 상자도 배경도 없다 */
+.edge { position: absolute; left: 0; right: 0; top: 0; height: 3px; background: rgba(255,255,255,.24); }
+.edge i { position: absolute; left: 0; top: 0; bottom: 0; width: var(--p); background: #fff; }
+.edge .boss { position: absolute; left: 66%; width: 20%; top: 0; bottom: 0; background: #FF5A4E; }
+.edge u { position: absolute; right: 0; top: -2px; width: 2px; height: 7px; background: #FFC24B; }
+.score { position: absolute; left: 26px; top: 20px; font-family: "Black Han Sans", sans-serif;
+  font-size: 34px; line-height: 1; letter-spacing: .01em; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
+.score em { font-family: "Noto Sans KR", sans-serif; font-style: normal; font-size: 13px; font-weight: 500;
+  color: #FFC24B; margin-left: 10px; vertical-align: 5px; }
+.run .pause { position: absolute; right: 22px; top: 18px; width: 44px; height: 44px; border: 0; cursor: pointer;
+  background: none; display: flex; align-items: center; justify-content: center; gap: 5px; }
+.run .pause span { width: 3px; height: 16px; background: #fff; border-radius: 2px; box-shadow: 0 1px 6px rgba(0,0,0,.6); }
+.run .right { position: absolute; right: 78px; top: 30px; display: flex; align-items: center; gap: 9px; }
+.run .right b { font-size: 10.5px; font-weight: 500; letter-spacing: .24em; opacity: .8; }
+.thin { position: relative; display: block; width: 132px; height: 2px; background: rgba(255,255,255,.3); }
+.thin i { position: absolute; inset: 0 auto 0 0; width: var(--p); background: #C8A7FF; }
+.tally { position: absolute; right: 24px; top: 56px; font-size: 11px; letter-spacing: .1em; opacity: .88;
+  display: flex; align-items: center; gap: 9px; }
+.tally s { width: 3px; height: 3px; border-radius: 99px; background: currentColor; }
+/* 조작은 그리지 않는다. 화면 절반이 곧 버튼이고, 가장자리에 그 사실만 희미하게 남긴다 */
+.zone { position: absolute; bottom: 0; width: 46%; height: 74px; }
+.zone::after { content: ""; position: absolute; top: 50%; width: 26px; height: 26px; margin-top: -13px;
+  border-left: 2px solid rgba(255,255,255,.5); border-bottom: 2px solid rgba(255,255,255,.5); }
+.zone.l { left: 0 } .zone.l::after { left: 24px; transform: rotate(-45deg); }
+.zone.r { right: 0 } .zone.r::after { right: 24px; transform: rotate(135deg); }
+/* 빌드 정보는 자막이다 — 가운데 맨 아래, 캐릭터가 서는 자리를 지나지 않는다 */
+.caption { position: absolute; left: 0; right: 0; bottom: 26px; text-align: center;
+  font-size: 12px; font-weight: 300; letter-spacing: .08em; opacity: .88;
+  display: flex; align-items: center; justify-content: center; gap: 10px; }
+.caption em { display: block; width: 56px; height: 2px; background: rgba(255,255,255,.3); position: relative; }
+.caption em i { position: absolute; inset: 0 auto 0 0; width: var(--p); background: #FFC24B; }
+
+/* ── 편의점: 한 번에 하나 ────────────────────────────────────────────────── */
+.shop .veil { background:
+  linear-gradient(180deg, rgba(8,10,14,.78), rgba(8,10,14,.22) 30%, rgba(8,10,14,.55)),
+  linear-gradient(90deg, rgba(8,10,14,.55), rgba(8,10,14,.72)); }
+.shop .back { position: absolute; left: 22px; top: 20px; width: 44px; height: 44px; border: 0; background: none; cursor: pointer; }
+.shop .back::before { content: ""; position: absolute; left: 16px; top: 15px; width: 13px; height: 13px;
+  border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(45deg); }
+.reel { position: absolute; left: 0; right: 0; top: 68px; bottom: 54px; display: flex; align-items: center; gap: 26px; padding: 0 24px; }
+.reel .big { width: 196px; height: 100%; object-fit: contain; flex: none; }
+.reel .info { flex: 1; padding-left: 6px; }
+.reel .title { font-size: 40px; }
+.arw { width: 44px; height: 44px; border: 0; background: none; cursor: pointer; flex: none; position: relative; opacity: .55; }
+.arw::before { content: ""; position: absolute; left: 15px; top: 15px; width: 13px; height: 13px;
+  border-left: 2px solid #fff; border-bottom: 2px solid #fff; }
+.arw.l::before { transform: rotate(45deg) }
+.arw.r::before { transform: rotate(-135deg); left: 12px }
+.dots { position: absolute; left: 0; right: 0; bottom: 26px; display: flex; justify-content: center; gap: 7px; }
+.dots i { width: 5px; height: 5px; border-radius: 99px; background: rgba(255,255,255,.3); }
+.dots i.on { background: #fff; width: 18px; }

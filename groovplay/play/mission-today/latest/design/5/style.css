@@ -1,0 +1,188 @@
+/* ── 시안 5 「캔디 팝」 ─────────────────────────────────────────────────────
+   기준: 모든 것이 손으로 만질 수 있는 물건이다. 두툼하게 솟고, 누르면 내려앉는다.
+   · 서체   Jua(표제·버튼) / Gothic A1 800(숫자·라벨). 흰 외곽선 + 아래 그림자
+   · 스케일 30 → 22 → 16 → 13 → 11  버튼 글자는 본문보다 크다
+   · 격자   중앙 집중. 왼쪽 리본 레일 82 · 가운데 무대 · 오른쪽 판 316
+   · 면     반경 26의 두툼한 판. 입체는 6px 하단 모서리 + 안쪽 위 하이라이트
+   · 부품   리본 머리표, 별 배지, 알약 버튼, 원형 조작. 최소 탭 56px
+   · 색     하늘 #BFE6FF 바탕 + 분홍 #FF5D8F · 노랑 #FFC93C · 민트 #35D6A8
+   · 밀도   가장 낮음. 큰 물건 몇 개                                          */
+.scr { font-family: "Jua", system-ui, sans-serif; color: #2A3550;
+  background: linear-gradient(180deg, #CFEBFF, #EAF6FF); }
+.scr .art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
+.sky { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(190,230,255,.72), rgba(255,255,255,.55)) }
+.blob { position: absolute; border-radius: 50%; filter: blur(2px); opacity: .5 }
+.b1 { left: -60px; top: -50px; width: 220px; height: 220px; background: #FFE7A8 }
+.b2 { right: -40px; bottom: -60px; width: 200px; height: 200px; background: #FFC8DD }
+
+/* 두툼한 부품 */
+.pop { position: relative; border: 0; cursor: pointer; border-radius: 22px; font-family: "Jua", sans-serif;
+  color: #fff; background: linear-gradient(180deg, #FF87AC, #FF4E7E);
+  box-shadow: 0 6px 0 #D62F5C, 0 12px 18px rgba(214,47,92,.3), inset 0 2px 0 rgba(255,255,255,.55);
+  font-size: 17px; height: 46px; padding: 0 18px }
+.pop.big { height: 62px; font-size: 24px; border-radius: 26px; width: 100% }
+.pop.soft { background: linear-gradient(180deg, #FFFFFF, #EDF3FA); color: #46557A;
+  box-shadow: 0 5px 0 #C9D6E6, 0 10px 16px rgba(60,90,140,.2), inset 0 2px 0 #fff }
+.pop.buy i.m { display: inline-block; width: 13px; height: 13px; border-radius: 99px; margin-right: 6px;
+  vertical-align: -1px; background: radial-gradient(circle at 34% 30%, #eaf7ff, #4fb8ff 60%, #1d76c4) }
+.round { position: relative; width: 58px; height: 58px; border: 0; border-radius: 50%; cursor: pointer;
+  background: linear-gradient(180deg, #FFFFFF, #E9F1FA);
+  box-shadow: 0 6px 0 #C4D3E4, 0 12px 18px rgba(60,90,140,.24), inset 0 2px 0 #fff;
+  display: grid; place-items: center; gap: 2px }
+.round em { font-style: normal; font-size: 10.5px; color: #6E80A3 }
+.bl { width: 22px; height: 22px; border-radius: 8px; display: block }
+.b0 { background: #FF7FA6 } .b1 { background: #6EC8FF } .b2 { background: #35D6A8 }
+.b3 { background: #C08BFF } .b4 { background: #FFC93C }
+.blob.b1 { background: #FFE7A8; border-radius: 50%; width: 220px; height: 220px }
+.round.on { background: linear-gradient(180deg, #FFD36B, #FFB01F); box-shadow: 0 6px 0 #D98A00, 0 12px 18px rgba(217,138,0,.3), inset 0 2px 0 rgba(255,255,255,.6) }
+.round.on em { color: #6B4400 }
+.dot { position: absolute; right: 6px; top: 4px; width: 11px; height: 11px; border-radius: 99px;
+  background: #FF3B5C; border: 2px solid #fff }
+
+.ribbonrail { position: absolute; left: 12px; top: 0; bottom: 0; width: 82px; display: flex;
+  flex-direction: column; align-items: center; justify-content: center; gap: 8px; z-index: 4 }
+
+.purse { position: absolute; right: 14px; top: 12px; display: flex; align-items: center; gap: 8px; z-index: 4 }
+.cap { display: inline-flex; align-items: center; gap: 7px; height: 38px; padding: 0 8px 0 11px; border-radius: 99px;
+  background: linear-gradient(180deg, #FFFFFF, #EDF3FA); color: #33415F; font-size: 16px;
+  box-shadow: 0 4px 0 #C9D6E6, inset 0 2px 0 #fff }
+.cap i { width: 17px; height: 17px; border-radius: 99px; display: block }
+.cap.m i, .cap i.m { background: radial-gradient(circle at 34% 30%, #eaf7ff, #4fb8ff 60%, #1d76c4) }
+.cap.s i, .cap i.k { background: radial-gradient(circle at 34% 30%, #fff3c4, #FFC93C 60%, #E09A00) }
+.cap b { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 99px; font-size: 15px;
+  background: #35D6A8; color: #fff; box-shadow: 0 2px 0 #1CA37C }
+.round.gear { width: 44px; height: 44px }
+.round.gear::before { content: ""; width: 17px; height: 17px; border-radius: 50%; border: 4px solid #8FA0BF }
+
+.stage { position: absolute; left: 104px; width: 372px; top: 18px; bottom: 14px; z-index: 3 }
+.plate { position: absolute; left: 12%; right: 12%; bottom: 34px; height: 30px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255,255,255,.9), rgba(255,255,255,0)) }
+.stage .hero { position: absolute; left: 24%; bottom: 40px; height: 84% }
+.stage .dog { position: absolute; left: 54%; bottom: 40px; height: 32% }
+.stage .bird { position: absolute; left: 2%; bottom: 56%; height: 16% }
+.nametag { position: absolute; left: 50%; transform: translateX(-50%); bottom: 4px; height: 34px; padding: 0 20px;
+  display: flex; align-items: center; gap: 6px; border-radius: 99px; font-size: 16px; color: #33415F;
+  background: linear-gradient(180deg, #FFFFFF, #EDF3FA); box-shadow: 0 4px 0 #C9D6E6, inset 0 2px 0 #fff }
+.nametag s { text-decoration: none; opacity: .4 }
+
+.panel { position: absolute; right: 14px; top: 62px; bottom: 14px; width: 316px; padding: 26px 16px 14px;
+  border-radius: 28px; background: linear-gradient(180deg, #FFFFFF, #F3F8FD);
+  box-shadow: 0 8px 0 #CBD9E9, 0 18px 28px rgba(50,80,130,.26), inset 0 2px 0 #fff; z-index: 4 }
+.ribbon { position: absolute; left: 50%; top: -16px; transform: translateX(-50%); z-index: 2 }
+.ribbon span { display: block; height: 34px; line-height: 34px; padding: 0 26px; font-size: 17px; color: #fff;
+  background: linear-gradient(180deg, #6FD3FF, #2FA8F0); border-radius: 8px;
+  box-shadow: 0 4px 0 #1B7CC0, 0 8px 12px rgba(30,100,170,.3) }
+.ribbon::before, .ribbon::after { content: ""; position: absolute; top: 8px; width: 16px; height: 22px;
+  background: #1B7CC0; border-radius: 3px; z-index: -1 }
+.ribbon::before { left: -11px; clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 34% 50%) }
+.ribbon::after { right: -11px; clip-path: polygon(0 0, 100% 0, 66% 50%, 100% 100%, 0 100%) }
+.pin { display: flex; gap: 11px; margin-top: 6px }
+.cov { width: 84px; height: 84px; object-fit: cover; border-radius: 18px; flex: none;
+  box-shadow: 0 4px 0 #CBD9E9 }
+.ptx h1 { font-size: 22px; letter-spacing: -.01em }
+.ptx p { font-size: 12.5px; line-height: 1.5; color: #5D6C8B; margin-top: 4px }
+.badges { display: flex; align-items: center; gap: 4px; margin-top: 7px; font-size: 11px; color: #8494B4 }
+.st { width: 15px; height: 15px; display: block; background: #DCE5F0;
+  clip-path: polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%) }
+.st.on { background: #FFC93C } .badges span { margin-left: 6px }
+.panel .pop.big { margin-top: 12px }
+.two { display: flex; gap: 8px; margin-top: 10px }
+.two .pop { flex: 1; font-size: 14px; height: 44px; padding: 0 6px }
+
+/* ── 플레이 ─────────────────────────────────────────────────────────────── */
+.run .field { position: absolute; inset: 0 }
+.run .asphalt { position: absolute; left: 0; right: 0; bottom: 0; height: 78px;
+  background: linear-gradient(180deg, #98a0aa, #6b727b) }
+.run .cast { position: absolute }
+.run .hero { left: 21%; bottom: 72px; height: 41% }
+.run .dog { left: 11%; bottom: 72px; height: 18% }
+.run .bird { left: 33%; bottom: 212px; height: 12% }
+.run .ob { position: absolute; left: 79%; bottom: 72px; height: 20% }
+.run .jelly { position: absolute; height: 13% }
+.run .j0 { left: 44%; bottom: 128px } .run .j1 { left: 50%; bottom: 154px }
+.run .j2 { left: 56%; bottom: 170px } .run .j3 { left: 62%; bottom: 170px }
+.run .j4 { left: 68%; bottom: 154px } .run .j5 { left: 74%; bottom: 128px }
+.run .hud { position: absolute; inset: 0 }
+.run .score { position: absolute; left: 16px; top: 12px; font-size: 32px; color: #fff;
+  -webkit-text-stroke: 5px #2A3550; paint-order: stroke fill; text-shadow: 0 4px 0 rgba(42,53,80,.35) }
+.run .score em { font-style: normal; font-size: 17px; color: #FFC93C; margin-left: 9px; -webkit-text-stroke-width: 4px }
+.track { position: absolute; left: 296px; width: 252px; top: 20px; height: 14px; border-radius: 99px;
+  background: rgba(42,53,80,.3); box-shadow: inset 0 2px 3px rgba(0,0,0,.25) }
+.track i { position: absolute; inset: 2px auto 2px 2px; width: var(--p); border-radius: 99px;
+  background: linear-gradient(180deg, #8FE3FF, #2FA8F0) }
+.track .boss { position: absolute; left: 66%; width: 20%; top: 2px; bottom: 2px; background: rgba(255,90,120,.55) }
+.track .mk { position: absolute; left: var(--p, 42%); top: -13px; width: 36px; height: 36px; border-radius: 50%;
+  object-fit: cover; border: 3px solid #fff; box-shadow: 0 3px 0 rgba(42,53,80,.35); transform: translateX(-18px) }
+.track .flag { position: absolute; right: -4px; top: -8px; width: 5px; height: 28px; border-radius: 3px; background: #FFC93C }
+.gaugewrap { position: absolute; right: 74px; top: 18px; display: flex; align-items: center; gap: 8px }
+.gaugewrap span { font-size: 13px; color: #fff; -webkit-text-stroke: 4px #2A3550; paint-order: stroke fill }
+.gaugec { position: relative; width: 148px; height: 16px; border-radius: 99px; background: rgba(42,53,80,.3);
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.25) }
+.gaugec i { position: absolute; inset: 2px auto 2px 2px; width: var(--p); border-radius: 99px;
+  background: linear-gradient(180deg, #D9B4FF, #9A5CFF) }
+.round.pause { position: absolute; right: 14px; top: 12px; width: 48px; height: 48px }
+.round.pause span { position: absolute; top: 15px; width: 5px; height: 18px; border-radius: 3px; background: #6E80A3 }
+.round.pause span:first-child { left: 17px } .round.pause span:last-child { right: 17px }
+.tally { position: absolute; right: 74px; top: 46px; display: flex; gap: 7px }
+.cap.tiny { height: 28px; font-size: 13px; padding: 0 11px; box-shadow: 0 3px 0 #C9D6E6 }
+.cap.tiny i { width: 13px; height: 13px }
+.round.ctl { position: absolute; bottom: 10px; width: 62px; height: 62px }
+.round.ctl::after { content: ""; position: absolute; left: 50%; top: 50%; margin-left: -11px; border: 11px solid transparent }
+.round.ctl.l { left: 14px } .round.ctl.l::after { border-top-color: #6E80A3; margin-top: -5px }
+.round.ctl.r { right: 14px } .round.ctl.r::after { border-bottom-color: #6E80A3; margin-top: -16px }
+.petring { position: absolute; left: 88px; bottom: 16px; width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(180deg, #FFFFFF, #E9F1FA); box-shadow: 0 5px 0 #C4D3E4, inset 0 2px 0 #fff }
+.petring svg { position: absolute; inset: 2px; transform: rotate(-90deg) }
+.petring circle { fill: none; stroke: rgba(42,53,80,.14); stroke-width: 5 }
+.petring circle.p { stroke: #FFC93C; stroke-dasharray: 126; stroke-dashoffset: 34; stroke-linecap: round }
+.petring .pi { position: absolute; left: 50%; top: 50%; width: 30px; transform: translate(-50%,-50%) }
+.miniribbon { position: absolute; left: 152px; bottom: 18px; height: 32px; display: flex; align-items: center; gap: 9px;
+  padding: 0 14px; border-radius: 99px; font-size: 13.5px; color: #33415F;
+  background: linear-gradient(180deg, #FFFFFF, #EDF3FA); box-shadow: 0 4px 0 #C9D6E6, inset 0 2px 0 #fff }
+.miniribbon span { color: #C4820A; font-size: 12.5px }
+.mini { position: relative; width: 74px; height: 9px; border-radius: 99px; background: #DDE5F0 }
+.mini i { position: absolute; inset: 0 auto 0 0; width: var(--p); border-radius: 99px;
+  background: linear-gradient(180deg, #FFD86B, #FFB61F) }
+
+/* ── 편의점 ─────────────────────────────────────────────────────────────── */
+.round.back { position: absolute; left: 14px; top: 12px; width: 48px; height: 48px; z-index: 4 }
+.round.back::before { content: ""; width: 13px; height: 13px; border-left: 4px solid #6E80A3;
+  border-bottom: 4px solid #6E80A3; transform: rotate(45deg) translate(2px,-2px) }
+.tabsrow { position: absolute; left: 74px; top: 16px; display: flex; gap: 8px; z-index: 4 }
+.pop.tab { height: 40px; font-size: 15px; padding: 0 18px; border-radius: 18px;
+  background: linear-gradient(180deg, #FFFFFF, #EDF3FA); color: #6E80A3; box-shadow: 0 4px 0 #C9D6E6, inset 0 2px 0 #fff }
+.pop.tab.on { background: linear-gradient(180deg, #FFD86B, #FFB61F); color: #6B4400; box-shadow: 0 4px 0 #D98A00, inset 0 2px 0 rgba(255,255,255,.6) }
+.shelf { position: absolute; left: 16px; right: 348px; top: 74px; bottom: 16px; display: grid;
+  grid-template-columns: repeat(3, 1fr); gap: 12px; z-index: 3 }
+.prod { position: relative; border-radius: 24px; padding: 26px 10px 12px; text-align: center;
+  background: linear-gradient(180deg, #FFFFFF, #F2F7FC);
+  box-shadow: 0 6px 0 #CBD9E9, 0 12px 20px rgba(50,80,130,.2), inset 0 2px 0 #fff;
+  display: flex; flex-direction: column; align-items: center; gap: 6px }
+.prod.on { box-shadow: 0 6px 0 #E0A800, 0 12px 20px rgba(50,80,130,.2), inset 0 2px 0 #fff, 0 0 0 3px #FFC93C }
+.prod .ribbon span { font-size: 15px; height: 30px; line-height: 30px; padding: 0 18px }
+.prod .pa { flex: 1; display: grid; place-items: center; width: 100% }
+.prod .art { max-height: 78px; max-width: 100%; object-fit: contain }
+.prod p { font-size: 12px; color: #5D6C8B }
+.prod .pop { width: 100%; height: 40px; font-size: 14px }
+.panel.side { top: 74px; width: 316px }
+.hero2 { display: block; margin: 8px auto 0; height: 108px; object-fit: contain }
+.pd { font-size: 13px; line-height: 1.55; color: #5D6C8B; text-align: center; margin-top: 8px }
+.lv { margin-top: 12px; text-align: center }
+.lv .mini { width: 100%; height: 11px }
+.lv span { display: block; font-size: 11.5px; color: #8494B4; margin-top: 6px }
+
+/* ── 세로 ───────────────────────────────────────────────────────────────── */
+.port .stage { left: 12px; right: 12px; width: auto; top: 62px; bottom: 400px }
+.port .stage .hero { left: 30%; bottom: 44px } .port .stage .dog { left: 58%; bottom: 44px }
+.port .stage .bird { left: 4%; bottom: 58% }
+.port .panel { left: 12px; right: 12px; width: auto; top: auto; bottom: 96px; height: 288px }
+.dock { position: absolute; left: 0; right: 0; bottom: 0; height: 84px; display: flex; z-index: 5;
+  background: linear-gradient(180deg, #FFFFFF, #EDF3FA); border-radius: 26px 26px 0 0;
+  box-shadow: 0 -6px 18px rgba(50,80,130,.18) }
+.dk { position: relative; flex: 1; border: 0; background: none; cursor: pointer; display: grid; place-items: center;
+  gap: 4px; padding-top: 6px }
+.dk em { font-style: normal; font-size: 11px; color: #7C8CAB }
+.dk .bl { width: 26px; height: 26px; border-radius: 10px; opacity: .55 }
+.dk.on .bl { opacity: 1; box-shadow: 0 4px 0 rgba(42,53,80,.18) }
+.dk.on em { color: #33415F }
+.dk .dot { top: 8px; right: 22% }

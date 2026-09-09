@@ -4,60 +4,70 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>오늘의 사명 — 프론트엔드 시안 다섯</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="shared/base.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/doc.css">
 <style>
-body{background:radial-gradient(90% 60% at 20% 0%,#1d2a52,#0A0E1A 62%);color:#E7ECF7}
-.pick{display:grid;gap:14px;margin-top:22px}
-.pick a{display:block;padding:16px 16px 14px;border-radius:18px;text-decoration:none;color:inherit;
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13)}
-.pick h2{font-size:19px;display:flex;align-items:baseline;gap:8px}
-.pick h2 em{font-style:normal;font-size:12px;opacity:.5}
-.pick p{font-size:13.5px;line-height:1.6;opacity:.78;margin-top:6px}
-.sw{display:flex;gap:6px;margin-top:11px}
-.sw i{width:34px;height:22px;border-radius:7px;display:block;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
-.go{margin-top:11px;font-size:13px;color:#9FD2FF}
+.pick{display:grid;gap:12px;margin-top:24px}
+.pick a{display:block;padding:16px 17px 15px;border-radius:16px;text-decoration:none;color:inherit;
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12)}
+.pick h2{font-size:19px;font-weight:700;display:flex;align-items:baseline;gap:9px}
+.pick h2 em{font-style:normal;font-size:12px;opacity:.42;font-weight:400}
+.pick p{font-size:13.5px;line-height:1.65;opacity:.8;margin-top:7px}
+.pick .kv{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.pick .kv span{font-size:11.5px;padding:4px 9px;border-radius:7px;background:rgba(255,255,255,.07);opacity:.86}
+.axis{margin-top:22px;overflow-x:auto}
+.axis table{border-collapse:collapse;font-size:12.5px;min-width:660px}
+.axis th,.axis td{text-align:left;padding:9px 12px 9px 0;border-bottom:1px solid rgba(255,255,255,.09);vertical-align:top}
+.axis th{opacity:.5;font-weight:600}
+.axis td:first-child{opacity:.5}
 </style>
 </head>
 <body>
 <div class="doc">
-  <h1>프론트엔드 시안 다섯</h1>
-  <p class="lede">같은 화면 넷(가로 로비 · 플레이 HUD · 편의점 · 세로 로비)을 다섯 방향으로 그렸다.
-  네 화면 모두 <b>겹침을 고친 배치</b>가 이미 들어가 있으니, 색과 재질만이 아니라 고쳐진 자리도 함께 보인다.
-  하나를 고르면 그 토큰이 <code>render/theme.ts</code>가 되고 화면 13개가 그 위에서 다시 그려진다.</p>
+  <div class="head">
+    <h1>프론트엔드 시안 다섯</h1>
+    <p class="phil">색만 다른 다섯이 아니라 <b>기준이 다른 다섯</b>이다. 서체와 스케일, 격자, 면과 깊이,
+    내비게이션 모델, 밀도까지 각자 다른 규칙 위에 서 있고, 그래서 같은 화면 넷이 서로 다른 구조로 나온다.
+    하나를 고르면 그 기준이 <code>render/theme.ts</code>와 컴포넌트 규격이 되어 화면 13개가 그 위에서 다시 그려진다.</p>
+  </div>
+  <div class="axis"><table>
+    <tr><th></th><th>내비게이션</th><th>면</th><th>서체</th><th>밀도</th></tr>
+    <tr><td>1 극장</td><td>메뉴 하나 · 전면 오버레이</td><td>컨테이너 없음</td><td>Black Han Sans + Noto</td><td>가장 낮음</td></tr>
+    <tr><td>2 벤토</td><td>타일이 곧 목적지</td><td>흰 타일 · 무테 무그림자</td><td>IBM Plex Sans KR 단일</td><td>가장 높음</td></tr>
+    <tr><td>3 크래프트</td><td>노트 옆구리 색인 탭</td><td>종이 · 흔들린 선</td><td>Nanum Pen + Gaegu</td><td>중간</td></tr>
+    <tr><td>4 아케이드</td><td>아이콘 레일 + 시스템 바</td><td>사각 베젤 · 곡률 0</td><td>Do Hyeon + Mono</td><td>높음</td></tr>
+    <tr><td>5 캔디 팝</td><td>리본 레일 / 하단 독</td><td>두툼한 판 · 6px 입체</td><td>Jua + Gothic A1</td><td>가장 낮음</td></tr>
+  </table></div>
   <div class="pick">
-    <a href="a/">
-      <h2>A · 그림책 <em>Storybook</em></h2>
-      <p>지금 방향을 제대로 완성한 것. 따뜻한 크림 종이, 부드러운 2단 그림자, 채움형 아이콘, 산호빛 주 버튼.</p>
-      <div class="sw"><i style="background:#FFFDF7"></i><i style="background:#2C2A3A"></i><i style="background:#FF5D73"></i><i style="background:#FFB92E"></i></div>
-      <div class="go">열어 보기 →</div>
+    <a href="1/">
+      <h2>1 · 극장 <em>Cinema</em></h2>
+      <p>화면은 포스터다. UI는 영화 자막처럼 최소로만 얹힌다. 한 화면에는 결정이 하나뿐이고, 나머지는 전부 그림에 자리를 내준다.</p>
+      <div class="kv">컨테이너를 쓰지 않는다</div>
     </a>
-    <a href="b/">
-      <h2>B · 방과후 네온 <em>Night Glass</em></h2>
-      <p>짙은 남색 유리판 위에 라임과 시안이 발광한다. 3D 캐릭터가 가장 또렷하게 떠오른다.</p>
-      <div class="sw"><i style="background:#0E1430"></i><i style="background:#EAF0FF"></i><i style="background:#C6FF4F"></i><i style="background:#FF5C8A"></i></div>
-      <div class="go">열어 보기 →</div>
+    <a href="2/">
+      <h2>2 · 벤토 <em>Bento</em></h2>
+      <p>상태가 전부 한 화면에 타일로 보인다. 스크롤도 탭도 없다. 타일을 누르는 것이 곧 이동이다 — 내비게이션이라는 별도의 층을 없앤다.</p>
+      <div class="kv">내비게이션 층이 없다</div>
     </a>
-    <a href="c/">
-      <h2>C · 젤리 <em>Jelly / Clay</em></h2>
-      <p>곰젤리와 같은 재질. 두툼하게 솟은 버튼, 캔디 그라디언트, 큼직한 곡률.</p>
-      <div class="sw"><i style="background:#DFF1FF"></i><i style="background:#26304A"></i><i style="background:#FF4F73"></i><i style="background:#FFC53D"></i></div>
-      <div class="go">열어 보기 →</div>
+    <a href="3/">
+      <h2>3 · 크래프트 <em>Craft</em></h2>
+      <p>아이 방의 공작 노트. 손으로 그린 선, 손글씨, 마스킹 테이프. 화면이 「앱」이 아니라 「도영이가 쓰는 물건」이 되게 한다.</p>
+      <div class="kv">직선과 격자를 버린다</div>
     </a>
-    <a href="d/">
-      <h2>D · 스티커 앨범 <em>Sticker</em></h2>
-      <p>다이컷 스티커 버튼, 테이프, 종이 콜라주. 스티커 재화와 세계관이 그대로 붙는다.</p>
-      <div class="sw"><i style="background:#EFE2CC"></i><i style="background:#332F2A"></i><i style="background:#EF4136"></i><i style="background:#FFC531"></i></div>
-      <div class="go">열어 보기 →</div>
+    <a href="4/">
+      <h2>4 · 아케이드 <em>Arcade</em></h2>
+      <p>화면은 게임기다. 베젤·코너 브래킷·세그먼트 계기가 문법이 된다. 값은 어림이 아니라 눈금으로 읽힌다.</p>
+      <div class="kv">연속값을 쓰지 않는다</div>
     </a>
-    <a href="e/">
-      <h2>E · 작전 브리핑 <em>Mission Console</em></h2>
-      <p>반투명 스크림 위 각진 패널, 앰버 강조, 큰 타이포 위계. 「오늘의 사명」이라는 이름에 가장 충실하다.</p>
-      <div class="sw"><i style="background:#0B1016"></i><i style="background:#EDF2F7"></i><i style="background:#FFB020"></i><i style="background:#FF5A4E"></i></div>
-      <div class="go">열어 보기 →</div>
+    <a href="5/">
+      <h2>5 · 캔디 팝 <em>Candy Pop</em></h2>
+      <p>모든 것이 손으로 만질 수 있는 물건이다. 두툼하게 솟고, 누르면 내려앉는다. 글자를 못 읽어도 무엇을 누르는지 알 수 있어야 한다.</p>
+      <div class="kv">모든 부품에 두께가 있다</div>
     </a>
   </div>
-  <p class="note">고른 시안 번호만 알려 주면 된다. 색을 섞고 싶으면 "C의 버튼 + E의 타이포"처럼 말해도 된다.</p>
+  <p class="diff">번호만 알려 주면 된다. 기준을 섞고 싶으면 "2의 격자에 5의 버튼"처럼 말해도 된다 —
+  다만 섞을수록 규칙이 흐려지므로, 하나를 고르고 그 안에서 조정하는 편이 결과가 낫다.</p>
 </div>
 </body>
 </html>
