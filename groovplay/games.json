@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-09T14:39:47.355Z",
+  "builtAt": "2026-09-09T23:39:56.534Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2545
+          "ms": 4627
         },
         "test": {
           "ok": true,
-          "ms": 5555,
+          "ms": 8701,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3031,
-        "at": "2026-09-09T14:39:12.929Z"
+        "ms": 6057,
+        "at": "2026-09-09T23:39:10.514Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -215,29 +215,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "207bff1",
-        "date": "2026-09-09T23:25:09+09:00",
-        "subject": "A-4~A-7: 아이콘·상태·토스트·애니메이션 프레임"
+        "hash": "aca9317",
+        "date": "2026-09-10T08:38:34+09:00",
+        "subject": "개편 계획 v2 — 증상이 아니라 구조. 그리고 작전복 깜빡임 정지"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2156
+          "ms": 3580
         },
         "test": {
           "ok": true,
-          "ms": 14651,
+          "ms": 18161,
           "tests": {
-            "passed": 99,
+            "passed": 102,
             "failed": 0,
-            "total": 99
+            "total": 102
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 4512,
-        "at": "2026-09-09T14:39:34.315Z"
+        "ms": 4623,
+        "at": "2026-09-09T23:39:36.943Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -431,11 +431,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3213
+          "ms": 4502
         },
         "test": {
           "ok": true,
-          "ms": 6041,
+          "ms": 9406,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -445,8 +445,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3766,
-        "at": "2026-09-09T14:39:47.353Z"
+        "ms": 5644,
+        "at": "2026-09-09T23:39:56.532Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"
