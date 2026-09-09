@@ -169,19 +169,29 @@ const SCREENS = [
 export function render(root) {
   root.innerHTML = SCREENS.map(([cap, w, h, fn]) => `
     <figure class="frame" style="--w:${w};--h:${h}">
-      <figcaption>${cap}<span>${w}×${h}</span></figcaption>
+      <figcaption>${cap}<span><button class="zoombtn">1:1로 보기</button> ${w}×${h}</span></figcaption>
       <div class="vp"><div class="fit">${fn()}</div></div>
     </figure>`).join("");
   const fit = () => {
     for (const f of root.querySelectorAll(".frame")) {
       const w = +f.style.getPropertyValue("--w");
       const vp = f.querySelector(".vp");
-      const k = Math.min(1, vp.clientWidth / w);
+      const k = f.classList.contains("zoom") ? 1 : Math.min(1, vp.clientWidth / w);
       const inner = f.querySelector(".fit");
       inner.style.transform = `scale(${k})`;
+      inner.style.width = w * k + "px";
       vp.style.height = (+f.style.getPropertyValue("--h")) * k + "px";
     }
   };
+  // 폰에서 가로 화면은 절반 크기로 줄어든다. 눌러서 1:1로 펴 보고 옆으로 밀 수 있게 한다
+  root.addEventListener("click", (e) => {
+    const b = e.target.closest(".zoombtn");
+    if (!b) return;
+    const f = b.closest(".frame");
+    f.classList.toggle("zoom");
+    b.textContent = f.classList.contains("zoom") ? "화면에 맞추기" : "1:1로 보기";
+    fit();
+  });
   new ResizeObserver(fit).observe(root);
   addEventListener("resize", fit);
   fit();

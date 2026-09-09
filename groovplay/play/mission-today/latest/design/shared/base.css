@@ -18,6 +18,9 @@ body { font-family: var(--font); background: var(--page, #14182a); color: var(--
   font-size: 13.5px; opacity: .72; margin-bottom: 7px; }
 .frame figcaption span { font-size: 11.5px; opacity: .6; }
 .vp { overflow: hidden; border-radius: 14px; max-width: calc(var(--w) * 1px); margin: 0 auto; }
+.frame.zoom .vp { max-width: none; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.zoombtn { font: inherit; font-size: 11.5px; padding: 3px 9px; border-radius: 99px; border: 0; cursor: pointer;
+  background: rgba(128,128,128,.22); color: inherit; opacity: .9; }
 .fit { transform-origin: 0 0; }
 
 /* ── 화면 ────────────────────────────────────────────────── */
