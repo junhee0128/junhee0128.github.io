@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-09T06:55:04.926Z",
+  "builtAt": "2026-09-09T12:28:56.945Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2527
+          "ms": 2638
         },
         "test": {
           "ok": true,
-          "ms": 5468,
+          "ms": 5417,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3021,
-        "at": "2026-09-09T06:54:35.368Z"
+        "ms": 3489,
+        "at": "2026-09-09T12:28:24.389Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -222,11 +222,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2045
+          "ms": 2088
         },
         "test": {
           "ok": true,
-          "ms": 12912,
+          "ms": 13717,
           "tests": {
             "passed": 85,
             "failed": 0,
@@ -236,8 +236,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3549,
-        "at": "2026-09-09T06:54:53.925Z"
+        "ms": 3774,
+        "at": "2026-09-09T12:28:44.713Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -246,7 +246,7 @@
       "id": "royal-chef",
       "title": "왕실 요리사 러너",
       "codename": "ROYAL CHEF RUNNER",
-      "tagline": "낚싯줄에 걸린 물고기를 점프로 유도해 재료를 쓸어 담는 러너. 시즌 1 여덟 편이 서로 다른 코스·우두머리·마무리를 갖고, 시즌 프롤로그와 편별 오프닝, 어시장 상점, 행동하는 펫 다섯. 화면 비율에 맞춰 세계가 늘어난다 — 모바일 세로까지.",
+      "tagline": "낚싯줄에 걸린 물고기를 점프로 유도해 재료를 쓸어 담는 러너. 시즌 1 여덟 편이 서로 다른 코스·우두머리·마무리를 갖고, 갑판의 조력자와 물속의 펫, 등급·확률·천장이 있는 뽑기, 어시장 상점. 화면 비율에 맞춰 세계가 늘어난다 — 접는 폰의 넓은 겉화면까지.",
       "status": "playable",
       "accent": "#e0a030",
       "engine": "Vite · TypeScript · PixiJS · WebAudio 합성 · 정본에서 생성한 WebP 그림 · 모바일 우선 UI",
@@ -331,9 +331,14 @@
           "note": "2026-09-09. 가로 스크롤 최대 2.69×→1.21×, 땅 셋을 하나로, 나무는 침몰선에만. design/reports/LANDSCAPE_AND_WORLD_v7.md"
         },
         {
+          "name": "대대적 개편 v8 — 화면 골격 · 카드 한 규격 · 어구와 뽑기 경제 · 갑판의 사람 · 구도와 뜰채",
+          "state": "done",
+          "note": "2026-09-09. 문서 스크롤 전 화면 1.00×, 조작 겹침 0, 채움률 96~100%. 저장 v3→v4 이관. design/reports/OVERHAUL_v8.md"
+        },
+        {
           "name": "실기 폰 플레이 확인과 사용자 손맛 승인",
           "state": "active",
-          "note": "bingle-wsl:4173 포털 배포. 헤드리스로는 움직임을 판정할 수 없다"
+          "note": "v8 개편 뒤 실기 검수 대기. 헤드리스로는 움직임을 판정할 수 없다"
         },
         {
           "name": "시즌 2 · 파티형 경쟁",
@@ -401,6 +406,14 @@
         {
           "label": "가로 화면과 세계의 앞뒤 보고 v7",
           "path": "design/reports/LANDSCAPE_AND_WORLD_v7.md"
+        },
+        {
+          "label": "대대적 개편 계획 v8",
+          "path": "design/OVERHAUL_v8.md"
+        },
+        {
+          "label": "대대적 개편 v8 수행 보고",
+          "path": "design/reports/OVERHAUL_v8.md"
         }
       ],
       "progress": {
@@ -411,29 +424,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "7c8372e",
-        "date": "2026-09-09T00:43:19+09:00",
-        "subject": "가로로 들어도 한 화면에 담기고, 바다에는 바닥이 하나뿐이다"
+        "hash": "c21bf33",
+        "date": "2026-09-09T12:58:08+09:00",
+        "subject": "게임처럼 보이고, 게임처럼 자란다 — 대대적 개편 v8"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2685
+          "ms": 2779
         },
         "test": {
           "ok": true,
-          "ms": 5233,
+          "ms": 5576,
           "tests": {
-            "passed": 225,
+            "passed": 245,
             "failed": 0,
-            "total": 225
+            "total": 245
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3062,
-        "at": "2026-09-09T06:55:04.926Z"
+        "ms": 3318,
+        "at": "2026-09-09T12:28:56.944Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"
