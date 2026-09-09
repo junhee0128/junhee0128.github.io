@@ -1,0 +1,171 @@
+/* ── 시안 B 「종이 공작」 ───────────────────────────────────────────────────
+   기준: 도톰한 색지와 펠트를 오려 붙인 판. 광택이 없고, 층과 그림자로만 깊이를 만든다.
+   · 색     아트 추출색을 종이로 옮긴다 — 코발트 #176AFB, 마리골드 #FACA28,
+            크라프트 #E3CFA9, 종이 #FFFBF2, 잉크 #12203C
+   · 서체   Gaegu 700(표제) + Gothic A1 700/800(본문·숫자). 둘 다 한글을 갖는다
+   · 스케일 30 → 22 → 18 → 15 → 13 → 12
+   · 격자   느슨하다. 요소가 −1.5°~+1.5° 기울고 테이프로 붙는다
+   · 내비   가로·세로 모두 **위쪽 펠트 탭 줄**. 레일도 독도 없다
+   · 부품   렌더한 펠트 아이콘 12종. 최소 탭 56, 주 동작 64
+   · 캐릭터 가로 56% · 세로 36%. 오려 붙인 종이 바닥 위에 선다                   */
+:root { --blue:#176AFB; --blue-d:#0B4FC9; --gold:#FACA28; --gold-d:#E0A800;
+  --kraft:#E3CFA9; --paper:#FFFBF2; --ink:#12203C; --mute:#7C7461; }
+.scr { font-family: "Gothic A1", system-ui, sans-serif; color: var(--ink); background: var(--kraft); }
+.board { position: absolute; inset: 0; background:
+  radial-gradient(120% 90% at 22% 0%, rgba(255,255,255,.24), transparent 62%),
+  repeating-linear-gradient(97deg, rgba(90,65,30,.045) 0 2px, transparent 2px 8px), var(--kraft); }
+.scr .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover }
+.ic { width: 32px; height: 32px; object-fit: contain; display: block } .ic.xs { width: 19px; height: 19px }
+h1, h4, .btn, .tb em, .kind { font-family: "Gaegu", system-ui, sans-serif; font-weight: 700 }
+
+/* 종이 — 흰 다이컷 테 + 매트한 그림자. 광택 없음 */
+.fold, .chip, .note, .tb, .btn, .felt, .petnote {
+  background: var(--paper); box-shadow: 0 5px 11px rgba(70,50,20,.26); }
+.fold { border: 4px solid #fff; border-radius: 10px; padding: 9px 10px; position: relative }
+.tape { position: absolute; width: 62px; height: 21px; background: rgba(250,202,40,.62);
+  box-shadow: 0 1px 2px rgba(70,50,20,.2) }
+.t1 { left: -14px; top: 12px; transform: rotate(-36deg) }
+.t2 { right: -16px; top: -9px; transform: rotate(32deg) }
+.t3 { left: 50%; top: -12px; width: 48px; height: 17px; transform: translateX(-50%) rotate(-3deg) }
+
+/* ── 위 탭 줄 ────────────────────────────────────────────────────────────── */
+.tabrow { position: absolute; left: 12px; top: 8px; display: flex; gap: 8px; z-index: 6 }
+.tb { position: relative; width: 96px; height: 56px; border: 3px solid #fff; border-radius: 12px 12px 4px 4px;
+  cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
+  color: var(--mute); transform: rotate(-.8deg) }
+.tb:nth-child(even) { transform: rotate(.9deg) }
+.tb em { font-style: normal; font-size: 15px }
+.tb.on { background: linear-gradient(180deg, #2E7BFF, var(--blue)); color: #fff; transform: rotate(-1.4deg) }
+.dot { position: absolute; top: -6px; right: -6px; width: 14px; height: 14px; border-radius: 99px;
+  background: #EF4136; border: 3px solid #fff }
+.purse { position: absolute; right: 12px; top: 8px; display: flex; align-items: center; gap: 8px; z-index: 6 }
+.chip { display: inline-flex; align-items: center; gap: 7px; height: 56px; padding: 0 15px; border: 3px solid #fff;
+  border-radius: 10px; font-size: 17px; font-weight: 800; transform: rotate(.7deg) }
+.chip.sm { height: 34px; font-size: 14px; padding: 0 11px; transform: none }
+.chip.gear { width: 56px; padding: 0; justify-content: center; border: 3px solid #fff; cursor: pointer }
+.chip.gear::before { content: ""; width: 20px; height: 20px; border-radius: 50%; border: 5px solid var(--mute) }
+
+/* ── 무대 ────────────────────────────────────────────────────────────────── */
+.stage { position: absolute; left: 12px; width: 400px; top: 72px; bottom: 12px; z-index: 3 }
+.ground { position: absolute; left: 4%; right: 4%; bottom: 38px; height: 26px; border-radius: 40% 60% 50% 50%;
+  background: #D9B98A; box-shadow: 0 4px 9px rgba(70,50,20,.28) }
+.stage .hero { position: absolute; left: 22%; bottom: 48px; height: 218px }
+.stage .dog { position: absolute; left: 56%; bottom: 48px; height: 86px }
+.stage .bird { position: absolute; left: 0; bottom: 186px; height: 52px }
+.label { position: absolute; left: 50%; transform: translateX(-50%) rotate(-1.2deg); bottom: 2px;
+  background: var(--paper); border: 3px solid #fff; border-radius: 8px; padding: 5px 14px; white-space: nowrap;
+  box-shadow: 0 4px 9px rgba(70,50,20,.26) }
+.label b { font-family: "Gaegu", sans-serif; font-size: 19px } .label span { font-size: 13px; color: var(--mute); margin-left: 7px }
+
+/* ── 오른쪽 ──────────────────────────────────────────────────────────────── */
+.side { position: absolute; right: 12px; width: 408px; top: 72px; bottom: 12px; z-index: 5;
+  display: flex; flex-direction: column; gap: 8px }
+.mission { transform: rotate(-.5deg) }
+.mrow { display: flex; gap: 11px }
+.cov { width: 68px; height: 68px; object-fit: cover; border-radius: 6px; border: 3px solid #fff; flex: none }
+.eye { font-size: 12px; color: var(--mute) }
+.mission h1 { font-size: 20px; line-height: 1.12; margin-top: 1px }
+.mission p { font-size: 13px; line-height: 1.42; color: #55503f; margin-top: 3px }
+.stars { position: absolute; right: 10px; bottom: 8px; display: flex; gap: 3px }
+.st { width: 19px; height: 19px; object-fit: contain; filter: grayscale(1) opacity(.32) }
+.st.on { filter: none }
+.btn { flex: none; height: 56px; border: 3px solid #fff; border-radius: 10px; cursor: pointer; font-size: 17px;
+  color: var(--ink); display: inline-flex; align-items: center; justify-content: center; gap: 8px }
+.btn.go { flex: none; height: 64px; font-size: 25px; color: #fff; transform: rotate(-1deg);
+  background: linear-gradient(180deg, #2E7BFF, var(--blue)); border-color: #fff;
+  box-shadow: 0 6px 13px rgba(11,79,201,.4) }
+.two { display: flex; gap: 9px } .two .btn { flex: 1; font-size: 16px }
+.quest { flex: 1; min-height: 0; transform: rotate(.6deg); display: flex; flex-direction: column; gap: 5px }
+.land .quest h4 { display: none }
+.quest h4 { font-size: 16px; color: var(--mute) }
+.qr { display: grid; grid-template-columns: 1fr 58px 36px; align-items: center; gap: 8px; font-size: 14px }
+.qr b { text-align: right; font-size: 13px; font-weight: 800; color: var(--blue) }
+.bar { position: relative; display: block; height: 9px; border-radius: 99px; background: #E7DCC4; overflow: hidden }
+.bar.wide { width: 100%; margin-top: 9px }
+.bar u { position: absolute; inset: 0 auto 0 0; width: var(--p); background: var(--gold) }
+
+/* ── 세로 ────────────────────────────────────────────────────────────────── */
+.port .tabrow { left: 10px; right: 10px; gap: 6px }
+.port .tb { width: 70px; height: 60px; flex-direction: column; gap: 1px }
+.port .tb em { font-size: 13px }
+.port .purse { right: 10px; top: 76px }
+.port .chip { height: 56px }
+.port .stage { left: 12px; right: 12px; width: auto; top: 140px; bottom: auto; height: 306px }
+.port .stage .hero { left: 28%; bottom: 44px; height: 288px }
+.port .stage .dog { left: 60%; bottom: 46px; height: 116px }
+.port .stage .bird { left: 2%; bottom: 230px; height: 60px }
+.port .side { left: 12px; right: 12px; width: auto; top: 458px; bottom: 10px; gap: 10px }
+.port .cov { width: 92px; height: 92px }
+.port .cov { width: 96px; height: 96px }
+
+/* ── 플레이 ──────────────────────────────────────────────────────────────── */
+.run .field { position: absolute; inset: 0 }
+.run .road { position: absolute; left: 0; right: 0; bottom: 0; height: 84px;
+  background: linear-gradient(180deg, #9aa2ad, #6f7681) }
+.run .runner { position: absolute; left: 21%; bottom: 78px; height: 41% }
+.run .dog { position: absolute; left: 11%; bottom: 78px; height: 18% }
+.run .bird { position: absolute; left: 33%; bottom: 216px; height: 12% }
+.run .ob { position: absolute; left: 79%; bottom: 78px; height: 20% }
+.run .jelly { position: absolute; height: 13% }
+.run .j0 { left: 44%; bottom: 134px } .run .j1 { left: 50%; bottom: 160px }
+.run .j2 { left: 56%; bottom: 176px } .run .j3 { left: 62%; bottom: 176px }
+.run .j4 { left: 68%; bottom: 160px } .run .j5 { left: 74%; bottom: 134px }
+.hud { position: absolute; inset: 0 }
+.note { position: absolute; border: 3px solid #fff; border-radius: 8px; padding: 7px 13px;
+  display: flex; align-items: center; gap: 10px }
+.note.score { left: 12px; top: 12px; transform: rotate(-1.4deg) }
+.note.score b { font-family: "Gothic A1", sans-serif; font-weight: 800; font-size: 27px; color: var(--blue) }
+.note.score em { font-style: normal; font-size: 15px; font-weight: 800; color: var(--gold-d) }
+.strip { position: absolute; left: 300px; width: 246px; top: 26px; height: 14px; border-radius: 3px;
+  background: var(--paper); border: 3px solid #fff; box-shadow: 0 3px 7px rgba(70,50,20,.26) }
+.strip i { position: absolute; inset: 0 auto 0 0; width: var(--p); background: var(--gold) }
+.strip .boss { position: absolute; left: 66%; width: 20%; top: 0; bottom: 0; background: rgba(239,65,54,.5) }
+.strip .pin { position: absolute; right: -5px; top: -9px; width: 5px; height: 26px; background: var(--blue) }
+.gau { position: absolute; right: 82px; top: 22px; display: flex; align-items: center; gap: 9px;
+  background: var(--paper); border: 3px solid #fff; border-radius: 8px; padding: 6px 12px;
+  box-shadow: 0 4px 9px rgba(70,50,20,.24) }
+.gau .bar.wide { width: 128px; margin: 0; height: 11px }
+.gau .bar u { background: linear-gradient(180deg, #C9A6FF, #8B4FFF) }
+.chip.pause { position: absolute; right: 12px; top: 12px; width: 56px; height: 56px; padding: 0;
+  justify-content: center; gap: 5px; transform: none; cursor: pointer }
+.chip.pause span { width: 6px; height: 21px; border-radius: 2px; background: var(--mute) }
+.tally { position: absolute; right: 82px; top: 74px; display: flex; gap: 7px }
+.felt { position: absolute; bottom: 10px; width: 72px; height: 72px; border-radius: 22px; border: 4px solid #fff;
+  cursor: pointer; box-shadow: 0 6px 13px rgba(70,50,20,.32) }
+.felt::after { content: ""; position: absolute; left: 50%; top: 50%; margin-left: -13px; border: 13px solid transparent }
+.felt.l { left: 12px } .felt.l::after { border-top-color: var(--mute); margin-top: -6px }
+.felt.r { right: 12px } .felt.r::after { border-bottom-color: var(--mute); margin-top: -19px }
+.petnote { position: absolute; left: 98px; bottom: 14px; width: 60px; height: 60px; border-radius: 50%;
+  border: 4px solid #fff }
+.petnote svg { position: absolute; inset: 1px; transform: rotate(-90deg) }
+.petnote circle { fill: none; stroke: rgba(18,32,60,.13); stroke-width: 5 }
+.petnote circle.p { stroke: var(--gold); stroke-dasharray: 145; stroke-dashoffset: 40; stroke-linecap: round }
+.petnote .pi { position: absolute; left: 50%; top: 50%; width: 34px; transform: translate(-50%,-50%) }
+.note.build { left: 172px; bottom: 16px; transform: rotate(-1deg); font-size: 14px }
+.note.build b { font-family: "Gaegu", sans-serif; font-size: 17px }
+.note.build .bar { width: 72px } .note.build em { font-style: normal; font-size: 13px; color: var(--gold-d); font-weight: 800 }
+
+/* ── 편의점 ──────────────────────────────────────────────────────────────── */
+.mid { position: absolute; left: 12px; right: 432px; top: 84px; bottom: 12px; display: flex; flex-direction: column; gap: 10px; z-index: 4 }
+.kinds { display: flex; gap: 8px }
+.kind { min-width: 56px; height: 56px; padding: 0 18px; border: 3px solid #fff; border-radius: 10px; cursor: pointer; font-size: 17px;
+  color: var(--mute); background: var(--paper); box-shadow: 0 4px 9px rgba(70,50,20,.22) }
+.kind.on { background: linear-gradient(180deg, #FFD860, var(--gold)); color: #4A3600; transform: rotate(-1deg) }
+.shelf { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; min-height: 0 }
+.prod { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 1px;
+  text-align: center; cursor: pointer; min-height: 0; overflow: hidden }
+.prod:nth-child(2) { transform: rotate(.9deg) } .prod:nth-child(3) { transform: rotate(-.8deg) }
+.prod .pa { height: 54px; display: grid; place-items: center; flex: none }
+.prod .art { max-height: 52px; max-width: 86%; object-fit: contain }
+.prod .cost { margin-top: auto }
+.prod b { font-family: "Gaegu", sans-serif; font-size: 18px } .prod span { font-size: 12px; color: var(--mute) }
+.cost { display: inline-flex; align-items: center; gap: 5px; height: 28px; padding: 0 12px; border-radius: 6px;
+  font-size: 14px; font-weight: 800; color: #fff; background: var(--blue); margin-top: 3px }
+.cost.got { background: #E7DCC4; color: var(--mute) }
+.side .big { flex: 1; min-height: 0; overflow: hidden; text-align: center; transform: rotate(-.6deg) }
+.hero2 { display: block; margin: 4px auto 6px; height: 104px; object-fit: contain }
+.side .big h1 { font-size: 24px } .side .big h1 em { font-style: normal; font-size: 15px; color: var(--mute) }
+.side .big p { font-size: 13.5px; line-height: 1.5; color: #55503f; margin-top: 6px }
+.side .big .eye { display: block; margin-top: 6px }
+.side .btn { width: 100% }
+.side .btn.go { margin-top: auto }
