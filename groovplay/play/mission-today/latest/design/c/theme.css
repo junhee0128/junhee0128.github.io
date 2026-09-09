@@ -1,0 +1,44 @@
+/* C — 젤리 (Jelly / Clay). 곰젤리 아트와 같은 재질: 두툼한 입체, 캔디 그라디언트, 큼직한 곡률 */
+:root{
+  --page:#D8ECFF; --pageink:#1B2A4A;
+  --ink:#26304A; --mute:#6E7B99; --paper:#FFFFFF; --line:#DCE7F5;
+  --accent:#FFC53D; --alert:#FF5E7D; --p1:#FF8FB0; --p2:#FF4F73; --edge:#D8305A;
+  --scrim:linear-gradient(180deg,rgba(255,255,255,.10),rgba(20,50,100,.24));
+  --podium:rgba(30,70,130,.18);
+  --sh:0 5px 0 #E3ECF7, 0 16px 28px rgba(35,70,130,.20);
+}
+body{background:radial-gradient(120% 70% at 50% 0%,#F1F9FF,#CFE6FF)}
+.tok{background:#fff;border-color:#D8E4F2;color:#26304A;box-shadow:0 3px 0 #E3ECF7}
+.vp{box-shadow:0 16px 34px rgba(35,70,130,.28)}
+.card{background:var(--paper);border-radius:24px;box-shadow:var(--sh),inset 0 2px 0 rgba(255,255,255,.9)}
+.btn{border-radius:22px;background:linear-gradient(180deg,#FFFFFF,#EFF5FC);color:var(--ink);box-shadow:0 5px 0 #CFDDEC,0 12px 20px rgba(35,70,130,.18),inset 0 2px 0 rgba(255,255,255,.9)}
+.btn.primary{background:linear-gradient(180deg,var(--p1),var(--p2));color:#fff;box-shadow:0 6px 0 var(--edge),0 16px 26px rgba(230,70,110,.34),inset 0 2px 0 rgba(255,255,255,.5)}
+.btn.big{border-radius:26px}
+.rail{background:linear-gradient(180deg,#FFFFFF,#EAF2FB);border-radius:0 26px 26px 0;box-shadow:6px 0 18px rgba(35,70,130,.18);color:var(--mute)}
+.rail-i.on{color:#fff}
+.rail-i.on::before{content:"";position:absolute;inset:1px 5px;border-radius:18px;background:linear-gradient(180deg,#68D6FF,#2FA8F0);box-shadow:0 4px 0 #1B7CC0,inset 0 2px 0 rgba(255,255,255,.5);z-index:-1}
+.rail-i{z-index:0}
+.topline{color:#fff;text-shadow:0 2px 6px rgba(10,40,90,.55)}
+.chip{background:#fff;color:var(--ink);box-shadow:0 4px 0 #D5E3F2,0 8px 14px rgba(35,70,130,.16);font-size:13px}
+.icobtn{background:#fff;border-radius:99px;color:var(--ink);box-shadow:0 4px 0 #D5E3F2}
+.nameplate{color:#fff;text-shadow:0 3px 8px rgba(10,40,90,.6)}
+.stars i{background:#DCE7F5}
+.hud{color:#fff;text-shadow:0 3px 6px rgba(10,30,70,.5)}
+.progress{background:rgba(255,255,255,.5);box-shadow:inset 0 2px 3px rgba(20,50,100,.28)}
+.progress i{background:linear-gradient(90deg,#7BE3FF,#2FA8F0)}
+.progress .me{background:#fff;border:3px solid #2FA8F0}
+.gauge{background:rgba(255,255,255,.5);box-shadow:inset 0 2px 3px rgba(20,50,100,.28)}
+.gauge i{background:linear-gradient(90deg,#D3A8FF,#8A4FFF)}
+.hud .pause{background:#fff;border-radius:99px;color:var(--ink);text-shadow:none;box-shadow:0 4px 0 #C9DAEC}
+.band{background:linear-gradient(180deg,rgba(20,45,90,0),rgba(20,45,90,.32))}
+.band .ctl{background:linear-gradient(180deg,#FFFFFF,#E8F1FA);color:#3E80C0;box-shadow:0 5px 0 #BCD2E6,0 10px 18px rgba(20,50,100,.28),inset 0 2px 0 #fff}
+.tab{border-radius:18px;background:#fff;color:var(--mute);box-shadow:0 4px 0 #DCE7F5}
+.tab.on{background:linear-gradient(180deg,#FFD86B,#FFB61F);color:#5A3C00;box-shadow:0 4px 0 #D18E00}
+.price{background:#EAF4FF;color:#2A6DB0;font-size:12px}
+.price.got{background:#E9F8EE;color:#2E9E5B}
+.sheet{background:#fff;border-radius:28px 28px 0 0;box-shadow:0 -14px 34px rgba(35,70,130,.28)}
+.lvbar{background:#E4EDF7}
+.nav{background:linear-gradient(180deg,#FFFFFF,#EAF2FB);border-radius:26px 26px 0 0;box-shadow:0 -6px 20px rgba(35,70,130,.2);color:var(--mute)}
+.nav-i.on{color:#fff}
+.nav-i.on::before{content:"";position:absolute;inset:8px 12px;border-radius:18px;background:linear-gradient(180deg,#68D6FF,#2FA8F0);box-shadow:0 4px 0 #1B7CC0;z-index:-1}
+.nav-i{z-index:0}

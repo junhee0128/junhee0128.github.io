@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko" data-img="../img">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>오늘의 사명 — 프론트엔드 시안 다섯</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/base.css">
+<style>
+body{background:radial-gradient(90% 60% at 20% 0%,#1d2a52,#0A0E1A 62%);color:#E7ECF7}
+.pick{display:grid;gap:14px;margin-top:22px}
+.pick a{display:block;padding:16px 16px 14px;border-radius:18px;text-decoration:none;color:inherit;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13)}
+.pick h2{font-size:19px;display:flex;align-items:baseline;gap:8px}
+.pick h2 em{font-style:normal;font-size:12px;opacity:.5}
+.pick p{font-size:13.5px;line-height:1.6;opacity:.78;margin-top:6px}
+.sw{display:flex;gap:6px;margin-top:11px}
+.sw i{width:34px;height:22px;border-radius:7px;display:block;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.go{margin-top:11px;font-size:13px;color:#9FD2FF}
+</style>
+</head>
+<body>
+<div class="doc">
+  <h1>프론트엔드 시안 다섯</h1>
+  <p class="lede">같은 화면 넷(가로 로비 · 플레이 HUD · 편의점 · 세로 로비)을 다섯 방향으로 그렸다.
+  네 화면 모두 <b>겹침을 고친 배치</b>가 이미 들어가 있으니, 색과 재질만이 아니라 고쳐진 자리도 함께 보인다.
+  하나를 고르면 그 토큰이 <code>render/theme.ts</code>가 되고 화면 13개가 그 위에서 다시 그려진다.</p>
+  <div class="pick">
+    <a href="a/">
+      <h2>A · 그림책 <em>Storybook</em></h2>
+      <p>지금 방향을 제대로 완성한 것. 따뜻한 크림 종이, 부드러운 2단 그림자, 채움형 아이콘, 산호빛 주 버튼.</p>
+      <div class="sw"><i style="background:#FFFDF7"></i><i style="background:#2C2A3A"></i><i style="background:#FF5D73"></i><i style="background:#FFB92E"></i></div>
+      <div class="go">열어 보기 →</div>
+    </a>
+    <a href="b/">
+      <h2>B · 방과후 네온 <em>Night Glass</em></h2>
+      <p>짙은 남색 유리판 위에 라임과 시안이 발광한다. 3D 캐릭터가 가장 또렷하게 떠오른다.</p>
+      <div class="sw"><i style="background:#0E1430"></i><i style="background:#EAF0FF"></i><i style="background:#C6FF4F"></i><i style="background:#FF5C8A"></i></div>
+      <div class="go">열어 보기 →</div>
+    </a>
+    <a href="c/">
+      <h2>C · 젤리 <em>Jelly / Clay</em></h2>
+      <p>곰젤리와 같은 재질. 두툼하게 솟은 버튼, 캔디 그라디언트, 큼직한 곡률.</p>
+      <div class="sw"><i style="background:#DFF1FF"></i><i style="background:#26304A"></i><i style="background:#FF4F73"></i><i style="background:#FFC53D"></i></div>
+      <div class="go">열어 보기 →</div>
+    </a>
+    <a href="d/">
+      <h2>D · 스티커 앨범 <em>Sticker</em></h2>
+      <p>다이컷 스티커 버튼, 테이프, 종이 콜라주. 스티커 재화와 세계관이 그대로 붙는다.</p>
+      <div class="sw"><i style="background:#EFE2CC"></i><i style="background:#332F2A"></i><i style="background:#EF4136"></i><i style="background:#FFC531"></i></div>
+      <div class="go">열어 보기 →</div>
+    </a>
+    <a href="e/">
+      <h2>E · 작전 브리핑 <em>Mission Console</em></h2>
+      <p>반투명 스크림 위 각진 패널, 앰버 강조, 큰 타이포 위계. 「오늘의 사명」이라는 이름에 가장 충실하다.</p>
+      <div class="sw"><i style="background:#0B1016"></i><i style="background:#EDF2F7"></i><i style="background:#FFB020"></i><i style="background:#FF5A4E"></i></div>
+      <div class="go">열어 보기 →</div>
+    </a>
+  </div>
+  <p class="note">고른 시안 번호만 알려 주면 된다. 색을 섞고 싶으면 "C의 버튼 + E의 타이포"처럼 말해도 된다.</p>
+</div>
+</body>
+</html>

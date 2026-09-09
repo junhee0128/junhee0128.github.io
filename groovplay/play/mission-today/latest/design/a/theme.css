@@ -1,0 +1,45 @@
+/* A — 그림책 (Storybook). 지금 방향을 제대로 완성한 것: 따뜻한 종이, 부드러운 2단 그림자, 채움형 아이콘 */
+:root{
+  --page:#F1E6D2; --pageink:#3B3226;
+  --ink:#2C2A3A; --mute:#7A7288; --paper:#FFFDF7; --line:#E4DAC6;
+  --accent:#FFB92E; --alert:#FF5D73; --p1:#FF9A5B; --p2:#FF5D73; --edge:#D9A03E;
+  --scrim:linear-gradient(180deg,rgba(255,247,232,.06),rgba(70,48,26,.26));
+  --podium:rgba(90,64,32,.20);
+  --sh:0 2px 0 #EADFC8, 0 10px 22px rgba(90,64,32,.18);
+}
+body{background:radial-gradient(120% 80% at 50% 0%,#FBF3E4,#EADCC2)}
+.tok{background:rgba(255,255,255,.6);border-color:#E0D3B9;color:#3B3226}
+.vp{box-shadow:0 12px 34px rgba(90,64,32,.24)}
+.scr{color:var(--ink)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--sh)}
+.btn{border-radius:99px;background:var(--paper);border:1px solid var(--line);color:var(--ink);box-shadow:0 2px 0 #E7DCC5,0 6px 14px rgba(90,64,32,.14)}
+.btn.primary{background:linear-gradient(180deg,var(--p1),var(--p2));color:#fff;border:0;box-shadow:0 3px 0 var(--edge),0 10px 20px rgba(210,80,80,.30)}
+.rail{background:linear-gradient(180deg,#FFFDF7,#F6EEDD);border-right:1px solid var(--line);box-shadow:4px 0 16px rgba(90,64,32,.14);color:var(--mute)}
+.rail-i.on{color:#fff}
+.rail-i.on::before{content:"";position:absolute;inset:2px 4px;border-radius:16px;background:linear-gradient(180deg,var(--p1),var(--p2));box-shadow:0 3px 0 var(--edge);z-index:-1}
+.rail-i{z-index:0}
+.topline{color:#fff;text-shadow:0 1px 3px rgba(40,26,10,.5)}
+.chip{background:rgba(255,253,247,.94);color:var(--ink);box-shadow:0 2px 0 #E7DCC5}
+.icobtn{background:rgba(255,253,247,.94);border-radius:99px;color:var(--ink);box-shadow:0 2px 0 #E7DCC5}
+.nameplate{color:#fff;text-shadow:0 2px 5px rgba(40,26,10,.6)}
+.stars i{background:#E0D6C2}
+.hud{color:#fff;text-shadow:0 2px 4px rgba(30,20,10,.55)}
+.hud .score{color:#fff}
+.progress{background:rgba(255,253,247,.42);box-shadow:inset 0 1px 2px rgba(0,0,0,.2)}
+.progress i{background:#fff}
+.progress .me{background:var(--p2);border:2px solid #fff}
+.gauge{background:rgba(255,253,247,.42)}
+.gauge i{background:linear-gradient(90deg,#C79BFF,#9A6BFF)}
+.hud .pause{background:rgba(255,253,247,.92);border-radius:99px;color:var(--ink);text-shadow:none;box-shadow:0 2px 0 #E0D3B9}
+.band{background:linear-gradient(180deg,rgba(52,40,28,0),rgba(52,40,28,.34))}
+.band .ctl{background:rgba(255,253,247,.9);color:#6A5B45;box-shadow:0 3px 0 rgba(120,95,60,.35)}
+.tab{border-radius:99px;background:rgba(255,253,247,.8);color:var(--mute);border:1px solid var(--line)}
+.tab.on{background:linear-gradient(180deg,var(--p1),var(--p2));color:#fff;border-color:transparent;box-shadow:0 2px 0 var(--edge)}
+.price{background:#FFF3D6;color:#8A6B1E}
+.price.got{background:#EDE6D6;color:#8A8272}
+.card.item.owned{background:#FFFBEE}
+.sheet{background:var(--paper);border-radius:22px 22px 0 0;border:1px solid var(--line);border-bottom:0;box-shadow:0 -12px 30px rgba(90,64,32,.26)}
+.nav{background:linear-gradient(180deg,#FFFDF7,#F6EEDD);border-top:1px solid var(--line);color:var(--mute);box-shadow:0 -4px 16px rgba(90,64,32,.14)}
+.nav-i.on{color:#fff}
+.nav-i.on::before{content:"";position:absolute;inset:6px 12px;border-radius:16px;background:linear-gradient(180deg,var(--p1),var(--p2));box-shadow:0 3px 0 var(--edge);z-index:-1}
+.nav-i{z-index:0}

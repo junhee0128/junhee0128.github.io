@@ -1,0 +1,48 @@
+/* B — 방과후 네온 (Night Glass). 짙은 유리판 위 라임 발광. 3D 캐릭터가 가장 또렷하게 뜬다 */
+:root{
+  --page:#070B18; --pageink:#DCE6FF;
+  --ink:#EAF0FF; --mute:#8E9CC4; --paper:rgba(255,255,255,.08); --line:rgba(255,255,255,.16);
+  --accent:#C6FF4F; --alert:#FF5C8A; --p1:#C6FF4F; --p2:#7BE8A0;
+  --scrim:linear-gradient(180deg,rgba(7,11,24,.42),rgba(7,11,24,.90));
+  --podium:rgba(198,255,79,.22);
+  --sh:0 12px 30px rgba(0,0,0,.45);
+}
+body{background:radial-gradient(90% 60% at 20% 0%,#182a5c,#070B18 60%)}
+.tok{background:rgba(255,255,255,.07)}
+.vp{box-shadow:0 16px 40px rgba(0,0,0,.6)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:var(--sh),inset 0 1px 0 rgba(255,255,255,.18)}
+.btn{border-radius:14px;background:rgba(255,255,255,.09);border:1px solid var(--line);color:var(--ink);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.btn.primary{background:linear-gradient(120deg,var(--p1),var(--p2));color:#08130A;border:0;box-shadow:0 0 0 1px rgba(198,255,79,.5),0 10px 26px rgba(150,255,80,.32)}
+.rail{background:rgba(10,16,34,.62);border-right:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:var(--mute)}
+.rail-i.on{color:var(--accent)}
+.rail-i.on::before{content:"";position:absolute;inset:2px 6px;border-radius:14px;background:rgba(198,255,79,.14);box-shadow:inset 0 0 0 1px rgba(198,255,79,.45),0 0 18px rgba(198,255,79,.25);z-index:-1}
+.rail-i{z-index:0}
+.rail-i.on::after{content:"";position:absolute;left:0;top:12px;bottom:12px;width:3px;border-radius:99px;background:var(--accent);box-shadow:0 0 10px var(--accent)}
+.topline{color:var(--ink)}
+.chip{background:rgba(255,255,255,.08);border:1px solid var(--line);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.icobtn{background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:12px}
+.nameplate{color:#fff}
+.nameplate span{color:var(--accent);opacity:.9}
+.stars i{background:rgba(255,255,255,.25)}
+.hud{color:#fff}
+.hud .score{text-shadow:0 0 18px rgba(198,255,79,.5)}
+.hud .chain{color:var(--accent)}
+.progress{background:rgba(255,255,255,.16)}
+.progress i{background:linear-gradient(90deg,#7BE8A0,var(--accent));box-shadow:0 0 12px rgba(198,255,79,.6)}
+.progress .me{background:var(--accent);box-shadow:0 0 12px var(--accent)}
+.gauge{background:rgba(255,255,255,.14)}
+.gauge i{background:linear-gradient(90deg,#6ED8FF,#B77BFF);box-shadow:0 0 12px rgba(140,140,255,.6)}
+.hud .pause{background:rgba(12,18,36,.6);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.band{background:linear-gradient(180deg,rgba(7,11,24,0),rgba(7,11,24,.75))}
+.band .ctl{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.24);color:#fff;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.band .build .mini{background:rgba(255,255,255,.18)}
+.tab{border-radius:12px;background:rgba(255,255,255,.07);border:1px solid var(--line);color:var(--mute)}
+.tab.on{background:rgba(198,255,79,.16);color:var(--accent);border-color:rgba(198,255,79,.45)}
+.price{background:rgba(255,255,255,.10);color:var(--ink)}
+.price.got{background:rgba(198,255,79,.16);color:var(--accent)}
+.sheet{background:rgba(10,16,34,.86);border:1px solid var(--line);border-bottom:0;border-radius:20px 20px 0 0;backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);box-shadow:0 -16px 40px rgba(0,0,0,.6)}
+.lvbar{background:rgba(255,255,255,.16)}
+.nav{background:rgba(10,16,34,.72);border-top:1px solid var(--line);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:var(--mute)}
+.nav-i.on{color:var(--accent)}
+.nav-i.on::before{content:"";position:absolute;inset:6px 14px;border-radius:14px;background:rgba(198,255,79,.14);box-shadow:inset 0 0 0 1px rgba(198,255,79,.45);z-index:-1}
+.nav-i{z-index:0}
