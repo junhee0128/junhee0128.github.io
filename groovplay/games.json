@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-09T14:26:10.196Z",
+  "builtAt": "2026-09-09T14:39:47.355Z",
   "games": [
     {
       "id": "everdusk",
@@ -96,18 +96,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "9d83ee0",
-        "date": "2026-09-09T15:53:36+09:00",
-        "subject": "홈에서 '출발' 단추가 잘리던 것을 고친다"
+        "hash": "7059bbc",
+        "date": "2026-09-09T23:38:15+09:00",
+        "subject": "가독성 계약이 재던 두 대상을 규칙이 말하는 대상으로 옮긴다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2942
+          "ms": 2545
         },
         "test": {
           "ok": true,
-          "ms": 6229,
+          "ms": 5555,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3761,
-        "at": "2026-09-09T14:25:36.355Z"
+        "ms": 3031,
+        "at": "2026-09-09T14:39:12.929Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -222,11 +222,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2282
+          "ms": 2156
         },
         "test": {
           "ok": true,
-          "ms": 14912,
+          "ms": 14651,
           "tests": {
             "passed": 99,
             "failed": 0,
@@ -236,8 +236,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3782,
-        "at": "2026-09-09T14:25:57.392Z"
+        "ms": 4512,
+        "at": "2026-09-09T14:39:34.315Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -431,11 +431,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3255
+          "ms": 3213
         },
         "test": {
           "ok": true,
-          "ms": 6107,
+          "ms": 6041,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -445,8 +445,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3416,
-        "at": "2026-09-09T14:26:10.191Z"
+        "ms": 3766,
+        "at": "2026-09-09T14:39:47.353Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"

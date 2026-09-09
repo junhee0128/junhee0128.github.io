@@ -3,10 +3,10 @@
   "entries": {
     "bcn_post_blaze": {
       "src": "beacons/bcn_post_blaze_{nn}@4x.webp",
-      "frameW": 88,
-      "frameH": 192,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 208,
+      "frameH": 208,
+      "frames": 4,
+      "fps": 10,
       "pivot": [
         0.5,
         1
@@ -16,8 +16,8 @@
     },
     "bcn_post_catch": {
       "src": "beacons/bcn_post_catch_{nn}@4x.webp",
-      "frameW": 82,
-      "frameH": 192,
+      "frameW": 208,
+      "frameH": 208,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -29,8 +29,8 @@
     },
     "bcn_post_dark": {
       "src": "beacons/bcn_post_dark_{nn}@4x.webp",
-      "frameW": 82,
-      "frameH": 192,
+      "frameW": 208,
+      "frameH": 208,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -42,21 +42,21 @@
     },
     "bcn_post_lit": {
       "src": "beacons/bcn_post_lit_{nn}@4x.webp",
-      "frameW": 82,
-      "frameH": 192,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 208,
+      "frameH": 208,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bcn_post_unlit": {
       "src": "beacons/bcn_post_unlit_{nn}@4x.webp",
-      "frameW": 82,
-      "frameH": 192,
+      "frameW": 208,
+      "frameH": 208,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -68,23 +68,23 @@
     },
     "bos_belless_broken": {
       "src": "bosses/bos_belless_broken_{nn}@4x.webp",
-      "frameW": 210,
-      "frameH": 235,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 276,
+      "frameH": 276,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_belless_down": {
       "src": "bosses/bos_belless_down_{nn}@4x.webp",
-      "frameW": 237,
-      "frameH": 211,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 276,
+      "frameH": 276,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -94,23 +94,23 @@
     },
     "bos_belless_idle": {
       "src": "bosses/bos_belless_idle_{nn}@4x.webp",
-      "frameW": 212,
-      "frameH": 256,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 276,
+      "frameH": 276,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_belless_rise": {
       "src": "bosses/bos_belless_rise_{nn}@4x.webp",
-      "frameW": 256,
-      "frameH": 182,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 276,
+      "frameH": 276,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -120,10 +120,10 @@
     },
     "bos_belless_strike": {
       "src": "bosses/bos_belless_strike_{nn}@4x.webp",
-      "frameW": 256,
-      "frameH": 238,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 276,
+      "frameH": 276,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         1
@@ -133,23 +133,23 @@
     },
     "bos_choir-ascendant_broken": {
       "src": "bosses/bos_choir-ascendant_broken_{nn}@4x.webp",
-      "frameW": 119,
-      "frameH": 228,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 253,
+      "frameH": 253,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_choir-ascendant_down": {
       "src": "bosses/bos_choir-ascendant_down_{nn}@4x.webp",
-      "frameW": 115,
-      "frameH": 66,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 253,
+      "frameH": 253,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -159,23 +159,23 @@
     },
     "bos_choir-ascendant_idle": {
       "src": "bosses/bos_choir-ascendant_idle_{nn}@4x.webp",
-      "frameW": 119,
-      "frameH": 235,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 253,
+      "frameH": 253,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_choir-ascendant_rise": {
       "src": "bosses/bos_choir-ascendant_rise_{nn}@4x.webp",
-      "frameW": 106,
-      "frameH": 186,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 253,
+      "frameH": 253,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -185,10 +185,10 @@
     },
     "bos_choir-ascendant_strike": {
       "src": "bosses/bos_choir-ascendant_strike_{nn}@4x.webp",
-      "frameW": 119,
-      "frameH": 240,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 253,
+      "frameH": 253,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         1
@@ -198,23 +198,23 @@
     },
     "bos_glass-widow_broken": {
       "src": "bosses/bos_glass-widow_broken_{nn}@4x.webp",
-      "frameW": 204,
-      "frameH": 165,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 190,
+      "frameH": 190,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_glass-widow_down": {
       "src": "bosses/bos_glass-widow_down_{nn}@4x.webp",
-      "frameW": 226,
-      "frameH": 131,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 190,
+      "frameH": 190,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -224,23 +224,23 @@
     },
     "bos_glass-widow_idle": {
       "src": "bosses/bos_glass-widow_idle_{nn}@4x.webp",
-      "frameW": 215,
-      "frameH": 176,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 190,
+      "frameH": 190,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_glass-widow_rise": {
       "src": "bosses/bos_glass-widow_rise_{nn}@4x.webp",
-      "frameW": 209,
-      "frameH": 138,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 190,
+      "frameH": 190,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -250,10 +250,10 @@
     },
     "bos_glass-widow_strike": {
       "src": "bosses/bos_glass-widow_strike_{nn}@4x.webp",
-      "frameW": 209,
-      "frameH": 240,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 190,
+      "frameH": 190,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         1
@@ -263,23 +263,23 @@
     },
     "bos_luminarch_broken": {
       "src": "bosses/bos_luminarch_broken_{nn}@4x.webp",
-      "frameW": 134,
-      "frameH": 175,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 212,
+      "frameH": 212,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_luminarch_down": {
       "src": "bosses/bos_luminarch_down_{nn}@4x.webp",
-      "frameW": 126,
-      "frameH": 134,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 212,
+      "frameH": 212,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -289,23 +289,23 @@
     },
     "bos_luminarch_idle": {
       "src": "bosses/bos_luminarch_idle_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 196,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 212,
+      "frameH": 212,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_luminarch_rise": {
       "src": "bosses/bos_luminarch_rise_{nn}@4x.webp",
-      "frameW": 125,
-      "frameH": 162,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 212,
+      "frameH": 212,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -315,10 +315,10 @@
     },
     "bos_luminarch_strike": {
       "src": "bosses/bos_luminarch_strike_{nn}@4x.webp",
-      "frameW": 134,
-      "frameH": 240,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 212,
+      "frameH": 212,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         1
@@ -328,23 +328,23 @@
     },
     "bos_pale-clock_broken": {
       "src": "bosses/bos_pale-clock_broken_{nn}@4x.webp",
-      "frameW": 164,
-      "frameH": 229,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_pale-clock_down": {
       "src": "bosses/bos_pale-clock_down_{nn}@4x.webp",
-      "frameW": 157,
-      "frameH": 137,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -354,23 +354,23 @@
     },
     "bos_pale-clock_idle": {
       "src": "bosses/bos_pale-clock_idle_{nn}@4x.webp",
-      "frameW": 164,
-      "frameH": 240,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_pale-clock_rise": {
       "src": "bosses/bos_pale-clock_rise_{nn}@4x.webp",
-      "frameW": 144,
-      "frameH": 147,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -380,10 +380,10 @@
     },
     "bos_pale-clock_strike": {
       "src": "bosses/bos_pale-clock_strike_{nn}@4x.webp",
-      "frameW": 165,
-      "frameH": 223,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         1
@@ -393,23 +393,23 @@
     },
     "bos_stationmaster_broken": {
       "src": "bosses/bos_stationmaster_broken_{nn}@4x.webp",
-      "frameW": 141,
-      "frameH": 218,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_stationmaster_down": {
       "src": "bosses/bos_stationmaster_down_{nn}@4x.webp",
-      "frameW": 134,
-      "frameH": 170,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -419,23 +419,23 @@
     },
     "bos_stationmaster_idle": {
       "src": "bosses/bos_stationmaster_idle_{nn}@4x.webp",
-      "frameW": 141,
-      "frameH": 240,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 6,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "bos_stationmaster_rise": {
       "src": "bosses/bos_stationmaster_rise_{nn}@4x.webp",
-      "frameW": 128,
-      "frameH": 225,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -445,10 +445,10 @@
     },
     "bos_stationmaster_strike": {
       "src": "bosses/bos_stationmaster_strike_{nn}@4x.webp",
-      "frameW": 141,
-      "frameH": 218,
-      "frames": 1,
-      "fps": 0,
+      "frameW": 259,
+      "frameH": 259,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         1
@@ -1160,8 +1160,8 @@
     },
     "env_clocktower-ward_chasm_pit": {
       "src": "environment/clocktower-ward/env_clocktower-ward_chasm_pit.webp",
-      "frameW": 768,
-      "frameH": 512,
+      "frameW": 1024,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1433,8 +1433,8 @@
     },
     "env_glassgarden_chasm_pit": {
       "src": "environment/glassgarden/env_glassgarden_chasm_pit.webp",
-      "frameW": 768,
-      "frameH": 512,
+      "frameW": 1024,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1810,8 +1810,8 @@
     },
     "env_lantern-market_chasm_canal": {
       "src": "environment/lantern-market/env_lantern-market_chasm_canal.webp",
-      "frameW": 768,
-      "frameH": 768,
+      "frameW": 1024,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2083,8 +2083,8 @@
     },
     "env_moonrail-depot_chasm_pit": {
       "src": "environment/moonrail-depot/env_moonrail-depot_chasm_pit.webp",
-      "frameW": 768,
-      "frameH": 512,
+      "frameW": 1024,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2356,8 +2356,8 @@
     },
     "env_rain-cathedral_chasm_pit": {
       "src": "environment/rain-cathedral/env_rain-cathedral_chasm_pit.webp",
-      "frameW": 768,
-      "frameH": 512,
+      "frameW": 1024,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2629,8 +2629,8 @@
     },
     "env_silent-foundry_chasm_pit": {
       "src": "environment/silent-foundry/env_silent-foundry_chasm_pit.webp",
-      "frameW": 768,
-      "frameH": 512,
+      "frameW": 1024,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
