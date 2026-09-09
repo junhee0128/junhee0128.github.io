@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-09T01:58:36.154Z",
+  "builtAt": "2026-09-09T02:01:46.293Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2733
+          "ms": 4333
         },
         "test": {
           "ok": true,
-          "ms": 5543,
+          "ms": 6541,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,10 +117,11 @@
       },
       "build": {
         "ok": true,
-        "ms": 3752,
-        "at": "2026-09-09T01:57:56.682Z"
+        "ms": 4161,
+        "at": "2026-09-09T01:58:14.366Z"
       },
-      "checkpoints": []
+      "checkpoints": [],
+      "keyart": "./keyart/everdusk.jpg"
     },
     {
       "id": "mission-today",
@@ -214,18 +215,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "283eb1a",
-        "date": "2026-09-09T10:19:29+09:00",
-        "subject": "시안 페이지: 폰에서 가로 화면을 1:1로 펴 볼 수 있게"
+        "hash": "2a9289c",
+        "date": "2026-09-09T10:58:56+09:00",
+        "subject": "시안을 다시 세웠다 — 색이 아니라 기준이 다른 다섯"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2210
+          "ms": 2140
         },
         "test": {
           "ok": true,
-          "ms": 17350,
+          "ms": 14672,
           "tests": {
             "passed": 85,
             "failed": 0,
@@ -235,10 +236,11 @@
       },
       "build": {
         "ok": true,
-        "ms": 4949,
-        "at": "2026-09-09T01:58:21.251Z"
+        "ms": 3478,
+        "at": "2026-09-09T02:01:46.268Z"
       },
-      "checkpoints": []
+      "checkpoints": [],
+      "keyart": "./keyart/mission-today.jpg"
     },
     {
       "id": "royal-chef",
@@ -416,11 +418,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3339
+          "ms": 2658
         },
         "test": {
           "ok": true,
-          "ms": 6782,
+          "ms": 5683,
           "tests": {
             "passed": 225,
             "failed": 0,
@@ -430,10 +432,11 @@
       },
       "build": {
         "ok": true,
-        "ms": 4742,
-        "at": "2026-09-09T01:58:36.146Z"
+        "ms": 3431,
+        "at": "2026-09-09T01:59:04.951Z"
       },
-      "checkpoints": []
+      "checkpoints": [],
+      "keyart": "./keyart/royal-chef.jpg"
     }
   ]
 }
