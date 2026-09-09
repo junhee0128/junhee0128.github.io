@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-09T03:47:04.418Z",
+  "builtAt": "2026-09-09T06:55:04.926Z",
   "games": [
     {
       "id": "everdusk",
@@ -96,18 +96,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "203ab33",
-        "date": "2026-09-09T01:34:51+09:00",
-        "subject": "가로 화면의 게임으로: 그림 크기, 다이얼로그 폐지, HUD, 진행 표시"
+        "hash": "9d83ee0",
+        "date": "2026-09-09T15:53:36+09:00",
+        "subject": "홈에서 '출발' 단추가 잘리던 것을 고친다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2765
+          "ms": 2527
         },
         "test": {
           "ok": true,
-          "ms": 5707,
+          "ms": 5468,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3560,
-        "at": "2026-09-09T03:46:34.593Z"
+        "ms": 3021,
+        "at": "2026-09-09T06:54:35.368Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -222,11 +222,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2179
+          "ms": 2045
         },
         "test": {
           "ok": true,
-          "ms": 13413,
+          "ms": 12912,
           "tests": {
             "passed": 85,
             "failed": 0,
@@ -236,8 +236,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3362,
-        "at": "2026-09-09T03:46:53.601Z"
+        "ms": 3549,
+        "at": "2026-09-09T06:54:53.925Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -418,11 +418,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2532
+          "ms": 2685
         },
         "test": {
           "ok": true,
-          "ms": 5155,
+          "ms": 5233,
           "tests": {
             "passed": 225,
             "failed": 0,
@@ -432,8 +432,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3108,
-        "at": "2026-09-09T03:47:04.417Z"
+        "ms": 3062,
+        "at": "2026-09-09T06:55:04.926Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"

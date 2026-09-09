@@ -29,8 +29,8 @@
     },
     "bcn_post_dark": {
       "src": "beacons/bcn_post_dark_{nn}@4x.webp",
-      "frameW": 81,
-      "frameH": 191,
+      "frameW": 82,
+      "frameH": 192,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -68,7 +68,7 @@
     },
     "bos_belless_broken": {
       "src": "bosses/bos_belless_broken_{nn}@4x.webp",
-      "frameW": 209,
+      "frameW": 210,
       "frameH": 235,
       "frames": 1,
       "fps": 0,
@@ -82,7 +82,7 @@
     "bos_belless_down": {
       "src": "bosses/bos_belless_down_{nn}@4x.webp",
       "frameW": 237,
-      "frameH": 210,
+      "frameH": 211,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -474,7 +474,7 @@
       "frameW": 160,
       "frameH": 160,
       "frames": 2,
-      "fps": 6,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -525,8 +525,8 @@
       "src": "characters/ferren/chr_ferren_jump-apex_{nn}@4x.webp",
       "frameW": 160,
       "frameH": 160,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -564,8 +564,8 @@
       "src": "characters/ferren/chr_ferren_landing_{nn}@4x.webp",
       "frameW": 160,
       "frameH": 160,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 12,
       "pivot": [
         0.5,
         1
@@ -578,7 +578,7 @@
       "frameW": 160,
       "frameH": 160,
       "frames": 12,
-      "fps": 14,
+      "fps": 18,
       "pivot": [
         0.5,
         1
@@ -604,7 +604,7 @@
       "frameW": 160,
       "frameH": 160,
       "frames": 2,
-      "fps": 6,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -630,7 +630,7 @@
       "frameW": 160,
       "frameH": 160,
       "frames": 2,
-      "fps": 6,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -681,8 +681,8 @@
       "src": "characters/lyra/chr_lyra_jump-apex_{nn}@4x.webp",
       "frameW": 160,
       "frameH": 160,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -720,8 +720,8 @@
       "src": "characters/lyra/chr_lyra_landing_{nn}@4x.webp",
       "frameW": 160,
       "frameH": 160,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 12,
       "pivot": [
         0.5,
         1
@@ -734,7 +734,7 @@
       "frameW": 160,
       "frameH": 160,
       "frames": 12,
-      "fps": 14,
+      "fps": 18,
       "pivot": [
         0.5,
         1
@@ -760,7 +760,7 @@
       "frameW": 160,
       "frameH": 160,
       "frames": 2,
-      "fps": 6,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -786,7 +786,7 @@
       "frameW": 160,
       "frameH": 160,
       "frames": 2,
-      "fps": 6,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -837,8 +837,8 @@
       "src": "characters/sable/chr_sable_jump-apex_{nn}@4x.webp",
       "frameW": 160,
       "frameH": 160,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -876,8 +876,8 @@
       "src": "characters/sable/chr_sable_landing_{nn}@4x.webp",
       "frameW": 160,
       "frameH": 160,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 12,
       "pivot": [
         0.5,
         1
@@ -890,7 +890,7 @@
       "frameW": 160,
       "frameH": 160,
       "frames": 12,
-      "fps": 14,
+      "fps": 18,
       "pivot": [
         0.5,
         1
@@ -916,7 +916,7 @@
       "frameW": 160,
       "frameH": 160,
       "frames": 2,
-      "fps": 6,
+      "fps": 8,
       "pivot": [
         0.5,
         1
@@ -928,7 +928,7 @@
       "src": "enemies/enm_cage_break_{nn}@4x.webp",
       "frameW": 80,
       "frameH": 80,
-      "frames": 3,
+      "frames": 4,
       "fps": 14,
       "pivot": [
         0.5,
@@ -941,7 +941,7 @@
       "src": "enemies/enm_cage_idle_{nn}@4x.webp",
       "frameW": 80,
       "frameH": 80,
-      "frames": 4,
+      "frames": 8,
       "fps": 8,
       "pivot": [
         0.5,
@@ -954,7 +954,7 @@
       "src": "enemies/enm_choir_break_{nn}@4x.webp",
       "frameW": 96,
       "frameH": 96,
-      "frames": 3,
+      "frames": 4,
       "fps": 14,
       "pivot": [
         0.5,
@@ -967,7 +967,7 @@
       "src": "enemies/enm_choir_idle_{nn}@4x.webp",
       "frameW": 96,
       "frameH": 96,
-      "frames": 4,
+      "frames": 8,
       "fps": 8,
       "pivot": [
         0.5,
@@ -980,7 +980,7 @@
       "src": "enemies/enm_hollowfolk_break_{nn}@4x.webp",
       "frameW": 104,
       "frameH": 104,
-      "frames": 3,
+      "frames": 4,
       "fps": 14,
       "pivot": [
         0.5,
@@ -993,7 +993,7 @@
       "src": "enemies/enm_hollowfolk_idle_{nn}@4x.webp",
       "frameW": 104,
       "frameH": 104,
-      "frames": 4,
+      "frames": 8,
       "fps": 8,
       "pivot": [
         0.5,
@@ -1006,7 +1006,7 @@
       "src": "enemies/enm_murmurs_break_{nn}@4x.webp",
       "frameW": 84,
       "frameH": 84,
-      "frames": 3,
+      "frames": 4,
       "fps": 14,
       "pivot": [
         0.5,
@@ -1019,7 +1019,7 @@
       "src": "enemies/enm_murmurs_idle_{nn}@4x.webp",
       "frameW": 84,
       "frameH": 84,
-      "frames": 4,
+      "frames": 8,
       "fps": 8,
       "pivot": [
         0.5,
@@ -1032,7 +1032,7 @@
       "src": "enemies/enm_stills_break_{nn}@4x.webp",
       "frameW": 92,
       "frameH": 92,
-      "frames": 3,
+      "frames": 4,
       "fps": 14,
       "pivot": [
         0.5,
@@ -1045,7 +1045,7 @@
       "src": "enemies/enm_stills_idle_{nn}@4x.webp",
       "frameW": 92,
       "frameH": 92,
-      "frames": 4,
+      "frames": 8,
       "fps": 8,
       "pivot": [
         0.5,
@@ -1058,7 +1058,7 @@
       "src": "enemies/enm_wardens_break_{nn}@4x.webp",
       "frameW": 116,
       "frameH": 116,
-      "frames": 3,
+      "frames": 4,
       "fps": 14,
       "pivot": [
         0.5,
@@ -1071,7 +1071,7 @@
       "src": "enemies/enm_wardens_idle_{nn}@4x.webp",
       "frameW": 116,
       "frameH": 116,
-      "frames": 4,
+      "frames": 8,
       "fps": 8,
       "pivot": [
         0.5,
@@ -1174,7 +1174,7 @@
     "env_clocktower-ward_far_skyline": {
       "src": "environment/clocktower-ward/env_clocktower-ward_far_skyline.webp",
       "frameW": 1536,
-      "frameH": 754,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1186,8 +1186,8 @@
     },
     "env_clocktower-ward_ground_road": {
       "src": "environment/clocktower-ward/env_clocktower-ward_ground_road.webp",
-      "frameW": 1024,
-      "frameH": 683,
+      "frameW": 1536,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1200,7 +1200,7 @@
     "env_clocktower-ward_mid_street": {
       "src": "environment/clocktower-ward/env_clocktower-ward_mid_street.webp",
       "frameW": 1536,
-      "frameH": 874,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1447,7 +1447,7 @@
     "env_glassgarden_far_skyline": {
       "src": "environment/glassgarden/env_glassgarden_far_skyline.webp",
       "frameW": 1536,
-      "frameH": 606,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1459,8 +1459,8 @@
     },
     "env_glassgarden_ground_road": {
       "src": "environment/glassgarden/env_glassgarden_ground_road.webp",
-      "frameW": 1024,
-      "frameH": 683,
+      "frameW": 1536,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1473,7 +1473,7 @@
     "env_glassgarden_mid_street": {
       "src": "environment/glassgarden/env_glassgarden_mid_street.webp",
       "frameW": 1536,
-      "frameH": 731,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1824,7 +1824,7 @@
     "env_lantern-market_far_rooftops": {
       "src": "environment/lantern-market/env_lantern-market_far_rooftops.webp",
       "frameW": 1536,
-      "frameH": 612,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1836,8 +1836,8 @@
     },
     "env_lantern-market_ground_road": {
       "src": "environment/lantern-market/env_lantern-market_ground_road.webp",
-      "frameW": 1024,
-      "frameH": 546,
+      "frameW": 1536,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -1850,7 +1850,7 @@
     "env_lantern-market_mid_shops": {
       "src": "environment/lantern-market/env_lantern-market_mid_shops.webp",
       "frameW": 1536,
-      "frameH": 642,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2097,7 +2097,7 @@
     "env_moonrail-depot_far_skyline": {
       "src": "environment/moonrail-depot/env_moonrail-depot_far_skyline.webp",
       "frameW": 1536,
-      "frameH": 685,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2109,8 +2109,8 @@
     },
     "env_moonrail-depot_ground_road": {
       "src": "environment/moonrail-depot/env_moonrail-depot_ground_road.webp",
-      "frameW": 1024,
-      "frameH": 683,
+      "frameW": 1536,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2123,7 +2123,7 @@
     "env_moonrail-depot_mid_street": {
       "src": "environment/moonrail-depot/env_moonrail-depot_mid_street.webp",
       "frameW": 1536,
-      "frameH": 661,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2370,7 +2370,7 @@
     "env_rain-cathedral_far_skyline": {
       "src": "environment/rain-cathedral/env_rain-cathedral_far_skyline.webp",
       "frameW": 1536,
-      "frameH": 675,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2382,8 +2382,8 @@
     },
     "env_rain-cathedral_ground_road": {
       "src": "environment/rain-cathedral/env_rain-cathedral_ground_road.webp",
-      "frameW": 1024,
-      "frameH": 683,
+      "frameW": 1536,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2396,7 +2396,7 @@
     "env_rain-cathedral_mid_street": {
       "src": "environment/rain-cathedral/env_rain-cathedral_mid_street.webp",
       "frameW": 1536,
-      "frameH": 878,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2643,7 +2643,7 @@
     "env_silent-foundry_far_skyline": {
       "src": "environment/silent-foundry/env_silent-foundry_far_skyline.webp",
       "frameW": 1536,
-      "frameH": 629,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2655,8 +2655,8 @@
     },
     "env_silent-foundry_ground_road": {
       "src": "environment/silent-foundry/env_silent-foundry_ground_road.webp",
-      "frameW": 1024,
-      "frameH": 683,
+      "frameW": 1536,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2669,7 +2669,7 @@
     "env_silent-foundry_mid_street": {
       "src": "environment/silent-foundry/env_silent-foundry_mid_street.webp",
       "frameW": 1536,
-      "frameH": 686,
+      "frameH": 1024,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -2826,14 +2826,14 @@
       "src": "hazards/clocktower-ward/haz_clocktower-ward_beam_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 3,
+      "fps": 10,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "haz_clocktower-ward_block-low": {
       "src": "hazards/clocktower-ward/haz_clocktower-ward_block-low_{nn}@4x.webp",
@@ -2888,20 +2888,20 @@
       "loop": false
     },
     "haz_generic_beam": {
-      "src": "hazards/haz_generic_beam_{nn}@4x.webp",
+      "src": "hazards/generic/haz_generic_beam_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 3,
+      "fps": 10,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "haz_generic_block-low": {
-      "src": "hazards/haz_generic_block-low_{nn}@4x.webp",
+      "src": "hazards/generic/haz_generic_block-low_{nn}@4x.webp",
       "frameW": 100,
       "frameH": 100,
       "frames": 1,
@@ -2914,7 +2914,7 @@
       "loop": false
     },
     "haz_generic_block-tall": {
-      "src": "hazards/haz_generic_block-tall_{nn}@4x.webp",
+      "src": "hazards/generic/haz_generic_block-tall_{nn}@4x.webp",
       "frameW": 124,
       "frameH": 124,
       "frames": 1,
@@ -2927,7 +2927,7 @@
       "loop": false
     },
     "haz_generic_spike": {
-      "src": "hazards/haz_generic_spike_{nn}@4x.webp",
+      "src": "hazards/generic/haz_generic_spike_{nn}@4x.webp",
       "frameW": 94,
       "frameH": 94,
       "frames": 1,
@@ -2940,7 +2940,7 @@
       "loop": false
     },
     "haz_generic_wall": {
-      "src": "hazards/haz_generic_wall_{nn}@4x.webp",
+      "src": "hazards/generic/haz_generic_wall_{nn}@4x.webp",
       "frameW": 290,
       "frameH": 290,
       "frames": 1,
@@ -2956,14 +2956,14 @@
       "src": "hazards/glassgarden/haz_glassgarden_beam_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 3,
+      "fps": 10,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "haz_glassgarden_block-low": {
       "src": "hazards/glassgarden/haz_glassgarden_block-low_{nn}@4x.webp",
@@ -3021,14 +3021,14 @@
       "src": "hazards/lantern-market/haz_lantern-market_beam_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 3,
+      "fps": 10,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "haz_lantern-market_block-low": {
       "src": "hazards/lantern-market/haz_lantern-market_block-low_{nn}@4x.webp",
@@ -3086,14 +3086,14 @@
       "src": "hazards/moonrail-depot/haz_moonrail-depot_beam_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 3,
+      "fps": 10,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "haz_moonrail-depot_block-low": {
       "src": "hazards/moonrail-depot/haz_moonrail-depot_block-low_{nn}@4x.webp",
@@ -3151,14 +3151,14 @@
       "src": "hazards/rain-cathedral/haz_rain-cathedral_beam_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 3,
+      "fps": 10,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "haz_rain-cathedral_block-low": {
       "src": "hazards/rain-cathedral/haz_rain-cathedral_block-low_{nn}@4x.webp",
@@ -3216,14 +3216,14 @@
       "src": "hazards/silent-foundry/haz_silent-foundry_beam_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 3,
+      "fps": 10,
       "pivot": [
         0.5,
         1
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "haz_silent-foundry_block-low": {
       "src": "hazards/silent-foundry/haz_silent-foundry_block-low_{nn}@4x.webp",
@@ -3346,97 +3346,97 @@
       "src": "items/item_pick_afterglow_{nn}@4x.webp",
       "frameW": 68,
       "frameH": 68,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 4,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "item_pick_burst": {
       "src": "items/item_pick_burst_{nn}@4x.webp",
       "frameW": 68,
       "frameH": 68,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 4,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "item_pick_light": {
       "src": "items/item_pick_light_{nn}@4x.webp",
       "frameW": 68,
       "frameH": 68,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 4,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "item_pick_magnet": {
       "src": "items/item_pick_magnet_{nn}@4x.webp",
       "frameW": 68,
       "frameH": 68,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 4,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "item_pick_shield": {
       "src": "items/item_pick_shield_{nn}@4x.webp",
       "frameW": 68,
       "frameH": 68,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 4,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "item_pick_sprint": {
       "src": "items/item_pick_sprint_{nn}@4x.webp",
       "frameW": 68,
       "frameH": 68,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 4,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "item_pick_windlight": {
       "src": "items/item_pick_windlight_{nn}@4x.webp",
       "frameW": 68,
       "frameH": 68,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 4,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "item_power_flame": {
       "src": "items/item_power_flame_{nn}@4x.webp",
-      "frameW": 34,
-      "frameH": 61,
+      "frameW": 35,
+      "frameH": 62,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3448,8 +3448,8 @@
     },
     "item_power_mothjar": {
       "src": "items/item_power_mothjar_{nn}@4x.webp",
-      "frameW": 41,
-      "frameH": 62,
+      "frameW": 42,
+      "frameH": 63,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -3632,86 +3632,86 @@
       "src": "items/item_spark_big_{nn}@4x.webp",
       "frameW": 44,
       "frameH": 44,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "item_spark_combo": {
       "src": "items/item_spark_combo_{nn}@4x.webp",
       "frameW": 44,
       "frameH": 44,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "item_spark_small": {
       "src": "items/item_spark_small_{nn}@4x.webp",
       "frameW": 44,
       "frameH": 44,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_bellbit_ability": {
       "src": "pets/pet_bellbit_ability_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_bellbit_celebrate": {
       "src": "pets/pet_bellbit_celebrate_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_bellbit_follow": {
       "src": "pets/pet_bellbit_follow_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 6,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_bellbit_hurt": {
       "src": "pets/pet_bellbit_hurt_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
@@ -3723,60 +3723,60 @@
       "src": "pets/pet_bellbit_idle_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 7,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_ember-pup_ability": {
       "src": "pets/pet_ember-pup_ability_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_ember-pup_celebrate": {
       "src": "pets/pet_ember-pup_celebrate_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_ember-pup_follow": {
       "src": "pets/pet_ember-pup_follow_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 6,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_ember-pup_hurt": {
       "src": "pets/pet_ember-pup_hurt_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
@@ -3788,60 +3788,60 @@
       "src": "pets/pet_ember-pup_idle_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 7,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_glimmerfin_ability": {
       "src": "pets/pet_glimmerfin_ability_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_glimmerfin_celebrate": {
       "src": "pets/pet_glimmerfin_celebrate_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_glimmerfin_follow": {
       "src": "pets/pet_glimmerfin_follow_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 6,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_glimmerfin_hurt": {
       "src": "pets/pet_glimmerfin_hurt_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
@@ -3853,60 +3853,60 @@
       "src": "pets/pet_glimmerfin_idle_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 7,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_morrow_ability": {
       "src": "pets/pet_morrow_ability_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_morrow_celebrate": {
       "src": "pets/pet_morrow_celebrate_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_morrow_follow": {
       "src": "pets/pet_morrow_follow_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 6,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_morrow_hurt": {
       "src": "pets/pet_morrow_hurt_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
@@ -3918,60 +3918,60 @@
       "src": "pets/pet_morrow_idle_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 7,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_mothkin_ability": {
       "src": "pets/pet_mothkin_ability_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_mothkin_celebrate": {
       "src": "pets/pet_mothkin_celebrate_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 12,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_mothkin_follow": {
       "src": "pets/pet_mothkin_follow_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 6,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "pet_mothkin_hurt": {
       "src": "pets/pet_mothkin_hurt_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 2,
+      "fps": 10,
       "pivot": [
         0.5,
         0.5
@@ -3983,14 +3983,14 @@
       "src": "pets/pet_mothkin_idle_{nn}@4x.webp",
       "frameW": 52,
       "frameH": 52,
-      "frames": 1,
-      "fps": 0,
+      "frames": 4,
+      "fps": 7,
       "pivot": [
         0.5,
         0.5
       ],
       "scale": 4,
-      "loop": false
+      "loop": true
     },
     "ui_card_district_clocktower_ward": {
       "src": "ui/cards/ui_card_district_clocktower-ward.webp",
@@ -4255,7 +4255,7 @@
     "ui_corner": {
       "src": "ui/ui_corner_{nn}@4x.webp",
       "frameW": 54,
-      "frameH": 56,
+      "frameH": 57,
       "frames": 1,
       "fps": 0,
       "pivot": [
@@ -4345,7 +4345,7 @@
     },
     "ui_flame_lit": {
       "src": "ui/ui_flame_lit_{nn}@4x.webp",
-      "frameW": 37,
+      "frameW": 39,
       "frameH": 56,
       "frames": 1,
       "fps": 0,
@@ -4358,7 +4358,7 @@
     },
     "ui_flame_spent": {
       "src": "ui/ui_flame_spent_{nn}@4x.webp",
-      "frameW": 36,
+      "frameW": 38,
       "frameH": 56,
       "frames": 1,
       "fps": 0,
@@ -4554,7 +4554,7 @@
     "ui_star_empty": {
       "src": "ui/ui_star_empty_{nn}@4x.webp",
       "frameW": 54,
-      "frameH": 53,
+      "frameH": 54,
       "frames": 1,
       "fps": 0,
       "pivot": [
