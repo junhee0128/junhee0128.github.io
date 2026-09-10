@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-10T15:09:53.020Z",
+  "builtAt": "2026-09-10T16:02:00.987Z",
   "games": [
     {
       "id": "everdusk",
@@ -96,18 +96,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "7059bbc",
-        "date": "2026-09-09T23:38:15+09:00",
-        "subject": "가독성 계약이 재던 두 대상을 규칙이 말하는 대상으로 옮긴다"
+        "hash": "fa97936",
+        "date": "2026-09-11T00:59:48+09:00",
+        "subject": "V6 마무리: 장애물이 빛으로 읽히고, 모든 아트 계약이 초록이 된다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2595
+          "ms": 5065
         },
         "test": {
           "ok": true,
-          "ms": 5393,
+          "ms": 8811,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3790,
-        "at": "2026-09-10T15:09:17.744Z"
+        "ms": 4583,
+        "at": "2026-09-10T16:01:01.211Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -222,11 +222,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2129
+          "ms": 4373
         },
         "test": {
           "ok": true,
-          "ms": 18110,
+          "ms": 28293,
           "tests": {
             "passed": 109,
             "failed": 0,
@@ -236,8 +236,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3505,
-        "at": "2026-09-10T15:09:41.553Z"
+        "ms": 8911,
+        "at": "2026-09-10T16:01:42.892Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -431,11 +431,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2589
+          "ms": 4292
         },
         "test": {
           "ok": true,
-          "ms": 5713,
+          "ms": 9638,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -445,8 +445,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3139,
-        "at": "2026-09-10T15:09:53.019Z"
+        "ms": 4139,
+        "at": "2026-09-10T16:02:00.986Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"
