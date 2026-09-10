@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-10T16:02:00.987Z",
+  "builtAt": "2026-09-10T17:33:27.970Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 5065
+          "ms": 2573
         },
         "test": {
           "ok": true,
-          "ms": 8811,
+          "ms": 6628,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4583,
-        "at": "2026-09-10T16:01:01.211Z"
+        "ms": 4450,
+        "at": "2026-09-10T17:32:28.789Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -215,29 +215,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "585927d",
-        "date": "2026-09-11T00:08:46+09:00",
-        "subject": "B6·B7 — 튀는 코인, 그리고 거울 대칭이던 길바닥"
+        "hash": "3659122",
+        "date": "2026-09-11T02:31:30+09:00",
+        "subject": "한 장으로 굳어 있던 펫 넷에 두 번째 프레임"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4373
+          "ms": 2161
         },
         "test": {
           "ok": true,
-          "ms": 28293,
+          "ms": 19214,
           "tests": {
-            "passed": 109,
+            "passed": 114,
             "failed": 0,
-            "total": 109
+            "total": 114
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 8911,
-        "at": "2026-09-10T16:01:42.892Z"
+        "ms": 26465,
+        "at": "2026-09-10T17:33:16.699Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -431,11 +431,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4292
+          "ms": 2813
         },
         "test": {
           "ok": true,
-          "ms": 9638,
+          "ms": 5442,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -445,8 +445,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4139,
-        "at": "2026-09-10T16:02:00.986Z"
+        "ms": 2993,
+        "at": "2026-09-10T17:33:27.970Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"
