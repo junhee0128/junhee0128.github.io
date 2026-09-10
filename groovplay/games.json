@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-10T11:18:05.679Z",
+  "builtAt": "2026-09-10T15:09:53.020Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2568
+          "ms": 2595
         },
         "test": {
           "ok": true,
-          "ms": 5550,
+          "ms": 5393,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3778,
-        "at": "2026-09-10T11:17:30.987Z"
+        "ms": 3790,
+        "at": "2026-09-10T15:09:17.744Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -215,18 +215,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "fcbf3b3",
-        "date": "2026-09-10T20:16:53+09:00",
-        "subject": "B3 — 작전복 커버리지 40 → 96/100, 네 프레임 달리기가 아홉 벌에서 돈다"
+        "hash": "585927d",
+        "date": "2026-09-11T00:08:46+09:00",
+        "subject": "B6·B7 — 튀는 코인, 그리고 거울 대칭이던 길바닥"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2053
+          "ms": 2129
         },
         "test": {
           "ok": true,
-          "ms": 17791,
+          "ms": 18110,
           "tests": {
             "passed": 109,
             "failed": 0,
@@ -236,8 +236,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3399,
-        "at": "2026-09-10T11:17:54.293Z"
+        "ms": 3505,
+        "at": "2026-09-10T15:09:41.553Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -431,11 +431,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2870
+          "ms": 2589
         },
         "test": {
           "ok": true,
-          "ms": 5435,
+          "ms": 5713,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -445,8 +445,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3060,
-        "at": "2026-09-10T11:18:05.678Z"
+        "ms": 3139,
+        "at": "2026-09-10T15:09:53.019Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"
