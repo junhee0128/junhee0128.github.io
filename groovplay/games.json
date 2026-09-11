@@ -1,5 +1,6 @@
 {
-  "builtAt": "2026-09-11T08:54:58.423Z",
+  "builtAt": "2026-09-11T14:24:53.080Z",
+  "lobbyRule": false,
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +104,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4161
+          "ms": 2830
         },
         "test": {
           "ok": true,
-          "ms": 9692,
+          "ms": 5900,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -116,16 +117,18 @@
         },
         "art": {
           "ok": true,
-          "ms": 44305
+          "ms": 25014
         }
       },
       "build": {
         "ok": true,
-        "ms": 6422,
-        "at": "2026-09-11T08:53:22.123Z"
+        "ms": 3522,
+        "at": "2026-09-11T14:21:48.834Z"
       },
       "checkpoints": [],
-      "keyart": "./keyart/everdusk.jpg"
+      "keyart": "./keyart/everdusk.jpg",
+      "platform": null,
+      "conformance": null
     },
     {
       "id": "mission-today",
@@ -226,11 +229,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4097
+          "ms": 2386
         },
         "test": {
           "ok": true,
-          "ms": 28507,
+          "ms": 22366,
           "tests": {
             "passed": 121,
             "failed": 0,
@@ -240,11 +243,13 @@
       },
       "build": {
         "ok": true,
-        "ms": 42196,
-        "at": "2026-09-11T08:54:37.033Z"
+        "ms": 6654,
+        "at": "2026-09-11T14:22:21.039Z"
       },
       "checkpoints": [],
-      "keyart": "./keyart/mission-today.jpg"
+      "keyart": "./keyart/mission-today.jpg",
+      "platform": null,
+      "conformance": null
     },
     {
       "id": "royal-chef",
@@ -340,9 +345,14 @@
           "note": "2026-09-09. 문서 스크롤 전 화면 1.00×, 조작 겹침 0, 채움률 96~100%. 저장 v3→v4 이관. design/reports/OVERHAUL_v8.md"
         },
         {
+          "name": "개편 v9 — 배치 계약과 문지기 (갈래 열다섯 · 304지점 · 계기 12)",
+          "state": "done",
+          "note": "2026-09-11. 열다섯 갈래 중 열넷이 계약 충족(0). 남은 것은 A 스크롤 16지점(640×360·360×640에 집중). design/reports/REBUILD_v9.md"
+        },
+        {
           "name": "실기 폰 플레이 확인과 사용자 손맛 승인",
           "state": "active",
-          "note": "v8 개편 뒤 실기 검수 대기. 헤드리스로는 움직임을 판정할 수 없다"
+          "note": "v9 개편 뒤 실기 검수 대기. 헤드리스로는 움직임을 판정할 수 없다"
         },
         {
           "name": "시즌 2 · 파티형 경쟁",
@@ -418,6 +428,14 @@
         {
           "label": "대대적 개편 v8 수행 보고",
           "path": "design/reports/OVERHAUL_v8.md"
+        },
+        {
+          "label": "개편 계획 v9 (개정) — 반복의 해부와 계약",
+          "path": "design/REBUILD_v9.md"
+        },
+        {
+          "label": "개편 v9 수행 보고",
+          "path": "design/reports/REBUILD_v9.md"
         }
       ],
       "progress": {
@@ -428,32 +446,48 @@
         "todo": 2
       },
       "commit": {
-        "hash": "c21bf33",
-        "date": "2026-09-09T12:58:08+09:00",
-        "subject": "게임처럼 보이고, 게임처럼 자란다 — 대대적 개편 v8"
+        "hash": "4ebbbb5",
+        "date": "2026-09-11T22:21:34+09:00",
+        "subject": "문지기가 제 뒤를 치운다 — 미리보기 서버를 무리째 죽인다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 5476
+          "ms": 2931
         },
         "test": {
           "ok": true,
-          "ms": 10007,
+          "ms": 5766,
           "tests": {
-            "passed": 245,
+            "passed": 262,
             "failed": 0,
-            "total": 245
+            "total": 262
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 5873,
-        "at": "2026-09-11T08:54:58.422Z"
+        "ms": 142778,
+        "at": "2026-09-11T14:24:53.079Z"
       },
       "checkpoints": [],
-      "keyart": "./keyart/royal-chef.jpg"
+      "keyart": "./keyart/royal-chef.jpg",
+      "platform": null,
+      "conformance": null
     }
-  ]
+  ],
+  "portal": {
+    "lobby": {
+      "passed": true,
+      "count": 0,
+      "findings": [],
+      "golden": true
+    },
+    "dev": {
+      "passed": true,
+      "count": 0,
+      "findings": [],
+      "golden": false
+    }
+  }
 }
