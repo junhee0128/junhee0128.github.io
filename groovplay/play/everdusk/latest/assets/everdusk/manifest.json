@@ -4410,7 +4410,7 @@
     },
     "ui_node_boss_locked": {
       "src": "ui/ui_node_boss_locked_{nn}@4x.webp",
-      "frameW": 76,
+      "frameW": 87,
       "frameH": 87,
       "frames": 1,
       "fps": 0,
@@ -4488,7 +4488,7 @@
     },
     "ui_portrait_lyra": {
       "src": "ui/portraits/ui_portrait_lyra_{nn}@4x.webp",
-      "frameW": 112,
+      "frameW": 170,
       "frameH": 170,
       "frames": 1,
       "fps": 0,
