@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-11T02:40:45.124Z",
+  "builtAt": "2026-09-11T04:35:39.622Z",
   "games": [
     {
       "id": "everdusk",
@@ -96,18 +96,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "ab66533",
-        "date": "2026-09-11T11:38:49+09:00",
-        "subject": "남은 넷을 모두 끝낸다 — 216화면·355자산이 계약 안에 선다"
+        "hash": "c3ff413",
+        "date": "2026-09-11T13:33:54+09:00",
+        "subject": "윤곽선을 재는 계약을 만든다 — 마감만 글로 남아 있었다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2577
+          "ms": 2935
         },
         "test": {
           "ok": true,
-          "ms": 5548,
+          "ms": 5683,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -116,13 +116,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 18707
+          "ms": 26367
         }
       },
       "build": {
         "ok": true,
-        "ms": 3016,
-        "at": "2026-09-11T02:40:03.421Z"
+        "ms": 3475,
+        "at": "2026-09-11T04:34:57.983Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -226,11 +226,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2407
+          "ms": 2433
         },
         "test": {
           "ok": true,
-          "ms": 20354,
+          "ms": 22481,
           "tests": {
             "passed": 117,
             "failed": 0,
@@ -240,8 +240,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4511,
-        "at": "2026-09-11T02:40:30.766Z"
+        "ms": 4129,
+        "at": "2026-09-11T04:35:27.092Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -435,11 +435,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2927
+          "ms": 2960
         },
         "test": {
           "ok": true,
-          "ms": 6786,
+          "ms": 6135,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -449,8 +449,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4598,
-        "at": "2026-09-11T02:40:45.122Z"
+        "ms": 3409,
+        "at": "2026-09-11T04:35:39.621Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"
