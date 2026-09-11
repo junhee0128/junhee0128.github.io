@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-10T17:33:27.970Z",
+  "builtAt": "2026-09-11T01:57:44.286Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2573
+          "ms": 5156
         },
         "test": {
           "ok": true,
-          "ms": 6628,
+          "ms": 10250,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,8 +117,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4450,
-        "at": "2026-09-10T17:32:28.789Z"
+        "ms": 6278,
+        "at": "2026-09-11T01:56:09.104Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -215,29 +215,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "3659122",
-        "date": "2026-09-11T02:31:30+09:00",
-        "subject": "한 장으로 굳어 있던 펫 넷에 두 번째 프레임"
+        "hash": "902d764",
+        "date": "2026-09-11T10:55:27+09:00",
+        "subject": "동행 일곱과 펫 일곱을 네 프레임으로 — 그림 28장"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2161
+          "ms": 3644
         },
         "test": {
           "ok": true,
-          "ms": 19214,
+          "ms": 29181,
           "tests": {
-            "passed": 114,
+            "passed": 117,
             "failed": 0,
-            "total": 114
+            "total": 117
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 26465,
-        "at": "2026-09-10T17:33:16.699Z"
+        "ms": 41127,
+        "at": "2026-09-11T01:57:23.184Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -431,11 +431,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2813
+          "ms": 5273
         },
         "test": {
           "ok": true,
-          "ms": 5442,
+          "ms": 9619,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -445,8 +445,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2993,
-        "at": "2026-09-10T17:33:27.970Z"
+        "ms": 6165,
+        "at": "2026-09-11T01:57:44.284Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"
