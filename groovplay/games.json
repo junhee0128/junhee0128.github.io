@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-11T04:35:39.622Z",
+  "builtAt": "2026-09-11T04:39:21.766Z",
   "games": [
     {
       "id": "everdusk",
@@ -103,11 +103,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2935
+          "ms": 2776
         },
         "test": {
           "ok": true,
-          "ms": 5683,
+          "ms": 5995,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -116,13 +116,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 26367
+          "ms": 26069
         }
       },
       "build": {
         "ok": true,
-        "ms": 3475,
-        "at": "2026-09-11T04:34:57.983Z"
+        "ms": 4645,
+        "at": "2026-09-11T04:37:46.924Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg"
@@ -219,29 +219,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "902d764",
-        "date": "2026-09-11T10:55:27+09:00",
-        "subject": "동행 일곱과 펫 일곱을 네 프레임으로 — 그림 28장"
+        "hash": "acfa321",
+        "date": "2026-09-11T13:36:50+09:00",
+        "subject": "손맛 셋 · 적 날갯짓 네 장 · 조판 100%"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2433
+          "ms": 3025
         },
         "test": {
           "ok": true,
-          "ms": 22481,
+          "ms": 28238,
           "tests": {
-            "passed": 117,
+            "passed": 121,
             "failed": 0,
-            "total": 117
+            "total": 121
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 4129,
-        "at": "2026-09-11T04:35:27.092Z"
+        "ms": 42065,
+        "at": "2026-09-11T04:39:00.332Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg"
@@ -435,11 +435,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2960
+          "ms": 4890
         },
         "test": {
           "ok": true,
-          "ms": 6135,
+          "ms": 10306,
           "tests": {
             "passed": 245,
             "failed": 0,
@@ -449,8 +449,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3409,
-        "at": "2026-09-11T04:35:39.621Z"
+        "ms": 6202,
+        "at": "2026-09-11T04:39:21.765Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg"
