@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-13T15:22:29.919Z",
+  "builtAt": "2026-09-13T15:40:07.260Z",
   "lobbyRule": true,
   "games": [
     {
@@ -491,6 +491,79 @@
         "count": 0,
         "findings": [],
         "at": "2026-09-13T15:22:29.918Z"
+      }
+    },
+    {
+      "id": "windseam",
+      "title": "바람실 — 돌아오는 정원",
+      "codename": "WINDSEAM",
+      "tagline": "흩어진 마음을 모아, 다시 피어나는 세계.",
+      "status": "playable",
+      "accent": "#8edec0",
+      "engine": "Three.js · 3D 액션 RPG",
+      "milestones": [
+        {
+          "name": "몰이와 꽃연계 · 3D 전투",
+          "state": "done",
+          "note": "기본 3연타 · 모으기 · 엮기 · 꽃피우기 · 회피"
+        },
+        {
+          "name": "여섯 조우와 정원지기",
+          "state": "done",
+          "note": "적 3종 · 정예 · 3패턴 보스와 결말"
+        },
+        {
+          "name": "두 성장 운영과 저장",
+          "state": "done",
+          "note": "정원사와 길잡이 · 조우 경계 복원"
+        },
+        {
+          "name": "PC·모바일 및 출시 검증",
+          "state": "done",
+          "note": "21개 자동 검사 · 15개 화면 크기 검사"
+        }
+      ],
+      "docs": [
+        {
+          "label": "제작 기록",
+          "path": "docs/REPORT.md"
+        }
+      ],
+      "progress": null,
+      "commit": {
+        "hash": "30e5917",
+        "date": "2026-09-14T00:38:07+09:00",
+        "subject": "feat(windseam): add original 3D garden action RPG with complete episode"
+      },
+      "checks": {
+        "typecheck": {
+          "ok": true,
+          "ms": 1246
+        },
+        "test": {
+          "ok": true,
+          "ms": 644,
+          "tests": {
+            "passed": 21,
+            "failed": 0,
+            "total": 21
+          }
+        }
+      },
+      "build": {
+        "ok": true,
+        "ms": 2345,
+        "at": "2026-09-13T15:38:12.417Z"
+      },
+      "checkpoints": [],
+      "keyart": "./keyart/windseam.webp",
+      "platform": 1,
+      "conformance": {
+        "version": 1,
+        "passed": true,
+        "count": 0,
+        "findings": [],
+        "at": "2026-09-13T15:40:07.260Z"
       }
     }
   ],
