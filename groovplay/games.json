@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-13T09:17:19.869Z",
+  "builtAt": "2026-09-13T14:03:02.621Z",
   "lobbyRule": true,
   "games": [
     {
@@ -104,11 +104,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4567
+          "ms": 2886
         },
         "test": {
           "ok": true,
-          "ms": 9233,
+          "ms": 5780,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 42446
+          "ms": 25000
         }
       },
       "build": {
         "ok": true,
-        "ms": 4922,
-        "at": "2026-09-13T08:57:16.995Z"
+        "ms": 4484,
+        "at": "2026-09-13T13:45:21.982Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-13T09:02:45.515Z"
+        "at": "2026-09-13T13:49:22.999Z"
       }
     },
     {
@@ -235,11 +235,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3099
+          "ms": 2508
         },
         "test": {
           "ok": true,
-          "ms": 28798,
+          "ms": 22817,
           "tests": {
             "passed": 121,
             "failed": 0,
@@ -249,8 +249,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 4754,
-        "at": "2026-09-13T09:03:22.997Z"
+        "ms": 3514,
+        "at": "2026-09-13T13:49:52.520Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -260,7 +260,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-13T09:06:36.091Z"
+        "at": "2026-09-13T13:52:33.160Z"
       }
     },
     {
@@ -458,18 +458,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "4444636",
-        "date": "2026-09-13T17:25:31+09:00",
-        "subject": "royal-chef: 병합 뒤 다시 적합하게 — 세로에서의 결과 도달, 결과 화면의 대비"
+        "hash": "0b33271",
+        "date": "2026-09-13T21:59:20+09:00",
+        "subject": "한 지점의 제한 시간을 30초에서 90초로 — 기다림이 실패하는 것은 거짓 붉음이다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4483
+          "ms": 2857
         },
         "test": {
           "ok": true,
-          "ms": 7092,
+          "ms": 6115,
           "tests": {
             "passed": 262,
             "failed": 0,
@@ -479,8 +479,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 104413,
-        "at": "2026-09-13T09:08:32.124Z"
+        "ms": 202551,
+        "at": "2026-09-13T13:56:04.714Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -490,7 +490,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-13T09:17:19.868Z"
+        "at": "2026-09-13T14:03:02.619Z"
       }
     }
   ],
