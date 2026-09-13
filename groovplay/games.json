@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-11T15:40:57.371Z",
+  "builtAt": "2026-09-13T09:17:19.869Z",
   "lobbyRule": true,
   "games": [
     {
@@ -97,18 +97,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "654511d",
-        "date": "2026-09-12T00:03:32+09:00",
-        "subject": "검사기: 장벽의 시간 초과는 오류이고, 클립된 글자는 재지 않는다"
+        "hash": "7b12397",
+        "date": "2026-09-13T16:57:48+09:00",
+        "subject": "골든: 대표 5셀 · 무손실 WebP — 85 MB 가 16 MB 로"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2567
+          "ms": 4567
         },
         "test": {
           "ok": true,
-          "ms": 5408,
+          "ms": 9233,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 23470
+          "ms": 42446
         }
       },
       "build": {
         "ok": true,
-        "ms": 3402,
-        "at": "2026-09-11T15:21:41.536Z"
+        "ms": 4922,
+        "at": "2026-09-13T08:57:16.995Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-11T15:27:20.051Z"
+        "at": "2026-09-13T09:02:45.515Z"
       }
     },
     {
@@ -228,18 +228,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "654511d",
-        "date": "2026-09-12T00:03:32+09:00",
-        "subject": "검사기: 장벽의 시간 초과는 오류이고, 클립된 글자는 재지 않는다"
+        "hash": "7b12397",
+        "date": "2026-09-13T16:57:48+09:00",
+        "subject": "골든: 대표 5셀 · 무손실 WebP — 85 MB 가 16 MB 로"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2136
+          "ms": 3099
         },
         "test": {
           "ok": true,
-          "ms": 20525,
+          "ms": 28798,
           "tests": {
             "passed": 121,
             "failed": 0,
@@ -249,8 +249,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3292,
-        "at": "2026-09-11T15:27:46.689Z"
+        "ms": 4754,
+        "at": "2026-09-13T09:03:22.997Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -260,7 +260,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-11T15:31:42.483Z"
+        "at": "2026-09-13T09:06:36.091Z"
       }
     },
     {
@@ -357,9 +357,14 @@
           "note": "2026-09-09. 문서 스크롤 전 화면 1.00×, 조작 겹침 0, 채움률 96~100%. 저장 v3→v4 이관. design/reports/OVERHAUL_v8.md"
         },
         {
+          "name": "개편 v9 — 배치 계약과 문지기 (갈래 열다섯 · 304지점 · 계기 12)",
+          "state": "done",
+          "note": "2026-09-11. 열다섯 갈래 중 열넷이 계약 충족(0). 남은 것은 A 스크롤 16지점(640×360·360×640에 집중). design/reports/REBUILD_v9.md"
+        },
+        {
           "name": "실기 폰 플레이 확인과 사용자 손맛 승인",
           "state": "active",
-          "note": "v8 개편 뒤 실기 검수 대기. 헤드리스로는 움직임을 판정할 수 없다"
+          "note": "v9 개편 뒤 실기 검수 대기. 헤드리스로는 움직임을 판정할 수 없다"
         },
         {
           "name": "시즌 2 · 파티형 경쟁",
@@ -435,6 +440,14 @@
         {
           "label": "대대적 개편 v8 수행 보고",
           "path": "design/reports/OVERHAUL_v8.md"
+        },
+        {
+          "label": "개편 계획 v9 (개정) — 반복의 해부와 계약",
+          "path": "design/REBUILD_v9.md"
+        },
+        {
+          "label": "개편 v9 수행 보고",
+          "path": "design/reports/REBUILD_v9.md"
         }
       ],
       "progress": {
@@ -445,29 +458,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "654511d",
-        "date": "2026-09-12T00:03:32+09:00",
-        "subject": "검사기: 장벽의 시간 초과는 오류이고, 클립된 글자는 재지 않는다"
+        "hash": "4444636",
+        "date": "2026-09-13T17:25:31+09:00",
+        "subject": "royal-chef: 병합 뒤 다시 적합하게 — 세로에서의 결과 도달, 결과 화면의 대비"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2711
+          "ms": 4483
         },
         "test": {
           "ok": true,
-          "ms": 5393,
+          "ms": 7092,
           "tests": {
-            "passed": 245,
+            "passed": 262,
             "failed": 0,
-            "total": 245
+            "total": 262
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3076,
-        "at": "2026-09-11T15:31:53.690Z"
+        "ms": 104413,
+        "at": "2026-09-13T09:08:32.124Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -477,7 +490,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-11T15:40:57.370Z"
+        "at": "2026-09-13T09:17:19.868Z"
       }
     }
   ],

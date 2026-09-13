@@ -408,17 +408,17 @@ function createShell({ win, doc, tokens, tokensCss, game, events, lifecycle, scr
 ${tokensCss}
 :root { --gp-accent: ${accent}; }
 #gp-shell, #gp-shell * { box-sizing: border-box; }
-#gp-shell { position: fixed; inset: 0; pointer-events: none; z-index: var(--gp-z-shell); font-family: var(--gp-font-family); color: var(--gp-color-ink); font-size: var(--gp-font-size-md); line-height: var(--gp-font-lineHeight-base); }
+#gp-shell { display: contents; font-family: var(--gp-font-family); color: var(--gp-color-ink); font-size: var(--gp-font-size-md); line-height: var(--gp-font-lineHeight-base); }
 #gp-shell button { font: inherit; color: inherit; border: 0; background: none; padding: 0; cursor: pointer; min-width: var(--gp-touch-min); min-height: var(--gp-touch-min); }
 #gp-shell [hidden] { display: none !important; }
 
-.gp-home { pointer-events: auto; position: absolute; top: calc(env(safe-area-inset-top, 0px) + 8px); left: calc(env(safe-area-inset-left, 0px) + 8px);
+.gp-home { pointer-events: auto; position: fixed; z-index: var(--gp-z-shell); top: calc(env(safe-area-inset-top, 0px) + 8px); left: calc(env(safe-area-inset-left, 0px) + 8px);
   width: var(--gp-touch-comfortable); height: var(--gp-touch-comfortable); border-radius: var(--gp-radius-md);
   background: rgba(11,13,18,.72); border: 1px solid rgba(255,255,255,.14); display: grid; place-items: center;
   backdrop-filter: blur(10px); transition: opacity var(--gp-motion-base) var(--gp-motion-ease); }
 .gp-home svg { width: 20px; height: 20px; }
 
-.gp-loading { pointer-events: auto; position: absolute; inset: 0; background: var(--gp-color-bg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--gp-space-4);
+.gp-loading { pointer-events: auto; position: fixed; inset: 0; z-index: var(--gp-z-shell); background: var(--gp-color-bg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--gp-space-4);
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); }
 .gp-wordmark { font-size: var(--gp-font-size-lg); font-weight: var(--gp-font-weight-black); letter-spacing: var(--gp-wordmark-letterSpacing); color: var(--gp-color-ink); }
 .gp-loading-title { font-size: var(--gp-font-size-xl); font-weight: var(--gp-font-weight-bold); color: var(--gp-accent); }
@@ -426,7 +426,7 @@ ${tokensCss}
 .gp-bar i { display: block; height: 100%; width: 0; background: var(--gp-accent); transition: width var(--gp-motion-fast) linear; }
 .gp-loading-note { font-size: var(--gp-font-size-xs); color: var(--gp-color-ink3); }
 
-.gp-scrim { pointer-events: auto; position: absolute; inset: 0; background: rgba(4,6,10,.7); z-index: var(--gp-z-overlay); display: flex; align-items: center; justify-content: center;
+.gp-scrim { pointer-events: auto; position: fixed; inset: 0; background: rgba(4,6,10,.7); z-index: var(--gp-z-overlay); display: flex; align-items: center; justify-content: center;
   padding: calc(env(safe-area-inset-top, 0px) + 12px) calc(env(safe-area-inset-right, 0px) + 12px) calc(env(safe-area-inset-bottom, 0px) + 12px) calc(env(safe-area-inset-left, 0px) + 12px); }
 .gp-panel { width: min(100%, 420px); max-height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch; background: var(--gp-color-panel); border: 1px solid var(--gp-color-edge); border-radius: var(--gp-radius-xl); padding: var(--gp-space-4); display: flex; flex-direction: column; gap: var(--gp-space-2); }
 .gp-panel-head { display: flex; align-items: center; gap: var(--gp-space-2); }
@@ -443,7 +443,7 @@ ${tokensCss}
 .gp-section { border-top: 1px solid var(--gp-color-edge); padding-top: var(--gp-space-2); margin-top: var(--gp-space-1); }
 .gp-section h3 { margin: 0 0 var(--gp-space-1); font-size: var(--gp-font-size-xs); letter-spacing: .1em; color: var(--gp-color-ink3); text-transform: uppercase; }
 
-.gp-toast { pointer-events: none; position: absolute; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); transform: translateX(-50%); z-index: var(--gp-z-toast);
+.gp-toast { pointer-events: none; position: fixed; left: 50%; bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); transform: translateX(-50%); z-index: var(--gp-z-toast);
   background: var(--gp-color-panel); border: 1px solid var(--gp-color-edge); border-radius: var(--gp-radius-md); padding: var(--gp-space-2) var(--gp-space-4); font-size: var(--gp-font-size-sm); color: var(--gp-color-ink); max-width: calc(100% - 32px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 .gp-hint { pointer-events: auto; position: absolute; left: 12px; right: 12px; bottom: calc(env(safe-area-inset-bottom, 0px) + 12px); background: var(--gp-color-panel); border: 1px solid var(--gp-color-edge); border-radius: var(--gp-radius-lg); padding: var(--gp-space-3) var(--gp-space-4); display: flex; gap: var(--gp-space-3); align-items: center; font-size: var(--gp-font-size-sm); }
@@ -466,6 +466,8 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
   function mount() {
     const style = h("style"); style.id = "gp-shell-style"; style.textContent = css;
     doc.head.append(style);
+    // 뿌리는 상자가 없다(display: contents). 화면 전체를 덮는 상자가 있으면 pointer-events 를 강제로 켜는 도구가
+    // 그것을 "가림" 으로 재고, 게임의 elementFromPoint 도 헷갈린다. 셸의 조각은 각자 뷰포트에 고정된다.
     root = h("div"); root.id = "gp-shell";
 
     home = h("button", "gp-home");
