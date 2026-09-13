@@ -57,7 +57,7 @@ button, a.play, .gear { min-height: var(--gp-touch-min); min-width: var(--gp-tou
 .chip.wip { color: var(--gp-color-warn); }
 .chip.paused, .chip.idea { color: var(--gp-color-ink2); }
 .chip.conform { color: var(--gp-color-ok); }
-.chip.nonconform { color: var(--gp-color-bad); }
+.chip.nonconform { color: #ff9a8f; } /* 토큰의 bad 는 칩의 어두운 판(rgb 50,47,55) 위에서 4.0 — 대비 4.5 를 위해 밝힌다 */
 .chip.notyet { color: var(--gp-color-ink2); }
 
 .play {
@@ -126,7 +126,7 @@ button, a.play, .gear { min-height: var(--gp-touch-min); min-width: var(--gp-tou
 .sheet-body { overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 14px 18px 20px; }
 .facts { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: var(--gp-font-size-xs); color: var(--gp-color-ink2); margin-bottom: 14px; }
 .facts .ok { color: var(--gp-color-ok); }
-.facts .bad { color: var(--gp-color-bad); }
+.facts .bad { color: #ff9a8f; }
 .bar-label { display: flex; justify-content: space-between; font-size: var(--gp-font-size-xs); color: var(--gp-color-ink2); }
 .bar-label b { color: var(--gp-color-ink); }
 .bar { height: 6px; border-radius: 3px; background: var(--gp-color-bg); display: flex; overflow: hidden; margin: 6px 0 14px; }

@@ -1,8 +1,20 @@
 <!doctype html>
 <html lang="ko">
   <head>
+    <!-- groovplay:pwa -->
+    <link rel="manifest" href="./app.webmanifest">
+    <meta name="theme-color" content="#2f7fff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="오늘의 사명">
+    <link rel="apple-touch-icon" href="./icon-192.png">
+    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=20260911152745").catch(function(){})});</script>
+    <!-- /groovplay:pwa -->
+    <script>window.__GP_GAME__={"id":"mission-today","title":"오늘의 사명","accent":"#2f7fff","kind":"game","home":"../../../"}</script>
+    <script src="./groovplay.js?v=20260911152745"></script>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>오늘의 사명</title>
     <style>
@@ -10,24 +22,12 @@
       /*
         손에 든 브라우저에서 100vh는 "주소창이 접혔을 때"의 높이다. 주소창이 나와 있으면 캔버스가
         보이는 영역보다 커져서 아래쪽 조작 단추와 HUD가 주소창 뒤로 숨는다. dvh는 지금 보이는 높이고,
-        --vvh는 포털 런타임(mobile.js)이 visualViewport로 재어 주는 같은 값이다. 셋을 겹쳐 적어
+        --vvh는 플랫폼 런타임(groovplay.js)이 visualViewport로 재어 주는 같은 값이다. 셋을 겹쳐 적어
         오래된 브라우저부터 차례로 받게 한다. 스크립트가 뜨면 main.ts가 픽셀로 다시 잡는다.
       */
       canvas { display: block; width: 100vw; height: 100vh; height: 100dvh; height: var(--vvh, 100dvh); touch-action: none; -webkit-user-select: none; user-select: none; }
-      /*
-        포털 런타임이 띄우는 전체 화면 손잡이(.gp-fs)는 화면 오른쪽 아래에 떠 있다. 이 게임은 화면
-        구석마다 무언가가 있어서(런은 뛰기 단추, 로비는 자유 달리기) 어디에 두어도 무언가를 덮는다.
-        그래서 **타이틀 화면에서만** 보이게 한다. 그 뒤로는 설정의 「전체 화면」 줄이 같은 일을 한다.
-        main.ts가 현재 화면을 <html data-gp>에 적어 준다.
-      */
-      body .gp-fs { display: none; }
-      html[data-gp="title"] body .gp-fs, html[data-gp="splash"] body .gp-fs {
-        display: flex;
-        bottom: calc(14px + env(safe-area-inset-bottom, 0px));
-        right: calc(14px + env(safe-area-inset-right, 0px));
-      }
     </style>
-    <script type="module" crossorigin src="./assets/index-rhX0U13q.js"></script>
+    <script type="module" crossorigin src="./assets/index-BsKvkarW.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-B2q2Kslv.css">
   </head>
   <body>

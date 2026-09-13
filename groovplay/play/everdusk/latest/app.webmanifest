@@ -1,0 +1,30 @@
+{
+  "name": "EVERDUSK",
+  "short_name": "EVERDUSK",
+  "description": "빛을 든 세 명이 여섯 구역의 비콘을 다시 켜는 페인팅 러너. 홈·탭·일일 임무·업적, 파워업 7, Hush 추격, 대사로 이어지는 에피소드.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": [
+    "fullscreen",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "background_color": "#0b0d12",
+  "theme_color": "#f0a63c",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

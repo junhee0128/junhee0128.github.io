@@ -1,32 +1,30 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- groovplay:pwa -->
+    <link rel="manifest" href="./app.webmanifest">
+    <meta name="theme-color" content="#f0a63c">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="EVERDUSK">
+    <link rel="apple-touch-icon" href="./icon-192.png">
+    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=20260911152140").catch(function(){})});</script>
+    <!-- /groovplay:pwa -->
+    <script>window.__GP_GAME__={"id":"everdusk","title":"EVERDUSK","accent":"#f0a63c","kind":"game","home":"../../../"}</script>
+    <script src="./groovplay.js?v=20260911152140"></script>
 <meta charset="UTF-8" />
 <!-- Zoom is deliberately left enabled: pinch-to-zoom is an accessibility
      feature, and `touch-action: none` on #app is enough to stop scrolling. -->
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
 <meta name="theme-color" content="#07071e" />
-<!-- Installable to a phone's home screen: the manifest asks for fullscreen
-     landscape, which is the orientation the run is designed for (main.ts gates
-     portrait behind a rotate prompt). Paths are relative so the same build
-     installs from a domain root or a project subpath. -->
-<link rel="manifest" href="./manifest.webmanifest" />
-<link rel="apple-touch-icon" href="./icon-192.png" />
-<meta name="mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 <meta name="description" content="EVERDUSK — run ahead of the Hush, gather Sparks and relight the city. A Canvas 2D runner." />
 <title>EVERDUSK</title>
-<!-- Display face. Gothic A1 carries Korean and Latin in one family and has a
-     900 weight, which is what a runner's titles and score want; the game had
-     been running entirely on the OS UI font. Preconnected so the first paint
-     is not held up, and every rule falls back to the system stack. -->
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;700;900&display=swap" />
+<!-- 서체(Gothic A1)는 main.ts 가 @fontsource 로 번들한다 — 플랫폼 계약: 외부 오리진 요청 없음. -->
 <!-- 스타일시트는 main.ts가 tokens.css 다음에 불러온다: 토큰이 먼저 정의돼야
        그것을 참조하는 규칙이 첫 페인트에서도 값을 갖는다. -->
-  <script type="module" crossorigin src="./assets/index-CPO4GhMQ.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CHR4RWQc.css">
+  <script type="module" crossorigin src="./assets/index-IZbZkyzf.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BnqdwRln.css">
 </head>
 <body>
 <!-- Landscape gate: the run's fairness is measured in visible seconds, so the
