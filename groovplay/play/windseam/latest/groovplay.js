@@ -179,6 +179,8 @@ const SETTINGS_DEFAULTS = Object.freeze({
   motion: "full",     // "full" | "reduced"
   language: "ko",
   haptics: true,
+  // 브라우저에서 주소창을 감추고 논다. iOS 사파리처럼 API 가 없는 곳에서는 설정에 줄이 보이지 않는다.
+  fullscreen: true,
 });
 
 function createSettings({ storage, emit, prefersReducedMotion = false }) {
@@ -306,7 +308,7 @@ function createAudio({ win, doc, events, settings }) {
 // 실행 환경 — 브라우저 · 설치된 PWA · 네이티브 셸(미래). 전체화면·복귀·설치 안내·제스처 억제·
 // 보이는 높이가 여기 산다. 게임은 host.kind 를 보고 분기하지 않는다; host 가 알아서 한다.
 
-function createHost({ win, doc, game, storage, events }) {
+function createHost({ win, doc, game, storage, events, settings }) {
   const mm = (q) => !!win.matchMedia?.(q)?.matches;
   const standalone = mm("(display-mode: standalone)") || mm("(display-mode: fullscreen)") || win.navigator?.standalone === true;
   const ua = win.navigator?.userAgent ?? "";
@@ -339,20 +341,62 @@ function createHost({ win, doc, game, storage, events }) {
     doc.addEventListener("wheel", (e) => { if (e.ctrlKey) e.preventDefault(); }, { passive: false });
   }
 
-  // ── 전체화면 ── 안드로이드·데스크탑은 API 가 있다. 첫 조작에 한 번 시도한다. 설치형은 이미 전체다.
+  // ── 전체화면 ──
+  //
+  // 주소창은 손에 든 화면의 8~12%를 먹는다. 게임은 그 높이까지 쓰라고 그려져 있으므로, 브라우저에서는
+  // 전체화면으로 들어가야 설계한 그림이 나온다. 설치형(홈 화면에 추가)은 이미 전체다.
+  //
+  // **한 번 실패했다고 포기하지 않는다.** 이전에는 첫 pointerdown 에서 한 번 시도하고 듣기를 끊었다 —
+  // 그 한 번이 거절되면(제스처가 소모됐거나, 문서가 아직 활성이 아니거나, 브라우저가 그 이벤트에는 권한을
+  // 주지 않거나) 그 페이지에서는 영영 전체화면이 되지 않았다. 이제 들어갈 때까지 조작마다 다시 시도하고,
+  // 밖에서 나가지면(브라우저가 회전할 때 풀기도 한다) 다음 조작에 다시 들어간다.
+  //
+  // 회전 자체로는 들어갈 수 없다 — 전체화면은 제스처를 요구하고 orientationchange 는 제스처가 아니다.
+  // 그래서 "가로로 돌리면 다음 한 번의 터치에" 가 이 플랫폼이 약속할 수 있는 전부다.
+  //
+  // 조르기를 멈추는 길은 하나뿐이다: 설정의 「전체 화면」을 끄는 것. 그러면 다시 요청하지 않는다.
+  //
+  // iOS 사파리에는 이 API 가 없다. 그 자리는 설치 안내가 대신한다(아래).
+  const fullscreenAvailable = () => kind === "browser" && !!doc?.documentElement?.requestFullscreen;
+  const fullscreenActive = () => !!doc?.fullscreenElement;
   const fullscreen = async () => {
-    if (kind !== "browser" || !doc?.documentElement.requestFullscreen) return false;
+    if (!fullscreenAvailable()) return false;
+    if (fullscreenActive()) return true;
     try { await doc.documentElement.requestFullscreen({ navigationUI: "hide" }); return true; } catch { return false; }
   };
-  if (doc && game.kind !== "portal" && kind === "browser" && touch) {
-    const once = () => { doc.removeEventListener("pointerdown", once); fullscreen(); };
-    doc.addEventListener("pointerdown", once);
+  const exitFullscreen = async () => {
+    if (!fullscreenActive()) return;
+    try { await doc.exitFullscreen?.(); } catch { /* 이미 나갔다 */ }
+  };
+
+  if (doc && game.kind !== "portal" && touch) {
+    // 브라우저마다 어느 제스처에 권한을 주는지 다르다. 셋 다 듣되 성공하면 바로 끊는다.
+    const GESTURES = ["pointerdown", "pointerup", "click"];
+    const arm = () => { for (const e of GESTURES) doc.addEventListener(e, attempt, { capture: true, passive: true }); };
+    const disarm = () => { for (const e of GESTURES) doc.removeEventListener(e, attempt, true); };
+    function attempt() {
+      if (!fullscreenAvailable() || settings?.get("fullscreen") === false) { disarm(); return; }
+      void fullscreen().then((ok) => { if (ok) disarm(); });
+    }
+    if (fullscreenAvailable()) arm();
+    doc.addEventListener("fullscreenchange", () => {
+      if (fullscreenActive()) disarm();
+      else if (settings?.get("fullscreen") !== false) arm();
+    });
   }
+
+  // 설정의 「전체 화면」 줄. 켜는 클릭 자체가 제스처라 그 자리에서 들어간다.
+  events?.on?.("settings", ({ key, value }) => {
+    if (key !== "fullscreen") return;
+    if (value) void fullscreen(); else void exitFullscreen();
+  });
+
 
   // ── 설치 안내 ── iOS 사파리는 전체화면 API 가 없다. 홈 화면에 추가하는 법을 알려 주는 것이 답이다.
   const hintStore = storage.scope("install-hint", { version: 1, shared: true });
   const installHintDue = () => {
-    if (kind !== "browser" || !isIOS) return false;
+    // 전체화면 API 가 있는 브라우저는 스스로 해결한다. 안내는 그 길이 없는 곳(iOS 사파리)의 몫이다.
+    if (kind !== "browser" || !isIOS || fullscreenAvailable()) return false;
     const seen = hintStore.get();
     return !seen || Date.now() - seen > 30 * 86400000;
   };
@@ -365,7 +409,13 @@ function createHost({ win, doc, game, storage, events }) {
     win.location.assign(url.href);
   };
 
-  return { kind, isIOS, touch, standalone, fullscreen, goHome, installHintDue, dismissInstallHint };
+  return {
+    kind, isIOS, touch, standalone, goHome, installHintDue, dismissInstallHint,
+    fullscreen, exitFullscreen,
+    /** 이 환경에 전체화면 API 가 있는가(iOS 사파리는 없다). 설정이 줄을 보일지 정한다. */
+    get fullscreenAvailable() { return fullscreenAvailable(); },
+    get fullscreenActive() { return fullscreenActive(); },
+  };
 }
 
 
@@ -397,7 +447,7 @@ function createShell({ win, doc, tokens, tokensCss, game, events, lifecycle, scr
   const T = tokens;
   const accent = /^#[0-9a-f]{6}$/i.test(game.accent ?? "") ? game.accent : T.color.accentFallback;
   // getter 는 여기서 정의한다. Object.assign 은 getter 를 값으로 복사해 버려, 나중에 넣으면 생성 시점의 값으로 굳는다.
-  let root, home, loading, bar, loadingTitle, panelScrim, panelBody, toastEl, toastTimer;
+  let root, home, loading, bar, loadingTitle, panelScrim, panelBody, toastEl, toastTimer, fsSwitch;
   const api = {
     ready: false,
     get settingsOpen() { return api.ready && !!panelScrim && !panelScrim.hidden; },
@@ -456,8 +506,8 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
 
   const h = (tag, cls, text) => { const n = doc.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
   const L = { // 셸의 글은 두 언어. 게임 텍스트는 게임 것이다.
-    ko: { home: "포털로", loading: "불러오는 중", settings: "설정", sound: "효과음", music: "음악", motion: "모션 줄이기", motionSub: "흔들림·전환 효과를 줄인다", haptics: "진동", language: "언어", close: "닫기", noSave: "이 브라우저에서는 진행이 저장되지 않습니다", install: "홈 화면에 추가하면 전체 화면으로 즐길 수 있어요", installHow: "공유 → 홈 화면에 추가", dismiss: "알겠어요" },
-    en: { home: "Portal", loading: "Loading", settings: "Settings", sound: "Sound", music: "Music", motion: "Reduce motion", motionSub: "Fewer shakes and transitions", haptics: "Haptics", language: "Language", close: "Close", noSave: "Progress will not be saved in this browser", install: "Add to Home Screen to play full screen", installHow: "Share → Add to Home Screen", dismiss: "Got it" },
+    ko: { home: "포털로", loading: "불러오는 중", settings: "설정", sound: "효과음", music: "음악", motion: "모션 줄이기", motionSub: "흔들림·전환 효과를 줄인다", haptics: "진동", fullscreen: "전체 화면", fullscreenSub: "주소창을 감추고 화면을 다 쓴다", language: "언어", close: "닫기", noSave: "이 브라우저에서는 진행이 저장되지 않습니다", install: "홈 화면에 추가하면 전체 화면으로 즐길 수 있어요", installHow: "공유 → 홈 화면에 추가", dismiss: "알겠어요" },
+    en: { home: "Portal", loading: "Loading", settings: "Settings", sound: "Sound", music: "Music", motion: "Reduce motion", motionSub: "Fewer shakes and transitions", haptics: "Haptics", fullscreen: "Fullscreen", fullscreenSub: "Hides the address bar and uses the whole screen", language: "Language", close: "Close", noSave: "Progress will not be saved in this browser", install: "Add to Home Screen to play full screen", installHow: "Share → Add to Home Screen", dismiss: "Got it" },
   };
   const t = (k) => (L[settings.get("language")] ?? L.ko)[k];
 
@@ -503,6 +553,8 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
 
     if (!storage.available) api.toast(t("noSave"), 4000);
     if (host.installHintDue()) showInstallHint();
+    // 밖에서 전체화면이 바뀌면(스와이프로 나가기, 게임의 요청) 스위치가 거짓말하지 않게 맞춘다.
+    doc.addEventListener("fullscreenchange", () => fsSwitch?.setAttribute("aria-checked", String(host.fullscreenActive)));
   }
 
   function renderSettings() {
@@ -521,6 +573,22 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
     row(t("music"), toggle("music", settings.get("music")));
     row(t("motion"), toggle("motion", settings.get("motion") === "reduced"), t("motionSub"));
     row(t("haptics"), toggle("haptics", settings.get("haptics")));
+    // 전체화면 줄은 API 가 있는 환경에만 선다(iOS 사파리에는 없다 — 그 자리는 설치 안내가 대신한다).
+    //
+    // 이 줄만 기본 toggle 을 쓰지 않는다. 스위치가 보여야 하는 것은 저장된 취향이 아니라 **지금 전체화면인가**이고,
+    // 누르면 기억과 적용을 함께 해야 하기 때문이다. 취향만 바꾸면(이미 같은 값이면 이벤트가 안 나므로) 한 번 눌러서는
+    // 아무 일도 일어나지 않는다 — 스스로 나갔다가 되돌아오려는 사람이 정확히 그 경우다.
+    if (host.fullscreenAvailable) {
+      fsSwitch = h("button", "gp-switch"); fsSwitch.setAttribute("role", "switch");
+      fsSwitch.setAttribute("aria-checked", String(host.fullscreenActive)); fsSwitch.setAttribute("aria-label", t("fullscreen"));
+      fsSwitch.addEventListener("click", () => {
+        const next = !host.fullscreenActive;
+        fsSwitch.setAttribute("aria-checked", String(next));
+        settings.set("fullscreen", next);
+        if (next) void host.fullscreen(); else void host.exitFullscreen();
+      });
+      row(t("fullscreen"), fsSwitch, t("fullscreenSub"));
+    }
     const sel = h("select", "gp-select"); sel.setAttribute("aria-label", t("language"));
     for (const [v, name] of [["ko", "한국어"], ["en", "English"]]) { const o = h("option", null, name); o.value = v; if (settings.get("language") === v) o.selected = true; sel.append(o); }
     sel.addEventListener("change", () => { settings.set("language", sel.value); renderSettings(); });
@@ -596,7 +664,7 @@ function createGroovplay({ win, doc, tokens, tokensCss, game, storagePrefix, bac
   const storage = createStorage({ prefix: storagePrefix, gameId: game.id, backend });
   const settings = createSettings({ storage, emit: events.emit, prefersReducedMotion: !!win.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches });
   const screens = createScreens(events.emit);
-  const host = createHost({ win, doc, game, storage, events });
+  const host = createHost({ win, doc, game, storage, events, settings });
   const lifecycle = createLifecycle({ win, doc, events, host });
   const audio = createAudio({ win, doc, events, settings });
   const capture = createCapture({ events });

@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-14T01:02:38.659Z",
+  "builtAt": "2026-09-14T06:16:45.744Z",
   "lobbyRule": true,
   "games": [
     {
@@ -104,11 +104,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 5247
+          "ms": 2669
         },
         "test": {
           "ok": true,
-          "ms": 9298,
+          "ms": 5737,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 38818
+          "ms": 23263
         }
       },
       "build": {
         "ok": true,
-        "ms": 5130,
-        "at": "2026-09-14T00:42:52.163Z"
+        "ms": 3365,
+        "at": "2026-09-14T01:59:14.816Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T00:47:24.532Z"
+        "at": "2026-09-14T02:03:05.423Z"
       }
     },
     {
@@ -235,11 +235,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2922
+          "ms": 2174
         },
         "test": {
           "ok": true,
-          "ms": 24013,
+          "ms": 20405,
           "tests": {
             "passed": 125,
             "failed": 0,
@@ -249,8 +249,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 5664,
-        "at": "2026-09-14T00:47:57.254Z"
+        "ms": 26712,
+        "at": "2026-09-14T02:03:54.779Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -260,7 +260,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T00:50:55.760Z"
+        "at": "2026-09-14T02:06:32.345Z"
       }
     },
     {
@@ -465,11 +465,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3424
+          "ms": 2589
         },
         "test": {
           "ok": true,
-          "ms": 6014,
+          "ms": 5287,
           "tests": {
             "passed": 262,
             "failed": 0,
@@ -479,8 +479,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 201507,
-        "at": "2026-09-14T00:54:26.745Z"
+        "ms": 197440,
+        "at": "2026-09-14T02:09:57.686Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -490,7 +490,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T01:00:40.418Z"
+        "at": "2026-09-14T02:16:09.935Z"
       }
     },
     {
@@ -531,18 +531,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "32d5247",
-        "date": "2026-09-14T09:42:21+09:00",
-        "subject": "feat(windseam): redesign combat around tension, linked enemies and guardian seals"
+        "hash": "a61a191",
+        "date": "2026-09-14T10:07:33+09:00",
+        "subject": "docs(windseam): record v2 platform validation and verified public release"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1357
+          "ms": 1432
         },
         "test": {
           "ok": true,
-          "ms": 703,
+          "ms": 714,
           "tests": {
             "passed": 33,
             "failed": 0,
@@ -552,8 +552,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2615,
-        "at": "2026-09-14T01:00:45.664Z"
+        "ms": 2578,
+        "at": "2026-09-14T06:14:52.874Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",
@@ -563,7 +563,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T01:02:38.658Z"
+        "at": "2026-09-14T06:16:45.743Z"
       }
     }
   ],
