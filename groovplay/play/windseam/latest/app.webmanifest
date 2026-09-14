@@ -1,7 +1,7 @@
 {
   "name": "바람실 — 돌아오는 정원",
   "short_name": "바람실 — 돌아오는 정",
-  "description": "흩어진 마음을 모아, 다시 피어나는 세계.",
+  "description": "엮을수록 위험해지는 실, 끊어내는 순간 피어나는 정원.",
   "start_url": "./",
   "scope": "./",
   "display": "fullscreen",
