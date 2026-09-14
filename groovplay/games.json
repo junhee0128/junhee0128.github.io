@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-14T07:53:00.215Z",
+  "builtAt": "2026-09-14T15:35:11.601Z",
   "lobbyRule": true,
   "games": [
     {
@@ -104,11 +104,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2651
+          "ms": 2814
         },
         "test": {
           "ok": true,
-          "ms": 5731,
+          "ms": 5510,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 24144
+          "ms": 23810
         }
       },
       "build": {
         "ok": true,
-        "ms": 4029,
-        "at": "2026-09-14T07:34:30.875Z"
+        "ms": 4154,
+        "at": "2026-09-14T14:12:06.621Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T07:38:21.404Z"
+        "at": "2026-09-14T14:15:55.969Z"
       }
     },
     {
@@ -235,11 +235,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2312
+          "ms": 2304
         },
         "test": {
           "ok": true,
-          "ms": 18509,
+          "ms": 19783,
           "tests": {
             "passed": 125,
             "failed": 0,
@@ -249,8 +249,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3468,
-        "at": "2026-09-14T07:38:45.753Z"
+        "ms": 3463,
+        "at": "2026-09-14T14:16:21.586Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -260,7 +260,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T07:41:24.006Z"
+        "at": "2026-09-14T14:18:59.055Z"
       }
     },
     {
@@ -465,11 +465,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2996
+          "ms": 3006
         },
         "test": {
           "ok": true,
-          "ms": 5776,
+          "ms": 5974,
           "tests": {
             "passed": 262,
             "failed": 0,
@@ -479,8 +479,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 196527,
-        "at": "2026-09-14T07:44:49.338Z"
+        "ms": 196004,
+        "at": "2026-09-14T14:22:24.068Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -490,7 +490,113 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T07:51:02.630Z"
+        "at": "2026-09-14T14:28:36.866Z"
+      }
+    },
+    {
+      "id": "starfall",
+      "title": "별의 서약",
+      "codename": "STARFALL COVENANT",
+      "tagline": "잿것에 갇힌 별빛을 끌어모아 마을의 등불을 되돌리는 마지막 서약 기사.",
+      "status": "playable",
+      "accent": "#f2b85a",
+      "engine": "Three.js · 몰이·연계 3인 파티 액션 RPG",
+      "milestones": [
+        {
+          "name": "규칙층 — 전투·서약·경계 저장·퀘스트",
+          "state": "done",
+          "note": "137개 시험, 규칙층만으로 두 결말 완주"
+        },
+        {
+          "name": "오버월드 — 다섯 지역·조우 9·낙성 제단",
+          "state": "done",
+          "note": "절차적 지형·하늘·식생·소품, 길잡이 등불 6"
+        },
+        {
+          "name": "몰이·연계 전투 — 인력·낙인·낙성, 동시 처치 별빛",
+          "state": "done",
+          "note": "연계가 난타보다 별빛 3.75배·피격 24 %, 보스 핵 취약"
+        },
+        {
+          "name": "주선 8장 · 부가 3 · 서약 2계열 · 결말 2×2",
+          "state": "done",
+          "note": "켜진 등불 수가 마을 장면을 가른다, 재도전·기록"
+        },
+        {
+          "name": "플랫폼 적합 · 브라우저 완주 PC·폰",
+          "state": "done",
+          "note": "15셀 골든·행렬·예산, 두 손가락·재시작·새로고침 시험"
+        }
+      ],
+      "docs": [
+        {
+          "label": "마스터 계약",
+          "path": "design/MASTER_CONTRACT.md"
+        },
+        {
+          "label": "개선 계획",
+          "path": "design/IMPROVEMENT_PLAN.md"
+        },
+        {
+          "label": "설계",
+          "path": "design/DESIGN.md"
+        },
+        {
+          "label": "아트 가이드",
+          "path": "design/ART_GUIDE.md"
+        },
+        {
+          "label": "에셋 목록",
+          "path": "design/ASSETS.md"
+        },
+        {
+          "label": "성능",
+          "path": "design/PERF.md"
+        },
+        {
+          "label": "체크포인트",
+          "path": "design/CHECKPOINTS.md"
+        },
+        {
+          "label": "README",
+          "path": "README.md"
+        }
+      ],
+      "progress": null,
+      "commit": {
+        "hash": "55392e8",
+        "date": "2026-09-15T00:18:48+09:00",
+        "subject": "starfall: 설정 화면 골든 셋을 다시 찍는다 — 서브픽셀로 찍힌 옛 기준"
+      },
+      "checks": {
+        "typecheck": {
+          "ok": true,
+          "ms": 2224
+        },
+        "test": {
+          "ok": true,
+          "ms": 9311,
+          "tests": {
+            "passed": 138,
+            "failed": 0,
+            "total": 138
+          }
+        }
+      },
+      "build": {
+        "ok": true,
+        "ms": 3845,
+        "at": "2026-09-14T15:19:11.802Z"
+      },
+      "checkpoints": [],
+      "keyart": "./keyart/starfall.jpg",
+      "platform": 1,
+      "conformance": {
+        "version": 1,
+        "passed": true,
+        "count": 0,
+        "findings": [],
+        "at": "2026-09-14T15:35:10.789Z"
       }
     },
     {
@@ -538,11 +644,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1513
+          "ms": 1395
         },
         "test": {
           "ok": true,
-          "ms": 725,
+          "ms": 709,
           "tests": {
             "passed": 33,
             "failed": 0,
@@ -552,8 +658,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2552,
-        "at": "2026-09-14T07:51:07.428Z"
+        "ms": 2696,
+        "at": "2026-09-14T14:45:41.527Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",
@@ -563,7 +669,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T07:53:00.214Z"
+        "at": "2026-09-14T14:47:35.081Z"
       }
     }
   ],

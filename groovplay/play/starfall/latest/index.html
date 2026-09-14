@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <!-- groovplay:pwa -->
+    <link rel="manifest" href="./app.webmanifest">
+    <meta name="theme-color" content="#f2b85a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="별의 서약">
+    <link rel="apple-touch-icon" href="./icon-192.png">
+    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=20260914151910").catch(function(){})});</script>
+    <!-- /groovplay:pwa -->
+    <script>window.__GP_GAME__={"id":"starfall","title":"별의 서약","accent":"#f2b85a","kind":"game","home":"../../../"}</script>
+    <script src="./groovplay.js?v=20260914151910"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8" />
+    <!-- 뷰포트·매니페스트·아이콘·런타임은 플러그인이 넣는다. -->
+    <title>별의 서약</title>
+    <script type="module" crossorigin src="./assets/index-Doe5MePE.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bu21Aihe.css">
+  </head>
+  <body>
+    <div id="stage"></div>
+
+    <!-- 타이틀 -->
+    <section class="ui title" data-screen="title" hidden>
+      <div class="title-card">
+        <p class="kicker" id="title-kicker">STARFALL COVENANT</p>
+        <h1 id="title-h">별의 서약</h1>
+        <p class="lead" id="title-sub">떨어진 별의 잿빛 땅에서</p>
+        <div class="col">
+          <button id="btn-continue" class="primary" hidden>이어하기</button>
+          <button id="btn-new">새 게임</button>
+          <div class="row">
+            <button id="btn-settings">설정</button>
+            <button id="btn-lang">English</button>
+          </div>
+        </div>
+        <p class="fine" id="title-save"></p>
+      </div>
+    </section>
+
+    <!-- 새 게임 확인 -->
+    <section class="ui modal" data-screen="confirm" hidden>
+      <div class="panel">
+        <p class="lead" id="confirm-text"></p>
+        <div class="row"><button id="btn-confirm-yes" class="primary"></button><button id="btn-confirm-no"></button></div>
+      </div>
+    </section>
+
+    <!-- HUD -->
+    <section class="hud" data-screen="play" hidden>
+      <div class="party" id="party"></div>
+      <div class="tracker" id="tracker"><span class="tracker-q" id="tracker-q"></span><span class="tracker-o" id="tracker-o"></span></div>
+      <button class="icon-btn menu-btn" id="btn-menu" aria-label="메뉴"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <div class="zone-toast" id="zone-toast" data-gp-decorative hidden></div>
+      <div class="toasts" id="toasts"></div>
+      <div class="numbers" id="numbers" data-gp-decorative></div>
+      <div class="boss-bar" id="boss-bar" hidden><span class="boss-name" id="boss-name"></span><div class="bar"><i id="boss-fill"></i></div></div>
+      <div class="bottom">
+        <button class="prompt" id="prompt" hidden></button>
+        <div class="burst" id="burst"><div class="bar"><i id="burst-fill"></i></div><span id="burst-label">버스트</span></div>
+      </div>
+      <div class="stick" id="stick" hidden><div class="stick-base"></div><div class="stick-knob" id="stick-knob"></div></div>
+      <div class="actions" id="actions">
+        <button class="act big" data-act="attack" id="act-attack" aria-label="공격"><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l9-9M13 11l5-5 2 2-5 5M13 11l3 3M6 18l-2 2M8 16l-4-4"/></svg></span></button>
+        <button class="act" data-act="dodge" id="act-dodge" aria-label="회피"><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h9M10 8l4 4-4 4"/><path d="M16 6c3 3 3 9 0 12" stroke-dasharray="2 2"/></svg></span></button>
+        <button class="act" data-act="skill1" id="act-skill1"><span class="glyph" id="skill1-glyph"></span><i class="cd" id="skill1-cd"></i></button>
+        <button class="act" data-act="skill2" id="act-skill2"><span class="glyph" id="skill2-glyph"></span><i class="cd" id="skill2-cd"></i></button>
+        <button class="act burst-btn" data-act="burst" id="act-burst" aria-label="버스트"><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 6 6.4.6-4.8 4.2 1.5 6.2L12 16.7 6.3 20l1.5-6.2L3 9.6 9.4 9z"/></svg></span></button>
+      </div>
+      <p class="hint" id="hint" data-gp-decorative></p>
+    </section>
+
+    <!-- 대화 -->
+    <section class="ui dialogue" data-screen="dialogue" hidden>
+      <div class="dlg" id="dlg">
+        <div class="dlg-portrait" id="dlg-portrait"></div>
+        <div class="dlg-body">
+          <p class="dlg-name" id="dlg-name"></p>
+          <p class="dlg-text" id="dlg-text"></p>
+          <div class="dlg-choices" id="dlg-choices"></div>
+        </div>
+        <button class="dlg-next" id="dlg-next" aria-label="다음"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5l8 7-8 7z"/></svg></button>
+      </div>
+    </section>
+
+    <!-- 일시정지 -->
+    <section class="ui modal" data-screen="pause" hidden>
+      <div class="panel">
+        <h1 id="pause-h">일시정지</h1>
+        <div class="col">
+          <button id="btn-resume" class="primary">계속</button>
+          <button id="btn-save">저장</button>
+          <button id="btn-pause-settings">설정</button>
+          <button id="btn-quit">타이틀로</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 메뉴 -->
+    <section class="ui menu" data-screen="menu" hidden>
+      <div class="menu-frame">
+        <nav class="tabs" id="tabs">
+          <button data-tab="party" class="on"></button><button data-tab="equip"></button><button data-tab="bag"></button><button data-tab="quests"></button><button data-tab="map"></button>
+          <button class="icon-btn close" id="btn-menu-close" aria-label="닫기"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+        </nav>
+        <div class="menu-body" id="menu-body"></div>
+      </div>
+    </section>
+
+    <!-- 상점 -->
+    <section class="ui menu" data-screen="shop" hidden>
+      <div class="menu-frame">
+        <nav class="tabs"><span class="tab-title" id="shop-title"></span><span class="tab-title" id="shop-shards"></span><button class="icon-btn close" id="btn-shop-close" aria-label="닫기"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></nav>
+        <div class="menu-body" id="shop-body"></div>
+      </div>
+    </section>
+
+    <!-- 서약 벼리기 -->
+    <section class="ui modal" data-screen="vow" hidden>
+      <div class="panel wide">
+        <p class="kicker" id="vow-kicker"></p>
+        <h1 id="vow-h"></h1>
+        <p class="fine" id="vow-shards"></p>
+        <div class="vow-options" id="vow-options"></div>
+        <button id="btn-vow-close"></button>
+      </div>
+    </section>
+
+    <!-- 결과 -->
+    <section class="ui results" data-screen="results" hidden>
+      <div class="panel wide">
+        <p class="kicker" id="results-kicker"></p>
+        <h1 id="results-h"></h1>
+        <p class="lead" id="results-village"></p>
+        <div class="stats" id="results-stats"></div>
+        <p class="fine" id="results-record"></p>
+        <p class="fine" id="results-thanks"></p>
+        <div class="row"><button id="btn-results-retry" class="primary"></button><button id="btn-results-title"></button></div>
+      </div>
+    </section>
+
+  </body>
+</html>
