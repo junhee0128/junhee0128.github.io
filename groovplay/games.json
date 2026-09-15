@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-14T15:35:11.601Z",
+  "builtAt": "2026-09-15T02:52:22.279Z",
   "lobbyRule": true,
   "games": [
     {
@@ -104,11 +104,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2814
+          "ms": 2671
         },
         "test": {
           "ok": true,
-          "ms": 5510,
+          "ms": 5430,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 23810
+          "ms": 24059
         }
       },
       "build": {
         "ok": true,
-        "ms": 4154,
-        "at": "2026-09-14T14:12:06.621Z"
+        "ms": 4192,
+        "at": "2026-09-15T02:17:47.486Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T14:15:55.969Z"
+        "at": "2026-09-15T02:21:37.531Z"
       }
     },
     {
@@ -235,11 +235,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2304
+          "ms": 2319
         },
         "test": {
           "ok": true,
-          "ms": 19783,
+          "ms": 18355,
           "tests": {
             "passed": 125,
             "failed": 0,
@@ -249,8 +249,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3463,
-        "at": "2026-09-14T14:16:21.586Z"
+        "ms": 3583,
+        "at": "2026-09-15T02:22:01.876Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -260,7 +260,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T14:18:59.055Z"
+        "at": "2026-09-15T02:24:39.823Z"
       }
     },
     {
@@ -465,11 +465,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3006
+          "ms": 2925
         },
         "test": {
           "ok": true,
-          "ms": 5974,
+          "ms": 5921,
           "tests": {
             "passed": 262,
             "failed": 0,
@@ -479,8 +479,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 196004,
-        "at": "2026-09-14T14:22:24.068Z"
+        "ms": 194004,
+        "at": "2026-09-15T02:28:02.706Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -490,7 +490,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T14:28:36.866Z"
+        "at": "2026-09-15T02:34:14.215Z"
       }
     },
     {
@@ -564,29 +564,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "55392e8",
-        "date": "2026-09-15T00:18:48+09:00",
-        "subject": "starfall: 설정 화면 골든 셋을 다시 찍는다 — 서브픽셀로 찍힌 옛 기준"
+        "hash": "3243add",
+        "date": "2026-09-15T00:53:11+00:00",
+        "subject": "docs(starfall): 골든 3건의 원인은 글자 안티에일리어싱 — 기준이 옳다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2224
+          "ms": 2364
         },
         "test": {
           "ok": true,
-          "ms": 9311,
+          "ms": 9312,
           "tests": {
-            "passed": 138,
+            "passed": 146,
             "failed": 0,
-            "total": 138
+            "total": 146
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3845,
-        "at": "2026-09-14T15:19:11.802Z"
+        "ms": 3751,
+        "at": "2026-09-15T02:34:29.651Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -596,7 +596,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T15:35:10.789Z"
+        "at": "2026-09-15T02:50:23.942Z"
       }
     },
     {
@@ -644,11 +644,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1395
+          "ms": 1428
         },
         "test": {
           "ok": true,
-          "ms": 709,
+          "ms": 772,
           "tests": {
             "passed": 33,
             "failed": 0,
@@ -658,8 +658,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2696,
-        "at": "2026-09-14T14:45:41.527Z"
+        "ms": 2544,
+        "at": "2026-09-15T02:50:29.272Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",
@@ -669,7 +669,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-14T14:47:35.081Z"
+        "at": "2026-09-15T02:52:22.278Z"
       }
     }
   ],
