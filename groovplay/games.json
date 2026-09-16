@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-16T08:18:22.492Z",
+  "builtAt": "2026-09-16T12:17:16.379Z",
   "lobbyRule": true,
   "games": [
     {
@@ -104,11 +104,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2462
+          "ms": 2540
         },
         "test": {
           "ok": true,
-          "ms": 5185,
+          "ms": 5166,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 22805
+          "ms": 22726
         }
       },
       "build": {
         "ok": true,
-        "ms": 3296,
-        "at": "2026-09-16T08:14:16.568Z"
+        "ms": 3225,
+        "at": "2026-09-16T12:12:16.857Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -171,14 +171,14 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "35bbcf1",
-        "date": "2026-09-16T16:58:47+09:00",
-        "subject": "T0: clarify adoption authority and download priority [node:groovplay.adopt]"
+        "hash": "c4bf495",
+        "date": "2026-09-16T21:09:23+09:00",
+        "subject": "T0: encode first-bite keyart as WebP [node:none]"
       },
       "checks": {
         "test": {
           "ok": true,
-          "ms": 216,
+          "ms": 222,
           "tests": {
             "passed": 10,
             "failed": 0,
@@ -188,19 +188,18 @@
       },
       "build": {
         "ok": true,
-        "ms": 422,
-        "at": "2026-09-16T08:14:17.371Z"
+        "ms": 414,
+        "at": "2026-09-16T12:12:17.658Z"
       },
       "checkpoints": [],
-      "keyart": "./keyart/first-bite.png",
+      "keyart": "./keyart/first-bite.webp",
       "platform": 1,
       "conformance": {
         "version": 1,
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T08:07:36.858Z",
-        "cached": true
+        "at": "2026-09-16T12:13:10.188Z"
       }
     },
     {
@@ -302,11 +301,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2115
+          "ms": 2131
         },
         "test": {
           "ok": true,
-          "ms": 18209,
+          "ms": 18287,
           "tests": {
             "passed": 125,
             "failed": 0,
@@ -316,8 +315,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3207,
-        "at": "2026-09-16T08:14:40.964Z"
+        "ms": 3192,
+        "at": "2026-09-16T12:13:33.869Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -533,11 +532,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2598
+          "ms": 2591
         },
         "test": {
           "ok": true,
-          "ms": 5220,
+          "ms": 5182,
           "tests": {
             "passed": 262,
             "failed": 0,
@@ -547,8 +546,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 194374,
-        "at": "2026-09-16T08:18:03.211Z"
+        "ms": 195341,
+        "at": "2026-09-16T12:16:57.037Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -640,11 +639,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2100
+          "ms": 2117
         },
         "test": {
           "ok": true,
-          "ms": 9014,
+          "ms": 9035,
           "tests": {
             "passed": 168,
             "failed": 0,
@@ -654,8 +653,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3603,
-        "at": "2026-09-16T08:18:17.954Z"
+        "ms": 3669,
+        "at": "2026-09-16T12:17:11.883Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -714,11 +713,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1299
+          "ms": 1311
         },
         "test": {
           "ok": true,
-          "ms": 679,
+          "ms": 662,
           "tests": {
             "passed": 33,
             "failed": 0,
@@ -728,8 +727,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2545,
-        "at": "2026-09-16T08:18:22.488Z"
+        "ms": 2508,
+        "at": "2026-09-16T12:17:16.375Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",
