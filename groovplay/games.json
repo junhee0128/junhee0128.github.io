@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-16T05:49:51.785Z",
+  "builtAt": "2026-09-16T06:56:11.075Z",
   "lobbyRule": true,
   "games": [
     {
@@ -104,11 +104,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2573
+          "ms": 2484
         },
         "test": {
           "ok": true,
-          "ms": 5588,
+          "ms": 5652,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 22998
+          "ms": 23645
         }
       },
       "build": {
         "ok": true,
-        "ms": 3864,
-        "at": "2026-09-16T05:15:22.024Z"
+        "ms": 3489,
+        "at": "2026-09-16T06:51:59.255Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T05:19:07.632Z"
+        "at": "2026-09-16T06:26:19.491Z",
+        "cached": true
       }
     },
     {
@@ -235,11 +236,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2190
+          "ms": 2150
         },
         "test": {
           "ok": true,
-          "ms": 17744,
+          "ms": 20342,
           "tests": {
             "passed": 125,
             "failed": 0,
@@ -249,8 +250,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 25910,
-        "at": "2026-09-16T05:19:53.551Z"
+        "ms": 3310,
+        "at": "2026-09-16T06:52:25.287Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -260,7 +261,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T05:22:28.655Z"
+        "at": "2026-09-16T06:28:05.907Z",
+        "cached": true
       }
     },
     {
@@ -465,11 +467,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2801
+          "ms": 2681
         },
         "test": {
           "ok": true,
-          "ms": 5401,
+          "ms": 5380,
           "tests": {
             "passed": 262,
             "failed": 0,
@@ -479,8 +481,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 192399,
-        "at": "2026-09-16T05:25:49.286Z"
+        "ms": 198376,
+        "at": "2026-09-16T06:55:51.777Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -490,7 +492,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T05:31:57.083Z"
+        "at": "2026-09-16T06:35:13.455Z",
+        "cached": true
       }
     },
     {
@@ -571,11 +574,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2209
+          "ms": 2098
         },
         "test": {
           "ok": true,
-          "ms": 9300,
+          "ms": 9065,
           "tests": {
             "passed": 168,
             "failed": 0,
@@ -585,8 +588,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3633,
-        "at": "2026-09-16T05:32:12.232Z"
+        "ms": 3647,
+        "at": "2026-09-16T06:56:06.608Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -596,7 +599,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T05:47:55.315Z"
+        "at": "2026-09-16T06:49:12.991Z",
+        "cached": true
       }
     },
     {
@@ -644,11 +648,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1396
+          "ms": 1283
         },
         "test": {
           "ok": true,
-          "ms": 702,
+          "ms": 681,
           "tests": {
             "passed": 33,
             "failed": 0,
@@ -658,8 +662,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2546,
-        "at": "2026-09-16T05:47:59.967Z"
+        "ms": 2483,
+        "at": "2026-09-16T06:56:11.071Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",
@@ -669,7 +673,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T05:49:51.784Z"
+        "at": "2026-09-16T06:50:01.940Z",
+        "cached": true
       }
     }
   ],
