@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-16T06:56:11.075Z",
+  "builtAt": "2026-09-16T08:18:22.492Z",
   "lobbyRule": true,
   "games": [
     {
@@ -104,11 +104,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2484
+          "ms": 2462
         },
         "test": {
           "ok": true,
-          "ms": 5652,
+          "ms": 5185,
           "tests": {
             "passed": 390,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 23645
+          "ms": 22805
         }
       },
       "build": {
         "ok": true,
-        "ms": 3489,
-        "at": "2026-09-16T06:51:59.255Z"
+        "ms": 3296,
+        "at": "2026-09-16T08:14:16.568Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -134,6 +134,72 @@
         "count": 0,
         "findings": [],
         "at": "2026-09-16T06:26:19.491Z",
+        "cached": true
+      }
+    },
+    {
+      "id": "first-bite",
+      "title": "첫 입질",
+      "codename": "FIRST BITE",
+      "tagline": "빈손이던 초보의 손끝에, 대왕 광어를 향한 첫 기억.",
+      "status": "wip",
+      "accent": "#efba79",
+      "engine": "Vite · JavaScript · Canvas 2D",
+      "milestones": [
+        {
+          "name": "입질·챔질·방향과 줄의 밀고 당기기",
+          "state": "done"
+        },
+        {
+          "name": "플랫폼 편입 및 실제 입력 검증",
+          "state": "active"
+        },
+        {
+          "name": "초보 이해와 실제 기기 손맛 검증",
+          "state": "todo"
+        }
+      ],
+      "docs": [
+        {
+          "label": "플레이와 개발",
+          "path": "README.md"
+        },
+        {
+          "label": "플랫폼 편입 보고서",
+          "path": "ADOPTION_REPORT.md"
+        }
+      ],
+      "progress": null,
+      "commit": {
+        "hash": "35bbcf1",
+        "date": "2026-09-16T16:58:47+09:00",
+        "subject": "T0: clarify adoption authority and download priority [node:groovplay.adopt]"
+      },
+      "checks": {
+        "test": {
+          "ok": true,
+          "ms": 216,
+          "tests": {
+            "passed": 10,
+            "failed": 0,
+            "total": 10
+          }
+        }
+      },
+      "build": {
+        "ok": true,
+        "ms": 422,
+        "at": "2026-09-16T08:14:17.371Z"
+      },
+      "checkpoints": [],
+      "keyart": "./keyart/first-bite.png",
+      "platform": 1,
+      "conformance": {
+        "version": 1,
+        "passed": true,
+        "count": 0,
+        "findings": [],
+        "at": "2026-09-16T08:07:36.858Z",
         "cached": true
       }
     },
@@ -236,11 +302,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2150
+          "ms": 2115
         },
         "test": {
           "ok": true,
-          "ms": 20342,
+          "ms": 18209,
           "tests": {
             "passed": 125,
             "failed": 0,
@@ -250,8 +316,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3310,
-        "at": "2026-09-16T06:52:25.287Z"
+        "ms": 3207,
+        "at": "2026-09-16T08:14:40.964Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -467,11 +533,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2681
+          "ms": 2598
         },
         "test": {
           "ok": true,
-          "ms": 5380,
+          "ms": 5220,
           "tests": {
             "passed": 262,
             "failed": 0,
@@ -481,8 +547,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 198376,
-        "at": "2026-09-16T06:55:51.777Z"
+        "ms": 194374,
+        "at": "2026-09-16T08:18:03.211Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -574,11 +640,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2098
+          "ms": 2100
         },
         "test": {
           "ok": true,
-          "ms": 9065,
+          "ms": 9014,
           "tests": {
             "passed": 168,
             "failed": 0,
@@ -588,8 +654,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3647,
-        "at": "2026-09-16T06:56:06.608Z"
+        "ms": 3603,
+        "at": "2026-09-16T08:18:17.954Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -648,11 +714,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1283
+          "ms": 1299
         },
         "test": {
           "ok": true,
-          "ms": 681,
+          "ms": 679,
           "tests": {
             "passed": 33,
             "failed": 0,
@@ -662,8 +728,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2483,
-        "at": "2026-09-16T06:56:11.071Z"
+        "ms": 2545,
+        "at": "2026-09-16T08:18:22.488Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",

@@ -1,0 +1,30 @@
+{
+  "name": "첫 입질",
+  "short_name": "첫 입질",
+  "description": "빈손이던 초보의 손끝에, 대왕 광어를 향한 첫 기억.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": [
+    "fullscreen",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "background_color": "#0b0d12",
+  "theme_color": "#efba79",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
