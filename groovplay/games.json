@@ -295,29 +295,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "5ccb7d33",
-        "date": "2026-09-17T11:52:07+09:00",
-        "subject": "골든 다시 뜸 — 화면이 들어간 뒤의 시간으로 찍힌다"
+        "hash": "30725d5c",
+        "date": "2026-09-17T22:41:16+09:00",
+        "subject": "mission-today: 정비 체크리스트 완료 표시"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2478
+          "ms": 4413
         },
         "test": {
           "ok": true,
-          "ms": 19376,
+          "ms": 29927,
           "tests": {
-            "passed": 126,
+            "passed": 136,
             "failed": 0,
-            "total": 126
+            "total": 136
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3395,
-        "at": "2026-09-17T02:53:07.561Z"
+        "ms": 5557,
+        "at": "2026-09-17T13:42:07.105Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -327,7 +327,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-17T02:54:11.768Z"
+        "at": "2026-09-17T13:43:19.281Z"
       }
     },
     {
