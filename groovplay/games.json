@@ -97,33 +97,33 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "86f745e",
-        "date": "2026-09-14T09:10:14+09:00",
-        "subject": "개발자 모드를 배포본에서 걷어낸다 — 플레이어가 켜면 여섯 구역이 열렸다"
+        "hash": "139a6edc",
+        "date": "2026-09-17T22:40:46+09:00",
+        "subject": "골든: 허브의 난이도 이름이 「등불지기」에서 「밤길」로 바뀌었다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2540
+          "ms": 5329
         },
         "test": {
           "ok": true,
-          "ms": 5166,
+          "ms": 10071,
           "tests": {
-            "passed": 390,
+            "passed": 394,
             "failed": 0,
-            "total": 390
+            "total": 394
           }
         },
         "art": {
           "ok": true,
-          "ms": 22726
+          "ms": 40641
         }
       },
       "build": {
         "ok": true,
-        "ms": 3225,
-        "at": "2026-09-16T12:12:16.857Z"
+        "ms": 5301,
+        "at": "2026-09-17T13:42:11.685Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,8 +133,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T06:26:19.491Z",
-        "cached": true
+        "at": "2026-09-17T13:44:05.404Z"
       }
     },
     {
