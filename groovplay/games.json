@@ -525,29 +525,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "7e6f9c79",
-        "date": "2026-09-17T16:27:25+09:00",
-        "subject": "장면이 바뀐 프레임에만 그린다 — 적합 검사 239초 → 116초"
+        "hash": "1d337ed4",
+        "date": "2026-09-17T22:40:31+09:00",
+        "subject": "royal-chef: 결과 화면 골든 — 실패 제목과 그 편의 한 줄"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2687
+          "ms": 3405
         },
         "test": {
           "ok": true,
-          "ms": 5383,
+          "ms": 6243,
           "tests": {
-            "passed": 263,
+            "passed": 284,
             "failed": 0,
-            "total": 263
+            "total": 284
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 168939,
-        "at": "2026-09-17T07:30:32.233Z"
+        "ms": 177892,
+        "at": "2026-09-17T13:43:52.055Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -557,7 +557,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-17T07:32:23.279Z"
+        "at": "2026-09-17T13:40:15.046Z",
+        "cached": true
       }
     },
     {
