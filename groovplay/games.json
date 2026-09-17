@@ -295,29 +295,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "dd506b0",
-        "date": "2026-09-13T23:56:30+09:00",
-        "subject": "감사 도구는 개발 서버에서 재고, 배포본에는 훅을 한 톨도 남기지 않는다"
+        "hash": "5ccb7d33",
+        "date": "2026-09-17T11:52:07+09:00",
+        "subject": "골든 다시 뜸 — 화면이 들어간 뒤의 시간으로 찍힌다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2131
+          "ms": 2478
         },
         "test": {
           "ok": true,
-          "ms": 18287,
+          "ms": 19376,
           "tests": {
-            "passed": 125,
+            "passed": 126,
             "failed": 0,
-            "total": 125
+            "total": 126
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3192,
-        "at": "2026-09-16T12:13:33.869Z"
+        "ms": 3395,
+        "at": "2026-09-17T02:53:07.561Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -327,8 +327,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T06:28:05.907Z",
-        "cached": true
+        "at": "2026-09-17T02:54:11.768Z"
       }
     },
     {
