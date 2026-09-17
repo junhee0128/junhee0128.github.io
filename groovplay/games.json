@@ -526,18 +526,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "0b33271",
+        "hash": "0b33271c",
         "date": "2026-09-13T21:59:20+09:00",
         "subject": "한 지점의 제한 시간을 30초에서 90초로 — 기다림이 실패하는 것은 거짓 붉음이다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2591
+          "ms": 5195
         },
         "test": {
           "ok": true,
-          "ms": 5182,
+          "ms": 11303,
           "tests": {
             "passed": 262,
             "failed": 0,
@@ -547,8 +547,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 195341,
-        "at": "2026-09-16T12:16:57.037Z"
+        "ms": 232827,
+        "at": "2026-09-17T02:23:54.967Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -558,8 +558,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T06:35:13.455Z",
-        "cached": true
+        "at": "2026-09-17T02:27:57.838Z"
       }
     },
     {
