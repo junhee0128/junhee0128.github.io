@@ -171,25 +171,25 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "c4bf495",
-        "date": "2026-09-16T21:09:23+09:00",
-        "subject": "T0: encode first-bite keyart as WebP [node:none]"
+        "hash": "6cd00070",
+        "date": "2026-09-17T11:19:44+09:00",
+        "subject": "docs(first-bite): adopt authorized self-service deployment workflow"
       },
       "checks": {
         "test": {
           "ok": true,
-          "ms": 222,
+          "ms": 499,
           "tests": {
-            "passed": 10,
+            "passed": 20,
             "failed": 0,
-            "total": 10
+            "total": 20
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 414,
-        "at": "2026-09-16T12:12:17.658Z"
+        "ms": 779,
+        "at": "2026-09-17T02:19:46.570Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/first-bite.webp",
@@ -199,7 +199,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T12:13:10.188Z"
+        "at": "2026-09-16T13:52:00.976Z",
+        "cached": true
       }
     },
     {
