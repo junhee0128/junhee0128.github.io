@@ -631,18 +631,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "7f7b78b",
-        "date": "2026-09-16T04:09:06+00:00",
-        "subject": "docs(starfall): 계약 5종 0건 — 골든은 얼굴 결함을 보지 못했다"
+        "hash": "bcd38fd",
+        "date": "2026-09-17T08:06:27+00:00",
+        "subject": "docs(starfall): 멈춘 화면을 안 그리니 검사가 2004초 → 478초"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2117
+          "ms": 2838
         },
         "test": {
           "ok": true,
-          "ms": 9035,
+          "ms": 13744,
           "tests": {
             "passed": 168,
             "failed": 0,
@@ -652,8 +652,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3669,
-        "at": "2026-09-16T12:17:11.883Z"
+        "ms": 4907,
+        "at": "2026-09-17T08:28:15.460Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -663,8 +663,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T06:49:12.991Z",
-        "cached": true
+        "at": "2026-09-17T08:38:22.843Z"
       }
     },
     {
