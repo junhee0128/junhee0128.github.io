@@ -631,29 +631,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "bcd38fd",
-        "date": "2026-09-17T08:06:27+00:00",
-        "subject": "docs(starfall): 멈춘 화면을 안 그리니 검사가 2004초 → 478초"
+        "hash": "0e7d3db",
+        "date": "2026-09-17T08:58:19+00:00",
+        "subject": "starfall: 가야 할 곳을 화면에 세운다 — 「움직이는 것 말고 뭘 하는지 모르겠다」"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2838
+          "ms": 2671
         },
         "test": {
           "ok": true,
-          "ms": 13744,
+          "ms": 13127,
           "tests": {
-            "passed": 168,
+            "passed": 173,
             "failed": 0,
-            "total": 168
+            "total": 173
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 4907,
-        "at": "2026-09-17T08:28:15.460Z"
+        "ms": 5022,
+        "at": "2026-09-17T08:58:57.302Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -663,7 +663,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-17T08:38:22.843Z"
+        "at": "2026-09-17T09:09:02.210Z"
       }
     },
     {
