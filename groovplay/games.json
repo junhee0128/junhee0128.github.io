@@ -146,12 +146,12 @@
       "engine": "Vite · JavaScript · Canvas 2D",
       "milestones": [
         {
-          "name": "입질·챔질·방향과 줄의 밀고 당기기",
+          "name": "입질·방향·줄싸움·포획 기술 검증",
           "state": "done"
         },
         {
-          "name": "플랫폼 편입 및 실제 입력 검증",
-          "state": "active"
+          "name": "살림망·수족관·숙련 성장 통합 검증",
+          "state": "done"
         },
         {
           "name": "초보 이해와 실제 기기 손맛 검증",
@@ -170,25 +170,25 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "4fd0c255",
-        "date": "2026-09-17T16:23:54+09:00",
-        "subject": "perf(first-bite): stop frame scheduling on unchanged idle screens"
+        "hash": "b6edacf0",
+        "date": "2026-09-18T00:24:08+09:00",
+        "subject": "docs(first-bite): prepare S2 WIP delivery and data-safe rollback"
       },
       "checks": {
         "test": {
           "ok": true,
-          "ms": 387,
+          "ms": 1160,
           "tests": {
-            "passed": 20,
+            "passed": 54,
             "failed": 0,
-            "total": 20
+            "total": 54
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 472,
-        "at": "2026-09-17T07:29:15.516Z"
+        "ms": 518,
+        "at": "2026-09-17T15:24:15.872Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/first-bite.webp",
@@ -198,8 +198,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-17T07:23:19.350Z",
-        "cached": true
+        "at": "2026-09-17T15:26:02.053Z"
       }
     },
     {

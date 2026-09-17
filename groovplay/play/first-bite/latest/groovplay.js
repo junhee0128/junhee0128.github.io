@@ -97,6 +97,22 @@ function createStorage({ prefix, gameId, backend }) {
     const k = key(name, version, id);
     return {
       key: k,
+      /** Read the exact slot by default; explicit legacy:true checks configured legacy keys only if missing. No migration, writes, deletion or raw-byte exposure. */
+      inspect({ legacy: inspectLegacy = false } = {}) {
+        let raw;
+        try {
+          raw = backend.getItem(k);
+          if (raw == null && inspectLegacy === true) {
+            for (const legacyKey of legacy) {
+              raw = backend.getItem(legacyKey);
+              if (raw != null) break;
+            }
+          }
+        } catch { return { status: "unavailable" }; }
+        if (raw == null) return { status: "missing" };
+        try { return { status: "ok", value: JSON.parse(raw) }; }
+        catch { return { status: "corrupt" }; }
+      },
       get() {
         const cur = read(k);
         if (cur !== null) return cur;
