@@ -631,29 +631,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "0e7d3db",
-        "date": "2026-09-17T08:58:19+00:00",
-        "subject": "starfall: 가야 할 곳을 화면에 세운다 — 「움직이는 것 말고 뭘 하는지 모르겠다」"
+        "hash": "3fd2062",
+        "date": "2026-09-17T13:29:45+00:00",
+        "subject": "starfall: 기준 이미지 5장 — 나침반과 이름표가 화면에 생겼다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2671
+          "ms": 2727
         },
         "test": {
           "ok": true,
-          "ms": 13127,
+          "ms": 14065,
           "tests": {
-            "passed": 173,
+            "passed": 182,
             "failed": 0,
-            "total": 173
+            "total": 182
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 5022,
-        "at": "2026-09-17T08:58:57.302Z"
+        "ms": 4952,
+        "at": "2026-09-17T13:30:18.168Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -663,7 +663,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-17T09:09:02.210Z"
+        "at": "2026-09-17T13:40:20.851Z"
       }
     },
     {
