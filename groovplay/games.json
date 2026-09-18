@@ -293,29 +293,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "30725d5c",
-        "date": "2026-09-17T22:41:16+09:00",
-        "subject": "mission-today: 정비 체크리스트 완료 표시"
+        "hash": "78f54556",
+        "date": "2026-09-18T21:00:28+09:00",
+        "subject": "mission-today: 골든 다시 뜸 — 카메라가 화면 비율과 무관하게 앞을 보장한다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4413
+          "ms": 4020
         },
         "test": {
           "ok": true,
-          "ms": 29927,
+          "ms": 24547,
           "tests": {
-            "passed": 136,
+            "passed": 145,
             "failed": 0,
-            "total": 136
+            "total": 145
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 5557,
-        "at": "2026-09-17T13:42:07.105Z"
+        "ms": 3387,
+        "at": "2026-09-18T12:01:04.795Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -325,7 +325,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-17T13:43:19.281Z"
+        "at": "2026-09-18T12:02:04.650Z"
       }
     },
     {
