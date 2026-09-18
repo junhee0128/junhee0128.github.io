@@ -170,25 +170,25 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "b6edacf0",
-        "date": "2026-09-18T00:24:08+09:00",
-        "subject": "docs(first-bite): prepare S2 WIP delivery and data-safe rollback"
+        "hash": "a4594525",
+        "date": "2026-09-18T09:02:53+09:00",
+        "subject": "test(first-bite): refresh reviewed collection feedback goldens"
       },
       "checks": {
         "test": {
           "ok": true,
-          "ms": 1160,
+          "ms": 1178,
           "tests": {
-            "passed": 54,
+            "passed": 55,
             "failed": 0,
-            "total": 54
+            "total": 55
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 518,
-        "at": "2026-09-17T15:24:15.872Z"
+        "ms": 544,
+        "at": "2026-09-18T00:02:56.309Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/first-bite.webp",
@@ -198,7 +198,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-17T15:26:02.053Z"
+        "at": "2026-09-18T00:04:40.368Z"
       }
     },
     {
