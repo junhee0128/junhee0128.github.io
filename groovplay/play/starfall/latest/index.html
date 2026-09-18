@@ -9,16 +9,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="별의 서약">
     <link rel="apple-touch-icon" href="./icon-192.png">
-    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=e3abada05098").catch(function(){})});</script>
+    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=3b51c469bdb6").catch(function(){})});</script>
     <!-- /groovplay:pwa -->
     <script>window.__GP_GAME__={"id":"starfall","title":"별의 서약","accent":"#f2b85a","kind":"game","home":"../../../"}</script>
-    <script src="./groovplay.js?v=e3abada05098"></script>
+    <script src="./groovplay.js?v=3b51c469bdb6"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
     <meta charset="utf-8" />
     <!-- 뷰포트·매니페스트·아이콘·런타임은 플러그인이 넣는다. -->
     <title>별의 서약</title>
-    <script type="module" crossorigin src="./assets/index-BSxz6CDA.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-LjrFQmU2.css">
+    <script type="module" crossorigin src="./assets/index-C-nC6EKM.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DI3lLvxA.css">
   </head>
   <body>
     <div id="stage"></div>
@@ -67,11 +67,11 @@
       </div>
       <div class="stick" id="stick" hidden><div class="stick-base"></div><div class="stick-knob" id="stick-knob"></div></div>
       <div class="actions" id="actions">
-        <button class="act big" data-act="attack" id="act-attack" aria-label="공격"><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l9-9M13 11l5-5 2 2-5 5M13 11l3 3M6 18l-2 2M8 16l-4-4"/></svg></span></button>
-        <button class="act" data-act="dodge" id="act-dodge" aria-label="회피"><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h9M10 8l4 4-4 4"/><path d="M16 6c3 3 3 9 0 12" stroke-dasharray="2 2"/></svg></span></button>
-        <button class="act" data-act="skill1" id="act-skill1"><span class="glyph" id="skill1-glyph"></span><i class="cd" id="skill1-cd"></i></button>
-        <button class="act" data-act="skill2" id="act-skill2"><span class="glyph" id="skill2-glyph"></span><i class="cd" id="skill2-cd"></i></button>
-        <button class="act burst-btn" data-act="burst" id="act-burst" aria-label="버스트"><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 6 6.4.6-4.8 4.2 1.5 6.2L12 16.7 6.3 20l1.5-6.2L3 9.6 9.4 9z"/></svg></span></button>
+        <span class="act-slot" id="slot-attack"><button class="act big" data-act="attack" id="act-attack" aria-label="공격"><span class="key" id="key-attack"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l9-9M13 11l5-5 2 2-5 5M13 11l3 3M6 18l-2 2M8 16l-4-4"/></svg></span></button><span class="nm" id="nm-attack"></span></span>
+        <span class="act-slot" id="slot-dodge"><button class="act" data-act="dodge" id="act-dodge" aria-label="회피"><span class="key" id="key-dodge"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h9M10 8l4 4-4 4"/><path d="M16 6c3 3 3 9 0 12" stroke-dasharray="2 2"/></svg></span></button><span class="nm" id="nm-dodge"></span></span>
+        <span class="act-slot" id="slot-skill1"><button class="act" data-act="skill1" id="act-skill1"><span class="key" id="key-skill1"></span><span class="glyph" id="skill1-glyph"></span><i class="cd" id="skill1-cd"></i></button><span class="nm" id="nm-skill1"></span></span>
+        <span class="act-slot" id="slot-skill2"><button class="act" data-act="skill2" id="act-skill2"><span class="key" id="key-skill2"></span><span class="glyph" id="skill2-glyph"></span><i class="cd" id="skill2-cd"></i></button><span class="nm" id="nm-skill2"></span></span>
+        <span class="act-slot" id="slot-burst"><button class="act burst-btn" data-act="burst" id="act-burst" aria-label="버스트"><span class="key" id="key-burst"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 6 6.4.6-4.8 4.2 1.5 6.2L12 16.7 6.3 20l1.5-6.2L3 9.6 9.4 9z"/></svg></span></button><span class="nm" id="nm-burst"></span></span>
       </div>
       <p class="hint" id="hint" data-gp-decorative></p>
     </section>
