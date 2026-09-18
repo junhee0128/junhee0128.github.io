@@ -17,8 +17,8 @@
     <meta charset="utf-8" />
     <!-- 뷰포트·매니페스트·아이콘·런타임은 플러그인이 넣는다. -->
     <title>별의 서약</title>
-    <script type="module" crossorigin src="./assets/index-C-nC6EKM.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DI3lLvxA.css">
+    <script type="module" crossorigin src="./assets/index-DzYgmIEX.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BiFtG3Z6.css">
   </head>
   <body>
     <div id="stage"></div>
@@ -51,15 +51,30 @@
 
     <!-- HUD -->
     <section class="hud" data-screen="play" hidden>
-      <div class="party" id="party"></div>
-      <div class="tracker" id="tracker"><span class="tracker-q" id="tracker-q"></span><span class="tracker-o" id="tracker-o"></span></div>
+      <div class="left-col">
+        <div class="party" id="party"></div>
+        <div class="healer" id="healer" hidden><button class="heal-btn" data-heal id="act-heal"><span class="key" id="key-heal"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3h4v3h-4z"/><path d="M8 6h8l-1 13a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M10 13h4M12 11v4"/></svg></span><span class="hn" id="heal-n"></span></button><span class="nm" id="nm-heal"></span></div>
+        <div class="rider" id="rider" hidden><button class="heal-btn ride-btn" id="act-ride"><span class="key" id="key-ride"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16c2-5 6-7 10-7 3 0 5 1 6 3"/><path d="M8 9V6l3 1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span></button><span class="nm" id="nm-ride"></span></div>
+      </div>
+      <div class="right-col">
+        <div class="tracker" id="tracker"><span class="tracker-q" id="tracker-q"></span><span class="tracker-o" id="tracker-o"></span></div>
+        <div class="minimap" id="minimap" hidden>
+          <div class="mm-rot" id="mm-rot"><div class="mm-img" id="mm-img"></div><div class="mm-dots" id="mm-dots"></div></div>
+          <span class="mm-me" aria-hidden="true"></span>
+          <span class="mm-n" id="mm-n">N</span>
+        </div>
+      </div>
       <button class="icon-btn menu-btn" id="btn-menu" aria-label="메뉴"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       <div class="zone-toast" id="zone-toast" data-gp-decorative hidden></div>
       <div class="toasts" id="toasts"></div>
       <div class="numbers" id="numbers" data-gp-decorative></div>
-      <div class="objective" id="objective" data-gp-decorative hidden><span class="obj-pin" id="obj-pin"></span><span class="obj-text" id="obj-text"></span></div>
-      <div class="nametags" id="nametags" data-gp-decorative></div>
-      <div class="compass" id="compass" data-gp-decorative hidden><div class="comp-strip" id="comp-strip"></div></div>
+      <div class="objective" id="objective" hidden><span class="obj-pin" id="obj-pin"></span><span class="obj-text" id="obj-text"></span></div>
+      <div class="nametags" id="nametags"></div>
+      <div class="foetags" id="foetags"></div>
+      <div class="compass" id="compass" hidden><div class="comp-strip" id="comp-strip"></div></div>
+      <div class="dodge-cue" id="dodge-cue" hidden></div>
+      <div class="cluster" id="cluster" hidden><span class="cl-n" id="cluster-n"></span><span class="cl-bar"><i id="cluster-fill"></i></span></div>
+      <div class="train" id="train" hidden><span class="tr-title" id="train-title"></span><span class="tr-step" id="train-step"></span><button class="tr-skip" id="train-skip"></button></div>
       <div class="boss-bar" id="boss-bar" hidden><span class="boss-name" id="boss-name"></span><div class="bar"><i id="boss-fill"></i></div></div>
       <div class="bottom">
         <button class="prompt" id="prompt" hidden></button>
@@ -73,7 +88,7 @@
         <span class="act-slot" id="slot-skill2"><button class="act" data-act="skill2" id="act-skill2"><span class="key" id="key-skill2"></span><span class="glyph" id="skill2-glyph"></span><i class="cd" id="skill2-cd"></i></button><span class="nm" id="nm-skill2"></span></span>
         <span class="act-slot" id="slot-burst"><button class="act burst-btn" data-act="burst" id="act-burst" aria-label="버스트"><span class="key" id="key-burst"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 6 6.4.6-4.8 4.2 1.5 6.2L12 16.7 6.3 20l1.5-6.2L3 9.6 9.4 9z"/></svg></span></button><span class="nm" id="nm-burst"></span></span>
       </div>
-      <p class="hint" id="hint" data-gp-decorative></p>
+      <p class="hint" id="hint"></p>
     </section>
 
     <!-- 대화 -->
@@ -99,6 +114,7 @@
           <button id="btn-pause-settings">설정</button>
           <button id="btn-quit">타이틀로</button>
         </div>
+        <p class="rule" id="pause-rule"></p>
       </div>
     </section>
 
@@ -106,7 +122,7 @@
     <section class="ui menu" data-screen="menu" hidden>
       <div class="menu-frame">
         <nav class="tabs" id="tabs">
-          <button data-tab="party" class="on"></button><button data-tab="equip"></button><button data-tab="bag"></button><button data-tab="quests"></button><button data-tab="map"></button>
+          <button data-tab="party" class="on"></button><button data-tab="equip"></button><button data-tab="bag"></button><button data-tab="quests"></button><button data-tab="map"></button><button data-tab="log"></button>
           <button class="icon-btn close" id="btn-menu-close" aria-label="닫기"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
         </nav>
         <div class="menu-body" id="menu-body"></div>

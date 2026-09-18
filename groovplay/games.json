@@ -630,29 +630,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "78ac4e1f",
-        "date": "2026-09-18T01:07:48+00:00",
-        "subject": "starfall: 기준 이미지 25장 — 나침반·이름표·버튼 이름·길·펫이 화면에 생겼다"
+        "hash": "56bd56b8",
+        "date": "2026-09-18T09:37:10+00:00",
+        "subject": "starfall: 골든 play 5장 재촬영 (직렬)"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3418
+          "ms": 3107
         },
         "test": {
           "ok": true,
-          "ms": 22659,
+          "ms": 17291,
           "tests": {
-            "passed": 210,
+            "passed": 274,
             "failed": 0,
-            "total": 210
+            "total": 274
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 6281,
-        "at": "2026-09-18T01:20:02.092Z"
+        "ms": 5495,
+        "at": "2026-09-18T09:37:51.276Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -662,7 +662,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T01:31:22.645Z"
+        "at": "2026-09-18T09:48:06.455Z"
       }
     },
     {
