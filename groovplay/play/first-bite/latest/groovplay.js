@@ -195,13 +195,18 @@ const SETTINGS_DEFAULTS = Object.freeze({
   motion: "full",     // "full" | "reduced"
   language: "ko",
   haptics: true,
-  // 브라우저에서 주소창을 감추고 논다. iOS 사파리처럼 API 가 없는 곳에서는 설정에 줄이 보이지 않는다.
+  // 게임을 전체 화면으로 여는가(주소창을 감춘다). 포털 로비의 토글과 게임 설정의 줄이 이 값 하나를 같이 본다.
+  // 초깃값은 기기를 따른다 — 아래 createSettings 의 touch. iOS 사파리처럼 API 가 없는 곳에서는 어디에도 줄이 서지 않는다.
   fullscreen: true,
 });
 
-function createSettings({ storage, emit, prefersReducedMotion = false }) {
+/**
+ * `touch` — 손에 든 화면인가. 전체 화면의 초깃값이다. 손에 든 화면은 주소창이 설계한 그림의 8~12%를 먹으므로 켜고,
+ * PC 는 끈다(창을 나란히 쓰는 사람의 첫 클릭을 전체 화면으로 가로채지 않는다). 한 번 고르면 고른 값이 이긴다.
+ */
+function createSettings({ storage, emit, prefersReducedMotion = false, touch = true }) {
   const store = storage.scope("settings", { version: 1, shared: true });
-  const state = { ...SETTINGS_DEFAULTS, ...(prefersReducedMotion ? { motion: "reduced" } : {}), ...(store.get() ?? {}) };
+  const state = { ...SETTINGS_DEFAULTS, ...(prefersReducedMotion ? { motion: "reduced" } : {}), ...(touch ? {} : { fullscreen: false }), ...(store.get() ?? {}) };
 
   return {
     keys: Object.keys(SETTINGS_DEFAULTS),
@@ -370,7 +375,12 @@ function createHost({ win, doc, game, storage, events, settings }) {
   // 회전 자체로는 들어갈 수 없다 — 전체화면은 제스처를 요구하고 orientationchange 는 제스처가 아니다.
   // 그래서 "가로로 돌리면 다음 한 번의 터치에" 가 이 플랫폼이 약속할 수 있는 전부다.
   //
-  // 조르기를 멈추는 길은 하나뿐이다: 설정의 「전체 화면」을 끄는 것. 그러면 다시 요청하지 않는다.
+  // 들어갈지 말지는 **취향 하나**가 정한다(settings 의 fullscreen). 포털 로비의 토글이 그것을 고르고, 게임 설정의 줄도
+  // 같은 값을 바꾼다. 켜져 있으면 기기와 상관없이 게임의 첫 조작에 들어가고, 꺼져 있으면 요청하지 않는다.
+  // 페이지를 넘어가면 전체 화면은 풀리므로(브라우저 규칙) 포털이 대신 들어가 줄 수는 없다 — 게임이 첫 조작에 들어간다.
+  //
+  // 밖으로 나가졌을 때: 손에 든 화면은 회전하면 브라우저가 풀기도 하니 다음 조작에 다시 들어간다. PC 에서 나가는 길은
+  // Esc 이고 그것은 사람이 일부러 나간 것이라 다시 조르지 않는다. 다음 판(다시 들어온 게임)에서 다시 들어간다.
   //
   // iOS 사파리에는 이 API 가 없다. 그 자리는 설치 안내가 대신한다(아래).
   const fullscreenAvailable = () => kind === "browser" && !!doc?.documentElement?.requestFullscreen;
@@ -385,28 +395,62 @@ function createHost({ win, doc, game, storage, events, settings }) {
     try { await doc.exitFullscreen?.(); } catch { /* 이미 나갔다 */ }
   };
 
-  if (doc && game.kind !== "portal" && touch) {
+  // 포털 자신은 전체 화면으로 들어가지 않는다. 포털의 토글은 "게임을 어떻게 열까" 이고, 들어가 봐야 게임으로 넘어가는 순간 풀린다.
+  const wanted = () => fullscreenAvailable() && settings?.get("fullscreen") !== false;
+  if (doc && game.kind !== "portal") {
     // 브라우저마다 어느 제스처에 권한을 주는지 다르다. 셋 다 듣되 성공하면 바로 끊는다.
     const GESTURES = ["pointerdown", "pointerup", "click"];
     const arm = () => { for (const e of GESTURES) doc.addEventListener(e, attempt, { capture: true, passive: true }); };
     const disarm = () => { for (const e of GESTURES) doc.removeEventListener(e, attempt, true); };
     function attempt() {
-      if (!fullscreenAvailable() || settings?.get("fullscreen") === false) { disarm(); return; }
+      if (!wanted()) { disarm(); return; }
       void fullscreen().then((ok) => { if (ok) disarm(); });
     }
-    if (fullscreenAvailable()) arm();
+    if (wanted()) arm();
     doc.addEventListener("fullscreenchange", () => {
       if (fullscreenActive()) disarm();
-      else if (settings?.get("fullscreen") !== false) arm();
+      else if (touch && wanted()) arm();
+    });
+
+    // 게임 설정의 「전체 화면」 줄. 켜는 클릭 자체가 제스처라 그 자리에서 들어간다. 끄면 조르기도 멈춘다.
+    events?.on?.("settings", ({ key, value }) => {
+      if (key !== "fullscreen") return;
+      if (value) void fullscreen().then((ok) => { if (!ok) arm(); });
+      else { disarm(); void exitFullscreen(); }
     });
   }
 
-  // 설정의 「전체 화면」 줄. 켜는 클릭 자체가 제스처라 그 자리에서 들어간다.
-  events?.on?.("settings", ({ key, value }) => {
-    if (key !== "fullscreen") return;
-    if (value) void fullscreen(); else void exitFullscreen();
-  });
 
+  // ── 방향 ──
+  //
+  // 게임이 game.json 에 orientation 을 선언하면(landscape | portrait) 두 길로 맞춘다.
+  //   설치형: 매니페스트의 orientation 을 OS 가 지킨다. 여기서 할 일이 없다.
+  //   브라우저: screen.orientation.lock() 이다. 표준이 **전체 화면일 것**을 요구하므로 전체 화면에 들어간 직후에만
+  //            부를 수 있다. iOS 사파리에는 lock 자체가 없다.
+  //
+  // 잠글 수 없을 때(사파리, 전체 화면을 끈 사람, 잠금을 거절하는 브라우저) 남는 길은 회전 안내뿐이다. 셸이 그린다.
+  // 안내는 **돌릴 수 있는 화면에서만** 뜬다 — 짧은 변이 폰 급일 때. 태블릿·PC 의 창은 돌리는 것이 아니라
+  // 그 비율대로 살아야 한다. 검사기는 모든 셀을 터치로 흉내 내므로 미디어 질의로는 이것을 가릴 수 없다.
+  const ROTATE_PROMPT_MAX_SHORT_SIDE = 560;
+  const wantOrientation = () => (game.orientation === "landscape" || game.orientation === "portrait" ? game.orientation : null);
+  const viewportOrientation = () => (win.innerWidth < win.innerHeight ? "portrait" : "landscape");
+  const rotatable = () => Math.min(win.innerWidth, win.innerHeight) <= ROTATE_PROMPT_MAX_SHORT_SIDE;
+  /** 지금 방향이 어긋나 있고, 돌려서 고칠 수 있는 화면인가. 셸의 안내와 검사기가 같이 본다. */
+  const rotateNeeded = () => {
+    const want = wantOrientation();
+    return !!want && viewportOrientation() !== want && rotatable();
+  };
+  const lockOrientation = async () => {
+    const want = wantOrientation();
+    if (!want || !win.screen?.orientation?.lock) return false;
+    try { await win.screen.orientation.lock(want); return true; } catch { return false; }
+  };
+  if (doc && game.kind !== "portal") {
+    const tell = () => events.emit("orientation", { want: wantOrientation(), now: viewportOrientation(), rotateNeeded: rotateNeeded() });
+    win.addEventListener("resize", tell, { passive: true });
+    win.screen?.orientation?.addEventListener?.("change", tell);
+    doc.addEventListener("fullscreenchange", () => { if (fullscreenActive()) void lockOrientation().then(tell); else tell(); });
+  }
 
   // ── 설치 안내 ── iOS 사파리는 전체화면 API 가 없다. 홈 화면에 추가하는 법을 알려 주는 것이 답이다.
   const hintStore = storage.scope("install-hint", { version: 1, shared: true });
@@ -427,7 +471,11 @@ function createHost({ win, doc, game, storage, events, settings }) {
 
   return {
     kind, isIOS, touch, standalone, goHome, installHintDue, dismissInstallHint,
-    fullscreen, exitFullscreen,
+    fullscreen, exitFullscreen, lockOrientation,
+    /** 이 게임이 선 방향(선언하지 않았으면 null). */
+    get orientation() { return wantOrientation(); },
+    /** 지금 돌려 달라고 해야 하는가. 셸의 안내가 이것을 따르고, 검사기가 이것을 물어본다. */
+    get rotateNeeded() { return rotateNeeded(); },
     /** 이 환경에 전체화면 API 가 있는가(iOS 사파리는 없다). 설정이 줄을 보일지 정한다. */
     get fullscreenAvailable() { return fullscreenAvailable(); },
     get fullscreenActive() { return fullscreenActive(); },
@@ -463,7 +511,7 @@ function createShell({ win, doc, tokens, tokensCss, game, events, lifecycle, scr
   const T = tokens;
   const accent = /^#[0-9a-f]{6}$/i.test(game.accent ?? "") ? game.accent : T.color.accentFallback;
   // getter 는 여기서 정의한다. Object.assign 은 getter 를 값으로 복사해 버려, 나중에 넣으면 생성 시점의 값으로 굳는다.
-  let root, home, loading, bar, loadingTitle, panelScrim, panelBody, toastEl, toastTimer, fsSwitch;
+  let root, home, loading, bar, loadingTitle, panelScrim, panelBody, toastEl, toastTimer, fsSwitch, rotateEl, rotateTitle, rotateNote;
   const api = {
     ready: false,
     get settingsOpen() { return api.ready && !!panelScrim && !panelScrim.hidden; },
@@ -483,6 +531,18 @@ ${tokensCss}
   background: rgba(11,13,18,.72); border: 1px solid rgba(255,255,255,.14); display: grid; place-items: center;
   backdrop-filter: blur(10px); transition: opacity var(--gp-motion-base) var(--gp-motion-ease); }
 .gp-home svg { width: 20px; height: 20px; }
+
+.gp-exit { pointer-events: auto; width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; margin-top: var(--gp-space-2);
+  padding: var(--gp-space-3); border-radius: var(--gp-radius-md); border: 1px solid var(--gp-color-edge); background: var(--gp-color-panel2); text-align: left; }
+.gp-exit small { color: var(--gp-color-ink3); font-size: var(--gp-font-size-xs); }
+
+/* 회전 안내 — 방향을 선언한 게임이 어긋난 방향으로 열렸을 때. 잠글 수 있는 브라우저에서는 첫 조작에 사라진다. */
+.gp-rotate { pointer-events: auto; position: fixed; inset: 0; z-index: var(--gp-z-overlay); background: var(--gp-color-bg);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--gp-space-3); text-align: center;
+  padding: calc(env(safe-area-inset-top, 0px) + 16px) calc(env(safe-area-inset-right, 0px) + 16px) calc(env(safe-area-inset-bottom, 0px) + 16px) calc(env(safe-area-inset-left, 0px) + 16px); }
+.gp-rotate svg { width: 56px; height: 56px; color: var(--gp-accent); }
+.gp-rotate strong { font-size: var(--gp-font-size-lg); font-weight: var(--gp-font-weight-bold); color: var(--gp-color-ink); }
+.gp-rotate span { font-size: var(--gp-font-size-md); color: var(--gp-color-ink2); }
 
 .gp-loading { pointer-events: auto; position: fixed; inset: 0; z-index: var(--gp-z-shell); background: var(--gp-color-bg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--gp-space-4);
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px); }
@@ -522,8 +582,8 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
 
   const h = (tag, cls, text) => { const n = doc.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
   const L = { // 셸의 글은 두 언어. 게임 텍스트는 게임 것이다.
-    ko: { home: "포털로", loading: "불러오는 중", settings: "설정", sound: "효과음", music: "음악", motion: "모션 줄이기", motionSub: "흔들림·전환 효과를 줄인다", haptics: "진동", fullscreen: "전체 화면", fullscreenSub: "주소창을 감추고 화면을 다 쓴다", language: "언어", close: "닫기", noSave: "이 브라우저에서는 진행이 저장되지 않습니다", install: "홈 화면에 추가하면 전체 화면으로 즐길 수 있어요", installHow: "공유 → 홈 화면에 추가", dismiss: "알겠어요" },
-    en: { home: "Portal", loading: "Loading", settings: "Settings", sound: "Sound", music: "Music", motion: "Reduce motion", motionSub: "Fewer shakes and transitions", haptics: "Haptics", fullscreen: "Fullscreen", fullscreenSub: "Hides the address bar and uses the whole screen", language: "Language", close: "Close", noSave: "Progress will not be saved in this browser", install: "Add to Home Screen to play full screen", installHow: "Share → Add to Home Screen", dismiss: "Got it" },
+    ko: { home: "포털로", loading: "불러오는 중", settings: "설정", sound: "효과음", music: "음악", motion: "모션 줄이기", motionSub: "흔들림·전환 효과를 줄인다", haptics: "진동", fullscreen: "전체 화면", fullscreenSub: "주소창을 감추고 화면을 다 쓴다", fullscreenGames: "게임을 전체 화면으로", fullscreenGamesSub: "게임에 들어가 처음 누를 때 주소창을 감춘다", language: "언어", close: "닫기", exit: "포털로 나가기", exitSub: "게임을 그만두고 목록으로 돌아간다", rotate: "화면을 돌려 주세요", rotateLand: "이 게임은 가로로 즐깁니다", rotatePort: "이 게임은 세로로 즐깁니다", noSave: "이 브라우저에서는 진행이 저장되지 않습니다", install: "홈 화면에 추가하면 전체 화면으로 즐길 수 있어요", installHow: "공유 → 홈 화면에 추가", dismiss: "알겠어요" },
+    en: { home: "Portal", loading: "Loading", settings: "Settings", sound: "Sound", music: "Music", motion: "Reduce motion", motionSub: "Fewer shakes and transitions", haptics: "Haptics", fullscreen: "Fullscreen", fullscreenSub: "Hides the address bar and uses the whole screen", fullscreenGames: "Open games full screen", fullscreenGamesSub: "Hides the address bar at your first tap in a game", language: "Language", close: "Close", exit: "Leave for the portal", exitSub: "Quit the game and go back to the list", rotate: "Please rotate your screen", rotateLand: "This game is played in landscape", rotatePort: "This game is played in portrait", noSave: "Progress will not be saved in this browser", install: "Add to Home Screen to play full screen", installHow: "Share → Add to Home Screen", dismiss: "Got it" },
   };
   const t = (k) => (L[settings.get("language")] ?? L.ko)[k];
 
@@ -540,7 +600,10 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
     home.setAttribute("aria-label", t("home"));
     home.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>';
     home.addEventListener("click", () => host.goHome());
-    if (game.kind === "portal") home.hidden = true;
+    // 나가는 길이 둘이면 플레이어는 어느 것이 게임의 뒤로인지 모른다. 게임이 자기 UI 에 갖췄다고 선언하면
+    // (game.json 의 exit: "self") 셸은 고정 버튼을 그리지 않는다. 그래도 나가는 길은 남는다 —
+    // 설정 패널의 「포털로 나가기」와 시스템 뒤로가 그것이다.
+    if (game.kind === "portal" || game.exit === "self") home.hidden = true;
 
     loading = h("div", "gp-loading"); loading.hidden = true;
     loading.append(h("div", "gp-wordmark", T.wordmark.text));
@@ -562,15 +625,26 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
 
     toastEl = h("div", "gp-toast"); toastEl.hidden = true;
 
-    root.append(home, loading, panelScrim, toastEl);
+    rotateEl = h("div", "gp-rotate"); rotateEl.hidden = true;
+    rotateEl.setAttribute("data-gp-rotate", ""); rotateEl.setAttribute("role", "alertdialog"); rotateEl.setAttribute("aria-live", "polite");
+    rotateEl.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="10" rx="2"/><path d="M8 3.5A9 9 0 0 1 12 2.6"/><path d="M12 21.4a9 9 0 0 1-4-1"/></svg>';
+    rotateTitle = h("strong", null, t("rotate"));
+    rotateNote = h("span", null, host.orientation === "portrait" ? t("rotatePort") : t("rotateLand"));
+    rotateEl.append(rotateTitle, rotateNote);
+
+    root.append(home, loading, panelScrim, toastEl, rotateEl);
     doc.body.append(root);
     doc.documentElement.dataset.gpMotion = settings.get("motion");
     api.ready = true;
 
+    syncRotate();
+    events.on("orientation", syncRotate);
     if (!storage.available) api.toast(t("noSave"), 4000);
     if (host.installHintDue()) showInstallHint();
     // 밖에서 전체화면이 바뀌면(스와이프로 나가기, 게임의 요청) 스위치가 거짓말하지 않게 맞춘다.
-    doc.addEventListener("fullscreenchange", () => fsSwitch?.setAttribute("aria-checked", String(host.fullscreenActive)));
+    // 포털의 스위치는 취향을 보이므로, 로비의 토글이 바꾸면 그것을 따른다.
+    if (game.kind === "portal") events.on("settings", ({ key }) => { if (key === "fullscreen") fsSwitch?.setAttribute("aria-checked", String(settings.get("fullscreen"))); });
+    else doc.addEventListener("fullscreenchange", () => fsSwitch?.setAttribute("aria-checked", String(host.fullscreenActive)));
   }
 
   function renderSettings() {
@@ -594,7 +668,14 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
     // 이 줄만 기본 toggle 을 쓰지 않는다. 스위치가 보여야 하는 것은 저장된 취향이 아니라 **지금 전체화면인가**이고,
     // 누르면 기억과 적용을 함께 해야 하기 때문이다. 취향만 바꾸면(이미 같은 값이면 이벤트가 안 나므로) 한 번 눌러서는
     // 아무 일도 일어나지 않는다 — 스스로 나갔다가 되돌아오려는 사람이 정확히 그 경우다.
-    if (host.fullscreenAvailable) {
+    //
+    // 포털에서는 뜻이 다르다. 포털은 전체 화면이 되지 않고, 이 줄은 **게임을 전체 화면으로 여는가**라는 취향 자체다.
+    if (host.fullscreenAvailable && game.kind === "portal") {
+      fsSwitch = h("button", "gp-switch"); fsSwitch.setAttribute("role", "switch");
+      fsSwitch.setAttribute("aria-checked", String(settings.get("fullscreen"))); fsSwitch.setAttribute("aria-label", t("fullscreenGames"));
+      fsSwitch.addEventListener("click", () => settings.set("fullscreen", !settings.get("fullscreen")));
+      row(t("fullscreenGames"), fsSwitch, t("fullscreenGamesSub"));
+    } else if (host.fullscreenAvailable) {
       fsSwitch = h("button", "gp-switch"); fsSwitch.setAttribute("role", "switch");
       fsSwitch.setAttribute("aria-checked", String(host.fullscreenActive)); fsSwitch.setAttribute("aria-label", t("fullscreen"));
       fsSwitch.addEventListener("click", () => {
@@ -613,6 +694,25 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
       const sec = h("div", "gp-section"); sec.append(h("h3", null, s.title));
       const body = h("div"); s.render(body); sec.append(body); panelBody.append(sec);
     }
+    // 나가는 길. 게임마다 자기 UI 가 어떻든, 여기로 오면 언제나 포털로 돌아갈 수 있다.
+    if (game.kind !== "portal") {
+      const exit = h("button", "gp-exit");
+      exit.append(h("span", null, t("exit")), h("small", null, t("exitSub")));
+      exit.addEventListener("click", () => host.goHome());
+      panelBody.append(exit);
+    }
+  }
+
+  /**
+   * 회전 안내는 host 가 정한다 — 선언한 방향과 어긋나고, 돌려서 고칠 수 있는 화면일 때.
+   * 안내가 덮는 동안 게임은 멈춘다. 보이지 않는 화면에서 시간이 흐르면 플레이어는 돌리고 나서 이미 진 판을 본다.
+   */
+  function syncRotate() {
+    if (!rotateEl) return;
+    const need = host.rotateNeeded;
+    if (need === !rotateEl.hidden) return;
+    rotateEl.hidden = !need;
+    if (lifecycle.inGameplay) { if (need) lifecycle.pause(); else lifecycle.resume(); }
   }
 
   function showInstallHint() {
@@ -656,7 +756,13 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
   events.on("gameplayStop", () => api.setHomeVisible(true));
   // 다른 화면으로 가면 설정 패널은 닫힌다.
   events.on("screen", ({ id }) => { if (id !== "settings" && api.settingsOpen) api.closeSettings(); });
-  events.on("settings", ({ key, value }) => { if (key === "language" && api.ready) { home.setAttribute("aria-label", t("home")); } if (key === "motion") doc.documentElement.dataset.gpMotion = value; });
+  events.on("settings", ({ key, value }) => {
+    if (key === "language" && api.ready) {
+      home.setAttribute("aria-label", t("home"));
+      if (rotateTitle) { rotateTitle.textContent = t("rotate"); rotateNote.textContent = host.orientation === "portrait" ? t("rotatePort") : t("rotateLand"); }
+    }
+    if (key === "motion") doc.documentElement.dataset.gpMotion = value;
+  });
   capture.onFreeze(() => { if (api.ready) { toastEl.hidden = true; } });
 
   // 기본 settings 화면. 게임이 자기 것을 등록하면 그것이 이긴다(나중에 등록한 것이 덮어쓴다).
@@ -678,7 +784,7 @@ function createGroovplay({ win, doc, tokens, tokensCss, game, storagePrefix, bac
   if (!game?.id) throw new Error("groovplay: window.__GP_GAME__.id 가 없다 — Vite 플러그인이 넣어 준다");
   const events = createEvents();
   const storage = createStorage({ prefix: storagePrefix, gameId: game.id, backend });
-  const settings = createSettings({ storage, emit: events.emit, prefersReducedMotion: !!win.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches });
+  const settings = createSettings({ storage, emit: events.emit, prefersReducedMotion: !!win.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches, touch: (win.navigator?.maxTouchPoints ?? 0) > 0 });
   const screens = createScreens(events.emit);
   const host = createHost({ win, doc, game, storage, events, settings });
   const lifecycle = createLifecycle({ win, doc, events, host });

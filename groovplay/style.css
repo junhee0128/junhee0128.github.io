@@ -79,10 +79,12 @@ button, a.play, .gear { min-height: var(--gp-touch-min); min-width: var(--gp-tou
 .brand { font-size: var(--gp-font-size-xs); font-weight: var(--gp-font-weight-black); letter-spacing: var(--gp-wordmark-letterSpacing); color: var(--gp-color-ink); text-shadow: 0 1px 8px rgba(0,0,0,.75); }
 .sub { font-size: var(--gp-font-size-xs); color: var(--gp-color-ink3); }
 .tools { margin-left: auto; display: flex; gap: var(--gp-space-2); align-items: center; }
-.news, .gear {
+.news, .gear, .fs {
   position: relative; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: var(--gp-radius-md);
   background: rgba(12,15,22,.55); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.1); color: var(--gp-color-ink); text-decoration: none;
 }
+/* 전체 화면 토글 — 켜지면 아이콘과 테두리가 강조색이 된다(플레이 단추와 시선을 다투지 않게 채우지는 않는다). 포털 자신이 아니라 게임을 어떻게 열지를 고른다. */
+.fs[aria-checked="true"] { color: var(--accent); border-color: var(--accent); }
 .news.dot::after { content: ""; position: absolute; top: 8px; right: 8px; width: 7px; height: 7px; border-radius: 50%; background: var(--gp-color-bad); box-shadow: 0 0 0 2px rgba(12,15,22,.9); }
 
 /* ── 썸네일 줄 ── */

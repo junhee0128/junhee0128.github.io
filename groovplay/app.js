@@ -158,6 +158,23 @@ stage.addEventListener("touchend", (e) => {
 addEventListener("keydown", (e) => { if (e.key === "ArrowRight" || e.key === "ArrowDown") show(current + 1); if (e.key === "ArrowLeft" || e.key === "ArrowUp") show(current - 1); });
 
 document.getElementById("gear").addEventListener("click", () => gp.screens.goto("settings"));
+
+// 전체 화면 토글 — 게임을 어떻게 열지 고른다. 값은 모든 게임이 같이 보는 설정 하나(settings.fullscreen)이고,
+// 게임은 들어가서 처음 누를 때 그 값대로 전체 화면에 들어간다. 페이지를 넘어가면 전체 화면이 풀리므로 포털이 대신
+// 들어가 줄 수는 없다. API 가 없는 곳(iOS 사파리)과 이미 전체인 설치형에서는 토글을 두지 않는다.
+const fsToggle = document.getElementById("fs");
+const syncFs = () => fsToggle.setAttribute("aria-checked", String(gp.settings.get("fullscreen")));
+if (gp.host.fullscreenAvailable) {
+  syncFs();
+  fsToggle.addEventListener("click", () => {
+    const next = !gp.settings.get("fullscreen");
+    gp.settings.set("fullscreen", next);
+    gp.shell.toast(next ? "게임을 전체 화면으로 엽니다" : "게임을 창 그대로 엽니다");
+  });
+  gp.on("settings", ({ key }) => { if (key === "fullscreen") syncFs(); });
+} else {
+  fsToggle.hidden = true;
+}
 // 포털의 화면 — 로비가 title. settings 는 셸이 준다.
 gp.screens.register("title", () => { if (sheet) { sheet.scrim.classList.remove("open"); sheet.box.classList.remove("open"); } });
 gp.on("settingsClosed", () => gp.screens.goto("title"));

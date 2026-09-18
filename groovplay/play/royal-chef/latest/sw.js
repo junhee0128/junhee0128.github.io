@@ -10,7 +10,7 @@
  * 배포할 때마다 VERSION이 바뀌고 옛 캐시는 버린다.
  */
 
-const VERSION = "groovplay-e0d5ea19d940";
+const VERSION = "groovplay-ced5679e5fc3";
 const MAX_CACHED_BYTES = 2 * 1024 * 1024;
 const SKIP = /\.(ogg|m4a|mp3|wav|mp4|webm)$/i;
 

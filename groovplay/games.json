@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-16T12:17:16.379Z",
+  "builtAt": "2026-09-18T12:47:20.985Z",
   "lobbyRule": true,
   "games": [
     {
@@ -97,18 +97,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "139a6edc",
-        "date": "2026-09-17T22:40:46+09:00",
-        "subject": "골든: 허브의 난이도 이름이 「등불지기」에서 「밤길」로 바뀌었다"
+        "hash": "3f4f7652",
+        "date": "2026-09-17T22:46:02+09:00",
+        "subject": "세계관·스토리 수정 계획: 28/28 완료와 공개 결과를 적는다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 5329
+          "ms": 2483
         },
         "test": {
           "ok": true,
-          "ms": 10071,
+          "ms": 5213,
           "tests": {
             "passed": 394,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 40641
+          "ms": 22877
         }
       },
       "build": {
         "ok": true,
-        "ms": 5301,
-        "at": "2026-09-17T13:42:11.685Z"
+        "ms": 3354,
+        "at": "2026-09-18T12:32:18.224Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-17T13:44:05.404Z"
+        "at": "2026-09-18T12:33:55.452Z"
       }
     },
     {
@@ -177,7 +177,7 @@
       "checks": {
         "test": {
           "ok": true,
-          "ms": 1178,
+          "ms": 1209,
           "tests": {
             "passed": 55,
             "failed": 0,
@@ -187,8 +187,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 544,
-        "at": "2026-09-18T00:02:56.309Z"
+        "ms": 547,
+        "at": "2026-09-18T12:33:57.218Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/first-bite.webp",
@@ -198,7 +198,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T00:04:40.368Z"
+        "at": "2026-09-18T12:35:40.473Z"
       }
     },
     {
@@ -293,29 +293,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "78f54556",
-        "date": "2026-09-18T21:00:28+09:00",
-        "subject": "mission-today: 골든 다시 뜸 — 카메라가 화면 비율과 무관하게 앞을 보장한다"
+        "hash": "30725d5c",
+        "date": "2026-09-17T22:41:16+09:00",
+        "subject": "mission-today: 정비 체크리스트 완료 표시"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4020
+          "ms": 2150
         },
         "test": {
           "ok": true,
-          "ms": 24547,
+          "ms": 20840,
           "tests": {
-            "passed": 145,
+            "passed": 136,
             "failed": 0,
-            "total": 145
+            "total": 136
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3387,
-        "at": "2026-09-18T12:01:04.795Z"
+        "ms": 3334,
+        "at": "2026-09-18T12:36:06.866Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -325,7 +325,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:02:04.650Z"
+        "at": "2026-09-18T12:37:07.484Z"
       }
     },
     {
@@ -523,18 +523,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "1d337ed4",
-        "date": "2026-09-17T22:40:31+09:00",
-        "subject": "royal-chef: 결과 화면 골든 — 실패 제목과 그 편의 한 줄"
+        "hash": "b9212ad4",
+        "date": "2026-09-17T22:46:29+09:00",
+        "subject": "royal-chef: v10 체크리스트 — 검증·배포 완료 기록"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3405
+          "ms": 2666
         },
         "test": {
           "ok": true,
-          "ms": 6243,
+          "ms": 5378,
           "tests": {
             "passed": 284,
             "failed": 0,
@@ -544,8 +544,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 177892,
-        "at": "2026-09-17T13:43:52.055Z"
+        "ms": 167584,
+        "at": "2026-09-18T12:40:03.140Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -555,8 +555,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-17T13:40:15.046Z",
-        "cached": true
+        "at": "2026-09-18T12:41:54.079Z"
       }
     },
     {
@@ -630,29 +629,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "b4dddfc3",
-        "date": "2026-09-18T12:01:39+00:00",
-        "subject": "starfall: 골든 play 3장 재촬영 (직렬)"
+        "hash": "9ec78a9a",
+        "date": "2026-09-18T09:49:17+00:00",
+        "subject": "docs(starfall): 구간 13 — 8단계 검증·배포 기록"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3180
+          "ms": 2331
         },
         "test": {
           "ok": true,
-          "ms": 18296,
+          "ms": 12057,
           "tests": {
-            "passed": 292,
+            "passed": 274,
             "failed": 0,
-            "total": 292
+            "total": 274
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 5815,
-        "at": "2026-09-18T12:02:15.852Z"
+        "ms": 3954,
+        "at": "2026-09-18T12:42:12.429Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -662,7 +661,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:12:19.558Z"
+        "at": "2026-09-18T12:46:32.171Z"
       }
     },
     {
@@ -703,18 +702,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "2b6d8a9",
+        "hash": "2b6d8a9d",
         "date": "2026-09-14T15:18:35+09:00",
         "subject": "셸에 줄 하나가 늘어난 자리를 따라 설정 화면 골든을 다시 찍는다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1311
+          "ms": 1334
         },
         "test": {
           "ok": true,
-          "ms": 662,
+          "ms": 667,
           "tests": {
             "passed": 33,
             "failed": 0,
@@ -724,8 +723,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2508,
-        "at": "2026-09-16T12:17:16.375Z"
+        "ms": 2497,
+        "at": "2026-09-18T12:46:36.679Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",
@@ -735,8 +734,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-16T06:50:01.940Z",
-        "cached": true
+        "at": "2026-09-18T12:47:20.984Z"
       }
     }
   ],
