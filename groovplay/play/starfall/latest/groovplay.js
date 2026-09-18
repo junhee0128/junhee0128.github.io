@@ -814,7 +814,7 @@ function classify(w, h, tokens) {
  * 세로·정사각에서는 위 띠, 가로에서는 왼쪽 띠(높이가 귀한 가로 폰에서 위를 버리지 않는다).
  * 버튼이 잠시 숨어도(플레이 중) 자리는 그대로 뺀다. 플레이를 시작할 때 레이아웃이 뛰면 안 된다.
  */
-function computeView({ viewport, dpr, insets, tokens, homeButton = false }) {
+function computeView({ viewport, dpr, insets, tokens, homeButton = false, scale = null }) {
   const { w, h } = viewport;
   const classes = classify(w, h, tokens);
   const orientation = classes.aspect === "square" ? "square" : w > h ? "landscape" : "portrait";
@@ -823,17 +823,40 @@ function computeView({ viewport, dpr, insets, tokens, homeButton = false }) {
     const band = HOME_BUTTON_OFFSET + tokens.touch.comfortable + HOME_BUTTON_OFFSET;
     if (orientation === "landscape") left += band; else top += band;
   }
+  // UI 배율(D4) — 짧은 변 기준. 폰이 설계의 기준이라 1 아래로는 내리지 않는다(내리면 13px 바닥이 깨진다).
+  // 큰 창에서 UI 가 멀어 보이는 것만 푼다. 월드 배율은 이것을 모른다(N4 의 게임 사각형이 정한다).
+  const uiScale = Math.min(UI_SCALE_MAX, Math.max(1, Math.min(w, h) / UI_SCALE_REF));
+  const safe = { x: left, y: top, w: Math.max(0, w - left - right), h: Math.max(0, h - top - bottom) };
+  const { stage, worldScale } = computeStage(safe, scale);
+  return { viewport: { w, h }, dpr, uiScale, insets: { ...insets }, safe, stage, worldScale, classes, orientation };
+}
+
+/**
+ * 게임 사각형(무대)과 월드 배율. 안전 사각형 안에서 정책대로 놓는다(N4).
+ *   fit    기준 비율 그대로 맞추고 남는 곳은 띠. 월드 배율 = 기준이 딱 들어가는 배율
+ *   expand 종횡비 상하한 안에서는 창을 다 쓰고, 넘으면 띠. 기준은 늘 무대 안에 들어간다(남는 쪽으로 세계를 더 보인다)
+ *   fill   상하한 안에서 무대를 채우고, 기준이 무대를 덮는다(넘치는 곳은 잘린다)
+ * 무대는 정수 픽셀로 반올림하고, 월드 배율은 반올림 전의 정확한 크기로 구한다 — 반올림한 값으로 구하면 fit 에서 두 축의 배율이 어긋난다.
+ */
+function computeStage(safe, scale) {
+  if (!scale) return { stage: { ...safe }, worldScale: 1 };
+  const [rw, rh] = scale.reference;
+  const [lo, hi] = scale.mode === "fit" ? [rw / rh, rw / rh] : scale.aspect;
+  const a = safe.w / safe.h;
+  const wE = a > hi ? safe.h * hi : safe.w;
+  const hE = a < lo ? safe.w / lo : safe.h;
+  const w = Math.round(wE), h = Math.round(hE);
+  const sx = wE / rw, sy = hE / rh;
   return {
-    viewport: { w, h },
-    dpr,
-    insets: { ...insets },
-    safe: { x: left, y: top, w: Math.max(0, w - left - right), h: Math.max(0, h - top - bottom) },
-    classes,
-    orientation,
+    stage: { x: safe.x + Math.round((safe.w - w) / 2), y: safe.y + Math.round((safe.h - h) / 2), w, h },
+    worldScale: scale.mode === "fill" ? Math.max(sx, sy) : Math.min(sx, sy),
   };
 }
 
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+/** UI 배율의 기준 짧은 변과 상한(D4). */
+const UI_SCALE_REF = 800;
+const UI_SCALE_MAX = 1.5;
 
 /** 안전영역을 env() 탐침으로 잰다. 문서가 아직 없으면 0. */
 function probeInsets(doc, win) {
@@ -862,6 +885,7 @@ function createView({ win, doc, events, tokens, game, measureInsets = () => prob
       insets: measureInsets(),
       tokens,
       homeButton,
+      scale: game.scale ?? null,
     });
   };
 
@@ -873,11 +897,40 @@ function createView({ win, doc, events, tokens, game, measureInsets = () => prob
     if (!de) return;
     const set = (k, px) => de.style.setProperty(k, `${px}px`);
     set("--gp-vw", v.viewport.w); set("--gp-vh", v.viewport.h);
+    de.style.setProperty("--gp-ui-scale", String(v.uiScale));
     set("--gp-safe-top", v.safe.y); set("--gp-safe-left", v.safe.x);
     set("--gp-safe-right", v.viewport.w - v.safe.x - v.safe.w); set("--gp-safe-bottom", v.viewport.h - v.safe.y - v.safe.h);
     de.dataset.gpW = v.classes.width; de.dataset.gpH = v.classes.height; de.dataset.gpAspect = v.classes.aspect;
     de.dataset.gpOrientation = v.orientation;
   };
+
+  // ── 무대와 레터박스(D8) ── 게임은 무대 안에 그린다. 무대 밖은 레터박스가 칠하고, 띠를 누른 입력은 게임의 문서 리스너까지
+  // 가지 않는다(버블링을 멈춘다 — 캡처 단계의 플랫폼 리스너, 예컨대 전체 화면 제스처는 그대로 본다). 셸의 조각은 그 위층이다.
+  // 게임의 모듈 스크립트는 셸이 붙는 시점(DOMContentLoaded)보다 먼저 돈다. 그래서 무대는 게임이 처음 찾는 순간 붙인다.
+  let stageEl = null, letterboxEl = null;
+  const SWALLOW = ["click", "dblclick", "pointerdown", "pointerup", "pointermove", "mousedown", "mouseup", "touchstart", "touchend", "touchmove", "contextmenu", "wheel"];
+  const place = () => {
+    if (!stageEl) return;
+    const s = current.stage, st = stageEl.style;
+    st.left = `${s.x}px`; st.top = `${s.y}px`; st.width = `${s.w}px`; st.height = `${s.h}px`;
+  };
+  const mountStage = () => {
+    if (!doc) return null;
+    if (!stageEl) {
+      letterboxEl = doc.createElement("div");
+      letterboxEl.id = "gp-letterbox";
+      letterboxEl.setAttribute("aria-hidden", "true");
+      letterboxEl.style.cssText = "position:fixed;inset:0;z-index:0;background:var(--gp-letterbox,var(--gp-color-bg,#0b0d12))";
+      for (const t of SWALLOW) letterboxEl.addEventListener(t, (e) => e.stopPropagation(), { passive: true });
+      stageEl = doc.createElement("div");
+      stageEl.id = "gp-stage";
+      stageEl.style.cssText = "position:fixed;z-index:1;overflow:hidden";
+    }
+    if (!stageEl.isConnected && doc.body) doc.body.prepend(letterboxEl, stageEl);
+    place();
+    return stageEl;
+  };
+  if (doc) { if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", mountStage); else mountStage(); }
 
   const flush = () => {
     pending = false;
@@ -886,6 +939,7 @@ function createView({ win, doc, events, tokens, game, measureInsets = () => prob
     if (!changed.length) return;
     current = next;
     expose(current);
+    place();
     if (changed.includes("dpr")) armDpr();
     events.emit("view", { view: current, changed });
   };
@@ -919,8 +973,20 @@ function createView({ win, doc, events, tokens, game, measureInsets = () => prob
   return {
     get viewport() { return current.viewport; },
     get dpr() { return current.dpr; },
+    /** UI 배율 — 글자·간격·터치 크기에 곱한다. 월드(게임 장면)에는 곱하지 않는다. */
+    get uiScale() { return current.uiScale; },
+    /** 캔버스 HUD 의 크기(px) → 지금 배율을 곱한 값. */
+    ui: (px) => px * current.uiScale,
+    /** 캔버스 HUD 의 글자 크기(px) → 배율을 곱하고, 바닥(토큰 xs)보다 작으면 바닥. */
+    text: (px) => Math.max(tokens.font.size.xs, px * current.uiScale),
     get insets() { return current.insets; },
     get safe() { return current.safe; },
+    /** 게임 사각형 — 스케일 정책이 안전 사각형 안에 놓은 무대(CSS px). */
+    get stage() { return current.stage; },
+    /** 월드 배율 — 기준 해상도(scale.reference)의 1 단위가 무대에서 몇 CSS px 인가. 정책이 없으면 1. */
+    get worldScale() { return current.worldScale; },
+    /** 무대 요소(#gp-stage). 게임은 여기에 그린다. 처음 찾는 순간 문서에 붙는다. */
+    get stageElement() { return mountStage(); },
     get classes() { return current.classes; },
     get orientation() { return current.orientation; },
     /** 지금의 전부. */

@@ -632,18 +632,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "8bee5261",
-        "date": "2026-09-18T15:02:13+00:00",
-        "subject": "starfall: 골든 18장 — 펫 탭·단축키 단추·포커스 링·단축키 화면 신규 5장"
+        "hash": "07318234",
+        "date": "2026-09-18T15:14:08+00:00",
+        "subject": "docs(starfall): 구간 15 — 정식 서비스 점검 88건과 배포 8bee5261"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3145
+          "ms": 3095
         },
         "test": {
           "ok": true,
-          "ms": 17591,
+          "ms": 17242,
           "tests": {
             "passed": 301,
             "failed": 0,
@@ -653,8 +653,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 5786,
-        "at": "2026-09-18T15:02:52.713Z"
+        "ms": 5439,
+        "at": "2026-09-18T18:02:23.331Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -664,7 +664,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T15:13:08.966Z"
+        "at": "2026-09-18T18:12:29.674Z"
       }
     },
     {
