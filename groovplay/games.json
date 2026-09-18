@@ -295,18 +295,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "ca3cb663",
-        "date": "2026-09-18T21:03:27+09:00",
-        "subject": "mission-today: 플레이 정비 체크리스트 완료 표시"
+        "hash": "2a52133d",
+        "date": "2026-09-18T22:31:44+09:00",
+        "subject": "mission-today: 하강 중력 1.8 → 2.6배, UI·화면 전수조사"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2200
+          "ms": 2177
         },
         "test": {
           "ok": true,
-          "ms": 21219,
+          "ms": 21162,
           "tests": {
             "passed": 145,
             "failed": 0,
@@ -316,8 +316,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3254,
-        "at": "2026-09-18T12:50:28.575Z"
+        "ms": 3304,
+        "at": "2026-09-18T13:32:13.383Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -327,7 +327,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:51:27.636Z"
+        "at": "2026-09-18T13:33:13.719Z"
       }
     },
     {
