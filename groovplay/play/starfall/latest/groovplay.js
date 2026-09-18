@@ -507,6 +507,9 @@ function createCapture({ events }) {
 //
 // 셸의 DOM 도 계약을 지켜야 한다 — 터치 44, 글자 13, 대비 4.5, 안전영역, 921×333 에서도 스크롤 없음.
 
+/** 고정 복귀 버튼이 안전영역 모서리에서 떨어진 거리(px). 화면 모델(view)이 이 자리를 안전 사각형에서 뺀다. */
+const HOME_BUTTON_OFFSET = 8;
+
 function createShell({ win, doc, tokens, tokensCss, game, events, lifecycle, screens, settings, storage, host, capture }) {
   const T = tokens;
   const accent = /^#[0-9a-f]{6}$/i.test(game.accent ?? "") ? game.accent : T.color.accentFallback;
@@ -526,7 +529,7 @@ ${tokensCss}
 #gp-shell button { font: inherit; color: inherit; border: 0; background: none; padding: 0; cursor: pointer; min-width: var(--gp-touch-min); min-height: var(--gp-touch-min); }
 #gp-shell [hidden] { display: none !important; }
 
-.gp-home { pointer-events: auto; position: fixed; z-index: var(--gp-z-shell); top: calc(env(safe-area-inset-top, 0px) + 8px); left: calc(env(safe-area-inset-left, 0px) + 8px);
+.gp-home { pointer-events: auto; position: fixed; z-index: var(--gp-z-shell); top: calc(env(safe-area-inset-top, 0px) + ${HOME_BUTTON_OFFSET}px); left: calc(env(safe-area-inset-left, 0px) + ${HOME_BUTTON_OFFSET}px);
   width: var(--gp-touch-comfortable); height: var(--gp-touch-comfortable); border-radius: var(--gp-radius-md);
   background: rgba(11,13,18,.72); border: 1px solid rgba(255,255,255,.14); display: grid; place-items: center;
   backdrop-filter: blur(10px); transition: opacity var(--gp-motion-base) var(--gp-motion-ease); }
@@ -773,6 +776,163 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
 }
 
 
+// ── classify ──
+// 창 크기 등급. 토큰 v2 의 window 표 하나로 폭·높이 등급과 종횡비 구간을 정한다.
+// 런타임(view)과 검사기가 같이 쓴다 — 둘이 다른 표를 보면 게임이 본 등급과 검사가 잰 등급이 갈라진다.
+
+/** 표(하한들)에서 값이 속한 등급. 표는 0 에서 시작하는 오름차순이다(tokens.test.mjs 가 지킨다). */
+const bandOf = (table, x) => {
+  let name = null;
+  for (const [k, lo] of Object.entries(table)) if (!k.startsWith("$") && x >= lo) name = k;
+  return name;
+};
+
+/** { width, height, aspect } — 예: { width: "expanded", height: "compact", aspect: "wide" } (가로 폰). */
+function classify(w, h, tokens) {
+  if (!(w > 0) || !(h > 0)) throw new Error(`classify: 크기는 양수여야 한다 (${w}×${h}) — 숨겨진 창이나 아직 배치되지 않은 요소에서 재지 않는다`);
+  const t = tokens.window;
+  return { width: bandOf(t.width, w), height: bandOf(t.height, h), aspect: bandOf(t.aspect, w / h) };
+}
+
+
+// ── view ──
+// 화면 모델 — 계약 v2 의 바탕. 플랫폼이 화면을 계산하고 게임은 받는다.
+//
+// 좌표는 네 겹이다: 뷰포트(보이는 영역) → 안전 사각형(노치·홈 바·셸의 자리를 뺀 것) → 게임 사각형(스케일 정책,
+// N4) → 렌더 버퍼(N5). 여기서는 앞의 둘과 밀도·등급·방향을 낸다.
+//
+// 게임은 window.innerWidth·devicePixelRatio·100vh 를 직접 읽지 않는다(검사 source/view-bypass). 모바일 주소창·가상
+// 키보드·브라우저 확대·모니터 이동·접힘은 브라우저마다 다르게 드러나고, 그것을 여섯 게임이 각자 처리하면 여섯 가지
+// 버그가 나온다. 여기서 한 번 흡수한다.
+//
+// 변화는 프레임당 한 번으로 합친다 — 창을 끄는 동안 이벤트가 쏟아지지 않는다. 이벤트는 무엇이 바뀌었는지 싣는다.
+// v2 게임(game.platform >= 2)에서만 만든다. v1 게임의 groovplay.view 는 null 이다.
+
+
+/**
+ * 순수 계산. viewport·insets 는 CSS px. homeButton 이 참이면 셸의 고정 복귀 버튼 자리를 뺀다 —
+ * 세로·정사각에서는 위 띠, 가로에서는 왼쪽 띠(높이가 귀한 가로 폰에서 위를 버리지 않는다).
+ * 버튼이 잠시 숨어도(플레이 중) 자리는 그대로 뺀다. 플레이를 시작할 때 레이아웃이 뛰면 안 된다.
+ */
+function computeView({ viewport, dpr, insets, tokens, homeButton = false }) {
+  const { w, h } = viewport;
+  const classes = classify(w, h, tokens);
+  const orientation = classes.aspect === "square" ? "square" : w > h ? "landscape" : "portrait";
+  let { top, right, bottom, left } = insets;
+  if (homeButton) {
+    const band = HOME_BUTTON_OFFSET + tokens.touch.comfortable + HOME_BUTTON_OFFSET;
+    if (orientation === "landscape") left += band; else top += band;
+  }
+  return {
+    viewport: { w, h },
+    dpr,
+    insets: { ...insets },
+    safe: { x: left, y: top, w: Math.max(0, w - left - right), h: Math.max(0, h - top - bottom) },
+    classes,
+    orientation,
+  };
+}
+
+const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+
+/** 안전영역을 env() 탐침으로 잰다. 문서가 아직 없으면 0. */
+function probeInsets(doc, win) {
+  if (!doc?.body) return { top: 0, right: 0, bottom: 0, left: 0 };
+  let el = doc.getElementById("gp-inset-probe");
+  if (!el) {
+    el = doc.createElement("div");
+    el.id = "gp-inset-probe";
+    el.setAttribute("aria-hidden", "true");
+    el.style.cssText = "position:fixed;left:0;top:0;width:0;height:0;visibility:hidden;pointer-events:none;"
+      + "padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)";
+    doc.body.append(el);
+  }
+  const s = win.getComputedStyle(el);
+  return { top: parseFloat(s.paddingTop) || 0, right: parseFloat(s.paddingRight) || 0, bottom: parseFloat(s.paddingBottom) || 0, left: parseFloat(s.paddingLeft) || 0 };
+}
+
+function createView({ win, doc, events, tokens, game, measureInsets = () => probeInsets(doc, win) }) {
+  const homeButton = game.kind !== "portal" && game.exit !== "self";
+  // 보이는 영역은 visualViewport 로 못박는다. 주소창이 접히는 도중에는 layout viewport 와 어긋나는데, 게임이 쓸 수 있는 것은 보이는 쪽이다.
+  const read = () => {
+    const vv = win.visualViewport;
+    return computeView({
+      viewport: { w: Math.round(vv ? vv.width : win.innerWidth), h: Math.round(vv ? vv.height : win.innerHeight) },
+      dpr: win.devicePixelRatio || 1,
+      insets: measureInsets(),
+      tokens,
+      homeButton,
+    });
+  };
+
+  let current = read();
+  let pending = false;
+
+  const expose = (v) => {
+    const de = doc?.documentElement;
+    if (!de) return;
+    const set = (k, px) => de.style.setProperty(k, `${px}px`);
+    set("--gp-vw", v.viewport.w); set("--gp-vh", v.viewport.h);
+    set("--gp-safe-top", v.safe.y); set("--gp-safe-left", v.safe.x);
+    set("--gp-safe-right", v.viewport.w - v.safe.x - v.safe.w); set("--gp-safe-bottom", v.viewport.h - v.safe.y - v.safe.h);
+    de.dataset.gpW = v.classes.width; de.dataset.gpH = v.classes.height; de.dataset.gpAspect = v.classes.aspect;
+    de.dataset.gpOrientation = v.orientation;
+  };
+
+  const flush = () => {
+    pending = false;
+    const next = read();
+    const changed = Object.keys(next).filter((k) => !same(next[k], current[k]));
+    if (!changed.length) return;
+    current = next;
+    expose(current);
+    if (changed.includes("dpr")) armDpr();
+    events.emit("view", { view: current, changed });
+  };
+  const schedule = () => {
+    if (pending) return;
+    pending = true;
+    (win.requestAnimationFrame ?? ((f) => setTimeout(f, 16)))(flush);
+  };
+
+  // 밀도 변화는 resize 로 오지 않을 수 있다(창을 다른 모니터로 옮길 때). 지금 밀도에 대한 질의가 바뀌면 안다.
+  let dprQuery = null;
+  function armDpr() {
+    dprQuery?.removeEventListener?.("change", schedule);
+    dprQuery = win.matchMedia?.(`(resolution: ${current.dpr}dppx)`) ?? null;
+    dprQuery?.addEventListener?.("change", schedule);
+  }
+  armDpr();
+  // 질의의 change 를 내지 않는 환경이 있다(실측: 헤드리스 크롬은 밀도가 바뀌어도 change 도 resize 도 내지 않는다).
+  // 0.5초마다 숫자 하나를 읽어 놓친 것을 잡는다. 문서가 숨어 있으면 읽지 않는다. 검사기의 멈춘 시계에서는 돌지 않는다.
+  win.setInterval?.(() => { if (doc?.visibilityState !== "hidden" && (win.devicePixelRatio || 1) !== current.dpr) schedule(); }, 500);
+
+  win.addEventListener?.("resize", schedule, { passive: true });
+  win.visualViewport?.addEventListener?.("resize", schedule, { passive: true });
+  win.addEventListener?.("orientationchange", schedule, { passive: true });
+  if (typeof win.ResizeObserver === "function" && doc?.documentElement) new win.ResizeObserver(schedule).observe(doc.documentElement);
+  doc?.addEventListener?.("fullscreenchange", schedule);
+  // 탐침은 body 가 있어야 선다. 문서가 준비되면 한 번 다시 잰다(인셋이 그때 처음 보인다).
+  if (doc && doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", () => { schedule(); });
+  expose(current);
+
+  return {
+    get viewport() { return current.viewport; },
+    get dpr() { return current.dpr; },
+    get insets() { return current.insets; },
+    get safe() { return current.safe; },
+    get classes() { return current.classes; },
+    get orientation() { return current.orientation; },
+    /** 지금의 전부. */
+    get current() { return current; },
+    /** 다음 프레임에 다시 잰다. 게임이 부를 일은 드물다 — 자기 레이아웃이 바뀐 뒤 셸이 부른다. */
+    schedule,
+    /** view 이벤트를 듣는다. 끊는 함수를 돌려준다. */
+    on: (fn) => events.on("view", fn),
+  };
+}
+
+
 // ── index ──
 // window.groovplay 를 조립한다. 이 파일이 번들의 끝이다.
 //
@@ -791,6 +951,8 @@ function createGroovplay({ win, doc, tokens, tokensCss, game, storagePrefix, bac
   const audio = createAudio({ win, doc, events, settings });
   const capture = createCapture({ events });
   const shell = createShell({ win, doc, tokens, tokensCss, game, events, lifecycle, screens, settings, storage, host, capture });
+  // 화면 모델은 계약 v2 의 것이다. v1 게임에서는 만들지 않는다 — v1 은 동결이고, 탐침 요소 하나라도 v1 페이지에 더하지 않는다.
+  const view = game.platform >= 2 ? createView({ win, doc, events, tokens, game }) : null;
 
   return Object.freeze({
     version: 1,
@@ -805,6 +967,7 @@ function createGroovplay({ win, doc, tokens, tokensCss, game, storagePrefix, bac
     lifecycle,
     audio,
     host,
+    view,
     capture,
     shell,
     rng: () => Math.random(),

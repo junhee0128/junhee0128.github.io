@@ -9,16 +9,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="별의 서약">
     <link rel="apple-touch-icon" href="./icon-192.png">
-    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=c66d06ff112a").catch(function(){})});</script>
+    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=9c87f92a1e8e").catch(function(){})});</script>
     <!-- /groovplay:pwa -->
-    <script>window.__GP_GAME__={"id":"starfall","title":"별의 서약","accent":"#f2b85a","kind":"game","exit":"platform","orientation":"any","home":"../../../"}</script>
-    <script src="./groovplay.js?v=c66d06ff112a"></script>
+    <script>window.__GP_GAME__={"id":"starfall","title":"별의 서약","accent":"#f2b85a","kind":"game","platform":1,"exit":"platform","orientation":"any","home":"../../../"}</script>
+    <script src="./groovplay.js?v=9c87f92a1e8e"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
     <meta charset="utf-8" />
     <!-- 뷰포트·매니페스트·아이콘·런타임은 플러그인이 넣는다. -->
     <title>별의 서약</title>
-    <script type="module" crossorigin src="./assets/index-BQG5mBKW.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BiFtG3Z6.css">
+    <script type="module" crossorigin src="./assets/index-By2iehyR.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bgw5o6Xq.css">
   </head>
   <body>
     <div id="stage"></div>
@@ -91,6 +91,15 @@
       <p class="hint" id="hint"></p>
     </section>
 
+    <!-- 단축키 일람 -->
+    <section class="ui modal" data-screen="keys" hidden>
+      <div class="panel keys-panel" role="dialog" aria-modal="true" aria-labelledby="keys-h">
+        <h1 id="keys-h"></h1>
+        <div class="keys-body" id="keys-body"></div>
+        <button id="btn-keys-close" class="primary"></button>
+      </div>
+    </section>
+
     <!-- 대화 -->
     <section class="ui dialogue" data-screen="dialogue" hidden>
       <div class="dlg" id="dlg">
@@ -106,13 +115,14 @@
 
     <!-- 일시정지 -->
     <section class="ui modal" data-screen="pause" hidden>
-      <div class="panel">
+      <div class="panel" role="dialog" aria-modal="true" aria-labelledby="pause-h">
         <h1 id="pause-h">일시정지</h1>
         <div class="col">
-          <button id="btn-resume" class="primary">계속</button>
-          <button id="btn-save">저장</button>
-          <button id="btn-pause-settings">설정</button>
-          <button id="btn-quit">타이틀로</button>
+          <button id="btn-resume" class="primary" data-hot="Esc">계속</button>
+          <button id="btn-save" data-hot="S">저장</button>
+          <button id="btn-pause-settings" data-hot="O">설정</button>
+          <button id="btn-keys-open" data-hot="H">단축키</button>
+          <button id="btn-quit" data-hot="T">타이틀로</button>
         </div>
         <p class="rule" id="pause-rule"></p>
       </div>
@@ -122,7 +132,7 @@
     <section class="ui menu" data-screen="menu" hidden>
       <div class="menu-frame">
         <nav class="tabs" id="tabs">
-          <button data-tab="party" class="on"></button><button data-tab="equip"></button><button data-tab="bag"></button><button data-tab="quests"></button><button data-tab="map"></button><button data-tab="log"></button>
+          <button data-tab="party" class="on"></button><button data-tab="equip"></button><button data-tab="bag"></button><button data-tab="quests"></button><button data-tab="map"></button><button data-tab="pet"></button><button data-tab="log"></button>
           <button class="icon-btn close" id="btn-menu-close" aria-label="닫기"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
         </nav>
         <div class="menu-body" id="menu-body"></div>

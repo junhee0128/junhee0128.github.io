@@ -632,29 +632,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "90c339c8",
-        "date": "2026-09-18T21:49:19+09:00",
-        "subject": "Merge remote-tracking branch 'origin/main'"
+        "hash": "8bee5261",
+        "date": "2026-09-18T15:02:13+00:00",
+        "subject": "starfall: 골든 18장 — 펫 탭·단축키 단추·포커스 링·단축키 화면 신규 5장"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2381
+          "ms": 3145
         },
         "test": {
           "ok": true,
-          "ms": 12700,
+          "ms": 17591,
           "tests": {
-            "passed": 292,
+            "passed": 301,
             "failed": 0,
-            "total": 292
+            "total": 301
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 4111,
-        "at": "2026-09-18T12:54:45.524Z"
+        "ms": 5786,
+        "at": "2026-09-18T15:02:52.713Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -664,7 +664,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:59:06.572Z"
+        "at": "2026-09-18T15:13:08.966Z"
       }
     },
     {
