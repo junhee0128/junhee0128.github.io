@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-18T12:47:20.985Z",
+  "builtAt": "2026-09-18T12:59:11.151Z",
   "lobbyRule": true,
   "games": [
     {
@@ -104,11 +104,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2483
+          "ms": 2441
         },
         "test": {
           "ok": true,
-          "ms": 5213,
+          "ms": 5247,
           "tests": {
             "passed": 394,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 22877
+          "ms": 23105
         }
       },
       "build": {
         "ok": true,
-        "ms": 3354,
-        "at": "2026-09-18T12:32:18.224Z"
+        "ms": 3280,
+        "at": "2026-09-18T12:49:59.903Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:33:55.452Z"
+        "at": "2026-09-18T12:33:55.452Z",
+        "cached": true
       }
     },
     {
@@ -177,7 +178,7 @@
       "checks": {
         "test": {
           "ok": true,
-          "ms": 1209,
+          "ms": 1171,
           "tests": {
             "passed": 55,
             "failed": 0,
@@ -187,8 +188,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 547,
-        "at": "2026-09-18T12:33:57.218Z"
+        "ms": 554,
+        "at": "2026-09-18T12:50:01.829Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/first-bite.webp",
@@ -198,7 +199,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:35:40.473Z"
+        "at": "2026-09-18T12:35:40.473Z",
+        "cached": true
       }
     },
     {
@@ -293,29 +295,29 @@
         "todo": 2
       },
       "commit": {
-        "hash": "30725d5c",
-        "date": "2026-09-17T22:41:16+09:00",
-        "subject": "mission-today: 정비 체크리스트 완료 표시"
+        "hash": "ca3cb663",
+        "date": "2026-09-18T21:03:27+09:00",
+        "subject": "mission-today: 플레이 정비 체크리스트 완료 표시"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2150
+          "ms": 2200
         },
         "test": {
           "ok": true,
-          "ms": 20840,
+          "ms": 21219,
           "tests": {
-            "passed": 136,
+            "passed": 145,
             "failed": 0,
-            "total": 136
+            "total": 145
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3334,
-        "at": "2026-09-18T12:36:06.866Z"
+        "ms": 3254,
+        "at": "2026-09-18T12:50:28.575Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -325,7 +327,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:37:07.484Z"
+        "at": "2026-09-18T12:51:27.636Z"
       }
     },
     {
@@ -530,11 +532,11 @@
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2666
+          "ms": 2677
         },
         "test": {
           "ok": true,
-          "ms": 5378,
+          "ms": 5556,
           "tests": {
             "passed": 284,
             "failed": 0,
@@ -544,8 +546,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 167584,
-        "at": "2026-09-18T12:40:03.140Z"
+        "ms": 170409,
+        "at": "2026-09-18T12:54:26.307Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -555,7 +557,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:41:54.079Z"
+        "at": "2026-09-18T12:41:54.079Z",
+        "cached": true
       }
     },
     {
@@ -629,29 +632,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "9ec78a9a",
-        "date": "2026-09-18T09:49:17+00:00",
-        "subject": "docs(starfall): 구간 13 — 8단계 검증·배포 기록"
+        "hash": "90c339c8",
+        "date": "2026-09-18T21:49:19+09:00",
+        "subject": "Merge remote-tracking branch 'origin/main'"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2331
+          "ms": 2381
         },
         "test": {
           "ok": true,
-          "ms": 12057,
+          "ms": 12700,
           "tests": {
-            "passed": 274,
+            "passed": 292,
             "failed": 0,
-            "total": 274
+            "total": 292
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 3954,
-        "at": "2026-09-18T12:42:12.429Z"
+        "ms": 4111,
+        "at": "2026-09-18T12:54:45.524Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -661,7 +664,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:46:32.171Z"
+        "at": "2026-09-18T12:59:06.572Z"
       }
     },
     {
@@ -702,18 +705,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "2b6d8a9d",
-        "date": "2026-09-14T15:18:35+09:00",
-        "subject": "셸에 줄 하나가 늘어난 자리를 따라 설정 화면 골든을 다시 찍는다"
+        "hash": "dd2dc0be",
+        "date": "2026-09-18T21:48:32+09:00",
+        "subject": "골든 — 설정 패널에 나가기 줄이 생겼다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1334
+          "ms": 1315
         },
         "test": {
           "ok": true,
-          "ms": 667,
+          "ms": 693,
           "tests": {
             "passed": 33,
             "failed": 0,
@@ -723,8 +726,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 2497,
-        "at": "2026-09-18T12:46:36.679Z"
+        "ms": 2558,
+        "at": "2026-09-18T12:59:11.146Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",
@@ -734,7 +737,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:47:20.984Z"
+        "at": "2026-09-18T12:47:20.984Z",
+        "cached": true
       }
     }
   ],
