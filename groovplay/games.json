@@ -630,29 +630,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "56bd56b8",
-        "date": "2026-09-18T09:37:10+00:00",
-        "subject": "starfall: 골든 play 5장 재촬영 (직렬)"
+        "hash": "b4dddfc3",
+        "date": "2026-09-18T12:01:39+00:00",
+        "subject": "starfall: 골든 play 3장 재촬영 (직렬)"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3107
+          "ms": 3180
         },
         "test": {
           "ok": true,
-          "ms": 17291,
+          "ms": 18296,
           "tests": {
-            "passed": 274,
+            "passed": 292,
             "failed": 0,
-            "total": 274
+            "total": 292
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 5495,
-        "at": "2026-09-18T09:37:51.276Z"
+        "ms": 5815,
+        "at": "2026-09-18T12:02:15.852Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -662,7 +662,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T09:48:06.455Z"
+        "at": "2026-09-18T12:12:19.558Z"
       }
     },
     {
