@@ -507,6 +507,9 @@ function createCapture({ events }) {
 //
 // 셸의 DOM 도 계약을 지켜야 한다 — 터치 44, 글자 13, 대비 4.5, 안전영역, 921×333 에서도 스크롤 없음.
 
+/** 고정 복귀 버튼이 안전영역 모서리에서 떨어진 거리(px). 화면 모델(view)이 이 자리를 안전 사각형에서 뺀다. */
+const HOME_BUTTON_OFFSET = 8;
+
 function createShell({ win, doc, tokens, tokensCss, game, events, lifecycle, screens, settings, storage, host, capture }) {
   const T = tokens;
   const accent = /^#[0-9a-f]{6}$/i.test(game.accent ?? "") ? game.accent : T.color.accentFallback;
@@ -526,7 +529,7 @@ ${tokensCss}
 #gp-shell button { font: inherit; color: inherit; border: 0; background: none; padding: 0; cursor: pointer; min-width: var(--gp-touch-min); min-height: var(--gp-touch-min); }
 #gp-shell [hidden] { display: none !important; }
 
-.gp-home { pointer-events: auto; position: fixed; z-index: var(--gp-z-shell); top: calc(env(safe-area-inset-top, 0px) + 8px); left: calc(env(safe-area-inset-left, 0px) + 8px);
+.gp-home { pointer-events: auto; position: fixed; z-index: var(--gp-z-shell); top: calc(env(safe-area-inset-top, 0px) + ${HOME_BUTTON_OFFSET}px); left: calc(env(safe-area-inset-left, 0px) + ${HOME_BUTTON_OFFSET}px);
   width: var(--gp-touch-comfortable); height: var(--gp-touch-comfortable); border-radius: var(--gp-radius-md);
   background: rgba(11,13,18,.72); border: 1px solid rgba(255,255,255,.14); display: grid; place-items: center;
   backdrop-filter: blur(10px); transition: opacity var(--gp-motion-base) var(--gp-motion-ease); }
@@ -773,6 +776,229 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
 }
 
 
+// ── classify ──
+// 창 크기 등급. 토큰 v2 의 window 표 하나로 폭·높이 등급과 종횡비 구간을 정한다.
+// 런타임(view)과 검사기가 같이 쓴다 — 둘이 다른 표를 보면 게임이 본 등급과 검사가 잰 등급이 갈라진다.
+
+/** 표(하한들)에서 값이 속한 등급. 표는 0 에서 시작하는 오름차순이다(tokens.test.mjs 가 지킨다). */
+const bandOf = (table, x) => {
+  let name = null;
+  for (const [k, lo] of Object.entries(table)) if (!k.startsWith("$") && x >= lo) name = k;
+  return name;
+};
+
+/** { width, height, aspect } — 예: { width: "expanded", height: "compact", aspect: "wide" } (가로 폰). */
+function classify(w, h, tokens) {
+  if (!(w > 0) || !(h > 0)) throw new Error(`classify: 크기는 양수여야 한다 (${w}×${h}) — 숨겨진 창이나 아직 배치되지 않은 요소에서 재지 않는다`);
+  const t = tokens.window;
+  return { width: bandOf(t.width, w), height: bandOf(t.height, h), aspect: bandOf(t.aspect, w / h) };
+}
+
+
+// ── view ──
+// 화면 모델 — 계약 v2 의 바탕. 플랫폼이 화면을 계산하고 게임은 받는다.
+//
+// 좌표는 네 겹이다: 뷰포트(보이는 영역) → 안전 사각형(노치·홈 바·셸의 자리를 뺀 것) → 게임 사각형(스케일 정책,
+// N4) → 렌더 버퍼(N5). 여기서는 앞의 둘과 밀도·등급·방향을 낸다.
+//
+// 게임은 window.innerWidth·devicePixelRatio·100vh 를 직접 읽지 않는다(검사 source/view-bypass). 모바일 주소창·가상
+// 키보드·브라우저 확대·모니터 이동·접힘은 브라우저마다 다르게 드러나고, 그것을 여섯 게임이 각자 처리하면 여섯 가지
+// 버그가 나온다. 여기서 한 번 흡수한다.
+//
+// 변화는 프레임당 한 번으로 합친다 — 창을 끄는 동안 이벤트가 쏟아지지 않는다. 이벤트는 무엇이 바뀌었는지 싣는다.
+// v2 게임(game.platform >= 2)에서만 만든다. v1 게임의 groovplay.view 는 null 이다.
+
+
+/**
+ * 순수 계산. viewport·insets 는 CSS px. homeButton 이 참이면 셸의 고정 복귀 버튼 자리를 뺀다 —
+ * 세로·정사각에서는 위 띠, 가로에서는 왼쪽 띠(높이가 귀한 가로 폰에서 위를 버리지 않는다).
+ * 버튼이 잠시 숨어도(플레이 중) 자리는 그대로 뺀다. 플레이를 시작할 때 레이아웃이 뛰면 안 된다.
+ */
+function computeView({ viewport, dpr, insets, tokens, homeButton = false, scale = null }) {
+  const { w, h } = viewport;
+  const classes = classify(w, h, tokens);
+  const orientation = classes.aspect === "square" ? "square" : w > h ? "landscape" : "portrait";
+  let { top, right, bottom, left } = insets;
+  if (homeButton) {
+    const band = HOME_BUTTON_OFFSET + tokens.touch.comfortable + HOME_BUTTON_OFFSET;
+    if (orientation === "landscape") left += band; else top += band;
+  }
+  // UI 배율(D4) — 짧은 변 기준. 폰이 설계의 기준이라 1 아래로는 내리지 않는다(내리면 13px 바닥이 깨진다).
+  // 큰 창에서 UI 가 멀어 보이는 것만 푼다. 월드 배율은 이것을 모른다(N4 의 게임 사각형이 정한다).
+  const uiScale = Math.min(UI_SCALE_MAX, Math.max(1, Math.min(w, h) / UI_SCALE_REF));
+  const safe = { x: left, y: top, w: Math.max(0, w - left - right), h: Math.max(0, h - top - bottom) };
+  const { stage, worldScale } = computeStage(safe, scale);
+  return { viewport: { w, h }, dpr, uiScale, insets: { ...insets }, safe, stage, worldScale, classes, orientation };
+}
+
+/**
+ * 게임 사각형(무대)과 월드 배율. 안전 사각형 안에서 정책대로 놓는다(N4).
+ *   fit    기준 비율 그대로 맞추고 남는 곳은 띠. 월드 배율 = 기준이 딱 들어가는 배율
+ *   expand 종횡비 상하한 안에서는 창을 다 쓰고, 넘으면 띠. 기준은 늘 무대 안에 들어간다(남는 쪽으로 세계를 더 보인다)
+ *   fill   상하한 안에서 무대를 채우고, 기준이 무대를 덮는다(넘치는 곳은 잘린다)
+ * 무대는 정수 픽셀로 반올림하고, 월드 배율은 반올림 전의 정확한 크기로 구한다 — 반올림한 값으로 구하면 fit 에서 두 축의 배율이 어긋난다.
+ */
+function computeStage(safe, scale) {
+  if (!scale) return { stage: { ...safe }, worldScale: 1 };
+  const [rw, rh] = scale.reference;
+  const [lo, hi] = scale.mode === "fit" ? [rw / rh, rw / rh] : scale.aspect;
+  const a = safe.w / safe.h;
+  const wE = a > hi ? safe.h * hi : safe.w;
+  const hE = a < lo ? safe.w / lo : safe.h;
+  const w = Math.round(wE), h = Math.round(hE);
+  const sx = wE / rw, sy = hE / rh;
+  return {
+    stage: { x: safe.x + Math.round((safe.w - w) / 2), y: safe.y + Math.round((safe.h - h) / 2), w, h },
+    worldScale: scale.mode === "fill" ? Math.max(sx, sy) : Math.min(sx, sy),
+  };
+}
+
+const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+/** UI 배율의 기준 짧은 변과 상한(D4). */
+const UI_SCALE_REF = 800;
+const UI_SCALE_MAX = 1.5;
+
+/** 안전영역을 env() 탐침으로 잰다. 문서가 아직 없으면 0. */
+function probeInsets(doc, win) {
+  if (!doc?.body) return { top: 0, right: 0, bottom: 0, left: 0 };
+  let el = doc.getElementById("gp-inset-probe");
+  if (!el) {
+    el = doc.createElement("div");
+    el.id = "gp-inset-probe";
+    el.setAttribute("aria-hidden", "true");
+    el.style.cssText = "position:fixed;left:0;top:0;width:0;height:0;visibility:hidden;pointer-events:none;"
+      + "padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)";
+    doc.body.append(el);
+  }
+  const s = win.getComputedStyle(el);
+  return { top: parseFloat(s.paddingTop) || 0, right: parseFloat(s.paddingRight) || 0, bottom: parseFloat(s.paddingBottom) || 0, left: parseFloat(s.paddingLeft) || 0 };
+}
+
+function createView({ win, doc, events, tokens, game, measureInsets = () => probeInsets(doc, win) }) {
+  const homeButton = game.kind !== "portal" && game.exit !== "self";
+  // 보이는 영역은 visualViewport 로 못박는다. 주소창이 접히는 도중에는 layout viewport 와 어긋나는데, 게임이 쓸 수 있는 것은 보이는 쪽이다.
+  const read = () => {
+    const vv = win.visualViewport;
+    return computeView({
+      viewport: { w: Math.round(vv ? vv.width : win.innerWidth), h: Math.round(vv ? vv.height : win.innerHeight) },
+      dpr: win.devicePixelRatio || 1,
+      insets: measureInsets(),
+      tokens,
+      homeButton,
+      scale: game.scale ?? null,
+    });
+  };
+
+  let current = read();
+  let pending = false;
+
+  const expose = (v) => {
+    const de = doc?.documentElement;
+    if (!de) return;
+    const set = (k, px) => de.style.setProperty(k, `${px}px`);
+    set("--gp-vw", v.viewport.w); set("--gp-vh", v.viewport.h);
+    de.style.setProperty("--gp-ui-scale", String(v.uiScale));
+    set("--gp-safe-top", v.safe.y); set("--gp-safe-left", v.safe.x);
+    set("--gp-safe-right", v.viewport.w - v.safe.x - v.safe.w); set("--gp-safe-bottom", v.viewport.h - v.safe.y - v.safe.h);
+    de.dataset.gpW = v.classes.width; de.dataset.gpH = v.classes.height; de.dataset.gpAspect = v.classes.aspect;
+    de.dataset.gpOrientation = v.orientation;
+  };
+
+  // ── 무대와 레터박스(D8) ── 게임은 무대 안에 그린다. 무대 밖은 레터박스가 칠하고, 띠를 누른 입력은 게임의 문서 리스너까지
+  // 가지 않는다(버블링을 멈춘다 — 캡처 단계의 플랫폼 리스너, 예컨대 전체 화면 제스처는 그대로 본다). 셸의 조각은 그 위층이다.
+  // 게임의 모듈 스크립트는 셸이 붙는 시점(DOMContentLoaded)보다 먼저 돈다. 그래서 무대는 게임이 처음 찾는 순간 붙인다.
+  let stageEl = null, letterboxEl = null;
+  const SWALLOW = ["click", "dblclick", "pointerdown", "pointerup", "pointermove", "mousedown", "mouseup", "touchstart", "touchend", "touchmove", "contextmenu", "wheel"];
+  const place = () => {
+    if (!stageEl) return;
+    const s = current.stage, st = stageEl.style;
+    st.left = `${s.x}px`; st.top = `${s.y}px`; st.width = `${s.w}px`; st.height = `${s.h}px`;
+  };
+  const mountStage = () => {
+    if (!doc) return null;
+    if (!stageEl) {
+      letterboxEl = doc.createElement("div");
+      letterboxEl.id = "gp-letterbox";
+      letterboxEl.setAttribute("aria-hidden", "true");
+      letterboxEl.style.cssText = "position:fixed;inset:0;z-index:0;background:var(--gp-letterbox,var(--gp-color-bg,#0b0d12))";
+      for (const t of SWALLOW) letterboxEl.addEventListener(t, (e) => e.stopPropagation(), { passive: true });
+      stageEl = doc.createElement("div");
+      stageEl.id = "gp-stage";
+      stageEl.style.cssText = "position:fixed;z-index:1;overflow:hidden";
+    }
+    if (!stageEl.isConnected && doc.body) doc.body.prepend(letterboxEl, stageEl);
+    place();
+    return stageEl;
+  };
+  if (doc) { if (doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", mountStage); else mountStage(); }
+
+  const flush = () => {
+    pending = false;
+    const next = read();
+    const changed = Object.keys(next).filter((k) => !same(next[k], current[k]));
+    if (!changed.length) return;
+    current = next;
+    expose(current);
+    place();
+    if (changed.includes("dpr")) armDpr();
+    events.emit("view", { view: current, changed });
+  };
+  const schedule = () => {
+    if (pending) return;
+    pending = true;
+    (win.requestAnimationFrame ?? ((f) => setTimeout(f, 16)))(flush);
+  };
+
+  // 밀도 변화는 resize 로 오지 않을 수 있다(창을 다른 모니터로 옮길 때). 지금 밀도에 대한 질의가 바뀌면 안다.
+  let dprQuery = null;
+  function armDpr() {
+    dprQuery?.removeEventListener?.("change", schedule);
+    dprQuery = win.matchMedia?.(`(resolution: ${current.dpr}dppx)`) ?? null;
+    dprQuery?.addEventListener?.("change", schedule);
+  }
+  armDpr();
+  // 질의의 change 를 내지 않는 환경이 있다(실측: 헤드리스 크롬은 밀도가 바뀌어도 change 도 resize 도 내지 않는다).
+  // 0.5초마다 숫자 하나를 읽어 놓친 것을 잡는다. 문서가 숨어 있으면 읽지 않는다. 검사기의 멈춘 시계에서는 돌지 않는다.
+  win.setInterval?.(() => { if (doc?.visibilityState !== "hidden" && (win.devicePixelRatio || 1) !== current.dpr) schedule(); }, 500);
+
+  win.addEventListener?.("resize", schedule, { passive: true });
+  win.visualViewport?.addEventListener?.("resize", schedule, { passive: true });
+  win.addEventListener?.("orientationchange", schedule, { passive: true });
+  if (typeof win.ResizeObserver === "function" && doc?.documentElement) new win.ResizeObserver(schedule).observe(doc.documentElement);
+  doc?.addEventListener?.("fullscreenchange", schedule);
+  // 탐침은 body 가 있어야 선다. 문서가 준비되면 한 번 다시 잰다(인셋이 그때 처음 보인다).
+  if (doc && doc.readyState === "loading") doc.addEventListener("DOMContentLoaded", () => { schedule(); });
+  expose(current);
+
+  return {
+    get viewport() { return current.viewport; },
+    get dpr() { return current.dpr; },
+    /** UI 배율 — 글자·간격·터치 크기에 곱한다. 월드(게임 장면)에는 곱하지 않는다. */
+    get uiScale() { return current.uiScale; },
+    /** 캔버스 HUD 의 크기(px) → 지금 배율을 곱한 값. */
+    ui: (px) => px * current.uiScale,
+    /** 캔버스 HUD 의 글자 크기(px) → 배율을 곱하고, 바닥(토큰 xs)보다 작으면 바닥. */
+    text: (px) => Math.max(tokens.font.size.xs, px * current.uiScale),
+    get insets() { return current.insets; },
+    get safe() { return current.safe; },
+    /** 게임 사각형 — 스케일 정책이 안전 사각형 안에 놓은 무대(CSS px). */
+    get stage() { return current.stage; },
+    /** 월드 배율 — 기준 해상도(scale.reference)의 1 단위가 무대에서 몇 CSS px 인가. 정책이 없으면 1. */
+    get worldScale() { return current.worldScale; },
+    /** 무대 요소(#gp-stage). 게임은 여기에 그린다. 처음 찾는 순간 문서에 붙는다. */
+    get stageElement() { return mountStage(); },
+    get classes() { return current.classes; },
+    get orientation() { return current.orientation; },
+    /** 지금의 전부. */
+    get current() { return current; },
+    /** 다음 프레임에 다시 잰다. 게임이 부를 일은 드물다 — 자기 레이아웃이 바뀐 뒤 셸이 부른다. */
+    schedule,
+    /** view 이벤트를 듣는다. 끊는 함수를 돌려준다. */
+    on: (fn) => events.on("view", fn),
+  };
+}
+
+
 // ── index ──
 // window.groovplay 를 조립한다. 이 파일이 번들의 끝이다.
 //
@@ -791,6 +1017,8 @@ function createGroovplay({ win, doc, tokens, tokensCss, game, storagePrefix, bac
   const audio = createAudio({ win, doc, events, settings });
   const capture = createCapture({ events });
   const shell = createShell({ win, doc, tokens, tokensCss, game, events, lifecycle, screens, settings, storage, host, capture });
+  // 화면 모델은 계약 v2 의 것이다. v1 게임에서는 만들지 않는다 — v1 은 동결이고, 탐침 요소 하나라도 v1 페이지에 더하지 않는다.
+  const view = game.platform >= 2 ? createView({ win, doc, events, tokens, game }) : null;
 
   return Object.freeze({
     version: 1,
@@ -805,6 +1033,7 @@ function createGroovplay({ win, doc, tokens, tokensCss, game, storagePrefix, bac
     lifecycle,
     audio,
     host,
+    view,
     capture,
     shell,
     rng: () => Math.random(),

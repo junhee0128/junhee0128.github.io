@@ -295,18 +295,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "2a52133d",
-        "date": "2026-09-18T22:31:44+09:00",
-        "subject": "mission-today: 하강 중력 1.8 → 2.6배, UI·화면 전수조사"
+        "hash": "149d077f",
+        "date": "2026-09-19T00:07:06+09:00",
+        "subject": "mission-today: 골든 다시 뜸 — 한 배율 체계·셸 단추 없음·설정 줄·타이틀·결과 배치·달리기 프레임·바닥"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2177
+          "ms": 2526
         },
         "test": {
           "ok": true,
-          "ms": 21162,
+          "ms": 25507,
           "tests": {
             "passed": 145,
             "failed": 0,
@@ -316,8 +316,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3304,
-        "at": "2026-09-18T13:32:13.383Z"
+        "ms": 4157,
+        "at": "2026-09-18T15:07:55.699Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -327,7 +327,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T13:33:13.719Z"
+        "at": "2026-09-18T15:09:00.675Z"
       }
     },
     {
