@@ -97,18 +97,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "dc8476a4",
-        "date": "2026-09-20T23:08:56+09:00",
-        "subject": "골든: v2 기준으로 다시 뜬다 — 대표 셀 7개, 실제 밀도, 게이트 두 장"
+        "hash": "ed1f161b",
+        "date": "2026-09-21T02:15:15+09:00",
+        "subject": "README: 216 화면 검사가 무엇을 재는지 적는다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 6057
+          "ms": 4846
         },
         "test": {
           "ok": true,
-          "ms": 9913,
+          "ms": 8192,
           "tests": {
             "passed": 402,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 43693
+          "ms": 40610
         }
       },
       "build": {
         "ok": true,
-        "ms": 5565,
-        "at": "2026-09-20T14:10:17.557Z"
+        "ms": 5271,
+        "at": "2026-09-20T17:30:31.990Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-20T14:13:48.519Z"
+        "at": "2026-09-20T17:35:07.524Z"
       }
     },
     {
