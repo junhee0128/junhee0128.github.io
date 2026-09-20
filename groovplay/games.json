@@ -294,18 +294,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "ca3fd8d1",
-        "date": "2026-09-21T03:30:16+09:00",
-        "subject": "mission-today: 골든 다시 뜸 — 빠진 틱을 채운 뒤"
+        "hash": "c64cd174",
+        "date": "2026-09-21T03:55:19+09:00",
+        "subject": "mission-today: 골든 다시 뜸 — 글자 크기를 정수로 맞춘 뒤"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2295
+          "ms": 2392
         },
         "test": {
           "ok": true,
-          "ms": 22983,
+          "ms": 25074,
           "tests": {
             "passed": 152,
             "failed": 0,
@@ -315,8 +315,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3434,
-        "at": "2026-09-20T18:38:37.821Z"
+        "ms": 3512,
+        "at": "2026-09-20T18:58:49.364Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -326,7 +326,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-20T18:40:00.567Z"
+        "at": "2026-09-20T19:00:35.673Z"
       }
     },
     {
