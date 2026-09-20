@@ -703,29 +703,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "dd2dc0be",
-        "date": "2026-09-18T21:48:32+09:00",
-        "subject": "골든 — 설정 패널에 나가기 줄이 생겼다"
+        "hash": "30eb6750",
+        "date": "2026-09-21T00:05:33+09:00",
+        "subject": "test(windseam): capture v0.1.0 version label in reviewed title baselines"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 1315
+          "ms": 4045
         },
         "test": {
           "ok": true,
-          "ms": 693,
+          "ms": 2235,
           "tests": {
-            "passed": 33,
+            "passed": 83,
             "failed": 0,
-            "total": 33
+            "total": 83
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 2558,
-        "at": "2026-09-18T12:59:11.146Z"
+        "ms": 7854,
+        "at": "2026-09-20T15:05:51.585Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",
@@ -735,8 +735,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:47:20.984Z",
-        "cached": true
+        "at": "2026-09-20T15:06:53.075Z"
       }
     }
   ],
