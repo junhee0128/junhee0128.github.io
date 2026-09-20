@@ -524,40 +524,39 @@
         "todo": 2
       },
       "commit": {
-        "hash": "b9212ad4",
-        "date": "2026-09-17T22:46:29+09:00",
-        "subject": "royal-chef: v10 체크리스트 — 검증·배포 완료 기록"
+        "hash": "9d1a271c",
+        "date": "2026-09-20T23:20:13+09:00",
+        "subject": "royal-chef: 계약 v2 골든 — 7셀 × 6화면 42장"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2677
+          "ms": 4302
         },
         "test": {
           "ok": true,
-          "ms": 5556,
+          "ms": 7227,
           "tests": {
-            "passed": 284,
+            "passed": 293,
             "failed": 0,
-            "total": 284
+            "total": 293
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 170409,
-        "at": "2026-09-18T12:54:26.307Z"
+        "ms": 163359,
+        "at": "2026-09-20T14:39:36.365Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
-      "platform": 1,
+      "platform": 2,
       "conformance": {
-        "version": 1,
+        "version": 2,
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:41:54.079Z",
-        "cached": true
+        "at": "2026-09-20T14:49:02.223Z"
       }
     },
     {
