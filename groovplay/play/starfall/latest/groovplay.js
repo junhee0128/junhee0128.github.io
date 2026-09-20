@@ -514,10 +514,13 @@ function createShell({ win, doc, tokens, tokensCss, game, events, lifecycle, scr
   const T = tokens;
   const accent = /^#[0-9a-f]{6}$/i.test(game.accent ?? "") ? game.accent : T.color.accentFallback;
   // getter 는 여기서 정의한다. Object.assign 은 getter 를 값으로 복사해 버려, 나중에 넣으면 생성 시점의 값으로 굳는다.
+  let viewRef = null;
   let root, home, loading, bar, loadingTitle, panelScrim, panelBody, toastEl, toastTimer, fsSwitch, rotateEl, rotateTitle, rotateNote;
   const api = {
     ready: false,
     get settingsOpen() { return api.ready && !!panelScrim && !panelScrim.hidden; },
+    /** 화면 모델을 잇는다(v2). 그 뒤로 안내는 view 의 게이트를 따른다. 문서가 없는 곳(단위 시험)에서도 부를 수 있다. */
+    attachView(v) { viewRef = v; events.on("view", syncRotate); syncRotate(); },
   };
   if (!doc) return api;
 
@@ -585,8 +588,8 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
 
   const h = (tag, cls, text) => { const n = doc.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
   const L = { // 셸의 글은 두 언어. 게임 텍스트는 게임 것이다.
-    ko: { home: "포털로", loading: "불러오는 중", settings: "설정", sound: "효과음", music: "음악", motion: "모션 줄이기", motionSub: "흔들림·전환 효과를 줄인다", haptics: "진동", fullscreen: "전체 화면", fullscreenSub: "주소창을 감추고 화면을 다 쓴다", fullscreenGames: "게임을 전체 화면으로", fullscreenGamesSub: "게임에 들어가 처음 누를 때 주소창을 감춘다", language: "언어", close: "닫기", exit: "포털로 나가기", exitSub: "게임을 그만두고 목록으로 돌아간다", rotate: "화면을 돌려 주세요", rotateLand: "이 게임은 가로로 즐깁니다", rotatePort: "이 게임은 세로로 즐깁니다", noSave: "이 브라우저에서는 진행이 저장되지 않습니다", install: "홈 화면에 추가하면 전체 화면으로 즐길 수 있어요", installHow: "공유 → 홈 화면에 추가", dismiss: "알겠어요" },
-    en: { home: "Portal", loading: "Loading", settings: "Settings", sound: "Sound", music: "Music", motion: "Reduce motion", motionSub: "Fewer shakes and transitions", haptics: "Haptics", fullscreen: "Fullscreen", fullscreenSub: "Hides the address bar and uses the whole screen", fullscreenGames: "Open games full screen", fullscreenGamesSub: "Hides the address bar at your first tap in a game", language: "Language", close: "Close", exit: "Leave for the portal", exitSub: "Quit the game and go back to the list", rotate: "Please rotate your screen", rotateLand: "This game is played in landscape", rotatePort: "This game is played in portrait", noSave: "Progress will not be saved in this browser", install: "Add to Home Screen to play full screen", installHow: "Share → Add to Home Screen", dismiss: "Got it" },
+    ko: { home: "포털로", loading: "불러오는 중", settings: "설정", sound: "효과음", music: "음악", motion: "모션 줄이기", motionSub: "흔들림·전환 효과를 줄인다", haptics: "진동", fullscreen: "전체 화면", fullscreenSub: "주소창을 감추고 화면을 다 쓴다", fullscreenGames: "게임을 전체 화면으로", fullscreenGamesSub: "게임에 들어가 처음 누를 때 주소창을 감춘다", language: "언어", close: "닫기", exit: "포털로 나가기", exitSub: "게임을 그만두고 목록으로 돌아간다", rotate: "화면을 돌려 주세요", rotateLand: "이 게임은 가로로 즐깁니다", rotatePort: "이 게임은 세로로 즐깁니다", enlarge: "창을 넓혀 주세요", needAtLeast: "이 게임은 {w}×{h} 이상에서 즐깁니다", noSave: "이 브라우저에서는 진행이 저장되지 않습니다", install: "홈 화면에 추가하면 전체 화면으로 즐길 수 있어요", installHow: "공유 → 홈 화면에 추가", dismiss: "알겠어요" },
+    en: { home: "Portal", loading: "Loading", settings: "Settings", sound: "Sound", music: "Music", motion: "Reduce motion", motionSub: "Fewer shakes and transitions", haptics: "Haptics", fullscreen: "Fullscreen", fullscreenSub: "Hides the address bar and uses the whole screen", fullscreenGames: "Open games full screen", fullscreenGamesSub: "Hides the address bar at your first tap in a game", language: "Language", close: "Close", exit: "Leave for the portal", exitSub: "Quit the game and go back to the list", rotate: "Please rotate your screen", rotateLand: "This game is played in landscape", rotatePort: "This game is played in portrait", enlarge: "Please make the window larger", needAtLeast: "This game needs at least {w}×{h}", noSave: "Progress will not be saved in this browser", install: "Add to Home Screen to play full screen", installHow: "Share → Add to Home Screen", dismiss: "Got it" },
   };
   const t = (k) => (L[settings.get("language")] ?? L.ko)[k];
 
@@ -712,10 +715,28 @@ html[data-gp-motion="reduced"] #gp-shell *, html[data-gp-motion="reduced"] #gp-s
    */
   function syncRotate() {
     if (!rotateEl) return;
-    const need = host.rotateNeeded;
+    // v2 는 화면 모델의 게이트(하한·방향·최소 크기)를, v1 은 예전의 방향 판정을 따른다. 안내 요소는 하나다.
+    const reason = viewRef ? viewRef.gate : host.rotateNeeded ? "rotate" : null;
+    if (viewRef) {
+      rotateEl.dataset.gpGate = reason ?? "";
+      if (reason) gateText(reason);
+    }
+    const need = !!reason;
     if (need === !rotateEl.hidden) return;
     rotateEl.hidden = !need;
     if (lifecycle.inGameplay) { if (need) lifecycle.pause(); else lifecycle.resume(); }
+  }
+
+  /** 이유별 문구. 방향이면 돌려 달라고, 크기면 넓혀 달라고 — 얼마나 넓혀야 하는지 숫자로. */
+  function gateText(reason) {
+    if (reason === "rotate") {
+      rotateTitle.textContent = t("rotate");
+      rotateNote.textContent = game.orientation === "portrait" ? t("rotatePort") : t("rotateLand");
+      return;
+    }
+    const [w, h] = reason === "min" ? game.minViewport : tokens.gate.floor;
+    rotateTitle.textContent = t("enlarge");
+    rotateNote.textContent = t("needAtLeast").replace("{w}", w).replace("{h}", h);
   }
 
   function showInstallHint() {
@@ -814,7 +835,7 @@ function classify(w, h, tokens) {
  * 세로·정사각에서는 위 띠, 가로에서는 왼쪽 띠(높이가 귀한 가로 폰에서 위를 버리지 않는다).
  * 버튼이 잠시 숨어도(플레이 중) 자리는 그대로 뺀다. 플레이를 시작할 때 레이아웃이 뛰면 안 된다.
  */
-function computeView({ viewport, dpr, insets, tokens, homeButton = false, scale = null }) {
+function computeView({ viewport, dpr, insets, tokens, homeButton = false, scale = null, renderLimit = null, orientation: want = null, minViewport = null }) {
   const { w, h } = viewport;
   const classes = classify(w, h, tokens);
   const orientation = classes.aspect === "square" ? "square" : w > h ? "landscape" : "portrait";
@@ -828,7 +849,17 @@ function computeView({ viewport, dpr, insets, tokens, homeButton = false, scale 
   const uiScale = Math.min(UI_SCALE_MAX, Math.max(1, Math.min(w, h) / UI_SCALE_REF));
   const safe = { x: left, y: top, w: Math.max(0, w - left - right), h: Math.max(0, h - top - bottom) };
   const { stage, worldScale } = computeStage(safe, scale);
-  return { viewport: { w, h }, dpr, uiScale, insets: { ...insets }, safe, stage, worldScale, classes, orientation };
+  // 렌더 배율(D5) — 밀도만으로 자르면 4K 200% 창이 830만 픽셀이 된다. 무대 × 배율² 이 상한을 넘지 않게 한 번 더 자른다.
+  // 게임이 스스로 낮춘 값(D6)은 하한 minScale 아래로 내려가지 않고, 플랫폼 값 위로는 못 올린다.
+  const R = tokens.render;
+  let renderScale = Math.min(dpr, R.dprMax, Math.sqrt(R.pixelsMax / Math.max(1, stage.w * stage.h)));
+  if (renderLimit !== null) renderScale = Math.min(renderScale, Math.max(R.minScale, renderLimit));
+  // 렌더러는 백버퍼를 round(크기 × 배율)로 잡는다(PixiJS 가 그렇다). 두 변이 함께 올라가면 곱이 상한을 넘는다 —
+  // 플랫폼이 준 값을 그대로 쓴 게임이 플랫폼 검사에 걸리지 않게, 반올림해도 상한 안인 값으로 조금 내린다.
+  const fits = (s) => Math.round(stage.w * s) * Math.round(stage.h * s) <= R.pixelsMax;
+  for (let i = 0; i < 16 && !fits(renderScale); i++) renderScale *= 0.9995;
+  const gate = computeGate({ w, h }, { orientation: want, minViewport }, tokens);
+  return { viewport: { w, h }, dpr, uiScale, renderScale, insets: { ...insets }, safe, stage, worldScale, classes, orientation, gate };
 }
 
 /**
@@ -851,6 +882,23 @@ function computeStage(safe, scale) {
     stage: { x: safe.x + Math.round((safe.w - w) / 2), y: safe.y + Math.round((safe.h - h) / 2), w, h },
     worldScale: scale.mode === "fill" ? Math.max(sx, sy) : Math.min(sx, sy),
   };
+}
+
+/**
+ * 뷰 게이트(N7) — 이 창에서 게임이 설 수 없으면 그 이유 하나, 아니면 null.
+ *   floor   플랫폼 하한(D3) 아래 — 모든 게임
+ *   rotate  선언한 방향과 어긋났고 돌릴 수 있는 화면(짧은 변 상한 이하)
+ *   min     게임이 선언한 최소 크기보다 작다
+ * 우선순위는 하한 > 방향 > 최소 크기다. 돌리면 풀리는 것을 "넓혀 주세요" 라고 하지 않는다 — 돌린 뒤에도 작으면 그때 말한다.
+ */
+function computeGate({ w, h }, game, tokens) {
+  const G = tokens.gate;
+  if (w < G.floor[0] || h < G.floor[1]) return "floor";
+  const want = game.orientation === "landscape" || game.orientation === "portrait" ? game.orientation : null;
+  if (want && (w < h ? "portrait" : "landscape") !== want && Math.min(w, h) <= G.rotateMaxShortSide) return "rotate";
+  const m = game.minViewport;
+  if (m && (w < m[0] || h < m[1])) return "min";
+  return null;
 }
 
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
@@ -876,6 +924,7 @@ function probeInsets(doc, win) {
 
 function createView({ win, doc, events, tokens, game, measureInsets = () => probeInsets(doc, win) }) {
   const homeButton = game.kind !== "portal" && game.exit !== "self";
+  let renderLimit = null;
   // 보이는 영역은 visualViewport 로 못박는다. 주소창이 접히는 도중에는 layout viewport 와 어긋나는데, 게임이 쓸 수 있는 것은 보이는 쪽이다.
   const read = () => {
     const vv = win.visualViewport;
@@ -886,6 +935,9 @@ function createView({ win, doc, events, tokens, game, measureInsets = () => prob
       tokens,
       homeButton,
       scale: game.scale ?? null,
+      renderLimit,
+      orientation: game.orientation ?? null,
+      minViewport: game.minViewport ?? null,
     });
   };
 
@@ -924,7 +976,8 @@ function createView({ win, doc, events, tokens, game, measureInsets = () => prob
       for (const t of SWALLOW) letterboxEl.addEventListener(t, (e) => e.stopPropagation(), { passive: true });
       stageEl = doc.createElement("div");
       stageEl.id = "gp-stage";
-      stageEl.style.cssText = "position:fixed;z-index:1;overflow:hidden";
+      // 무대는 CSS 컨테이너다 — 게임의 CSS 는 뷰포트 단위(vh) 대신 무대 기준 단위(cqw·cqh)와 @container gp-stage 를 쓴다.
+      stageEl.style.cssText = "position:fixed;z-index:1;overflow:hidden;container-type:size;container-name:gp-stage";
     }
     if (!stageEl.isConnected && doc.body) doc.body.prepend(letterboxEl, stageEl);
     place();
@@ -985,16 +1038,67 @@ function createView({ win, doc, events, tokens, game, measureInsets = () => prob
     get stage() { return current.stage; },
     /** 월드 배율 — 기준 해상도(scale.reference)의 1 단위가 무대에서 몇 CSS px 인가. 정책이 없으면 1. */
     get worldScale() { return current.worldScale; },
+    /** 렌더 배율 — 캔버스 백버퍼 = 무대 × 이 값. 밀도 상한과 픽셀 총량 상한을 둘 다 지킨다. */
+    get renderScale() { return current.renderScale; },
+    /**
+     * 무대를 그릴 캔버스의 백버퍼 크기(물리 픽셀). 게임은 캔버스를 이 크기로 만든다.
+     * 내림이다 — 반올림하면 두 변이 함께 올라가 곱이 상한을 넘는다(실측: 4K 200% 에서 3036×1708 = 518만 5488).
+     */
+    get backbuffer() { return { w: Math.floor(current.stage.w * current.renderScale), h: Math.floor(current.stage.h * current.renderScale) }; },
+    /** 게임이 렌더 배율을 낮춘다(프레임이 무거울 때). null 이면 푼다. 하한이 있고 플랫폼 값 위로는 못 올린다. */
+    limitRenderScale: (x) => { renderLimit = x === null || x === undefined ? null : Number(x); schedule(); },
     /** 무대 요소(#gp-stage). 게임은 여기에 그린다. 처음 찾는 순간 문서에 붙는다. */
     get stageElement() { return mountStage(); },
     get classes() { return current.classes; },
     get orientation() { return current.orientation; },
+    /** 게이트 — 이 창에서 게임이 설 수 없으면 이유("floor" | "rotate" | "min"), 아니면 null. 셸이 안내를 덮고 게임을 멈춘다. */
+    get gate() { return current.gate; },
     /** 지금의 전부. */
     get current() { return current; },
     /** 다음 프레임에 다시 잰다. 게임이 부를 일은 드물다 — 자기 레이아웃이 바뀐 뒤 셸이 부른다. */
     schedule,
     /** view 이벤트를 듣는다. 끊는 함수를 돌려준다. */
     on: (fn) => events.on("view", fn),
+  };
+}
+
+
+// ── input ──
+// 입력 모델 — 계약 v2. 기기가 아니라 능력으로 보고, 마지막에 쓴 입력을 따라간다.
+//
+// "PC 라서 마우스" 는 틀린다. 터치 노트북, 키보드를 붙인 태블릿, 컨트롤러를 꽂은 PC 가 있다. 능력은 미디어 질의
+// (pointer·hover)로 보고, 키보드·게임패드는 만난 뒤에야 안다. 마지막 입력이 바뀌면 이벤트를 낸다 — 게임은 조작 안내
+// (버튼 모양, 단축키 표시)를 바꾼다. 콘솔 게임이 패드와 키보드 사이에서 하는 그대로다.
+
+const MODIFIERS = new Set(["Shift", "Control", "Alt", "Meta", "CapsLock", "Fn"]);
+
+function createInput({ win, events }) {
+  const mq = (q) => !!win.matchMedia?.(q)?.matches;
+  const caps = {
+    pointer: mq("(pointer: fine)") ? "fine" : mq("(pointer: coarse)") ? "coarse" : "none",
+    hover: mq("(hover: hover)"),
+    keyboard: false,
+    gamepad: false,
+  };
+  let last = caps.pointer === "coarse" ? "touch" : caps.pointer === "fine" ? "mouse" : null;
+  const use = (kind) => {
+    if (kind === last) return;
+    const prev = last;
+    last = kind;
+    events.emit("input", { last, prev });
+  };
+  win.addEventListener?.("pointerdown", (e) => use(e.pointerType === "touch" ? "touch" : "mouse"), { capture: true, passive: true });
+  // 수식 키만 누른 것은 입력 전환이 아니다 — 트랙패드 확대(Ctrl)나 단축키 준비가 안내를 뒤집으면 안 된다.
+  win.addEventListener?.("keydown", (e) => { caps.keyboard = true; if (!MODIFIERS.has(e.key)) use("keyboard"); }, { capture: true, passive: true });
+  win.addEventListener?.("gamepadconnected", () => { caps.gamepad = true; use("gamepad"); });
+
+  return {
+    /** 능력. keyboard·gamepad 는 만난 뒤에 참이 된다. */
+    get capabilities() { return { ...caps }; },
+    /** 마지막에 쓴 입력 — "touch" | "mouse" | "keyboard" | "gamepad". */
+    get last() { return last; },
+    /** 마지막 입력이 바뀌면. 끊는 함수를 돌려준다. */
+    on: (fn) => events.on("input", fn),
   };
 }
 
@@ -1019,6 +1123,8 @@ function createGroovplay({ win, doc, tokens, tokensCss, game, storagePrefix, bac
   const shell = createShell({ win, doc, tokens, tokensCss, game, events, lifecycle, screens, settings, storage, host, capture });
   // 화면 모델은 계약 v2 의 것이다. v1 게임에서는 만들지 않는다 — v1 은 동결이고, 탐침 요소 하나라도 v1 페이지에 더하지 않는다.
   const view = game.platform >= 2 ? createView({ win, doc, events, tokens, game }) : null;
+  const input = game.platform >= 2 ? createInput({ win, events }) : null;
+  if (view) shell.attachView(view);
 
   return Object.freeze({
     version: 1,
@@ -1034,6 +1140,7 @@ function createGroovplay({ win, doc, tokens, tokensCss, game, storagePrefix, bac
     audio,
     host,
     view,
+    input,
     capture,
     shell,
     rng: () => Math.random(),

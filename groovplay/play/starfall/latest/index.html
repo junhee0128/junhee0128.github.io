@@ -9,16 +9,16 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="별의 서약">
     <link rel="apple-touch-icon" href="./icon-192.png">
-    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=b2944ce967e0").catch(function(){})});</script>
+    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=85af62702eb0").catch(function(){})});</script>
     <!-- /groovplay:pwa -->
-    <script>window.__GP_GAME__={"id":"starfall","title":"별의 서약","accent":"#f2b85a","kind":"game","platform":1,"exit":"platform","orientation":"any","scale":null,"home":"../../../"}</script>
-    <script src="./groovplay.js?v=b2944ce967e0"></script>
+    <script>window.__GP_GAME__={"id":"starfall","title":"별의 서약","accent":"#f2b85a","kind":"game","platform":1,"exit":"platform","orientation":"any","scale":null,"input":["touch","mouse"],"minViewport":null,"home":"../../../"}</script>
+    <script src="./groovplay.js?v=85af62702eb0"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
     <meta charset="utf-8" />
     <!-- 뷰포트·매니페스트·아이콘·런타임은 플러그인이 넣는다. -->
     <title>별의 서약</title>
-    <script type="module" crossorigin src="./assets/index-By2iehyR.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-Bgw5o6Xq.css">
+    <script type="module" crossorigin src="./assets/index-DiToO0Ih.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-nZI3PsTw.css">
   </head>
   <body>
     <div id="stage"></div>
@@ -27,23 +27,37 @@
     <section class="ui title" data-screen="title" hidden>
       <div class="title-card">
         <p class="kicker" id="title-kicker">STARFALL COVENANT</p>
-        <h1 id="title-h">별의 서약</h1>
-        <p class="lead" id="title-sub">떨어진 별의 잿빛 땅에서</p>
+        <h1 id="title-h"></h1>
+        <p class="lead" id="title-sub"></p>
         <div class="col">
-          <button id="btn-continue" class="primary" hidden>이어하기</button>
-          <button id="btn-new">새 게임</button>
+          <button id="btn-continue" class="primary" hidden></button>
+          <button id="btn-new"></button>
           <div class="row">
-            <button id="btn-settings">설정</button>
-            <button id="btn-lang">English</button>
+            <button id="btn-settings"></button>
+            <button id="btn-lang"></button>
           </div>
         </div>
         <p class="fine" id="title-save"></p>
+        <div class="notice" id="title-broken" hidden>
+          <p id="title-broken-msg"></p>
+          <button id="btn-save-retry"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 오류 복구 -->
+    <section class="ui modal" data-screen="error" hidden>
+      <div class="panel" role="alertdialog" aria-modal="true" aria-labelledby="error-h">
+        <h2 id="error-h"></h2>
+        <p class="fine" id="error-what"></p>
+        <p class="fine" id="error-save"></p>
+        <div class="row"><button id="btn-error-home" class="primary"></button></div>
       </div>
     </section>
 
     <!-- 새 게임 확인 -->
     <section class="ui modal" data-screen="confirm" hidden>
-      <div class="panel">
+      <div class="panel" role="dialog" aria-modal="true" aria-labelledby="confirm-text">
         <p class="lead" id="confirm-text"></p>
         <div class="row"><button id="btn-confirm-yes" class="primary"></button><button id="btn-confirm-no"></button></div>
       </div>
@@ -53,40 +67,40 @@
     <section class="hud" data-screen="play" hidden>
       <div class="left-col">
         <div class="party" id="party"></div>
-        <div class="healer" id="healer" hidden><button class="heal-btn" data-heal id="act-heal"><span class="key" id="key-heal"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3h4v3h-4z"/><path d="M8 6h8l-1 13a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M10 13h4M12 11v4"/></svg></span><span class="hn" id="heal-n"></span></button><span class="nm" id="nm-heal"></span></div>
-        <div class="rider" id="rider" hidden><button class="heal-btn ride-btn" id="act-ride"><span class="key" id="key-ride"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16c2-5 6-7 10-7 3 0 5 1 6 3"/><path d="M8 9V6l3 1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span></button><span class="nm" id="nm-ride"></span></div>
+        <div class="healer" id="healer" hidden><button class="heal-btn" data-heal id="act-heal" aria-labelledby="nm-heal"><span class="key" id="key-heal"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3h4v3h-4z"/><path d="M8 6h8l-1 13a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2z"/><path d="M10 13h4M12 11v4"/></svg></span><span class="hn" id="heal-n"></span></button><span class="nm" id="nm-heal"></span></div>
+        <div class="rider" id="rider" hidden><button class="heal-btn ride-btn" id="act-ride" aria-labelledby="nm-ride"><span class="key" id="key-ride"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16c2-5 6-7 10-7 3 0 5 1 6 3"/><path d="M8 9V6l3 1"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg></span></button><span class="nm" id="nm-ride"></span></div>
       </div>
       <div class="right-col">
-        <div class="tracker" id="tracker"><span class="tracker-q" id="tracker-q"></span><span class="tracker-o" id="tracker-o"></span></div>
-        <div class="minimap" id="minimap" hidden>
+        <div class="tracker" id="tracker" role="status"><span class="tracker-q" id="tracker-q"></span><span class="tracker-o" id="tracker-o"></span></div>
+        <div class="minimap" id="minimap" role="button" tabindex="0" hidden>
           <div class="mm-rot" id="mm-rot"><div class="mm-img" id="mm-img"></div><div class="mm-dots" id="mm-dots"></div></div>
           <span class="mm-me" aria-hidden="true"></span>
           <span class="mm-n" id="mm-n">N</span>
         </div>
       </div>
-      <button class="icon-btn menu-btn" id="btn-menu" aria-label="메뉴"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <button class="icon-btn menu-btn" id="btn-menu"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       <div class="zone-toast" id="zone-toast" data-gp-decorative hidden></div>
-      <div class="toasts" id="toasts"></div>
+      <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
       <div class="numbers" id="numbers" data-gp-decorative></div>
-      <div class="objective" id="objective" hidden><span class="obj-pin" id="obj-pin"></span><span class="obj-text" id="obj-text"></span></div>
+      <div class="objective" id="objective" role="status" hidden><span class="obj-pin" id="obj-pin"></span><span class="obj-text" id="obj-text"></span></div>
       <div class="nametags" id="nametags"></div>
       <div class="foetags" id="foetags"></div>
       <div class="compass" id="compass" hidden><div class="comp-strip" id="comp-strip"></div></div>
       <div class="dodge-cue" id="dodge-cue" hidden></div>
       <div class="cluster" id="cluster" hidden><span class="cl-n" id="cluster-n"></span><span class="cl-bar"><i id="cluster-fill"></i></span></div>
-      <div class="train" id="train" hidden><span class="tr-title" id="train-title"></span><span class="tr-step" id="train-step"></span><button class="tr-skip" id="train-skip"></button></div>
-      <div class="boss-bar" id="boss-bar" hidden><span class="boss-name" id="boss-name"></span><div class="bar"><i id="boss-fill"></i></div></div>
+      <div class="train" id="train" role="status" hidden><span class="tr-title" id="train-title"></span><span class="tr-step" id="train-step"></span><button class="tr-skip" id="train-skip"></button></div>
+      <div class="boss-bar" id="boss-bar" hidden><span class="boss-name" id="boss-name"></span><div class="bar" id="boss-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><i id="boss-fill"></i></div></div>
       <div class="bottom">
         <button class="prompt" id="prompt" hidden></button>
-        <div class="burst" id="burst"><div class="bar"><i id="burst-fill"></i></div><span id="burst-label">버스트</span></div>
+        <div class="burst" id="burst"><div class="bar" id="burst-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="burst-fill"></i></div><span id="burst-label"></span></div>
       </div>
-      <div class="stick" id="stick" hidden><div class="stick-base"></div><div class="stick-knob" id="stick-knob"></div></div>
+      <div class="stick" id="stick" aria-hidden="true" hidden><div class="stick-base"></div><div class="stick-knob" id="stick-knob"></div></div>
       <div class="actions" id="actions">
-        <span class="act-slot" id="slot-attack"><button class="act big" data-act="attack" id="act-attack" aria-label="공격"><span class="key" id="key-attack"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l9-9M13 11l5-5 2 2-5 5M13 11l3 3M6 18l-2 2M8 16l-4-4"/></svg></span></button><span class="nm" id="nm-attack"></span></span>
-        <span class="act-slot" id="slot-dodge"><button class="act" data-act="dodge" id="act-dodge" aria-label="회피"><span class="key" id="key-dodge"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h9M10 8l4 4-4 4"/><path d="M16 6c3 3 3 9 0 12" stroke-dasharray="2 2"/></svg></span></button><span class="nm" id="nm-dodge"></span></span>
-        <span class="act-slot" id="slot-skill1"><button class="act" data-act="skill1" id="act-skill1"><span class="key" id="key-skill1"></span><span class="glyph" id="skill1-glyph"></span><i class="cd" id="skill1-cd"></i></button><span class="nm" id="nm-skill1"></span></span>
-        <span class="act-slot" id="slot-skill2"><button class="act" data-act="skill2" id="act-skill2"><span class="key" id="key-skill2"></span><span class="glyph" id="skill2-glyph"></span><i class="cd" id="skill2-cd"></i></button><span class="nm" id="nm-skill2"></span></span>
-        <span class="act-slot" id="slot-burst"><button class="act burst-btn" data-act="burst" id="act-burst" aria-label="버스트"><span class="key" id="key-burst"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 6 6.4.6-4.8 4.2 1.5 6.2L12 16.7 6.3 20l1.5-6.2L3 9.6 9.4 9z"/></svg></span></button><span class="nm" id="nm-burst"></span></span>
+        <span class="act-slot" id="slot-attack"><button class="act big" data-act="attack" id="act-attack"><span class="key" id="key-attack"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l9-9M13 11l5-5 2 2-5 5M13 11l3 3M6 18l-2 2M8 16l-4-4"/></svg></span></button><span class="nm" id="nm-attack"></span></span>
+        <span class="act-slot" id="slot-dodge"><button class="act" data-act="dodge" id="act-dodge"><span class="key" id="key-dodge"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h9M10 8l4 4-4 4"/><path d="M16 6c3 3 3 9 0 12" stroke-dasharray="2 2"/></svg></span></button><span class="nm" id="nm-dodge"></span></span>
+        <span class="act-slot" id="slot-skill1"><button class="act" data-act="skill1" id="act-skill1" aria-labelledby="nm-skill1"><span class="key" id="key-skill1"></span><span class="glyph" id="skill1-glyph"></span><i class="cd" id="skill1-cd"></i></button><span class="nm" id="nm-skill1"></span></span>
+        <span class="act-slot" id="slot-skill2"><button class="act" data-act="skill2" id="act-skill2" aria-labelledby="nm-skill2"><span class="key" id="key-skill2"></span><span class="glyph" id="skill2-glyph"></span><i class="cd" id="skill2-cd"></i></button><span class="nm" id="nm-skill2"></span></span>
+        <span class="act-slot" id="slot-burst"><button class="act burst-btn" data-act="burst" id="act-burst"><span class="key" id="key-burst"></span><span class="glyph"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 6 6.4.6-4.8 4.2 1.5 6.2L12 16.7 6.3 20l1.5-6.2L3 9.6 9.4 9z"/></svg></span></button><span class="nm" id="nm-burst"></span></span>
       </div>
       <p class="hint" id="hint"></p>
     </section>
@@ -109,20 +123,20 @@
           <p class="dlg-text" id="dlg-text"></p>
           <div class="dlg-choices" id="dlg-choices"></div>
         </div>
-        <button class="dlg-next" id="dlg-next" aria-label="다음"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5l8 7-8 7z"/></svg></button>
+        <button class="dlg-next" id="dlg-next"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5l8 7-8 7z"/></svg></button>
       </div>
     </section>
 
     <!-- 일시정지 -->
     <section class="ui modal" data-screen="pause" hidden>
       <div class="panel" role="dialog" aria-modal="true" aria-labelledby="pause-h">
-        <h1 id="pause-h">일시정지</h1>
+        <h1 id="pause-h"></h1>
         <div class="col">
-          <button id="btn-resume" class="primary" data-hot="Esc">계속</button>
-          <button id="btn-save" data-hot="S">저장</button>
-          <button id="btn-pause-settings" data-hot="O">설정</button>
-          <button id="btn-keys-open" data-hot="H">단축키</button>
-          <button id="btn-quit" data-hot="T">타이틀로</button>
+          <button id="btn-resume" class="primary" data-hot="Esc"></button>
+          <button id="btn-save" data-hot="S"></button>
+          <button id="btn-pause-settings" data-hot="O"></button>
+          <button id="btn-keys-open" data-hot="H"></button>
+          <button id="btn-quit" data-hot="T"></button>
         </div>
         <p class="rule" id="pause-rule"></p>
       </div>
@@ -130,26 +144,26 @@
 
     <!-- 메뉴 -->
     <section class="ui menu" data-screen="menu" hidden>
-      <div class="menu-frame">
-        <nav class="tabs" id="tabs">
-          <button data-tab="party" class="on"></button><button data-tab="equip"></button><button data-tab="bag"></button><button data-tab="quests"></button><button data-tab="map"></button><button data-tab="pet"></button><button data-tab="log"></button>
-          <button class="icon-btn close" id="btn-menu-close" aria-label="닫기"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <div class="menu-frame" role="dialog" aria-modal="true" aria-labelledby="tabs">
+        <nav class="tabs" id="tabs" role="tablist">
+          <button data-tab="party" class="on" role="tab" aria-selected="true" aria-controls="menu-body"></button><button data-tab="equip" role="tab" aria-selected="false" aria-controls="menu-body"></button><button data-tab="bag" role="tab" aria-selected="false" aria-controls="menu-body"></button><button data-tab="quests" role="tab" aria-selected="false" aria-controls="menu-body"></button><button data-tab="map" role="tab" aria-selected="false" aria-controls="menu-body"></button><button data-tab="pet" role="tab" aria-selected="false" aria-controls="menu-body"></button><button data-tab="log" role="tab" aria-selected="false" aria-controls="menu-body"></button><button data-tab="info" role="tab" aria-selected="false" aria-controls="menu-body"></button>
+          <button class="icon-btn close" id="btn-menu-close"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
         </nav>
-        <div class="menu-body" id="menu-body"></div>
+        <div class="menu-body" id="menu-body" role="tabpanel" tabindex="0"></div>
       </div>
     </section>
 
     <!-- 상점 -->
     <section class="ui menu" data-screen="shop" hidden>
-      <div class="menu-frame">
-        <nav class="tabs"><span class="tab-title" id="shop-title"></span><span class="tab-title" id="shop-shards"></span><button class="icon-btn close" id="btn-shop-close" aria-label="닫기"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></nav>
+      <div class="menu-frame" role="dialog" aria-modal="true" aria-labelledby="shop-title">
+        <nav class="tabs"><span class="tab-title" id="shop-title"></span><span class="tab-title" id="shop-shards"></span><button class="icon-btn close" id="btn-shop-close"><svg class="ic" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></nav>
         <div class="menu-body" id="shop-body"></div>
       </div>
     </section>
 
     <!-- 서약 벼리기 -->
     <section class="ui modal" data-screen="vow" hidden>
-      <div class="panel wide">
+      <div class="panel wide" role="dialog" aria-modal="true" aria-labelledby="vow-h">
         <p class="kicker" id="vow-kicker"></p>
         <h1 id="vow-h"></h1>
         <p class="fine" id="vow-shards"></p>
@@ -160,7 +174,7 @@
 
     <!-- 결과 -->
     <section class="ui results" data-screen="results" hidden>
-      <div class="panel wide">
+      <div class="panel wide" role="dialog" aria-modal="true" aria-labelledby="results-h">
         <p class="kicker" id="results-kicker"></p>
         <h1 id="results-h"></h1>
         <p class="lead" id="results-village"></p>

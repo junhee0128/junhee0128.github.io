@@ -632,29 +632,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "07318234",
-        "date": "2026-09-18T15:14:08+00:00",
-        "subject": "docs(starfall): 구간 15 — 정식 서비스 점검 88건과 배포 8bee5261"
+        "hash": "53e24d56",
+        "date": "2026-09-20T05:46:31+00:00",
+        "subject": "starfall: 골든 기준 재촬영 — 새 화면 둘과 고지 탭"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3095
+          "ms": 3094
         },
         "test": {
           "ok": true,
-          "ms": 17242,
+          "ms": 33451,
           "tests": {
-            "passed": 301,
+            "passed": 339,
             "failed": 0,
-            "total": 301
+            "total": 339
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 5439,
-        "at": "2026-09-18T18:02:23.331Z"
+        "ms": 6049,
+        "at": "2026-09-20T05:47:19.674Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -664,7 +664,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T18:12:29.674Z"
+        "at": "2026-09-20T05:56:36.985Z"
       }
     },
     {
