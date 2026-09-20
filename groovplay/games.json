@@ -97,44 +97,43 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "3f4f7652",
-        "date": "2026-09-17T22:46:02+09:00",
-        "subject": "세계관·스토리 수정 계획: 28/28 완료와 공개 결과를 적는다"
+        "hash": "dc8476a4",
+        "date": "2026-09-20T23:08:56+09:00",
+        "subject": "골든: v2 기준으로 다시 뜬다 — 대표 셀 7개, 실제 밀도, 게이트 두 장"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2441
+          "ms": 6057
         },
         "test": {
           "ok": true,
-          "ms": 5247,
+          "ms": 9913,
           "tests": {
-            "passed": 394,
+            "passed": 402,
             "failed": 0,
-            "total": 394
+            "total": 402
           }
         },
         "art": {
           "ok": true,
-          "ms": 23105
+          "ms": 43693
         }
       },
       "build": {
         "ok": true,
-        "ms": 3280,
-        "at": "2026-09-18T12:49:59.903Z"
+        "ms": 5565,
+        "at": "2026-09-20T14:10:17.557Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
-      "platform": 1,
+      "platform": 2,
       "conformance": {
-        "version": 1,
+        "version": 2,
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:33:55.452Z",
-        "cached": true
+        "at": "2026-09-20T14:13:48.519Z"
       }
     },
     {
