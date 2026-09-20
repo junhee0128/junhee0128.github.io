@@ -9,25 +9,24 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="오늘의 사명">
     <link rel="apple-touch-icon" href="./icon-192.png">
-    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=d82522794342").catch(function(){})});</script>
+    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=2b2f27cd31ee").catch(function(){})});</script>
     <!-- /groovplay:pwa -->
-    <script>window.__GP_GAME__={"id":"mission-today","title":"오늘의 사명","accent":"#2f7fff","kind":"game","platform":1,"exit":"self","orientation":"any","scale":null,"home":"../../../"}</script>
-    <script src="./groovplay.js?v=d82522794342"></script>
+    <script>window.__GP_GAME__={"id":"mission-today","title":"오늘의 사명","accent":"#2f7fff","kind":"game","platform":2,"exit":"self","orientation":"landscape","scale":{"mode":"expand","reference":[1280,625],"aspect":[1.33,2.05]},"input":["touch","mouse","keyboard"],"minViewport":null,"home":"../../../"}</script>
+    <script src="./groovplay.js?v=2b2f27cd31ee"></script>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no, interactive-widget=resizes-content">
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>오늘의 사명</title>
     <style>
       html, body { margin: 0; height: 100%; background: #cfe8ff; overflow: hidden; overscroll-behavior: none; }
       /*
-        손에 든 브라우저에서 100vh는 "주소창이 접혔을 때"의 높이다. 주소창이 나와 있으면 캔버스가
-        보이는 영역보다 커져서 아래쪽 조작 단추와 HUD가 주소창 뒤로 숨는다. dvh는 지금 보이는 높이고,
-        --vvh는 플랫폼 런타임(groovplay.js)이 visualViewport로 재어 주는 같은 값이다. 셋을 겹쳐 적어
-        오래된 브라우저부터 차례로 받게 한다. 스크립트가 뜨면 main.ts가 픽셀로 다시 잡는다.
+        계약 v2 — 캔버스의 크기는 플랫폼이 준 무대(groovplay.view.stage)가 정한다. 여기서 뷰포트 단위로
+        잡지 않는다: 주소창·노치·레터박스를 재는 것은 플랫폼의 일이고, 두 곳에서 정하면 어긋난다.
+        main.ts 가 view 이벤트마다 px 로 못박는다. 그 전까지는 무대를 채우고 있는다.
       */
-      canvas { display: block; width: 100vw; height: 100vh; height: 100dvh; height: var(--vvh, 100dvh); touch-action: none; -webkit-user-select: none; user-select: none; }
+      canvas { display: block; width: 100%; height: 100%; touch-action: none; -webkit-user-select: none; user-select: none; }
     </style>
-    <script type="module" crossorigin src="./assets/index-CrrXCK9Y.js"></script>
+    <script type="module" crossorigin src="./assets/index-CUWluHTq.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-B2q2Kslv.css">
   </head>
   <body>

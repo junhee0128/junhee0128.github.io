@@ -294,39 +294,39 @@
         "todo": 2
       },
       "commit": {
-        "hash": "149d077f",
-        "date": "2026-09-19T00:07:06+09:00",
-        "subject": "mission-today: 골든 다시 뜸 — 한 배율 체계·셸 단추 없음·설정 줄·타이틀·결과 배치·달리기 프레임·바닥"
+        "hash": "ca3fd8d1",
+        "date": "2026-09-21T03:30:16+09:00",
+        "subject": "mission-today: 골든 다시 뜸 — 빠진 틱을 채운 뒤"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2526
+          "ms": 2295
         },
         "test": {
           "ok": true,
-          "ms": 25507,
+          "ms": 22983,
           "tests": {
-            "passed": 145,
+            "passed": 152,
             "failed": 0,
-            "total": 145
+            "total": 152
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 4157,
-        "at": "2026-09-18T15:07:55.699Z"
+        "ms": 3434,
+        "at": "2026-09-20T18:38:37.821Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
-      "platform": 1,
+      "platform": 2,
       "conformance": {
-        "version": 1,
+        "version": 2,
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T15:09:00.675Z"
+        "at": "2026-09-20T18:40:00.567Z"
       }
     },
     {
