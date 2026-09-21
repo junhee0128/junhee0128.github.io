@@ -630,39 +630,39 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "53e24d56",
-        "date": "2026-09-20T05:46:31+00:00",
-        "subject": "starfall: 골든 기준 재촬영 — 새 화면 둘과 고지 탭"
+        "hash": "e9286c9c",
+        "date": "2026-09-21T03:01:12+00:00",
+        "subject": "starfall: v2 적합 31건 → 0건 (골든만 남음)"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3094
+          "ms": 3573
         },
         "test": {
           "ok": true,
-          "ms": 33451,
+          "ms": 15218,
           "tests": {
-            "passed": 339,
+            "passed": 361,
             "failed": 0,
-            "total": 339
+            "total": 361
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 6049,
-        "at": "2026-09-20T05:47:19.674Z"
+        "ms": 4781,
+        "at": "2026-09-21T03:25:48.166Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
-      "platform": 1,
+      "platform": 2,
       "conformance": {
-        "version": 1,
+        "version": 2,
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-20T05:56:36.985Z"
+        "at": "2026-09-21T03:45:19.549Z"
       }
     },
     {

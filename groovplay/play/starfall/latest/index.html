@@ -9,19 +9,20 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="별의 서약">
     <link rel="apple-touch-icon" href="./icon-192.png">
-    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=85af62702eb0").catch(function(){})});</script>
+    <script>if("serviceWorker" in navigator)addEventListener("load",function(){navigator.serviceWorker.register("./sw.js?v=8c7d33ec89de").catch(function(){})});</script>
     <!-- /groovplay:pwa -->
-    <script>window.__GP_GAME__={"id":"starfall","title":"별의 서약","accent":"#f2b85a","kind":"game","platform":1,"exit":"platform","orientation":"any","scale":null,"input":["touch","mouse"],"minViewport":null,"home":"../../../"}</script>
-    <script src="./groovplay.js?v=85af62702eb0"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+    <script>window.__GP_GAME__={"id":"starfall","title":"별의 서약","accent":"#f2b85a","kind":"game","platform":2,"exit":"platform","orientation":"any","scale":{"mode":"expand","reference":[1280,720],"aspect":[0.45,2.4]},"input":["touch","mouse","keyboard"],"minViewport":null,"home":"../../../"}</script>
+    <script src="./groovplay.js?v=8c7d33ec89de"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no, interactive-widget=resizes-content">
     <meta charset="utf-8" />
     <!-- 뷰포트·매니페스트·아이콘·런타임은 플러그인이 넣는다. -->
     <title>별의 서약</title>
-    <script type="module" crossorigin src="./assets/index-DiToO0Ih.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-nZI3PsTw.css">
+    <script type="module" crossorigin src="./assets/index-B7ebb4b8.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CRlpiCMu.css">
   </head>
   <body>
-    <div id="stage"></div>
+    <!-- 게임 세계(캔버스가 붙는 곳). 무대(#gp-stage)는 플랫폼의 것이고 main.ts 가 이것을 그 안으로 옮긴다. -->
+    <div id="world"></div>
 
     <!-- 타이틀 -->
     <section class="ui title" data-screen="title" hidden>
