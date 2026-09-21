@@ -97,18 +97,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "ed1f161b",
-        "date": "2026-09-21T02:15:15+09:00",
-        "subject": "README: 216 화면 검사가 무엇을 재는지 적는다"
+        "hash": "ef0b5c99",
+        "date": "2026-09-21T09:03:02+09:00",
+        "subject": "골든: fold-cover 두 장을 부하 없이 다시 뜬다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4846
+          "ms": 2734
         },
         "test": {
           "ok": true,
-          "ms": 8192,
+          "ms": 5468,
           "tests": {
             "passed": 402,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 40610
+          "ms": 23768
         }
       },
       "build": {
         "ok": true,
-        "ms": 5271,
-        "at": "2026-09-20T17:30:31.990Z"
+        "ms": 3730,
+        "at": "2026-09-21T00:08:31.022Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-20T17:35:07.524Z"
+        "at": "2026-09-21T00:13:25.699Z"
       }
     },
     {
