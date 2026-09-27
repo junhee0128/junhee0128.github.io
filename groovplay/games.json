@@ -630,29 +630,29 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "e9286c9c",
-        "date": "2026-09-21T03:01:12+00:00",
-        "subject": "starfall: v2 적합 31건 → 0건 (골든만 남음)"
+        "hash": "5a00545d",
+        "date": "2026-09-27T13:32:10+00:00",
+        "subject": "starfall: budget 기준을 v2 밀도에서 다시 뜬다 — 23.1ms → 15.6ms"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 3573
+          "ms": 4092
         },
         "test": {
           "ok": true,
-          "ms": 15218,
+          "ms": 20528,
           "tests": {
-            "passed": 361,
+            "passed": 363,
             "failed": 0,
-            "total": 361
+            "total": 363
           }
         }
       },
       "build": {
         "ok": true,
-        "ms": 4781,
-        "at": "2026-09-21T03:25:48.166Z"
+        "ms": 6914,
+        "at": "2026-09-27T14:03:33.201Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -662,7 +662,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-21T03:45:19.549Z"
+        "at": "2026-09-27T14:27:07.739Z"
       }
     },
     {
