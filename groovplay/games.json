@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-09-18T12:59:11.151Z",
+  "builtAt": "2026-10-29T02:02:25.576Z",
   "lobbyRule": true,
   "games": [
     {
@@ -97,18 +97,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "ef0b5c99",
-        "date": "2026-09-21T09:03:02+09:00",
-        "subject": "골든: fold-cover 두 장을 부하 없이 다시 뜬다"
+        "hash": "d2a0a512",
+        "date": "2026-10-25T16:22:19+09:00",
+        "subject": "everdusk: 생성 배치의 로그와 failed.json 을 추적에서 뺀다 — 무시 규칙이 gen/ 만 막고 있었다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2734
+          "ms": 2831
         },
         "test": {
           "ok": true,
-          "ms": 5468,
+          "ms": 5808,
           "tests": {
             "passed": 402,
             "failed": 0,
@@ -117,13 +117,13 @@
         },
         "art": {
           "ok": true,
-          "ms": 23768
+          "ms": 24566
         }
       },
       "build": {
         "ok": true,
-        "ms": 3730,
-        "at": "2026-09-21T00:08:31.022Z"
+        "ms": 4494,
+        "at": "2026-10-29T01:56:44.802Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/everdusk.jpg",
@@ -133,7 +133,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-21T00:13:25.699Z"
+        "at": "2026-10-29T01:09:53.498Z",
+        "cached": true
       }
     },
     {
@@ -170,14 +171,14 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "a4594525",
-        "date": "2026-09-18T09:02:53+09:00",
-        "subject": "test(first-bite): refresh reviewed collection feedback goldens"
+        "hash": "e7d57f66",
+        "date": "2026-10-14T12:51:25+09:00",
+        "subject": "docs: 게임 문서의 포털 주소를 :4173 에서 :8020 으로 맞춘다"
       },
       "checks": {
         "test": {
           "ok": true,
-          "ms": 1171,
+          "ms": 1199,
           "tests": {
             "passed": 55,
             "failed": 0,
@@ -187,8 +188,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 554,
-        "at": "2026-09-18T12:50:01.829Z"
+        "ms": 598,
+        "at": "2026-10-29T01:56:46.823Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/first-bite.webp",
@@ -198,7 +199,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-18T12:35:40.473Z",
+        "at": "2026-10-29T01:11:07.578Z",
         "cached": true
       }
     },
@@ -294,18 +295,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "c64cd174",
-        "date": "2026-09-21T03:55:19+09:00",
-        "subject": "mission-today: 골든 다시 뜸 — 글자 크기를 정수로 맞춘 뒤"
+        "hash": "046df90d",
+        "date": "2026-10-29T10:55:57+09:00",
+        "subject": "mission-today: 골든을 다시 뜬다 — 글자 높이를 Jua 의 값으로 잰 뒤"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 2392
+          "ms": 2641
         },
         "test": {
           "ok": true,
-          "ms": 25074,
+          "ms": 26037,
           "tests": {
             "passed": 152,
             "failed": 0,
@@ -315,8 +316,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 3512,
-        "at": "2026-09-20T18:58:49.364Z"
+        "ms": 3562,
+        "at": "2026-10-29T01:57:19.145Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/mission-today.jpg",
@@ -326,7 +327,7 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-20T19:00:35.673Z"
+        "at": "2026-10-29T01:59:00.206Z"
       }
     },
     {
@@ -524,18 +525,18 @@
         "todo": 2
       },
       "commit": {
-        "hash": "9d1a271c",
-        "date": "2026-09-20T23:20:13+09:00",
-        "subject": "royal-chef: 계약 v2 골든 — 7셀 × 6화면 42장"
+        "hash": "b7ba9ee1",
+        "date": "2026-10-29T10:04:17+09:00",
+        "subject": "royal-chef: pc-480x360 골든 두 장을 다시 뜬다 — 검사기의 프레임 격자를 문서 시작에 맞춘 뒤"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4302
+          "ms": 2946
         },
         "test": {
           "ok": true,
-          "ms": 7227,
+          "ms": 6131,
           "tests": {
             "passed": 293,
             "failed": 0,
@@ -545,8 +546,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 163359,
-        "at": "2026-09-20T14:39:36.365Z"
+        "ms": 169813,
+        "at": "2026-10-29T02:01:59.157Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/royal-chef.jpg",
@@ -556,7 +557,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-20T14:49:02.223Z"
+        "at": "2026-10-29T01:22:16.830Z",
+        "cached": true
       }
     },
     {
@@ -630,18 +632,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "5a00545d",
-        "date": "2026-09-27T13:32:10+00:00",
-        "subject": "starfall: budget 기준을 v2 밀도에서 다시 뜬다 — 23.1ms → 15.6ms"
+        "hash": "33c9e3df",
+        "date": "2026-10-25T16:21:56+09:00",
+        "subject": "starfall: 계약 v2 도입 보고(ADOPTION_REPORT)에 「기록 — 해결됨」을 단다"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4092
+          "ms": 2966
         },
         "test": {
           "ok": true,
-          "ms": 20528,
+          "ms": 12991,
           "tests": {
             "passed": 363,
             "failed": 0,
@@ -651,8 +653,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 6914,
-        "at": "2026-09-27T14:03:33.201Z"
+        "ms": 4560,
+        "at": "2026-10-29T02:02:19.723Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/starfall.jpg",
@@ -662,7 +664,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-27T14:27:07.739Z"
+        "at": "2026-10-29T01:30:21.700Z",
+        "cached": true
       }
     },
     {
@@ -703,18 +706,18 @@
       ],
       "progress": null,
       "commit": {
-        "hash": "30eb6750",
-        "date": "2026-09-21T00:05:33+09:00",
-        "subject": "test(windseam): capture v0.1.0 version label in reviewed title baselines"
+        "hash": "0b8393ac",
+        "date": "2026-09-21T00:11:17+09:00",
+        "subject": "docs(windseam): record v0.1.0 deployment and completed version checkpoints"
       },
       "checks": {
         "typecheck": {
           "ok": true,
-          "ms": 4045
+          "ms": 1606
         },
         "test": {
           "ok": true,
-          "ms": 2235,
+          "ms": 1125,
           "tests": {
             "passed": 83,
             "failed": 0,
@@ -724,8 +727,8 @@
       },
       "build": {
         "ok": true,
-        "ms": 7854,
-        "at": "2026-09-20T15:05:51.585Z"
+        "ms": 3094,
+        "at": "2026-10-29T02:02:25.571Z"
       },
       "checkpoints": [],
       "keyart": "./keyart/windseam.webp",
@@ -735,7 +738,8 @@
         "passed": true,
         "count": 0,
         "findings": [],
-        "at": "2026-09-20T15:06:53.075Z"
+        "at": "2026-10-29T01:31:01.690Z",
+        "cached": true
       }
     }
   ],
